@@ -1,4 +1,9 @@
 language: node_js
 node_js:
-  - 0.10.29
-
+- 0.10.29
+deploy:
+  provider: heroku
+  app:
+    master: macovei
+  api_key:
+    secure: DbffJAOUh4gCJ0ItP6kxrzkaeAnUFsswiWWMOw75FIF7z/rIRdr1ASaPNaH2HECUQAcivUYxjf5evKvm/BNHDQP+d+r8CMgyrYYJgLSj/6OEX6XhYpywPbcajvajpHcC9l4NYOA35z8dttcwAthV7I5iYN1KpvQG4geibz+Djec=
