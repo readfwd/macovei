@@ -1,6 +1,7 @@
+'use strict';
+
 /* global app */
-var Backbone = require('../shims/backbone');
-var View = Backbone.View;
+var View = require('ampersand-view');
 var templates = require('../lib/templates');
 
 module.exports = View.extend({
