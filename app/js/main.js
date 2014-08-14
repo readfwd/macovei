@@ -2,7 +2,6 @@
 
 var $ = require('./shims/jquery');
 var _ = require('lodash');
-
 var MainView = require('./views/main');
 
 module.exports = {
