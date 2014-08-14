@@ -15,7 +15,9 @@ var karmaConf = {
   frameworks: ['mocha'],
   preprocessors: {},
   files: [
-    paths.tmp + "/js/main.js",
+    paths.app + '/bower_components/jquery/dist/jquery.min.js',
+    paths.app + '/bower_components/bootstrap/dist/js/bootstrap.min.js',
+    paths.tmp + '/js/main.js',
     './node_modules/should/should.min.js',
     paths.test + '/**/*.spec.js'
   ],

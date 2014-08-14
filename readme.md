@@ -18,7 +18,7 @@ This is a single page, static webapp. Dependencies are handled through `npm` and
 To set up the project, install `gulp` and the project dependencies:
 
 ```bash
-$ npm install -g gulp
+$ npm install -g bower gulp
 $ bower install
 $ npm install
 ```

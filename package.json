@@ -48,6 +48,7 @@
     "gulp-uglify": "^0.3.1",
     "gulp-useref": "^0.6.0",
     "gulp-util": "^3.0.0",
+    "jquery": "^2.1.1",
     "karma": "^0.12.19",
     "karma-coverage": "git://github.com/readfwd/karma-coverage.git#61216c0",
     "karma-mocha": "^0.1.6",
