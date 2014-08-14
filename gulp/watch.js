@@ -13,11 +13,12 @@ gulp.task('watch:common', ['build'], function () {
   gulp.watch(paths.app + '/templates/*.jade', ['templates']);
   gulp.watch(paths.app + '/**/*.js', ['js:dev']);
   gulp.watch(paths.app + '/**/*.styl', ['css']);
+  gulp.watch(['bower.json'], ['wiredep']);
 });
 
 // Build the project and start a web development server.
 gulp.task('watch', ['watch:common'], function (done) {
-  browserSyncRun(done, paths.tmp);
+  browserSyncRun(done, [paths.tmp, paths.app]);
 });
 
 function browserSyncRun(done, path) {
@@ -33,7 +34,7 @@ function browserSyncRun(done, path) {
 
 // Serve the ./.tmp folder using a static web development server.
 gulp.task('serve', function (done) {
-  browserSyncRun(done, paths.tmp);
+  browserSyncRun(done, [paths.tmp, paths.app]);
 });
 
 // Serve the ./dist folder using a static web development server.

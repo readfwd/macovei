@@ -13,12 +13,13 @@ Source code for the official 'Monica Macovei Presedinte' website.
 
 ## Setting up the project
 
-This is a single page, static webapp. All dependencies are handled through `npm`, and the build process is managed by `gulp`.
+This is a single page, static webapp. Dependencies are handled through `npm` and `bower`, and the build process is managed by `gulp`.
 
 To set up the project, install `gulp` and the project dependencies:
 
 ```bash
 $ npm install -g gulp
+$ bower install
 $ npm install
 ```
 

@@ -6,6 +6,7 @@ var config = require('./_config.js');
 var paths = config.paths;
 var $ = config.plugins;
 
+var wiredep = require('wiredep').stream;
 var nodefn = require('when/node');
 var fs = require('fs');
 var exec = require('child_process').exec;
@@ -29,8 +30,15 @@ var opts = {
   ]
 };
 
+// Wire Bower dependencies into the main jade file.
+gulp.task('wiredep', function () {
+  return gulp.src(paths.app + '/index.jade')
+    .pipe(wiredep())
+    .pipe(gulp.dest(paths.app));
+});
+
 // Turn index.jade into an HTML file.
-gulp.task('index.html', function () {
+gulp.task('index.html', ['wiredep'], function () {
   return gulp.src(paths.app + '/index.jade')
     .pipe($.jade({
       pretty: true
