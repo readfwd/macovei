@@ -112,7 +112,7 @@ gulp.task('assets', ['assets:clean', 'mktmp'], function () {
 // Copies over assets for production.
 gulp.task('assets:dist', function () {
   return gulp.src(paths.app + '/assets/**/*')
-     .pipe(gulp.dest(paths.dist + '/assets/'));
+    .pipe(gulp.dest(paths.dist + '/assets/'));
 });
 
 // Common tasks between all the different builds.
