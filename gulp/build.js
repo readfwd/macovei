@@ -17,15 +17,15 @@ var templatizer = require('templatizer');
 
 var opts = {
   autoprefixer: [
-    'ie >= 10',
-    'ie_mob >= 10',
+    'ie >= 8',
+    'ie_mob >= 9',
     'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
+    'chrome >= 30',
+    'safari >= 6',
     'opera >= 23',
-    'ios >= 7',
-    'android >= 4.4',
-    'bb >= 10'
+    'ios >= 6',
+    'android >= 2.3',
+    'bb >= 9'
   ]
 };
 
@@ -73,7 +73,7 @@ gulp.task('js:istanbul', ['templates'], function () {
 });
 
 // Bundles Browserify with sourcemaps.
-gulp.task('js:dev', function () {
+gulp.task('js:dev', ['templates'], function () {
   var bundleStream = browserify({
       entries: paths.app + '/js/main.js',
       debug: true
