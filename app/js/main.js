@@ -17,8 +17,6 @@ module.exports = {
       // Render it.
       mainView.render();
 
-      console.log('hi');
-
       // Listen for new pages from the router.
       // self.router.on('newPage', mainView.setPage, mainView);
 
