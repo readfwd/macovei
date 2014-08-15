@@ -4,7 +4,6 @@ var Router = require('ampersand-router');
 var HomePage = require('./pages/home');
 var LoremPage = require('./pages/lorem');
 
-
 module.exports = Router.extend({
   routes: {
     '': 'home',
