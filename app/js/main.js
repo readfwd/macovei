@@ -28,8 +28,15 @@ module.exports = {
       // Listen for new pages from the router.
       self.router.on('newPage', mainView.setPage, mainView);
 
+      var isLocal = false;
+      if (window.location.host.indexOf('localhost') !== -1) {
+        // Use non-pushState URLs for localhost dev for BrowserSync.
+        isLocal = true;
+      }
+      var usePushState = !isLocal;
+
       // Start our router and show the appropriate page.
-      self.router.history.start({ pushState: true, root: '/' });
+      self.router.history.start({ pushState: usePushState, root: '/' });
     });
   }),
   navigate: function (page) {
