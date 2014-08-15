@@ -1,3 +1,3 @@
 module.exports = {
-  fbPosts: 'https://www.facebook.com/feeds/page.php?format=json&id=1444537399159513'
+  fbPosts: 'http://fb-proxy.macoveipresedinte.ro/v1.0/macovei-fb-proxy.json'
 };
