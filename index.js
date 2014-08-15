@@ -18,7 +18,7 @@ if (process.env.REDISCLOUD_URL) {
 
 app.use(express.static(__dirname + '/dist'));
 
-app.get('*', function(request, response){
+app.get('*', function(request, response) {
   response.sendFile(__dirname + '/dist/index.html');
 });
 
