@@ -10,7 +10,7 @@ var browserSync = require('browser-sync');
 // Common watch hooks.
 gulp.task('watch:common', ['build'], function () {
   gulp.watch(paths.app + '/index.jade', ['index.html']);
-  gulp.watch(paths.app + '/templates/*.jade', ['templates']);
+  gulp.watch(paths.app + '/templates/**/*.jade', ['templates']);
   gulp.watch(paths.app + '/**/*.js', ['js:dev']);
   gulp.watch(paths.app + '/**/*.styl', ['css']);
   gulp.watch(['bower.json'], ['wiredep']);

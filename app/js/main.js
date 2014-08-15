@@ -19,12 +19,6 @@ module.exports = {
 
       // Render it.
       mainView.render();
-
-      // Listen for new pages from the router.
-      // self.router.on('newPage', mainView.setPage, mainView);
-
-      // Start the router and show the appropriate page.
-      // self.router.history.start({pushState: true, root: '/'});
     });
   })
 };
