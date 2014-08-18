@@ -1,14 +1,29 @@
 .jumbotron
   .container
     .row
-      .col-sm-7
-        img.img-responsive(src="http://placehold.it/500x200")
-      .col-sm-5
-        ul
-          li ceva1
-          li ceva2
-          li ceva3
-          li ceva4
+      .col-sm-8.col-sm-offset-2
+        img.img-responsive(src="http://placehold.it/800x480")
+    hr
+    .row
+      .col-sm-4
+        .btn.btn-lg.btn-block.btn-default
+          | Depunerea candidaturii
+          .small 200.000 de semnături
+      .col-sm-4
+        .btn.btn-lg.btn-block.btn-default Voluntariat
+      .col-sm-4
+        .btn.btn-lg.btn-block.btn-default Donații
 
 .container
-  div(role="posts-collection")
+  h1 Actual
+  .row
+    .col-sm-8
+      div(role="posts-collection")
+    .col-sm-4
+      img.img-responsive(src="http://placehold.it/400x600")
+      hr
+      form
+        .form-group
+          .input-group
+            input.form-control(type="email", placeholder="Email")
+            btn.btn-default.input-group-addon Abonare
