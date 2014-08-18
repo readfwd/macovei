@@ -147,6 +147,7 @@ gulp.task('build:dist', ['build:common', 'js', 'assets:dist'], function () {
     .pipe(jsFilter.restore())
 
     .pipe(cssFilter)
+    .pipe($.minifyCss())
     .pipe(cssFilter.restore())
 
     .pipe(assets.restore())
