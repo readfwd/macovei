@@ -1,5 +1,15 @@
 body
-  ul
-    li: a(href="/") Home
-    li: a(href="/lorem") Lorem
+  nav.navbar.navbar-default(role="nagivation")
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-collapse")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(class="navbar-brand", href="/") Monica Macovei
+      .collapse.navbar-collapse(id="navbar-collapse")
+        ul.nav.navbar-nav
+          li: a(href="/") Home
+          li: a(href="/lorem") Lorem
   div(role="page-container")

@@ -1,5 +1,6 @@
 'use strict';
 
+/* global __dirname */
 var gulp = require('gulp');
 
 var config = require('./_config.js');
@@ -15,6 +16,9 @@ var browserify = require('browserify');
 var istanbul = require('browserify-istanbul');
 var browserSync = require('browser-sync');
 var templatizer = require('templatizer');
+var penthouse = require('penthouse');
+var express = require('express');
+var path = require('path');
 
 var opts = {
   autoprefixer: [
@@ -133,7 +137,7 @@ gulp.task('build', ['build:common', 'js:dev', 'assets']);
 gulp.task('build:test', ['build:common', 'js:istanbul', 'assets']);
 
 // Production-ready build.
-gulp.task('build:dist', ['build:common', 'js', 'assets:dist'], function () {
+gulp.task('build:dist:base', ['build:common', 'js', 'assets:dist'], function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
   var htmlFilter = $.filter('**/*.html');
@@ -147,6 +151,7 @@ gulp.task('build:dist', ['build:common', 'js', 'assets:dist'], function () {
     .pipe(jsFilter.restore())
 
     .pipe(cssFilter)
+    .pipe($.minifyCss())
     .pipe(cssFilter.restore())
 
     .pipe(assets.restore())
@@ -156,5 +161,53 @@ gulp.task('build:dist', ['build:common', 'js', 'assets:dist'], function () {
     .pipe($.minifyHtml())
     .pipe(htmlFilter.restore())
 
+    .pipe(gulp.dest(paths.dist));
+});
+
+var CRIT = '';
+
+gulp.task('critical', ['build:dist:base'], function (done) {
+  // Start a local express server for penthouse.
+  var app = express();
+  var port = 8765;
+
+  app.use(express.static(path.resolve(__dirname, '../dist')));
+
+  app.get('*', function (request, response) {
+    response.sendFile(path.resolve(__dirname, '../dist/index.html'));
+  });
+
+  var server = app.listen(port, function () {
+    penthouse({
+      url: 'http://localhost:' + port,
+      css: paths.dist + '/css/main.css',
+      width: 1440,
+      height: 900
+    }, function (err, criticalCSS) {
+      CRIT = criticalCSS.replace('\n', '');
+      server.close();
+      done();
+    });
+  });
+});
+
+gulp.task('build:dist:critical', ['critical'], function () {
+  return gulp.src(paths.dist + '/index.html')
+    .pipe($.replace(
+      '<link rel=stylesheet href=css/main.css>',
+      '<style>' + CRIT + '</style>'
+    ))
+    .pipe(gulp.dest(paths.dist));
+});
+
+gulp.task('build:dist', ['build:dist:critical'], function () {
+  return gulp.src(paths.dist + '/**/*')
+    .pipe($.manifest({
+      hash: true,
+      preferOnline: true,
+      network: ['http://*', 'https://*', '*'],
+      filename: 'app.manifest',
+      exclude: 'app.manifest'
+    }))
     .pipe(gulp.dest(paths.dist));
 });
