@@ -5,6 +5,7 @@ var _ = require('lodash');
 var MainView = require('./views/main');
 var Posts = require('./models/posts-collection');
 var Router = require('./router');
+var loadcss = require('./lib/loadcss');
 
 module.exports = {
   launch: _.once(function () {
@@ -17,6 +18,9 @@ module.exports = {
     this.router = new Router();
 
     $(document).ready(function () {
+      // Asynchronously load our main CSS file.
+      loadcss('css/main.css');
+
       // Initialize our main view.
       var mainView = self.view = new MainView({
         el: document.body
