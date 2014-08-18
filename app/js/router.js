@@ -11,6 +11,7 @@ var SustinatoriPage = require('./pages/sustinatori');
 var ImplicarePage = require('./pages/implicare');
 var MediaPage = require('./pages/media');
 var ContactPage = require('./pages/contact');
+var SemnaturiPage = require('./pages/semnaturi');
 
 
 module.exports = Router.extend({
@@ -22,7 +23,8 @@ module.exports = Router.extend({
     'sustinatori/:section': 'sustinatori',
     'implicare/:section': 'implicare',
     'media/:section': 'media',
-    'contact/:section': 'contact'
+    'contact/:section': 'contact',
+    'fii-alaturi-de-mine/': 'semnaturi'
   },
 
   // ------- ROUTE HANDLERS ---------
@@ -63,5 +65,9 @@ module.exports = Router.extend({
   contact: function (section) {
     this.trigger('newPage', new ContactPage({}));
     smoothScroll(section);
+  },
+
+  semnaturi: function () {
+    this.trigger('newPage', new SemnaturiPage({}));
   }
 });
