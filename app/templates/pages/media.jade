@@ -1,0 +1,18 @@
+.container
+  h1 Media
+
+  - var giffys = ['LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest', 'LongFlimsyFirecrest'];
+
+  //- Uses classes and structure from the ShapeHoverEffectSVG Codrops lib.
+  //- Kind of ugly, but functional.
+  .demo-3: section.grid.clearfix
+    each gfy in giffys
+      a(href="#", data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z")
+        figure
+          iframe(src="http://gfycat.com/ifr/#{gfy}", frameborder="0", scrolling="no", width="800", height="480", style="-webkit-backface-visibility: hidden;")
+          svg(viewBox="0 0 180 320", preserveAspectRatio="none")
+            path(d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z ")
+          figcaption
+            h2 Monica Macovei
+            p Declarații, informații, click pentru video.
+            button Vizualizare

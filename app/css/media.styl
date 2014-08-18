@@ -1,0 +1,14 @@
+// Make iframes also follow the same rules as img's.
+.grid figure iframe
+  position: relative
+  display: block
+  // Manually position the frame a bit.
+  top: 200px
+  left: -170px
+  opacity: 0.7
+  transition: opacity 0.3s ease, transform 0.3s ease
+  transform: scale(1.1)
+
+.grid a:hover figure iframe
+  opacity: 1
+  transform: scale(1.7)
