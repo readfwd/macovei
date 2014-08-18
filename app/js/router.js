@@ -13,7 +13,7 @@ var MediaPage = require('./pages/media');
 var ContactPage = require('./pages/contact');
 var SemnaturiPage = require('./pages/semnaturi');
 var DonatiiPage = require('./pages/donatii');
-
+var VoluntariatPage = require('./pages/voluntariat');
 
 module.exports = Router.extend({
   routes: {
@@ -27,6 +27,7 @@ module.exports = Router.extend({
     'contact/:section': 'contact',
     'fii-alaturi-de-mine/': 'semnaturi',
     'donatii/': 'donatii',
+    'voluntariat/': 'voluntariat'
   },
 
   // ------- ROUTE HANDLERS ---------
@@ -75,5 +76,9 @@ module.exports = Router.extend({
 
   donatii: function () {
     this.trigger('newPage', new DonatiiPage({}));
+  },
+
+  voluntariat: function () {
+    this.trigger('newPage', new VoluntariatPage({}));
   }
 });
