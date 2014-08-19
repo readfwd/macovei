@@ -1,3 +1,5 @@
+bounce-bezier ?= cubic-bezier(0.41, 1.34, 0.51, 1.01)
+
 // Make iframes also follow the same rules as img's.
 .grid figure iframe
   position: relative
@@ -8,6 +10,9 @@
   opacity: 0.7
   transition: opacity 0.3s ease, transform 0.3s ease
   transform: scale(1.1)
+
+.grid figure button
+  transition: opacity 0.3s bounce-bezier, transform 0.3s bounce-bezier
 
 .grid a:hover figure iframe
   opacity: 1
