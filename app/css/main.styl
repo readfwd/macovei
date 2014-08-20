@@ -1,8 +1,63 @@
-// Wrap links so that they don't overflow their parent container.
-a
-  word-wrap: break-word
-
-@import media
+font-family-sans ?=  'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif
+mm-dark-blue ?= #232A50
+mm-blue ?= #00679E
+mm-light-blue ?= #99B0FF
+mm-red ?= #9D0000
 
 body
+  font-size: 20px
+  line-height: 1.5em
+  font-family: font-family-sans
   background: #eee
+  padding-top: 50px
+
+  @media (max-width: 767px)
+    font-size: 14px
+    padding-top: 43px + 20 * 14px
+
+@import overrides
+@import media
+@import hero
+
+.navbar
+  background: rgba(9, 46, 78, 1.0)
+  border: 0
+  border-radius: 0
+  margin: 0
+
+  .navbar-toggle
+    background: transparent
+    border: 1px solid white
+    border-radius: 0
+
+    .icon-bar
+      background: white
+
+    &:hover
+      background: transparent
+
+  .navbar-collapse
+    border-color: transparent
+
+  a.navbar-brand
+    font-size: 1em
+    font-family: Futura
+    text-transform: uppercase
+
+  .navbar-nav > li > a, a.navbar-brand
+    color: white
+    font-weight: 300
+    transition: color 0.1s
+
+    &:hover
+      color: lighten(mm-red, 50%)
+
+.content
+  margin-top: 15px
+  padding: 15px
+  background: white
+
+[role="page-container"]
+  @media (max-width: 767px)
+    background: #eee
+    border-top: 0.5em solid rgba(mm-red, 1.0)

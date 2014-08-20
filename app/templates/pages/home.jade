@@ -1,15 +1,17 @@
 include ../includes/hero.jade
+include ../includes/callToAction.jade
 
 .container
-  h1 Actual
-  .row
-    .col-sm-8
-      div(role="posts-collection")
-    .col-sm-4
-      img.img-responsive(src="http://placehold.it/400x600")
-      hr
-      form
-        .form-group
-          .input-group
-            input.form-control(type="email", placeholder="Email")
-            btn.btn-default.input-group-addon Abonare
+  .content
+    h1 Actual
+    .row
+      .col-sm-8
+        div(role="posts-collection")
+      .col-sm-4
+        img.img-responsive.monica.hidden-xs(src="assets/img/monica-macovei.jpg")
+        hr
+        form
+          .form-group
+            .input-group
+              input.form-control(type="email", placeholder="Email")
+              btn.btn-default.input-group-addon Abonare

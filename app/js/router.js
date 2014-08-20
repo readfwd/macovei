@@ -23,7 +23,7 @@ module.exports = Router.extend({
     'candidatura/:section': 'candidatura',
     'sustinatori/:section': 'sustinatori',
     'implicare/:section': 'implicare',
-    'media/:section': 'media',
+    'media/': 'media',
     'contact/:section': 'contact',
     'fii-alaturi-de-mine/': 'semnaturi',
     'donatii/': 'donatii',
@@ -60,9 +60,8 @@ module.exports = Router.extend({
     smoothScroll(section);
   },
 
-  media: function (section) {
+  media: function () {
     this.trigger('newPage', new MediaPage({}));
-    smoothScroll(section);
   },
 
   contact: function (section) {
