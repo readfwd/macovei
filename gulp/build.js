@@ -123,7 +123,14 @@ gulp.task('assets', ['assets:clean', 'mktmp'], function () {
 
 // Copies over assets for production.
 gulp.task('assets:dist', function () {
+  var imgFilter = $.filter('**/img/**/*.*');
   return gulp.src(paths.app + '/assets/**/*')
+    .pipe(imgFilter)
+    .pipe($.cache($.imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(imgFilter.restore())
     .pipe(gulp.dest(paths.dist + '/assets/'));
 });
 
