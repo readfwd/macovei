@@ -3,8 +3,18 @@
   max-width: 1600px
   margin: 0 auto
 
+  @media (max-width: 767px)
+    height: 20em
+    top: 64px
+    position: fixed
+    width: 100%
+    z-index: -20
+
   .banner
     width: 100%
+
+    @media (max-width: 767px)
+      display: none
 
   .overlay
     position: absolute
@@ -17,6 +27,9 @@
       position: absolute
       h = 3em
       left: h * 0.50
+
+      @media (max-width: 767px)
+        display: none
 
       img
         width: h
@@ -39,9 +52,12 @@
       right: 10%
       top: 10%
 
+      @media (max-width: 767px)
+        display: none
+
     .quote-box
       background: rgba(9, 46, 78, 0.9)
-      height: 15em
+      height: 12em
       border-bottom: 0.5em solid rgba(mm-red, 0.8)
       position: absolute
       bottom: 1em
@@ -63,7 +79,7 @@
         &:before
           content: '\201C'
           padding-right: 2px
-          margin-left: -17px
+          margin-left: -22px
         &:after
           content: '\201D'
           margin-left: 2px
@@ -78,32 +94,47 @@
         bottom: 2em
         right: 2em
 
+      @media (min-width: 900px) and (max-width: 1024px)
+        font-size: 0.7em
+        height: 14em
+        blockquote:before
+          margin-left: -16px
+
+        .author
+          transform: scale(0.8)
+
+      @media (min-width: 768px) and (max-width: 900px)
+        font-size: 0.5em
+        height: 14em
+        blockquote:before
+          margin-left: -12px
+
+        .author
+          transform: scale(0.7)
+
+      @media (max-width: 767px)
+        width: 100%
+        height: 100%
+        z-index: -20
+        blockquote:before
+          margin-left: -16px
+
 .call-to-action
   .column
+    background: white
+    margin-top: 15px
     height: 25em
+    background: white
 
-    @media (min-width: 768px)
-      &:nth-child(1)
-        padding-right: 0
-      &:nth-child(2)
-        padding-left: 0
-        padding-right: 0
-        border-left: 1px solid rgba(#000, 0.3)
-        border-right: 1px solid rgba(#000, 0.3)
-      &:nth-child(3)
-        padding-left: 0
+    @media (min-width: 1024px) and (max-width: 1199px)
+      font-size: 0.8em
 
-    &:nth-child(1)
-      h1
-        background: mm-dark-blue
-    &:nth-child(2)
-      h1
-        background: mm-blue
-    &:nth-child(3)
-      h1
-        background: mm-light-blue
+    @media (min-width: 768px) and (max-width: 1023px)
+      font-size: 0.6em
+      height: 28em
 
     h1
+      background: mm-dark-blue
       margin: 0
       color: white
       text-transform: uppercase
@@ -111,11 +142,24 @@
       padding: 1em 0
       font-size: 1.5em
       font-weight: 300
+      position: relative
+
+      &:after
+        content: ""
+        position: absolute
+        bottom: -15px
+        left: 50%
+        width: 0
+        height: 0
+        transform: translate3d(-50%, 0, 0)
+        border-left: 100px solid transparent
+        border-right: 100px solid transparent
+        border-top: 30px solid mm-dark-blue
 
     .lead
       color: mm-red
       font-style: italic
-      font-size: 1.5em
+      font-size: 1.4em
       padding: 1em
       text-align: center
       margin: 0
@@ -126,7 +170,7 @@
       color: white
       position: absolute
       font-size: 1.5em
-      top: 33rem
+      top: 10.5em
       left: 50%
       transform: translate3d(-50%, 0, 0)
       padding: 0.4em
@@ -139,7 +183,11 @@
 
     .questions
       position: absolute
-      top: 40rem
+      top: 20em
       li
         font-size: 1em
         line-height: 1.5em
+
+      @media (min-width: 768px) and (max-width: 1023px)
+        li
+          font-size: 1.3em
