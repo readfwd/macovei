@@ -19,7 +19,7 @@ module.exports = View.extend({
     this.pageSwitcher = new ViewSwitcher(this.$('[role="page-container"]')[0], {
       show: function (newView) {
         document.title = newView.pageTitle || 'Monica Macovei';
-        document.scrollTop = 0;
+        window.scrollTo(0, 0);
 
         app.currentPage = newView;
       }
