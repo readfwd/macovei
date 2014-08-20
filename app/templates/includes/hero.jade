@@ -1,27 +1,27 @@
-.jumbotron.hero
-  .container
-    .row
-      .col-sm-12
-        img.img-responsive(src="assets/img/hero-banner.png")
-        .overlay
-          .social-btns
-            img.facebook(src="assets/img/social-facebook.png")
-            img.youtube(src="assets/img/social-youtube.png")
-            img.vimeo(src="assets/img/social-vimeo.png")
-          img.logo(src="assets/img/logo-monica-macovei-presedinte.png")
-          .quotation
-            .quote
-              span Monica Macovei, apărătoarea iconică<br>a libertăților românilor.
-            .author
-              img(src="assets/img/logo-le-monde.png")
+.hero
+  img.banner(src="assets/img/hero-banner.png")
+  .overlay
+    .social-btns
+      a(href="https://www.facebook.com/MacoveiPresedinte", target="_blank")
+        img.facebook(src="assets/img/social-facebook.png", alt="Facebook")
+      a(href="https://www.youtube.com/user/macoveipresedinte", target="_blank")
+        img.youtube(src="assets/img/social-youtube.png", alt="YouTube")
+      a(href="http://vimeo.com/user30874894", target="_blank")
+        img.vimeo(src="assets/img/social-vimeo.png", alt="Vimeo")
+    img.logo(src="assets/img/logo-monica-macovei-presedinte.png", alt="Poză Monica Macovei")
+    .quote-box
+      .quote
+        span Monica Macovei, apărătoarea iconică a libertăților românilor.
+      .author
+        img(src="assets/img/logo-le-monde.png", alt="Logo Le Monde")
 
-    hr
-    .row
-      .col-sm-4
-        a.btn.btn-lg.btn-block.btn-default(href="/fii-alaturi-de-mine/")
-          | Depunerea candidaturii
-          .small 200.000 de semnături
-      .col-sm-4
-        a.btn.btn-lg.btn-block.btn-default(href="/voluntariat/") Voluntariat
-      .col-sm-4
-        a.btn.btn-lg.btn-block.btn-default(href="/donatii/") Donații
+.container
+  .row
+    .col-sm-4
+      a.btn.btn-lg.btn-block.btn-default(href="/fii-alaturi-de-mine/")
+        | Depunerea candidaturii
+        .small 200.000 de semnături
+    .col-sm-4
+      a.btn.btn-lg.btn-block.btn-default(href="/voluntariat/") Voluntariat
+    .col-sm-4
+      a.btn.btn-lg.btn-block.btn-default(href="/donatii/") Donații
