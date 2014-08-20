@@ -1,6 +1,9 @@
 {
   "name": "macovei-app",
   "version": "0.1.0",
+  "engines": {
+    "node": "0.10.29"
+  },
   "description": "Source code for the official 'Monica Macovei Presedinte' website.",
   "main": "index.js",
   "scripts": {
