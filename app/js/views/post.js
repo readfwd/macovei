@@ -8,8 +8,9 @@ module.exports = View.extend({
   template: templates.includes.post,
   render: function () {
     var content = this.model.attributes.content;
+    var url = this.model.attributes.alternate;
 
-    content = content.replace(/<(?:.|\n)*?>/gm, ' ');
+    // content = content.replace(/<(?:.|\n)*?>/gm, ' ');
     content = content.replace(/http(\S+)\s/gm, '');
 
     var MAXLEN = 280;
@@ -19,7 +20,8 @@ module.exports = View.extend({
     }
 
     this.$el.html(this.template({
-      content: content
+      content: content,
+      url: url
     }));
     return this;
   }
