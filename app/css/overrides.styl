@@ -1,3 +1,36 @@
 // Wrap links so that they don't overflow their parent container.
 a
   word-wrap: break-word
+
+.navbar
+  background: rgba(9, 46, 78, 1.0)
+  border: 0
+  border-radius: 0
+  margin: 0
+
+  .navbar-toggle
+    background: transparent
+    border: 1px solid white
+    border-radius: 0
+
+    .icon-bar
+      background: white
+
+    &:hover
+      background: transparent
+
+  .navbar-collapse
+    border-color: transparent
+
+  a.navbar-brand
+    font-size: 1em
+    font-family: Futura
+    text-transform: uppercase
+
+  .navbar-nav > li > a, a.navbar-brand
+    color: white
+    font-weight: 300
+    transition: color 0.1s
+
+    &:hover
+      color: lighten(mm-red, 50%)

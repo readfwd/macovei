@@ -1,5 +1,6 @@
-div
-  | !{locals.content}
-div.clearfix
-  .btn.btn-sm.btn-default.pull-right Citește
-hr
+.post
+  div
+    blockquote !{locals.content}
+  div.clearfix
+    a.btn.btn-lg.btn-default.pull-right(href="#{locals.url}", target="_blank") Citește
+  hr
