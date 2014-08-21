@@ -192,6 +192,7 @@ gulp.task('critical', ['build:dist:base'], function (done) {
       height: 900
     }, function (err, criticalCSS) {
       CRIT = criticalCSS.replace('\n', '');
+      $.util.log('Critical CSS size: ' + criticalCSS.length + ' bytes.');
       server.close();
       done();
     });
