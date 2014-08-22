@@ -13,6 +13,7 @@ module.exports = View.extend({
     'click a[href]': 'handleLinkClick'
   },
   render: function () {
+    var self = this;
     this.$el.html(this.template());
 
     // Init and configure the page switcher.
@@ -23,6 +24,10 @@ module.exports = View.extend({
 
         app.currentPage = newView;
       }
+    });
+
+    this.$('.nav a').on('click', function () {
+      self.$('.navbar-toggle').click();
     });
 
     return this;
