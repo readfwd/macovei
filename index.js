@@ -1,3 +1,4 @@
+var newrelic = require('newrelic');
 var express = require('express');
 var compression = require('compression');
 var seo = require('mean-seo');
