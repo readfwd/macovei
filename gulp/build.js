@@ -216,15 +216,3 @@ gulp.task('build:dist', ['critical'], function () {
     ))
     .pipe(gulp.dest(paths.dist));
 });
-
-// gulp.task('build:dist', ['build:dist:critical'], function () {
-//   return gulp.src(paths.dist + '/**/*')
-//     .pipe($.manifest({
-//       hash: true,
-//       preferOnline: true,
-//       network: ['http://*', 'https://*', '*'],
-//       filename: 'app.manifest',
-//       exclude: 'app.manifest'
-//     }))
-//     .pipe(gulp.dest(paths.dist));
-// });
