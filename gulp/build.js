@@ -143,6 +143,8 @@ gulp.task('build', ['build:common', 'js:dev', 'assets']);
 // CI testing build, with coverage maps.
 gulp.task('build:test', ['build:common', 'js:istanbul', 'assets']);
 
+var cssPath = '';
+
 // Production-ready build.
 gulp.task('build:dist:base', ['build:common', 'js', 'assets:dist'], function () {
   var jsFilter = $.filter('**/*.js');
@@ -152,6 +154,7 @@ gulp.task('build:dist:base', ['build:common', 'js', 'assets:dist'], function () 
 
   return gulp.src(paths.tmp + '/index.html')
     .pipe(assets)
+    .pipe($.rev())
 
     .pipe(jsFilter)
     .pipe($.uglify())
@@ -159,6 +162,11 @@ gulp.task('build:dist:base', ['build:common', 'js', 'assets:dist'], function () 
 
     .pipe(cssFilter)
     .pipe($.minifyCss())
+    .pipe($.tap(function (file) {
+      // Get the path of the revReplaced CSS file.
+      var tmpPath = path.resolve(paths.tmp);
+      cssPath = file.path.replace(tmpPath, '');
+    }))
     .pipe(cssFilter.restore())
 
     .pipe(assets.restore())
@@ -168,6 +176,7 @@ gulp.task('build:dist:base', ['build:common', 'js', 'assets:dist'], function () 
     .pipe($.minifyHtml())
     .pipe(htmlFilter.restore())
 
+    .pipe($.revReplace())
     .pipe(gulp.dest(paths.dist));
 });
 
@@ -187,7 +196,7 @@ gulp.task('critical', ['build:dist:base'], function (done) {
   var server = app.listen(port, function () {
     penthouse({
       url: 'http://localhost:' + port,
-      css: paths.dist + '/css/main.css',
+      css: paths.dist + cssPath,
       width: 1440,
       height: 900
     }, function (err, criticalCSS) {
@@ -202,7 +211,7 @@ gulp.task('critical', ['build:dist:base'], function (done) {
 gulp.task('build:dist', ['critical'], function () {
   return gulp.src(paths.dist + '/index.html')
     .pipe($.replace(
-      '<link rel=stylesheet href=css/main.css>',
+      '<link rel=stylesheet href=' + cssPath.replace('/css', 'css') + '>',
       '<style>' + CRIT + '</style>'
     ))
     .pipe(gulp.dest(paths.dist));
