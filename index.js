@@ -1,7 +1,6 @@
 var express = require('express');
 var compression = require('compression');
 var seo = require('mean-seo');
-var fs = require('fs');
 
 var app = express();
 
@@ -19,10 +18,8 @@ if (process.env.REDISCLOUD_URL) {
 
 app.use(express.static(__dirname + '/dist'));
 
-var indexContent = fs.readFileSync(__dirname + '/dist/index.html');
-
 app.get('*', function(request, response) {
-  response.end(indexContent, 200);
+  response.sendFile(__dirname + '/dist/index.html');
 });
 
 app.listen(process.env.PORT);
