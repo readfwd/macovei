@@ -8,3 +8,4 @@ npm-debug.log
 coverage
 app/js/lib/templates.js
 app/bower_components
+*.log

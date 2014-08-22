@@ -219,7 +219,7 @@ gulp.task('critical', ['build:dist:base'], function (done) {
 gulp.task('build:dist', ['critical'], function () {
   return gulp.src(paths.dist + '/index.html')
     .pipe($.replace(
-      '<link rel=stylesheet href=' + cssPath.replace('/css', 'css') + '>',
+      '<link rel=stylesheet href=' + cssPath + '>',
       '<style>' + CRIT + '</style>'
     ))
     .pipe(gulp.dest(paths.dist));

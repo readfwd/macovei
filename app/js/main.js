@@ -6,6 +6,7 @@ var MainView = require('./views/main');
 var Posts = require('./models/posts-collection');
 var Router = require('./router');
 var loadcss = require('./lib/loadcss');
+var browser = require('bowser').browser;
 
 module.exports = {
   launch: _.once(function () {
@@ -18,6 +19,10 @@ module.exports = {
     this.router = new Router();
 
     $(document).ready(function () {
+      if (browser.msie) {
+        $('html').addClass('msie');
+      }
+
       // Asynchronously load our main CSS file.
       loadcss('css/main.css');
       loadcss('http://fonts.googleapis.com/css?family=Source+Sans+Pro:' +

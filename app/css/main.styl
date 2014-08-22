@@ -1,10 +1,8 @@
-font-family-sans ?=  'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif
-font-family-futura ?= Futura, Futura-Medium, 'Futura Medium', 'Century Gothic', CenturyGothic, 'Apple Gothic', AppleGothic, 'URW Gothic L', 'Avant Garde', Avenir, sans-serif;
-mm-dark-blue ?= #232A50
-mm-blue ?= #00679E
-mm-light-blue ?= #99B0FF
-mm-red ?= #9D0000
-mm-orange ?= #e69822
+@import variables
+@import overrides
+@import media
+@import hero
+@import msie
 
 body
   font-size: 20px
@@ -16,10 +14,6 @@ body
   @media (max-width: 767px)
     font-size: 14px
     padding-top: 43px + 20 * 14px
-
-@import overrides
-@import media
-@import hero
 
 .content
   margin-top: 15px
