@@ -122,18 +122,12 @@
   div:nth-child(1)
     h1
       background: mm-dark-blue
-      &:after
-        border-top: 30px solid mm-dark-blue
   div:nth-child(2)
     h1
       background: mm-blue
-      &:after
-        border-top: 30px solid mm-blue
   div:nth-child(3)
     h1
       background: mm-light-blue
-      &:after
-        border-top: 30px solid mm-light-blue
 
   .column
     background: white
@@ -157,17 +151,13 @@
       font-weight: 300
       position: relative
 
-      &:after
-        content: ""
+      img
         position: absolute
-        bottom: -15px
-        left: 50%
-        width: 0
-        height: 0
-        transform: translate3d(-50%, 0, 0)
-        border-left: 100px solid transparent
-        border-right: 100px solid transparent
-        border-top: 30px solid mm-dark-blue
+        left: 0
+        h = 0.6em
+        bottom: - h
+        width: 100%
+        height: h
 
     .lead
       color: mm-red
