@@ -19,6 +19,7 @@ var templatizer = require('templatizer');
 var penthouse = require('penthouse');
 var express = require('express');
 var path = require('path');
+var mainBowerFiles = require('main-bower-files');
 
 var opts = {
   autoprefixer: [
@@ -121,8 +122,15 @@ gulp.task('assets', ['assets:clean', 'mktmp'], function () {
   return nodefn.call(fs.symlink, '../app/assets', paths.tmp + '/assets');
 });
 
+gulp.task('fonts', function () {
+  return gulp.src(mainBowerFiles())
+    .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest(paths.dist + '/fonts'));
+});
+
 // Copies over assets for production.
-gulp.task('assets:dist', function () {
+gulp.task('assets:dist', ['fonts'], function () {
   var imgFilter = $.filter('**/img/**/*.*');
   return gulp.src(paths.app + '/assets/**/*')
     .pipe(imgFilter)
