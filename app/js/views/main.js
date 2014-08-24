@@ -10,7 +10,7 @@ var templates = require('../lib/templates');
 module.exports = View.extend({
   template: templates.body,
   events: {
-    'click a[href]': 'handleLinkClick'
+    'click a[href]:not([rel="download"])': 'handleLinkClick'
   },
   render: function () {
     var self = this;
@@ -19,7 +19,7 @@ module.exports = View.extend({
     // Init and configure the page switcher.
     this.pageSwitcher = new ViewSwitcher(this.$('[role="page-container"]')[0], {
       show: function (newView) {
-        document.title = newView.pageTitle || 'Monica Macovei';
+        document.title = newView.pageTitle || 'Monica Macovei Presedinte';
         window.scrollTo(0, 0);
 
         app.currentPage = newView;
