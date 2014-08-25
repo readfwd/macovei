@@ -18,13 +18,13 @@ var VoluntariatPage = require('./pages/voluntariat');
 module.exports = Router.extend({
   routes: {
     '': 'home',
-    'despre/:section': 'despre',
-    'viziune/:section': 'viziune',
-    'candidatura/:section': 'candidatura',
-    'sustinatori/:section': 'sustinatori',
-    'implicare/:section': 'implicare',
+    'despre/': 'despre',
+    'viziune/': 'viziune',
+    'candidatura/': 'candidatura',
+    'sustinatori/': 'sustinatori',
+    'implicare/': 'implicare',
     'media/': 'media',
-    'contact/:section': 'contact',
+    'contact/': 'contact',
     'fii-alaturi-de-mine/': 'semnaturi',
     'donatii/': 'donatii',
     'voluntariat/': 'voluntariat'
@@ -35,38 +35,32 @@ module.exports = Router.extend({
     this.trigger('newPage', new HomePage({}));
   },
 
-  despre: function (section) {
+  despre: function () {
     this.trigger('newPage', new DesprePage({}));
-    smoothScroll(section);
   },
 
-  viziune: function (section) {
+  viziune: function () {
     this.trigger('newPage', new ViziunePage({}));
-    smoothScroll(section);
   },
 
-  candidatura: function (section) {
+  candidatura: function () {
     this.trigger('newPage', new CandidaturaPage({}));
-    smoothScroll(section);
   },
 
-  sustinatori: function (section) {
+  sustinatori: function () {
     this.trigger('newPage', new SustinatoriPage({}));
-    smoothScroll(section);
   },
 
-  implicare: function (section) {
+  implicare: function () {
     this.trigger('newPage', new ImplicarePage({}));
-    smoothScroll(section);
   },
 
   media: function () {
     this.trigger('newPage', new MediaPage({}));
   },
 
-  contact: function (section) {
+  contact: function () {
     this.trigger('newPage', new ContactPage({}));
-    smoothScroll(section);
   },
 
   semnaturi: function () {
