@@ -1,7 +1,7 @@
 'use strict';
 
 var Router = require('ampersand-router');
-var smoothScroll = require('./lib/smooth-scroll');
+var $ = require('./shims/jquery');
 
 var HomePage = require('./pages/home');
 var DesprePage = require('./pages/despre');
@@ -33,6 +33,7 @@ module.exports = Router.extend({
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));
+    $('body').attr('data-page', 'home');
   },
 
   despre: function () {
@@ -65,13 +66,16 @@ module.exports = Router.extend({
 
   semnaturi: function () {
     this.trigger('newPage', new SemnaturiPage({}));
+    $('body').attr('data-page', 'semnaturi');
   },
 
   donatii: function () {
     this.trigger('newPage', new DonatiiPage({}));
+    $('body').attr('data-page', 'donatii');
   },
 
   voluntariat: function () {
     this.trigger('newPage', new VoluntariatPage({}));
+    $('body').attr('data-page', 'voluntariat');
   }
 });
