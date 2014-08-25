@@ -17,6 +17,7 @@
   "dependencies": {
     "bootstrap": "~3.2.0",
     "fontawesome": "~4.1.0",
-    "ShapeHoverEffectSVG": "codrops/ShapeHoverEffectSVG#d369803"
+    "ShapeHoverEffectSVG": "codrops/ShapeHoverEffectSVG#d369803",
+    "gmaps": "~0.4.14"
   }
 }
