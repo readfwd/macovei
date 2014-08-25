@@ -24,9 +24,11 @@ html(lang="en")
     // endbuild
   body
     // build:js({app,.tmp,dist}) /js/main.js
+    script(src='http://maps.google.com/maps/api/js?sensor=true')
     // bower:js
     script(src='bower_components/jquery/dist/jquery.js')
     script(src='bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='bower_components/gmaps/gmaps.js')
     // endbower
     script(src='bower_components/ShapeHoverEffectSVG/js/snap.svg-min.js')
     script(src="js/main.js")
