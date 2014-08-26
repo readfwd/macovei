@@ -21,7 +21,6 @@ module.exports = View.extend({
       show: function (newView) {
         document.title = newView.pageTitle || 'Monica Macovei Presedinte';
         window.scrollTo(0, 0);
-
         app.currentPage = newView;
       }
     });

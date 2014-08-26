@@ -1,7 +1,7 @@
 'use strict';
 
 var Router = require('ampersand-router');
-var smoothScroll = require('./lib/smooth-scroll');
+var $ = require('./shims/jquery');
 
 var HomePage = require('./pages/home');
 var DesprePage = require('./pages/despre');
@@ -19,13 +19,13 @@ var VoluntariatPage = require('./pages/voluntariat');
 module.exports = Router.extend({
   routes: {
     '': 'home',
-    'despre/:section': 'despre',
-    'viziune/:section': 'viziune',
-    'candidatura/:section': 'candidatura',
-    'sustinatori/:section': 'sustinatori',
-    'implicare/:section': 'implicare',
+    'despre/': 'despre',
+    'viziune/': 'viziune',
+    'candidatura/': 'candidatura',
+    'sustinatori/': 'sustinatori',
+    'implicare/': 'implicare',
     'media/': 'media',
-    'contact/:section': 'contact',
+    'contact/': 'contact',
     'fii-alaturi-de-mine/': 'semnaturi',
     'donatii/': 'donatii',
     'voluntariat/': 'voluntariat',
@@ -36,48 +36,45 @@ module.exports = Router.extend({
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));
+    $('body').attr('data-page', 'home');
   },
 
-  despre: function (section) {
+  despre: function () {
     this.trigger('newPage', new DesprePage({}));
-    smoothScroll(section);
   },
 
-  viziune: function (section) {
+  viziune: function () {
     this.trigger('newPage', new ViziunePage({}));
-    smoothScroll(section);
   },
 
-  candidatura: function (section) {
+  candidatura: function () {
     this.trigger('newPage', new CandidaturaPage({}));
-    smoothScroll(section);
   },
 
-  sustinatori: function (section) {
+  sustinatori: function () {
     this.trigger('newPage', new SustinatoriPage({}));
-    smoothScroll(section);
   },
 
-  implicare: function (section) {
+  implicare: function () {
     this.trigger('newPage', new ImplicarePage({}));
-    smoothScroll(section);
   },
 
   media: function () {
     this.trigger('newPage', new MediaPage({}));
   },
 
-  contact: function (section) {
+  contact: function () {
     this.trigger('newPage', new ContactPage({}));
-    smoothScroll(section);
   },
 
   semnaturi: function () {
     this.trigger('newPage', new SemnaturiPage({}));
+    $('body').attr('data-page', 'semnaturi');
   },
 
   donatii: function () {
     this.trigger('newPage', new DonatiiPage({}));
+    $('body').attr('data-page', 'donatii');
   },
 
   donatii_thankyou: function () {
@@ -86,5 +83,6 @@ module.exports = Router.extend({
 
   voluntariat: function () {
     this.trigger('newPage', new VoluntariatPage({}));
+    $('body').attr('data-page', 'voluntariat');
   }
 });
