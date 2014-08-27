@@ -39,6 +39,9 @@ module.exports = View.extend({
     var aEl = t.is('a') ? t[0] : t.closest('a')[0];
     var local = window.location.host === aEl.host;
     var path = aEl.pathname.slice(1);
+    if (!path) {
+      return;
+    }
 
     // If the window location host and target host are the
     // same it's local, else, leave it alone.
