@@ -23,4 +23,6 @@ app.get('*', function(request, response) {
   response.sendFile(__dirname + '/dist/index.html');
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, function () {
+  console.log('Listening on port: ' + process.env.PORT + '.');
+});
