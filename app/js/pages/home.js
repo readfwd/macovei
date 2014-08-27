@@ -26,6 +26,7 @@ module.exports = View.extend({
       collection: app.posts,
       el: this.$('[role="posts-collection"]')
     });
+    this.postsView.render();
     return this;
   }
 });

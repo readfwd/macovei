@@ -15,6 +15,7 @@ var SemnaturiPage = require('./pages/semnaturi');
 var DonatiiPage = require('./pages/donatii');
 var DonatiiThankYouPage = require('./pages/donatii-thankyou');
 var VoluntariatPage = require('./pages/voluntariat');
+var PostPage = require('./pages/post');
 
 module.exports = Router.extend({
   routes: {
@@ -33,7 +34,8 @@ module.exports = Router.extend({
     'sustinere-financiara/': 'donatii',
     'donatii_thankyou/': 'donatiiThankyou',
     'donatii-thankyou/': 'donatiiThankyou',
-    'sustinere-financiara-multumiri/': 'donatiiThankyou'
+    'sustinere-financiara-multumiri/': 'donatiiThankyou',
+    'posts/:slug': 'post'
   },
 
   // ------- ROUTE HANDLERS ---------
@@ -87,5 +89,11 @@ module.exports = Router.extend({
   voluntariat: function () {
     this.trigger('newPage', new VoluntariatPage({}));
     $('body').attr('data-page', 'voluntariat');
+  },
+
+  post: function (slug) {
+    this.trigger('newPage', new PostPage({
+      slug: slug
+    }));
   }
 });
