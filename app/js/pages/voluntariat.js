@@ -31,7 +31,7 @@ module.exports = View.extend({
   generateMap: function () {
     var lat = this.romaniaCoords.latitude;
     var long = this.romaniaCoords.longitude;
-    this.map = new window.GMaps({
+    this.map = window.map = new window.GMaps({
       el: this.$('#map')[0],
       lat: lat,
       lng: long,
@@ -40,7 +40,13 @@ module.exports = View.extend({
       zoom: 6
     });
     this.addMarkersRomania();
-    
+
+    var self = this;
+    setTimeout(function () {
+      self.map.refresh();
+      self.map.setCenter(self.romaniaCoords.latitude, self.romaniaCoords.longitude);
+    }, 1);
+
   },
   addMarkersRomania: function () {
     var map = this.map;
