@@ -40,7 +40,7 @@ module.exports = View.extend({
       zoom: 6
     });
     this.addMarkersRomania();
-    
+
   },
   addMarkersRomania: function () {
     var map = this.map;
@@ -91,7 +91,7 @@ module.exports = View.extend({
       lng: 24.354286,
       title: 'Medias',
       infoWindow: {
-        content: '<p>Coordonator: Tudor Dinca<br><br>tcdinca@gmail.com</p>'
+        content: '<p>Coordonator: Tudor Dinca<br>tcdinca@gmail.com</p>'
       }
     });
     // map.setZoom(9);
