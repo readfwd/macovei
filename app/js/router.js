@@ -29,6 +29,7 @@ module.exports = Router.extend({
     'fii-alaturi-de-mine/': 'semnaturi',
     'donatii/': 'donatii',
     'voluntariat/': 'voluntariat',
+    'strange-semnaturi/': 'voluntariat',
     'donatii_thankyou/': 'donatiiThankyou',
     'donatii-thankyou/': 'donatiiThankyou'
   },
