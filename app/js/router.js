@@ -13,7 +13,7 @@ var MediaPage = require('./pages/media');
 var ContactPage = require('./pages/contact');
 var SemnaturiPage = require('./pages/semnaturi');
 var DonatiiPage = require('./pages/donatii');
-var DonatiiThankYouPage = require('./pages/donatii_thankyou')
+var DonatiiThankYouPage = require('./pages/donatii-thankyou');
 var VoluntariatPage = require('./pages/voluntariat');
 
 module.exports = Router.extend({
@@ -29,8 +29,8 @@ module.exports = Router.extend({
     'fii-alaturi-de-mine/': 'semnaturi',
     'donatii/': 'donatii',
     'voluntariat/': 'voluntariat',
-    'donatii_thankyou/': 'donatii_thankyou',
-    'donatii-thankyou/': 'donatii_thankyou'
+    'donatii_thankyou/': 'donatiiThankyou',
+    'donatii-thankyou/': 'donatiiThankyou'
   },
 
   // ------- ROUTE HANDLERS ---------
@@ -77,7 +77,7 @@ module.exports = Router.extend({
     $('body').attr('data-page', 'donatii');
   },
 
-  donatii_thankyou: function () {
+  donatiiThankyou: function () {
     this.trigger('newPage', new DonatiiThankYouPage({}));
   },
 
