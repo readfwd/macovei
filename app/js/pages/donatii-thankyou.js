@@ -6,7 +6,7 @@ var templates = require('../lib/templates');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei | Donații - Mulțumiri',
-  template: templates.pages.donatii_thankyou,
+  template: templates.pages.donatiiThankyou,
   render: function () {
     this.$el.html(this.template());
     return this;
