@@ -20,6 +20,7 @@ module.exports = View.extend({
       longitude: -39.5317294
     };
     this.generateMap();
+    console.log('aa');
     return this;
   },
 
@@ -41,12 +42,17 @@ module.exports = View.extend({
     });
     this.addMarkersRomania();
 
+    var self = this;
+    // #yolo
+    setTimeout(function () {
+      self.map.refresh();
+      self.map.setCenter(self.romaniaCoords.latitude, self.romaniaCoords.longitude);
+    }, 1);
+
   },
   addMarkersRomania: function () {
-    var map = this.map;
-    map.setCenter(this.romaniaCoords.latitude, this.romaniaCoords.longitude);
-    map.setZoom(6);
-    map.addMarker({
+    this.map.setZoom(6);
+    this.map.addMarker({
       lat: 44.437917,
       lng: 26.094637,
       title: 'Bucuresti',
@@ -54,7 +60,7 @@ module.exports = View.extend({
         content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.30<br>team@macoveipresedinte.ro</p>'
       }
     });
-    map.addMarker({
+    this.map.addMarker({
       lat: 46.783442,
       lng: 23.616512,
       title: 'Cluj-Napoca',
@@ -62,7 +68,7 @@ module.exports = View.extend({
         content: '<p>Coordonator: Claudiu Campean<br>0757.152.921<br>claudiu.campean@gmail.com</p>'
       }
     });
-    map.addMarker({
+    this.map.addMarker({
       lat: 44.181357,
       lng: 28.629339,
       title: 'Constanta',
@@ -70,7 +76,7 @@ module.exports = View.extend({
         content: '<p>Coordonator: Mihai Petre<br>0744.340.918<br>mihaipetre77@yahoo.com</p>'
       }
     });
-    map.addMarker({
+    this.map.addMarker({
       lat: 45.437678,
       lng: 28.047494,
       title: 'Galati',
@@ -86,7 +92,7 @@ module.exports = View.extend({
     //     content: '<p>Coordonator: 0745.345.100<br>0757.152.921<br></p>'
     //   }
     // });
-    map.addMarker({
+    this.map.addMarker({
       lat: 46.164287,
       lng: 24.354286,
       title: 'Medias',
@@ -102,10 +108,9 @@ module.exports = View.extend({
   },
 
   addMarkersWW: function () {
-    var map = this.map;
-    map.setCenter(this.wwCoords.latitude, this.wwCoords.longitude);
-    map.setZoom(2);
-    map.addMarker({
+    this.map.setCenter(this.wwCoords.latitude, this.wwCoords.longitude);
+    this.map.setZoom(2);
+    this.map.addMarker({
       lat: 44.437917,
       lng: 26.094637,
       title: 'Bucuresti',
