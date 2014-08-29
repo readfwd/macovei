@@ -84,6 +84,14 @@ module.exports = View.extend({
         content: '<p>Coordonator: George Schin<br>0744.613.117<br>schingeorge@yahoo.com</p>'
       }
     });
+    map.addMarker({
+      lat: 46.582,
+      lng: 26.912,
+      title: 'Bacău',
+      infoWindow: {
+        content: '<p>Coordonator: Petrică Dănilă<br>0745.542.626<br>petricadanila@gmail.com</p>'
+      }
+    });
     // map.addMarker({
     //   lat: 47.156185,
     //   lng: 27.586970,
