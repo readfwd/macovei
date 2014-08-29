@@ -246,6 +246,6 @@ gulp.task('posts', function () {
       };
     }
   }
-  var content = JSON.stringify(json);
+  var content = "module.exports = " + JSON.stringify(json);
   fs.writeFileSync(paths.app + '/js/lib/posts-json.js', content);
 });
