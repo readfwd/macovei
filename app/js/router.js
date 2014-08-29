@@ -103,5 +103,6 @@ module.exports = Router.extend({
     this.trigger('newPage', new PostPage({
       slug: slug
     }));
+    $('body').attr('data-page', 'semnaturi');
   }
 });
