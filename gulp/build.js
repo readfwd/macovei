@@ -20,6 +20,7 @@ var penthouse = require('penthouse');
 var express = require('express');
 var path = require('path');
 var mainBowerFiles = require('main-bower-files');
+var fs = require('fs');
 
 var opts = {
   autoprefixer: [
@@ -67,7 +68,7 @@ var spitJs = function (bundleStream) {
 };
 
 // Bundles Browserify for production; no source or coverage maps.
-gulp.task('js', ['templates'], function () {
+gulp.task('js', ['templates', 'posts'], function () {
   var bundleStream = browserify(paths.app + '/js/main.js')
     .bundle();
 
@@ -75,7 +76,7 @@ gulp.task('js', ['templates'], function () {
 });
 
 // Bundles Browserify with Istanbul coverage maps.
-gulp.task('js:istanbul', ['templates'], function () {
+gulp.task('js:istanbul', ['templates', 'posts'], function () {
   var bundleStream = browserify(paths.app + '/js/main.js')
     .transform(istanbul({
       ignore: ['**/lib/**']
@@ -86,7 +87,7 @@ gulp.task('js:istanbul', ['templates'], function () {
 });
 
 // Bundles Browserify with sourcemaps.
-gulp.task('js:dev', ['templates'], function () {
+gulp.task('js:dev', ['templates', 'posts'], function () {
   var bundleStream = browserify({
       entries: paths.app + '/js/main.js',
       debug: true
@@ -223,4 +224,33 @@ gulp.task('build:dist', ['critical'], function () {
       '<style>' + CRIT + '</style>'
     ))
     .pipe(gulp.dest(paths.dist));
+});
+
+gulp.task('posts', function () {
+  templatizer(paths.app + '/posts', paths.tmp + '/posts-templates.js');
+
+  delete require.cache[require.resolve('.' + paths.tmp + '/posts-templates')];
+  var t = require('.' + paths.tmp + '/posts-templates');
+  var json = {};
+  for (var key in t) {
+    if (t.hasOwnProperty(key)) {
+      var locals = {};
+      var c = t[key](locals);
+      var d = locals.date;
+      var s = locals.slug;
+      var p = locals.preview;
+      var thumb = locals.thumb;
+      var title = locals.title;
+      json[s] = {
+        date: d,
+        slug: s,
+        preview: p,
+        content: c,
+        thumb: thumb,
+        title: title
+      };
+    }
+  }
+  var content = JSON.stringify(json);
+  fs.writeFileSync(paths.app + '/js/lib/posts-json.json', content);
 });

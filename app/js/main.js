@@ -7,13 +7,21 @@ var Posts = require('./models/posts-collection');
 var Router = require('./router');
 var loadcss = require('./lib/loadcss');
 var browser = require('bowser').browser;
+var templates = require('./lib/posts-json');
 
 module.exports = {
   launch: _.once(function () {
     var self = window.app = this;
 
-    // Create our global 'posts' object that contains the Facebook feed.
-    this.posts = new Posts();
+    var posts = [];
+    for (var key in templates) {
+      if (templates.hasOwnProperty(key)) {
+        posts.push({ slug: key });
+      }
+    }
+
+    // Create our global 'posts' object.
+    this.posts = new Posts(posts);
 
     // Init our URL handlers and the history tracker.
     this.router = new Router();
