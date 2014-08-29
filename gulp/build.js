@@ -68,7 +68,7 @@ var spitJs = function (bundleStream) {
 };
 
 // Bundles Browserify for production; no source or coverage maps.
-gulp.task('js', ['templates'], function () {
+gulp.task('js', ['templates', 'posts'], function () {
   var bundleStream = browserify(paths.app + '/js/main.js')
     .bundle();
 
@@ -76,7 +76,7 @@ gulp.task('js', ['templates'], function () {
 });
 
 // Bundles Browserify with Istanbul coverage maps.
-gulp.task('js:istanbul', ['templates'], function () {
+gulp.task('js:istanbul', ['templates', 'posts'], function () {
   var bundleStream = browserify(paths.app + '/js/main.js')
     .transform(istanbul({
       ignore: ['**/lib/**']
@@ -87,7 +87,7 @@ gulp.task('js:istanbul', ['templates'], function () {
 });
 
 // Bundles Browserify with sourcemaps.
-gulp.task('js:dev', ['templates'], function () {
+gulp.task('js:dev', ['templates', 'posts'], function () {
   var bundleStream = browserify({
       entries: paths.app + '/js/main.js',
       debug: true
@@ -227,9 +227,10 @@ gulp.task('build:dist', ['critical'], function () {
 });
 
 gulp.task('posts', function () {
-  templatizer(paths.app + '/posts', paths.app + '/js/lib/posts-templates.js');
+  templatizer(paths.app + '/posts', paths.tmp + '/posts-templates.js');
 
-  var t = require('.' + paths.app + '/js/lib/posts-templates');
+  delete require.cache[require.resolve('.' + paths.tmp + '/posts-templates')];
+  var t = require('.' + paths.tmp + '/posts-templates');
   var json = {};
   for (var key in t) {
     if (t.hasOwnProperty(key)) {
@@ -238,14 +239,19 @@ gulp.task('posts', function () {
       var d = locals.date;
       var s = locals.slug;
       var p = locals.preview;
+      var thumb = locals.thumb;
+      var title = locals.title;
       json[s] = {
         date: d,
         slug: s,
         preview: p,
-        content: c
+        content: c,
+        thumb: thumb,
+        title: title
       };
+      console.log(thumb);
     }
   }
-  var content = "module.exports = " + JSON.stringify(json);
-  fs.writeFileSync(paths.app + '/js/lib/posts-json.js', content);
+  var content = JSON.stringify(json);
+  fs.writeFileSync(paths.app + '/js/lib/posts-json.json', content);
 });

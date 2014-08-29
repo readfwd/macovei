@@ -1,5 +1,15 @@
 .post
-  div !{preview}
-  div.clearfix
-    a.btn.btn-lg.btn-default.pull-right(href="#{url}", target="_blank") Citește
+  if locals.thumb
+    .row
+      .col-md-2.col-sm-3.hidden-xs
+        a(href="#{locals.url}", target="_blank")
+          img.img-responsive(src="#{locals.thumb}")
+      .col-md-10.col-sm-9
+        a.div(href="#{locals.url}", target="_blank") !{locals.preview}
+        div.clearfix
+          a.btn.btn-lg.btn-default.pull-right(href="#{locals.url}", target="_blank") Citește
+  else
+    a.div(href="#{locals.url}", target="_blank") !{locals.preview}
+    div.clearfix
+      a.btn.btn-lg.btn-default.pull-right(href="#{locals.url}", target="_blank") Citește
   hr
