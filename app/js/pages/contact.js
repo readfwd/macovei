@@ -5,7 +5,7 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 
 module.exports = View.extend({
-  pageTitle: 'Monica Macovei | Contact',
+  pageTitle: 'Monica Macovei Presedinte | Contact',
   template: templates.pages.contact,
   render: function () {
     this.$el.html(this.template());

@@ -8,7 +8,7 @@ var PostsView = require('../views/posts');
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
-  pageTitle: 'Monica Macovei | Home',
+  pageTitle: 'Monica Macovei Presedinte | Home',
   template: templates.pages.home,
   render: function () {
     this.$el.html(this.template());

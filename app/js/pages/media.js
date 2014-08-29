@@ -7,7 +7,7 @@ var Snap = require('../shims/snap');
 var mina = require('../shims/mina');
 
 module.exports = View.extend({
-  pageTitle: 'Monica Macovei | Media',
+  pageTitle: 'Monica Macovei Presedinte | Media',
   template: templates.pages.media,
   render: function () {
     this.$el.html(this.template());
