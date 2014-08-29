@@ -87,7 +87,7 @@ module.exports = View.extend({
     map.addMarker({
       lat: 46.582,
       lng: 26.912,
-      title: 'Un orașșșșș',
+      title: 'Bacău',
       infoWindow: {
         content: '<p>Coordonator: Petrică Dănilă<br>0745.542.626<br>petricadanila@gmail.com</p>'
       }

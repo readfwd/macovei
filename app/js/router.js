@@ -27,11 +27,13 @@ module.exports = Router.extend({
     'media/': 'media',
     'contact/': 'contact',
     'fii-alaturi-de-mine/': 'semnaturi',
-    'donatii/': 'donatii',
     'voluntariat/': 'voluntariat',
     'strange-semnaturi/': 'voluntariat',
+    'donatii/': 'donatii',
+    'sustinere-financiara/': 'donatii',
     'donatii_thankyou/': 'donatiiThankyou',
-    'donatii-thankyou/': 'donatiiThankyou'
+    'donatii-thankyou/': 'donatiiThankyou',
+    'sustinere-financiara-multumiri/': 'donatiiThankyou'
   },
 
   // ------- ROUTE HANDLERS ---------
