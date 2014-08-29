@@ -3,10 +3,11 @@
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
+var posts = require('../lib/posts-json');
 var Post = require('../models/post');
 
 module.exports = View.extend({
-  pageTitle: 'Monica Macovei | Asdf',
+  pageTitle: 'Monica Macovei | Asdff',
   template: templates.includes.postShow,
   initialize: function (options) {
     this.model = new Post({
@@ -14,11 +15,11 @@ module.exports = View.extend({
     });
   },
   render: function () {
-    var locals = {};
-    var html = templates.posts[this.model.attributes.slug](locals);
     this.$el.html(this.template({
-      content: html,
-      date: locals.date
+      content: posts[this.model.attributes.slug].content,
+      date: posts[this.model.attributes.slug].date,
+      slug: posts[this.model.attributes.slug].slug,
+      preview: posts[this.model.attributes.slug].preview
     }));
     return this;
   }

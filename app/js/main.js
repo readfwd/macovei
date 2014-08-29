@@ -7,15 +7,15 @@ var Posts = require('./models/posts-collection');
 var Router = require('./router');
 var loadcss = require('./lib/loadcss');
 var browser = require('bowser').browser;
-var templates = require('./lib/templates');
+var templates = require('./lib/posts-json');
 
 module.exports = {
   launch: _.once(function () {
     var self = window.app = this;
 
     var posts = [];
-    for (var key in templates.posts) {
-      if (templates.posts.hasOwnProperty(key)) {
+    for (var key in templates) {
+      if (templates.hasOwnProperty(key)) {
         posts.push({ slug: key });
       }
     }
