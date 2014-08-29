@@ -31,7 +31,7 @@ module.exports = View.extend({
   generateMap: function () {
     var lat = this.romaniaCoords.latitude;
     var long = this.romaniaCoords.longitude;
-    this.map = window.map = new window.GMaps({
+    this.map = new window.GMaps({
       el: this.$('#map')[0],
       lat: lat,
       lng: long,
