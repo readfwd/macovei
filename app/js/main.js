@@ -19,7 +19,6 @@ module.exports = {
         posts.push({ slug: key });
       }
     }
-    console.log(posts);
 
     // Create our global 'posts' object.
     this.posts = new Posts(posts);

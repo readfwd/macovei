@@ -17,7 +17,7 @@ module.exports = View.extend({
     if (this.locals.title) {
       this.pageTitle = this.pageTitle + " | " + this.locals.title;
     }
-    
+
   },
   render: function () {
     this.$el.html(this.template({
@@ -28,7 +28,6 @@ module.exports = View.extend({
       thumb: this.locals.thumb,
       title: this.locals.title
     }));
-    console.log(this.locals.title);
     return this;
   }
 });
