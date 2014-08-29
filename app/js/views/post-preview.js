@@ -14,7 +14,6 @@ module.exports = window.postView = View.extend({
       url: '/posts/' + this.model.attributes.slug,
       thumb: posts[this.model.attributes.slug].thumb
     }));
-    console.log(posts[this.model.attributes.slug].thumb);
     return this;
   }
 });

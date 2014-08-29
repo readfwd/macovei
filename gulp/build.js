@@ -249,7 +249,6 @@ gulp.task('posts', function () {
         thumb: thumb,
         title: title
       };
-      console.log(thumb);
     }
   }
   var content = JSON.stringify(json);
