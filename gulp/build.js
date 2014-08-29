@@ -20,6 +20,7 @@ var penthouse = require('penthouse');
 var express = require('express');
 var path = require('path');
 var mainBowerFiles = require('main-bower-files');
+var fs = require('fs');
 
 var opts = {
   autoprefixer: [
@@ -223,4 +224,28 @@ gulp.task('build:dist', ['critical'], function () {
       '<style>' + CRIT + '</style>'
     ))
     .pipe(gulp.dest(paths.dist));
+});
+
+gulp.task('posts', function () {
+  templatizer(paths.app + '/posts', paths.app + '/js/lib/posts-templates.js');
+
+  var t = require('.' + paths.app + '/js/lib/posts-templates');
+  var json = {};
+  for (var key in t) {
+    if (t.hasOwnProperty(key)) {
+      var locals = {};
+      var c = t[key](locals);
+      var d = locals.date;
+      var s = locals.slug;
+      var p = locals.preview;
+      json[s] = {
+        date: d,
+        slug: s,
+        preview: p,
+        content: c
+      };
+    }
+  }
+  var content = JSON.stringify(json);
+  fs.writeFileSync(paths.app + '/js/lib/posts-json.js', content);
 });
