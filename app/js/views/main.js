@@ -26,7 +26,9 @@ module.exports = View.extend({
     });
 
     this.$('.nav a').on('click', function () {
-      self.$('.navbar-toggle').click();
+      if ($(window).width() < 768){
+        return self.$('.navbar-toggle').click();
+      }
     });
 
     return this;
@@ -35,19 +37,20 @@ module.exports = View.extend({
     this.pageSwitcher.set(view);
   },
   handleLinkClick: function (e) {
-    var t = $(e.target);
-    var aEl = t.is('a') ? t[0] : t.closest('a')[0];
-    var local = window.location.host === aEl.host;
-    var path = aEl.pathname.slice(1);
-    if (!path) {
-      return;
-    }
 
-    // If the window location host and target host are the
-    // same it's local, else, leave it alone.
-    if (local) {
-      e.preventDefault();
-      app.navigate(path);
-    }
+      var t = $(e.target);
+      var aEl = t.is('a') ? t[0] : t.closest('a')[0];
+      var local = window.location.host === aEl.host;
+      var path = aEl.pathname.slice(1);
+      if (!path) {
+        return;
+      }
+
+      // If the window location host and target host are the
+      // same it's local, else, leave it alone.
+      if (local) {
+        e.preventDefault();
+        app.navigate(path);
+      }
   }
 });
