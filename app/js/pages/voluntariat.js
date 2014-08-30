@@ -6,7 +6,7 @@ var templates = require('../lib/templates');
 
 
 module.exports = View.extend({
-  pageTitle: 'Monica Macovei | Voluntariat',
+  pageTitle: 'Monica Macovei Presedinte | Voluntariat',
   template: templates.pages.voluntariat,
 
   render: function () {

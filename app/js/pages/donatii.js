@@ -6,7 +6,7 @@ var templates = require('../lib/templates');
 var $ = require('../shims/jquery');
 
 module.exports = View.extend({
-  pageTitle: 'Monica Macovei | Susținere financiară',
+  pageTitle: 'Monica Macovei Presedinte | Susținere financiară',
   template: templates.pages.donatii,
   events: {
     'click .paypal .btn': 'loadBtn'

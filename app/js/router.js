@@ -15,6 +15,7 @@ var SemnaturiPage = require('./pages/semnaturi');
 var DonatiiPage = require('./pages/donatii');
 var DonatiiThankYouPage = require('./pages/donatii-thankyou');
 var VoluntariatPage = require('./pages/voluntariat');
+var Eroare404 = require('./pages/eroare404');
 
 module.exports = Router.extend({
   routes: {
@@ -34,7 +35,7 @@ module.exports = Router.extend({
     'donatii_thankyou/': 'donatiiThankyou',
     'donatii-thankyou/': 'donatiiThankyou',
     'sustinere-financiara-multumiri/': 'donatiiThankyou',
-    '404': 'notFound'
+    '404': 'eroare404'
   },
 
   // ------- ROUTE HANDLERS ---------
@@ -90,8 +91,8 @@ module.exports = Router.extend({
     $('body').attr('data-page', 'voluntariat');
   },
 
-  notFound: function () {
-    this.trigger('newPage', new HomePage({}));
-    $('body').attr('data-page', 'home');
+  eroare404: function () {
+    this.trigger('newPage', new Eroare404({}));
+    $('body').attr('data-page', 'eroare404');
   }
 });

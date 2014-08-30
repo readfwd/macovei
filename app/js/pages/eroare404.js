@@ -5,8 +5,8 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 
 module.exports = View.extend({
-  pageTitle: 'Monica Macovei Presedinte | Contact',
-  template: templates.pages.contact,
+  pageTitle: 'Monica Macovei Presedinte | eroare 404',
+  template: templates.pages.eroare404,
   render: function () {
     this.$el.html(this.template());
     return this;
