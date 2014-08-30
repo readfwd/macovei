@@ -47,7 +47,10 @@ module.exports = {
       var usePushState = !isLocal;
 
       // Start our router and show the appropriate page.
-      self.router.history.start({ pushState: usePushState, root: '/' });
+      // If start method returns false, it means the route was not found.
+      if (!self.router.history.start({ pushState: usePushState, root: '/' })) {
+        self.navigate('404');
+      }
     });
   }),
   navigate: function (page) {
