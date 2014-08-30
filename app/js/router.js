@@ -33,7 +33,8 @@ module.exports = Router.extend({
     'sustinere-financiara/': 'donatii',
     'donatii_thankyou/': 'donatiiThankyou',
     'donatii-thankyou/': 'donatiiThankyou',
-    'sustinere-financiara-multumiri/': 'donatiiThankyou'
+    'sustinere-financiara-multumiri/': 'donatiiThankyou',
+    '404': 'notFound'
   },
 
   // ------- ROUTE HANDLERS ---------
@@ -87,5 +88,10 @@ module.exports = Router.extend({
   voluntariat: function () {
     this.trigger('newPage', new VoluntariatPage({}));
     $('body').attr('data-page', 'voluntariat');
+  },
+
+  notFound: function () {
+    this.trigger('newPage', new HomePage({}));
+    $('body').attr('data-page', 'home');
   }
 });
