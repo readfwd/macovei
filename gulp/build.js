@@ -227,10 +227,10 @@ gulp.task('build:dist', ['critical'], function () {
 });
 
 gulp.task('posts', function () {
-  templatizer(paths.app + '/posts', paths.tmp + '/posts-templates.js');
+  templatizer(paths.app + '/posts', paths.app + '/js/lib/posts-templates.js');
 
-  delete require.cache[require.resolve('.' + paths.tmp + '/posts-templates')];
-  var t = require('.' + paths.tmp + '/posts-templates');
+  delete require.cache[require.resolve('../' + paths.app + '/js/lib/posts-templates')];
+  var t = require('../' + paths.app + '/js/lib/posts-templates');
   var json = {};
   for (var key in t) {
     if (t.hasOwnProperty(key)) {
