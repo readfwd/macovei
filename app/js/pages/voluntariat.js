@@ -87,27 +87,67 @@ module.exports = View.extend({
     map.addMarker({
       lat: 46.582,
       lng: 26.912,
-      title: 'Bacău',
+      title: 'Bacau',
       infoWindow: {
-        content: '<p>Coordonator: Petrică Dănilă<br>0745.542.626<br>petricadanila@gmail.com</p>'
+        content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com</p>'
       }
     });
-    // map.addMarker({
-    //   lat: 47.156185,
-    //   lng: 27.586970,
-    //   title: 'Iasi',
-    //   infoWindow: {
-    //     content: '<p>Coordonator: 0745.345.100<br>0757.152.921<br></p>'
-    //   }
-    // });
+  map.addMarker({
+      lat: 47.743904,
+      lng: 21.923732,
+      title: 'Botosani',
+      infoWindow: {
+        content: '<p>Coordonator: Mihai Politic<br>0740.239.069<br>politicmihai@yahoo.com</p>'
+      }
+    });
+  map.addMarker({
+      lat: 45.694594,
+      lng: 27.189102,
+      title: 'Focsani',
+      infoWindow: {
+        content: '<p>Coordonator: Mariana Bondila<br>0766.400.715<br></p>'
+      }
+    });
+  map.addMarker({
+      lat: 47.067297,
+      lng: 26.665534,
+      title: 'Oradea',
+      infoWindow: {
+        content: '<p>Coordonator: Radu Popovici<br>0744.570.848<br>maiaduc@gmail.com</p>'
+      }
+    });
+     map.addMarker({
+       lat: 47.154667,
+       lng: 27.590446,
+       title: 'Iasi',
+       infoWindow: {
+         content: '<p>Coordonator: 0745.345.100<br>Dan Radu<br></p>'
+       }
+     });
     map.addMarker({
-      lat: 46.164287,
-      lng: 24.354286,
-      title: 'Medias',
+       lat: 45.754809,
+       lng: 21.228160,
+       title: 'Timisoara',
+       infoWindow: {
+         content: '<p>Coordonator: Petru Adrian<br>0745.780.197<br>adi2totea@yahoo.com<br><br>Piroska Bogdan<br>0727 214 432</p>'
+       }
+     });
+     map.addMarker({
+      lat: 46.061722,
+      lng: 23.584213,
+      title: 'Alba Iulia',
       infoWindow: {
-        content: '<p>Coordonator: Tudor Dinca<br><br>tcdinca@gmail.com</p>'
+        content: '<p>Coordonator:  Ciprian Cucu<br>0722.733.831<br>cucu.ciprian@gmail.com</p>'
       }
     });
+    //map.addMarker({
+     // lat: 46.164287,
+    //  lng: 24.354286,
+    //  title: 'Medias',
+    //  infoWindow: {
+    //    content: '<p>Coordonator: Tudor Dinca<br><br>tcdinca@gmail.com</p>'
+    //  }
+    //});
     // map.setZoom(9);
     // map.panTo(new window.google.maps.LatLng(40.7056308,-73.9780035));
     // setTimeout( function() {
