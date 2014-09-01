@@ -3,7 +3,7 @@
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
-var posts = require('../lib/posts-json');
+var posts = require('../lib/posts-json.json');
 
 module.exports = window.postView = View.extend({
   template: templates.includes.postPreview,

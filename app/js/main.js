@@ -7,7 +7,7 @@ var Posts = require('./models/posts-collection');
 var Router = require('./router');
 var loadcss = require('./lib/loadcss');
 var browser = require('bowser').browser;
-var templates = require('./lib/posts-json');
+var templates = require('./lib/posts-json.json');
 
 module.exports = {
   launch: _.once(function () {

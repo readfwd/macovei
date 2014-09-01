@@ -14,7 +14,7 @@ gulp.task('watch:common', ['build'], function () {
   gulp.watch(paths.app + '/posts/**/*.jade', ['js:dev']);
   gulp.watch([paths.app + '/**/*.js',
               '!' + paths.app + '/js/lib/templates.js',
-              '!' + paths.app + '/js/lib/posts-json.js'], ['js:dev']);
+              '!' + paths.app + '/js/lib/posts-templates.js'], ['js:dev']);
   gulp.watch(paths.app + '/**/**/*.styl', ['css']);
   gulp.watch(['bower.json'], ['wiredep']);
 });
