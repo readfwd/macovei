@@ -93,8 +93,8 @@ module.exports = View.extend({
       }
     });
   map.addMarker({
-      lat: 47.743904,
-      lng: 21.923732,
+      lat: 47.7375721,
+      lng: 26.6594085,
       title: 'Botosani',
       infoWindow: {
         content: '<p>Coordonator: Lucian Buium<br>0751.401.127<br>luciabuium700@yahoo.com<br></p>'
