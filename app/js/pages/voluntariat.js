@@ -129,7 +129,7 @@ module.exports = View.extend({
        lng: 27.590446,
        title: 'Iasi',
        infoWindow: {
-         content: '<p>Coordonator: 0745.345.100<br>Dan Radu<br></p>'
+         content: '<p>Coordonator: Viorel Paraschiv<br>0748.997.793<br>paraschiv03@gmail.com</p>'
        }
      });
     map.addMarker({
