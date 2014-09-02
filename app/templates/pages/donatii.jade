@@ -15,7 +15,7 @@
               | Paypal
               i.fa.fa-fw.fa-paypal
             li: a(data-toggle='modal', data-target='#credit-card')
-              | Credit-card (în curând)
+              | Credit-card
               i.fa.fa-fw.fa-credit-card
             li: a(data-toggle='modal', data-target='#sms')
               | SMS (în curând)
@@ -114,9 +114,42 @@
               button.close(type='button', data-dismiss='modal')
                 span(aria-hidden='true') ×
                 span.sr-only Închide
-              h4#myModalLabel.modal-title Card de credit
-            .modal-body
-              p În curând
+              h4#myModalLabel.modal-title Susținere financiară prin card de credit
+            .modal-body.paypal.text-center
+              div
+                img.center-block.master-card(src="/assets/img/mastercard-logo.png")
+                img.center-block(src="/assets/img/visa-logo.png")
+                .credit-card Card de Credit
+              hr
+              .inline-block
+                a(href="http://mpy.ro/zej1ev", target="_blank")
+                  button.btn.btn-primary(type="submit") 25 Lei
+
+              .inline-block
+                a(href="http://mpy.ro/zej2ev", target="_blank")
+                  button.btn.btn-primary(type="submit") 50 Lei
+
+              .inline-block
+                a(href="http://mpy.ro/zej3ev", target="_blank")
+                  button.btn.btn-primary(type="submit") 100 Lei
+
+              .inline-block
+                a(href="http://mpy.ro/zej4ev", target="_blank")
+                  button.btn.btn-primary(type="submit") 300 Lei
+
+              .inline-block
+                a(href="http://mpy.ro/zej5ev", target="_blank")
+                  button.btn.btn-primary(type="submit") 500 Lei
+
+              .inline-block
+                a(href="http://mpy.ro/zej6ev", target="_blank")
+                  button.btn.btn-primary(type="submit") 1000 Lei
+
+              .inline-block
+                a(href="http://mpy.ro/zej7ev", target="_blank")
+                  button.btn.btn-primary(type="submit") Altă sumă
+
+
             .modal-footer
               button.btn.btn-default(type='button', data-dismiss='modal') Închide
       #sms.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
