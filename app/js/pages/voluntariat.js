@@ -89,9 +89,7 @@ module.exports = View.extend({
       lng: 26.912,
       title: 'Bacau',
       infoWindow: {
-        content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br><br>
-          Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>
-          Punct depunere semnaturi: Calea Moldovei, nr. 35</p>'
+        content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br><br>Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>Punct depunere semnaturi: Calea Moldovei, nr. 35</p>'
       }
     });
   map.addMarker({
