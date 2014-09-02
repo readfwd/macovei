@@ -93,8 +93,8 @@ module.exports = View.extend({
       }
     });
   map.addMarker({
-      lat: 47.743904,
-      lng: 21.923732,
+      lat: 47.743443,
+      lng: 26.665534,
       title: 'Botosani',
       infoWindow: {
         content: '<p>Coordonator: Mihai Politic<br>0740.239.069<br>politicmihai@yahoo.com</p>'
