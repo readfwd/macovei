@@ -6,6 +6,10 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
 var $ = require('../shims/jquery');
+<<<<<<< HEAD
+=======
+// var Fixedsticky = require('../../bower_components/filament-fixed/fixedfixed.js');
+>>>>>>> Change menubar.
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
@@ -27,6 +31,7 @@ module.exports = View.extend({
       collection: app.posts,
       el: this.$('[role="posts-collection"]')
     });
+<<<<<<< HEAD
     $(window).scroll(function() {
       var scrollPos = $(this).scrollTop();
       if(scrollPos > 350) {
@@ -35,6 +40,11 @@ module.exports = View.extend({
           $(".navbar").removeClass('navbar-dimmed') // ->> css('background-color', '#232A50');
       }
     });
+=======
+    // Fixedsticky.tests.sticky = false;
+    $('.fixedsticky').fixedsticky();
+    // After fixed-sticky.js
+>>>>>>> Change menubar.
     return this;
   }
 });
