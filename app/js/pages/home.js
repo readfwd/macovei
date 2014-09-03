@@ -6,6 +6,10 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
 var $ = require('../shims/jquery');
+<<<<<<< HEAD
+=======
+// var Fixedsticky = require('../../bower_components/filament-fixed/fixedfixed.js');
+>>>>>>> Change menubar.
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
