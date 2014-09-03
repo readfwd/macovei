@@ -156,6 +156,22 @@ module.exports = View.extend({
         content: '<p>Coordonator: Dan Masca<br>0745.992.463<br>dan@reea.net<br> Punct depunere semnaturi: Piata Republicii, nr. 43</p>'
       }
     });
+    map.addMarker({
+      lat: 47.047522,
+      lng: 21.919097,
+      title: 'Oradea',
+      infoWindow: {
+        content: '<p>Coordonator: Radu Popovici<br>0744.570.848<br>maiaduc@gmail.com<br> Punct depunere semnaturi: str.Calea Aradului, nr. 59</p>'
+      }
+    });
+    map.addMarker({
+      lat: 44.318858,
+      lng: 23.806686,
+      title: 'Craiova',
+      infoWindow: {
+        content: '<p>Coordonator:  Tiberiu Alexandru Brindusoiu<br>0728.253.102<br>tialexius@yahoo.com</p>'
+      }
+    });
     //map.addMarker({
      // lat: 46.164287,
     //  lng: 24.354286,
