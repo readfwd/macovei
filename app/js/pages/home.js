@@ -5,6 +5,8 @@ var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
+var $ = require('../shims/jquery');
+// var Fixedsticky = require('../../bower_components/filament-fixed/fixedfixed.js');
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
@@ -26,6 +28,9 @@ module.exports = View.extend({
       collection: app.posts,
       el: this.$('[role="posts-collection"]')
     });
+    // Fixedsticky.tests.sticky = false;
+    $('.fixedsticky').fixedsticky();
+    // After fixed-sticky.js
     return this;
   }
 });
