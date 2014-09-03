@@ -129,7 +129,7 @@ module.exports = View.extend({
        lng: 27.590446,
        title: 'Iasi',
        infoWindow: {
-         content: '<p>Coordonator: 0745.345.100<br>Dan Radu<br></p>'
+         content: '<p>Coordonator: Viorel Paraschiv<br>0748.997.793<br>paraschiv03@gmail.com</p>'
        }
      });
     map.addMarker({
@@ -140,6 +140,22 @@ module.exports = View.extend({
          content: '<p>Coordonator: <br>Piroska Bogdan<br>0727 214 432<br> piribogdan@gmail.com </p>'
        }
      });
+    map.addMarker({
+      lat: 45.871769,
+      lng: 22.916793,
+      title: 'Deva',
+      infoWindow: {
+        content: '<p>Coordonator: Mirela Cristea<br>0769.684.820<br>mircristea@yahoo.fr<br> Punct depunere semnaturi: Str, Dorobantilor, nr. 30 (Patiseria Paticof, langa Foricon)</p>'
+      }
+    });
+    map.addMarker({
+      lat: 46.543967,
+      lng: 24.561481,
+      title: 'Târgu Mureș',
+      infoWindow: {
+        content: '<p>Coordonator: Dan Masca<br>0745.992.463<br>dan@reea.net<br> Punct depunere semnaturi: Piata Republicii, nr. 43</p>'
+      }
+    });
     //map.addMarker({
      // lat: 46.164287,
     //  lng: 24.354286,
