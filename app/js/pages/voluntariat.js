@@ -92,7 +92,7 @@ module.exports = View.extend({
         content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br><br>Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>Punct depunere semnaturi: Calea Moldovei, nr. 35</p>'
       }
     });
-  map.addMarker({
+    map.addMarker({
       lat: 47.7375721,
       lng: 26.6594085,
       title: 'Botosani',
@@ -100,7 +100,7 @@ module.exports = View.extend({
         content: '<p>Coordonator: Lucian Buium<br>0751.401.127<br>luciabuium700@yahoo.com<br></p>'
       }
     });
-  map.addMarker({
+    map.addMarker({
       lat: 45.694594,
       lng: 27.189102,
       title: 'Focsani',
@@ -108,20 +108,12 @@ module.exports = View.extend({
         content: '<p>Coordonator: Mariana Bondila<br>0723.531.486<br>marianabondila@yahoo.com<br> Punct depunere semnaturi: Str. Revolutiei, nr. 19 (Sud, magazinul alimentar)</p>'
       }
     });
-  map.addMarker({
+    map.addMarker({
       lat: 46.061722,
       lng: 23.584213,
       title: 'Alba Iulia',
       infoWindow: {
         content: '<p>Coordonator:  Ciprian Cucu<br>0722.733.831<br>cucu.ciprian@gmail.com</p>'
-      }
-    });
-  map.addMarker({
-      lat: 47.067297,
-      lng: 26.665534,
-      title: 'Oradea',
-      infoWindow: {
-        content: '<p>Coordonator: Radu Popovici<br>0744.570.848<br>maiaduc@gmail.com<br> Punct depunere semnaturi: str.Calea Aradului, nr. 59</p>'
       }
     });
      map.addMarker({
@@ -170,6 +162,14 @@ module.exports = View.extend({
       title: 'Craiova',
       infoWindow: {
         content: '<p>Coordonator:  Tiberiu Alexandru Brindusoiu<br>0728.253.102<br>tialexius@yahoo.com</p>'
+      }
+    });
+    map.addMarker({
+      lat: 45.264700,
+      lng: 27.961235,
+      title: 'Braila',
+      infoWindow: {
+        content: '<p>Coordonator: Dragan Florin<br>0744.470.578 <br>draganbr75@gmail.com<br></p>'
       }
     });
     //map.addMarker({
