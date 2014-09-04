@@ -7,9 +7,12 @@ var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
 var $ = require('../shims/jquery');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // var Fixedsticky = require('../../bower_components/filament-fixed/fixedfixed.js');
 >>>>>>> Change menubar.
+=======
+>>>>>>> Finish homepage v2 mockup no 1.
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
@@ -31,6 +34,7 @@ module.exports = View.extend({
       collection: app.posts,
       el: this.$('[role="posts-collection"]')
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     $(window).scroll(function() {
@@ -58,6 +62,14 @@ module.exports = View.extend({
 =======
           $(".navbar").removeClass('navbar-dimmed') // ->> css('background-color', '#232A50');
 >>>>>>> Refactoring.
+=======
+    $(document).scroll(function() {
+      var scrollPos = $(this).scrollTop();
+      if(scrollPos > 350) {
+          $(".navbar").css('background-color', '#232A50');
+      } else {
+          $(".navbar").css('background-color', 'rgba(0,0,0,0.25)');
+>>>>>>> Finish homepage v2 mockup no 1.
       }
     });
     return this;
