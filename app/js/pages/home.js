@@ -9,6 +9,7 @@ var $ = require('../shims/jquery');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // var Fixedsticky = require('../../bower_components/filament-fixed/fixedfixed.js');
 >>>>>>> Change menubar.
@@ -19,6 +20,8 @@ var $ = require('../shims/jquery');
 // var Fixedsticky = require('../../bower_components/filament-fixed/fixedfixed.js');
 >>>>>>> Change menubar.
 >>>>>>> Change menubar.
+=======
+>>>>>>> Finish homepage v2 mockup no 1.
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
@@ -45,6 +48,7 @@ module.exports = View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Change menubar.
     $(window).scroll(function() {
@@ -75,6 +79,8 @@ module.exports = View.extend({
 =======
     $(document).scroll(function() {
 =======
+=======
+>>>>>>> Finish homepage v2 mockup no 1.
     $(window).scroll(function() {
 >>>>>>> Refactoring.
       var scrollPos = $(this).scrollTop();
@@ -93,11 +99,6 @@ module.exports = View.extend({
 >>>>>>> Refactoring.
       }
     });
-=======
-    // Fixedsticky.tests.sticky = false;
-    $('.fixedsticky').fixedsticky();
-    // After fixed-sticky.js
->>>>>>> Change menubar.
     return this;
   }
 });
