@@ -1,2 +1,33 @@
 .container
-  h1 Contact
+  h1.text-center Contact
+  .row: .col-sm-4.col-sm-offset-4
+    .well
+      p Ne puteți scrie pe adresa de email 
+        a(href="mailto:team@macoveipresedinte.ro") team@macoveipresedinte.ro
+      p Sau ne puteți vizita la sediul de campanie: 
+      .alert.alert-info.small
+        p Monica Macovei Președinte
+        p Str. C.A. Rosetti. 17, sector 2
+        p Cod poștal 020011
+        p București
+
+    //- form
+    //-   .row
+    //-     .col-sm-3
+    //-       .row
+    //-           label First Name
+    //-           input(type="text", placeholder="Your First Name")
+    //-           label Last Name
+    //-           input(type="text", placeholder="Your Last Name")
+    //-           label Email Address
+    //-           input(type="text", placeholder="Your email address")
+    //-           label Subject
+    //-           select#subject(name="subject")
+    //-             option(value="na" selected="") Choose One
+    //-             option(value="service") General Customer Service
+    //-             option(value="suggestions") Suggestions
+    //-             option(value="product") Product Support
+    //-     .col-sm-5
+    //-       label Message
+    //-       textarea.input-xlarge(name="message", id="message", rows="10")
+    //-     button.btn.btn-primary.pull-right(type="submit") Send
