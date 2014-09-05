@@ -1,0 +1,81 @@
+.photoStripe
+  position: relative
+  height: 100vh
+  width: 100vw
+  color: white
+  overflow: hidden
+  .imgBack
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 200%
+    width: 200%
+    img
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      min-width: 50%;
+      min-height: 50%;
+  @media(max-width: 767px)
+    .imgBack
+      top: -50%;
+      left: -100%;
+  .overlay
+    position: absolute
+    top: 0
+    // bottom: 0
+    background: rgba(0,0,0,0.4)
+    height: 100%
+    width: 100%
+    .callout
+      margin-top: 40vh
+      text-align: center
+      // position: absolute
+      // top: 40%
+      // margin: 0 auto
+      // width: 100%
+      font-size: 2.3em
+      // text-align: center
+    .hotlinks
+      margin-top: 0.5em
+      text-align: center
+      font-size: 1em
+    .quote-bar
+      height: 50px
+      bottom: 0
+      position: absolute
+      bottom: 0
+
+      width: 100%
+      // text-align: center
+      background: rgba(0,0,0,0.50);
+      div
+        position: relative
+        height: 100%
+        .quote
+          span
+            position: absolute
+            top: 50%
+            left: 20%
+            transform: translate3d(-20%, -50%, 0)
+          img
+            position: absolute
+            top: 50%
+            right: 20%
+            transform: translate3d(20%, -50%, 0)
+            width: auto
+            height: 80%
+          @media(max-width: 1200px)
+            img
+              right: 0
+              transform: translateY(-50%)
+      @media(max-width: 767px)
+        div
+          display: none
+    .chevron
+      position: absolute
+      bottom: 55px
+      left: 50%

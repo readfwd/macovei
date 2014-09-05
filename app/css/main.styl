@@ -1,7 +1,7 @@
 @import variables
 @import overrides
 @import media
-@import hero
+@import photoStripe
 @import msie
 @import donatii
 
@@ -10,7 +10,14 @@ body
   line-height: 1.5em
   font-family: font-family-sans
   background: #eee
-  padding-top: 50px
+  // padding-top: 50px
+
+  .navbar
+    background: mm-dark-blue
+    position: fixed
+    top: 0
+    z-index: 1
+    width: 100%
 
   @media (max-width: 767px)
     font-size: 14px
@@ -22,7 +29,16 @@ body
   padding: 15px
   background: white
 
+[data-page='home']
+  .navbar
+    background: rgba(0,0,0,0.50);
+  .navbar-dimmed
+    background: mm-dark-blue;
+  [role="page-container"]
+    padding-top: 0
+
 [role="page-container"]
+  padding-top: 50px
   @media (max-width: 767px)
     background: #eee
     border-top: 0.5em solid rgba(mm-red, 1.0)

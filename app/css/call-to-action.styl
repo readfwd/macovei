@@ -19,7 +19,7 @@
 
   .overlay
     position: absolute
-    top: 0
+    top: 50px
     left: 0
     width: 100%
     height: 100%
@@ -27,8 +27,7 @@
     .social-btns
       position: absolute
       h = 2em
-      left: h * 0.50
-      top: 50%
+      top: h * 2
 
       @media (max-width: 767px)
         display: none
@@ -39,21 +38,24 @@
       a:nth-child(1)
         position: absolute
         top: h * 0.50
+        left: h * 0.50
 
       a:nth-child(2)
         position: absolute
         top: h * 1.75
+        left: h * 0.50
 
       a:nth-child(3)
         position: absolute
         top: h * 3.0
+        left: h * 0.50
 
     .logo
       position: absolute
-      width: 7%
+      width: 5%
       // right: 10%
-      top: 6%
-      left: 2%
+      top: 1em
+      left: 1em
 
       @media (max-width: 767px)
         display: none
@@ -91,26 +93,23 @@
 
 
     .quote-box
-      background: rgba(darken(#0e517e, 30%), 0.9)
-      background: linear-gradient(top, rgba(darken(#0e517e, 30%), 0.9) 0%, rgba(darken(#222d4f, 30%), 0.9) 100%);
-      height: 12em
+      background: rgba(0,0,0,0.45);
+      height: 3em
       border-bottom: 0.5em solid rgba(mm-red, 0.8)
       position: absolute
-      bottom: 1em
+      bottom: 8%
       right: 0
-      width: 50%
+      width: 100%
 
       blockquote
         border: 0
         color: white
-        font-weight: 300
-        font-size: 1.75em
+        font-weight: 400
+        font-size: 1em
         line-height: 1em
         position: absolute
-        top: 50%
-        left: 50%
-        transform: translate3d(-50%, -50%, 0)
-        width: 80%
+        transform: translate3d(50%, 25%, 0)
+
 
         &:before
           content: '\201C'
@@ -127,12 +126,11 @@
 
       .author
         position: absolute
-        bottom: 2em
-        right: 2em
+        right: 0%
+        padding: 0 10%
+        transform: translate3d(-50%, 25%, 0)
 
       @media (min-width: 900px) and (max-width: 1024px)
-        font-size: 0.7em
-        height: 14em
         blockquote:before
           margin-left: -16px
 
@@ -140,8 +138,6 @@
           transform: scale(0.8)
 
       @media (min-width: 768px) and (max-width: 900px)
-        font-size: 0.5em
-        height: 14em
         blockquote:before
           margin-left: -12px
 
@@ -154,7 +150,6 @@
         // z-index: -20
         blockquote:before
           margin-left: -16px
-
 .call-to-action
 
   div:nth-child(1)

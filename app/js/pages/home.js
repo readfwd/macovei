@@ -5,6 +5,7 @@ var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
+var $ = require('../shims/jquery');
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
@@ -17,7 +18,7 @@ module.exports = View.extend({
     //   model: new Backbone.Model({
     //     content: 'Monica Macovei, apărătoarea iconică a libertăților românilor.',
     //     author: 'Le Monde',
-    //     authorLogo: 'assets/img/logo-le-monde.png'
+        // authorLogo: 'assets/img/logo-le-monde.png'
     //   }),
     //   el: this.$('[role="quote-box"]')
     // });
@@ -25,6 +26,14 @@ module.exports = View.extend({
     this.postsView = new PostsView({
       collection: app.posts,
       el: this.$('[role="posts-collection"]')
+    });
+    $(window).scroll(function() {
+      var scrollPos = $(this).scrollTop();
+      if(scrollPos > 350) {
+          $(".navbar").addClass('navbar-dimmed') // ->> css('background-color', '#232A50');
+      } else {
+          $(".navbar").removeClass('navbar-dimmed') // ->> css('background-color', '#232A50');
+      }
     });
     return this;
   }
