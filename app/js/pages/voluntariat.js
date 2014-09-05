@@ -57,7 +57,7 @@ module.exports = View.extend({
       lng: 26.094637,
       title: 'Bucuresti',
       infoWindow: {
-        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.30<br>team@macoveipresedinte.ro</p>'
+        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.30<br>team@macoveipresedinte.ro<br>Adresa: Str. C.A. Rosetti nr. 17</p>'
       }
     });
     map.addMarker({
@@ -200,5 +200,7 @@ module.exports = View.extend({
       }
     });
   }
+
+
 
 });
