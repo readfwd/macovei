@@ -40,8 +40,12 @@ module.exports = View.extend({
       if(scrollPos > 350) {
           $(".navbar").css('background-color', '#232A50');
       } else {
+<<<<<<< HEAD
           $(".navbar").css('background-color', 'rgba(0,0,0,0.25)');
 >>>>>>> Finish homepage v2 mockup no 1.
+=======
+          $(".navbar").css('background-color', 'rgba(0,0,0,0.50)');
+>>>>>>> Update the photoStripe.
       }
     });
     return this;
