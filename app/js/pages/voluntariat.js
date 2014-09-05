@@ -129,7 +129,7 @@ module.exports = View.extend({
        lng: 21.228160,
        title: 'Timisoara',
        infoWindow: {
-         content: '<p>Coordonator: <br>Piroska Bogdan<br>0727 214 432<br> piribogdan@gmail.com </p>'
+         content: '<p>Coordonator: <br>Piroska Bogdan<br>0727 214 432<br> piribogdan@gmail.com <br/>Avem doua corturi amplasate unde puteti semna intre orele 10:00-18:00: <br />(1) langa magazinul Bega in fata ceasului floral <br />(2) piata 700, vis-a-vis de statia de troleu.</p>'
        }
      });
     map.addMarker({
