@@ -1,4 +1,4 @@
-nav.navbar.fixedsticky(role="nagivation")
+nav.navbar.navbar-fixed-top(role="nagivation")
   .container
     .navbar-header
       button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-collapse")
@@ -6,7 +6,8 @@ nav.navbar.fixedsticky(role="nagivation")
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a(class="navbar-brand", href="/") Macovei 2014
+      a(class="navbar-brand", href="/")
+        img(src="assets/img/logo-macovei-albastru.jpg")
 
     .collapse.navbar-collapse.navbar-right(id="navbar-collapse")
       ul.nav.navbar-nav
@@ -72,4 +73,4 @@ nav.navbar.fixedsticky(role="nagivation")
         //-     li: a(href="/media/noutati") Noutăți
         //-     li: a(href="/media/kit-de-presa") Kit de presă
         //-
-        //- li: a(href="/contact") Contact
+        li: a(href="/contact/") Contact
