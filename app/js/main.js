@@ -22,6 +22,9 @@ module.exports = {
       if (browser.msie) {
         $('html').addClass('msie');
       }
+      if (browser.android || browser.windowsphone || browser.ios || browser.blackberry) {
+        $('.photoStripe video').remove();
+      }
 
       // Asynchronously load our main CSS file.
       loadcss('/css/main.css');
