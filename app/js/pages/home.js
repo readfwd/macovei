@@ -27,12 +27,12 @@ module.exports = View.extend({
       collection: app.posts,
       el: this.$('[role="posts-collection"]')
     });
-    $(document).scroll(function() {
+    $(window).scroll(function() {
       var scrollPos = $(this).scrollTop();
       if(scrollPos > 350) {
-          $(".navbar").css('background-color', '#232A50');
+          $(".navbar").addClass('navbar-dimmed') // ->> css('background-color', '#232A50');
       } else {
-          $(".navbar").css('background-color', 'rgba(0,0,0,0.50)');
+          $(".navbar").removeClass('navbar-dimmed') // ->> css('background-color', '#232A50');
       }
     });
     return this;
