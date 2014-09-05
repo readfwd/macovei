@@ -1,7 +1,7 @@
 @import variables
 @import overrides
 @import media
-@import hero
+@import photoStripe
 @import msie
 @import donatii
 
@@ -13,26 +13,32 @@ body
   // padding-top: 50px
 
   .navbar
-    background: rgba(0,0,0,0.25);
+    background: mm-dark-blue
     position: fixed
     top: 0
     z-index: 1
     width: 100%
-    // filter: blur(1px);
-
-
 
   @media (max-width: 767px)
     font-size: 14px
     &[data-page='home']
-      padding-top: 43px + 20 * 14px
+      // padding-top: 35%
 
 .content
   margin-top: 15px
   padding: 15px
   background: white
 
+[data-page='home']
+  .navbar
+    background: rgba(0,0,0,0.50);
+  .navbar-dimmed
+    background: mm-dark-blue;
+  [role="page-container"]
+    padding-top: 0
+
 [role="page-container"]
+  padding-top: 50px
   @media (max-width: 767px)
     background: #eee
     border-top: 0.5em solid rgba(mm-red, 1.0)
