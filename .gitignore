@@ -7,6 +7,7 @@ npm-debug.log
 .tmp
 coverage
 app/js/lib/templates.js
+app/js/lib/posts-templates.js
 app/js/lib/posts-json.json
 app/bower_components
 *.log
