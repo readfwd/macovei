@@ -19,11 +19,19 @@
       margin: auto;
       min-width: 50%;
       min-height: 50%;
+<<<<<<< HEAD
       overflow: hidden
   @media(max-width: 767px)
+=======
+
+  @media(min-width: 500px) (max-width: 767px)
+>>>>>>> Remove bottom bar and adjust positionings.
     .imgBack
       top: -50%;
-      left: -100%;
+      left: -110%;
+  @media(max-width: 500px)
+    .imgBack
+      left: -140%;
   .overlay
     position: absolute
     top: 0
@@ -73,9 +81,9 @@
             img
               right: 0
               transform: translateY(-50%)
-      @media(max-width: 767px)
-        div
-          display: none
+    @media(max-width: 767px)
+      .quote-bar
+        display: none
     .chevron
       position: absolute
       bottom: 55px
