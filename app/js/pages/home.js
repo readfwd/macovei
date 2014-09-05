@@ -37,6 +37,7 @@ module.exports = View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     $(window).scroll(function() {
       var scrollPos = $(this).scrollTop();
       if(scrollPos > 350) {
@@ -64,16 +65,23 @@ module.exports = View.extend({
 >>>>>>> Refactoring.
 =======
     $(document).scroll(function() {
+=======
+    $(window).scroll(function() {
+>>>>>>> Refactoring.
       var scrollPos = $(this).scrollTop();
       if(scrollPos > 350) {
-          $(".navbar").css('background-color', '#232A50');
+          $(".navbar").addClass('navbar-dimmed') // ->> css('background-color', '#232A50');
       } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
           $(".navbar").css('background-color', 'rgba(0,0,0,0.25)');
 >>>>>>> Finish homepage v2 mockup no 1.
 =======
           $(".navbar").css('background-color', 'rgba(0,0,0,0.50)');
 >>>>>>> Update the photoStripe.
+=======
+          $(".navbar").removeClass('navbar-dimmed') // ->> css('background-color', '#232A50');
+>>>>>>> Refactoring.
       }
     });
     return this;
