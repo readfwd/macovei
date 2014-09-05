@@ -3,8 +3,7 @@
   height: 100vh
   width: 100vw
   color: white
-  // img
-    // overflow: hidden
+  overflow: hidden
   .imgBack
     position: absolute;
     top: -50%;
@@ -20,10 +19,14 @@
       margin: auto;
       min-width: 50%;
       min-height: 50%;
-  @media(max-width: 767px)
+
+  @media(min-width: 500px) (max-width: 767px)
     .imgBack
       top: -50%;
-      left: -100%;
+      left: -110%;
+  @media(max-width: 500px)
+    .imgBack
+      left: -140%;
   .overlay
     position: absolute
     top: 0
@@ -73,10 +76,13 @@
             img
               right: 0
               transform: translateY(-50%)
-      @media(max-width: 767px)
-        div
-          display: none
+    @media(max-width: 767px)
+      .quote-bar
+        display: none
     .chevron
       position: absolute
       bottom: 55px
       left: 50%
+  video
+    min-width: 100%
+    min-height: 100%
