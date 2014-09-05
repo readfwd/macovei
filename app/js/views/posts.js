@@ -19,6 +19,6 @@ module.exports = View.extend({
     var view = new PostPreView({
       model: post
     });
-    this.$('[role="posts"]').append(view.render().el);
+    this.$('[role="posts"]').prepend(view.render().el);
   }
 });

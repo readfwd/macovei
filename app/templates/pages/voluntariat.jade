@@ -20,7 +20,7 @@
           p <em>Monica Macovei</em>
         .col-sm-4
           p.text-center
-            a.btn.btn-lg.btn-primary(href="/assets/misc/formular-final-fara-adresa.pdf", rel="download")
+            a.btn.btn-lg.btn-block.btn-success(href="/assets/misc/formular-final-fara-adresa.pdf", rel="download")
              | Descarcă formularul
              br
              |  pentru semnături.
@@ -43,10 +43,29 @@
       h1 
         a(id="lista-coordonatori") 
         | Coordonatori strângere semnături
-      table.table.table-bordered.small#volunteers
-        tr
-          th Locație
-          th Contact
+      .table-responsive
+        table.table.table-bordered.small#volunteers
+          tr
+            th Oraș
+            th Coordonator(i)
+            th Telefon
+            th Email
+            th Adresă colectare
+          each mark in markers 
+            tr
+              td #{mark.title}
+              - var htmlobject = $(mark.infoWindow.content).html();
+              //- - console.log(htmlobject);
+              //- - var htmlobject = htmlobject[0].innerHTML.html(value).text();
+              td #{mark.infoWindow.coordinators}
+              td 
+                a(href="tel:!{mark.infoWindow.phone}") #{mark.infoWindow.phone}
+              td 
+                a(href="!{mark.infoWindow.email}") !{mark.infoWindow.email}
+              td #{mark.infoWindow.address}
+
+
+
 
       .alert.alert-info.small
         p Dacă vreți să strângeți semnături din locuri publice sau de la evenimente, vă puteți printa afișe pe format A3 sau A4 de mai jos.
