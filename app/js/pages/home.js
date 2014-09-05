@@ -32,7 +32,7 @@ module.exports = View.extend({
       if(scrollPos > 350) {
           $(".navbar").css('background-color', '#232A50');
       } else {
-          $(".navbar").css('background-color', 'rgba(0,0,0,0.25)');
+          $(".navbar").css('background-color', 'rgba(0,0,0,0.50)');
       }
     });
     return this;
