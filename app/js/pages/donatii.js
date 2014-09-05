@@ -21,6 +21,5 @@ module.exports = View.extend({
     var t = $(e.target);
     t.addClass('active');
     t.html('<i class="fa fa-fw fa-spin fa-spinner"></i>');
-    console.log(t);
   }
 });
