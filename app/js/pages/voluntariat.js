@@ -85,11 +85,11 @@ var markers = [
       lng: 27.189102,
       title: 'Focsani',
       infoWindow: {
-        content: '<p>Coordonator: Raluca Soare<br>0745.197.183<br>soare.raluca2009@gmail.com<br> Punct depunere semnaturi: Str. Revolutiei, nr. 19 (Sud, magazinul alimentar)</p>',
+        content: '<p>Coordonator: Raluca Soare<br>0745.197.183<br>soare.raluca2009@gmail.com</p>',
         coordinators: 'Raluca Soare',
         phone: '0745.197.183',
         email: 'soare.raluca2009@gmail.com',
-        address: 'Str. Revolutiei, nr. 19 (Sud, magazinul alimentar)'
+        address: ''
 
       }
     }, 
