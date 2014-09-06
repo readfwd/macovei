@@ -12,7 +12,7 @@ var markers = [
       lng: 26.094637,
       title: 'Bucuresti',
       infoWindow: {
-        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.30<br>team@macoveipresedinte.ro<br>Adresa: Str. C.A. Rosetti nr. 17 <br> la "Lokal", Str M. Eminescu, nr. 57A.</p>',
+        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.36<br>team@macoveipresedinte.ro<br>Adresa: Str. C.A. Rosetti nr. 17 <br> la "Lokal", Str M. Eminescu, nr. 57A.</p>',
         coordinators: 'Alina Daniela Bogdan & Mircea Șerdin',
         phone: '031.860.11.30',
         email: 'team@macoveipresedinte.ro',
@@ -288,7 +288,7 @@ module.exports = View.extend({
       lng: 26.094637,
       title: 'Bucuresti',
       infoWindow: {
-        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.30<br>team@macoveipresedinte.ro</p>'
+        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.36<br>team@macoveipresedinte.ro</p>'
       }
     }];
     // var tabel = this.$('#volunteers tbody');
