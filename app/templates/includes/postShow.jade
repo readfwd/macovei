@@ -1,4 +1,15 @@
 .container.postShow
-  .content
-    p #{locals.date}
-    div !{locals.content}
+  .row
+    .col-md-2.hidden-sm.hidden-xs
+      if locals.thumb
+        img.img-responsive(src="#{locals.thumb}", style="margin-top: 1em;")
+    .col-md-8.col-sm-10.col-sm-offset-1.content
+      h2: strong #{locals.title}
+      if locals.author
+        p.small #{locals.author}
+
+      div.serif(style="margin-top: 2em;") !{locals.content}
+      small Data: #{locals.date}
+        if locals.source
+          span  / Sursa: 
+            a(href="#{locals.source}") #{locals.source}

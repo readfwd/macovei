@@ -241,13 +241,19 @@ gulp.task('posts', function () {
       var p = locals.preview;
       var thumb = locals.thumb;
       var title = locals.title;
+      var author = locals.author;
+      var source = locals.source;
+      var tags = locals.tags;
       json[s] = {
         date: d,
         slug: s,
         preview: p,
         content: c,
         thumb: thumb,
-        title: title
+        title: title,
+        author: author,
+        source: source,
+        tags: tags,
       };
     }
   }

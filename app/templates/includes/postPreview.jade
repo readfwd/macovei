@@ -1,15 +1,35 @@
-.post
-  if locals.thumb
-    .row
-      .col-md-2.col-sm-3.hidden-xs
-        a(href="#{locals.url}", target="_blank")
-          img.img-responsive(src="#{locals.thumb}")
-      .col-md-10.col-sm-9
-        a.div(href="#{locals.url}", target="_blank") !{locals.preview}
-        div.clearfix
-          a.btn.btn-lg.btn-default.pull-right(href="#{locals.url}", target="_blank") Citește
-  else
-    a.div(href="#{locals.url}", target="_blank") !{locals.preview}
-    div.clearfix
-      a.btn.btn-lg.btn-default.pull-right(href="#{locals.url}", target="_blank") Citește
-  hr
+.content
+  .post
+    .media
+      a.pull-left(href="#{locals.url}")
+        img.media-object(src="#{locals.thumb}", style="max-width: 12em;")
+      .media-body
+        a(href="#{locals.url}")
+          h3.media-heading.post-title !{locals.title}
+        blockquote: .small !{locals.preview}
+
+
+
+    //- if locals.thumb
+    //-   .row
+    //-     .col-md-2.col-sm-3.hidden-xs
+    //-       p.small #{locals.date}
+    //-       a(href="#{locals.url}", target="_blank")
+    //-         img.img-responsive(src="#{locals.thumb}")
+    //-     .col-md-10.col-sm-9
+    //-       h3.post-title(style="margin-top: 0;")
+    //-         a.div(href="#{locals.url}", target="_blank") !{locals.title}
+    //-       blockquote: .small !{locals.preview}
+    //-       if locals.author
+    //-         .small Autor: #{locals.author}
+    //-       if locals.source
+    //-         .small 
+    //-           a(href="#{locals.source}", target="_blank") Sursa
+
+    //-       div.clearfix
+    //-         a.btn.btn-lg.btn-default.pull-right(href="#{locals.url}", target="_blank") Citește
+    //- else
+    //-   a.div(href="#{locals.url}", target="_blank") !{locals.preview}
+    //-   div.clearfix
+    //-     a.btn.btn-lg.btn-default.pull-right(href="#{locals.url}", target="_blank") Citește
+    //- hr
