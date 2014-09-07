@@ -12,11 +12,11 @@ var markers = [
       lng: 26.094637,
       title: 'Bucuresti',
       infoWindow: {
-        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.30<br>team@macoveipresedinte.ro<br>Adresa: Str. C.A. Rosetti nr. 17</p>',
+        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.36<br>team@macoveipresedinte.ro<br>Adresa: Str. C.A. Rosetti nr. 17 <br> la "Lokal", Str M. Eminescu, nr. 57A.</p>',
         coordinators: 'Alina Daniela Bogdan & Mircea Șerdin',
         phone: '031.860.11.30',
         email: 'team@macoveipresedinte.ro',
-        address: 'Str. C.A. Rosetti nr. 17'
+        address: '(1)Sediul de campanie: Str. C.A. Rosetti nr. 17 & (2) la "Lokal", Str M. Eminescu, nr. 57A.'
       },
     },
     {
@@ -48,11 +48,11 @@ var markers = [
       lng: 28.047494,
       title: 'Galati',
       infoWindow: {
-        content: '<p>Coordonator: George Schin<br>0744.613.117<br>schingeorge@yahoo.com</p>',
+        content: '<p>Coordonator: George Schin<br>0744.613.117<br>schingeorge@yahoo.com<br>Punct strângere semnături : birou mediator Anca Simona Cinepa Str  N Bălcescu nr 56 ( in curte la demisol)</p>',
         coordinators: 'George Schin',
         phone: '0744.613.117',
         email: 'schingeorge@yahoo.com',
-        address: ''
+        address: 'Birou mediator "Anca Simona Cinepa" Str  N Bălcescu nr 56 ( in curte la demisol)'
       }
     }, 
     {
@@ -85,11 +85,11 @@ var markers = [
       lng: 27.189102,
       title: 'Focsani',
       infoWindow: {
-        content: '<p>Coordonator: Mariana Bondila<br>0723.531.486<br>marianabondila@yahoo.com<br> Punct depunere semnaturi: Str. Revolutiei, nr. 19 (Sud, magazinul alimentar)</p>',
-        coordinators: 'Mariana Bondila',
-        phone: '0723.531.486',
-        email: 'marianabondila@yahoo.com',
-        address: 'Str. Revolutiei, nr. 19 (Sud, magazinul alimentar)'
+        content: '<p>Coordonator: Raluca Soare<br>0745.197.183<br>soare.raluca2009@gmail.com</p>',
+        coordinators: 'Raluca Soare',
+        phone: '0745.197.183',
+        email: 'soare.raluca2009@gmail.com',
+        address: ''
 
       }
     }, 
@@ -111,10 +111,10 @@ var markers = [
        title: 'Iasi',
        infoWindow: {
          content: '<p>Coordonator: Viorel Paraschiv<br>0748.997.793<br>paraschiv03@gmail.com</p>',
-         coordinators: 'Viorel Paraschiv',
+         coordinators: 'Viorel Paraschiv & Ambroz Octav Constantin',
          phone: '0748.997.793',
          email: 'paraschiv03@gmail.com',
-         address: ''
+         address: '(1)Strada "Stefan Cel Mare si Sfânt" la Tineret 2000 (popcorn vis-a-vis sediul PDL si PSD) sau (2) strada Bacinshi nr 2, bl C16-vis-a-vis de stația de tramvai de la Billa Gara sau lângă cofetăria Teiul. '
        }
      }, 
      {
@@ -288,7 +288,7 @@ module.exports = View.extend({
       lng: 26.094637,
       title: 'Bucuresti',
       infoWindow: {
-        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.30<br>team@macoveipresedinte.ro</p>'
+        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.36<br>team@macoveipresedinte.ro</p>'
       }
     }];
     // var tabel = this.$('#volunteers tbody');

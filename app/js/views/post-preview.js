@@ -10,9 +10,13 @@ module.exports = window.postView = View.extend({
 
   render: function () {
     this.$el.html(this.template({
+      title: posts[this.model.attributes.slug].title,
       preview: posts[this.model.attributes.slug].preview,
       url: '/posts/' + this.model.attributes.slug,
-      thumb: posts[this.model.attributes.slug].thumb
+      thumb: posts[this.model.attributes.slug].thumb,
+      author: posts[this.model.attributes.slug].author,
+      source: posts[this.model.attributes.slug].source,
+      date: posts[this.model.attributes.slug].date,
     }));
     return this;
   }

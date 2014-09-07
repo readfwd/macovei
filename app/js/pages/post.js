@@ -26,7 +26,9 @@ module.exports = View.extend({
       slug: this.locals.slug,
       preview: this.locals.preview,
       thumb: this.locals.thumb,
-      title: this.locals.title
+      title: this.locals.title,
+      author: this.locals.author,
+      source: this.locals.source,
     }));
     return this;
   }
