@@ -1,0 +1,23 @@
+'use strict';
+
+var Backbone = require('../shims/backbone');
+var View = Backbone.View;
+var templates = require('../lib/templates');
+var posts = require('../lib/posts-json.json');
+
+module.exports = window.postView = View.extend({
+  template: templates.includes.postPreview,
+  render: function () {
+    this.$el.addClass('item');
+    this.$el.html(this.template({
+      title: posts[this.model.attributes.slug].title,
+      preview: posts[this.model.attributes.slug].preview,
+      url: '/posts/' + this.model.attributes.slug,
+      thumb: posts[this.model.attributes.slug].thumb,
+      author: posts[this.model.attributes.slug].author,
+      source: posts[this.model.attributes.slug].source,
+      date: posts[this.model.attributes.slug].date,
+    }));
+    return this;
+  }
+});

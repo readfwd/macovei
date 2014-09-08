@@ -7,52 +7,68 @@
       //-     .btn.btn-md.btn-primary#romaniaCenters România
       //-     .btn.btn-md.btn-primary#worldWideCenters Diaspora
       #map
-      p.text-center
-        a.btn.btn-lg.btn-primary(href="/assets/misc/formular-final-fara-adresa.pdf", rel="download")
-         | Descarcă formularul
-         br.visible-xs
-         |  pentru semnături.
-
-      p Dragi susținători,
-      p Vă mulțumesc pentru semnăturile pe care le strângeți ca să pot candida la alegerile prezidențiale.
-      p Persoana care strânge semnăturile trebuie să se asigure că semnatarul a completat corect și complet rubricile și să verifice valabilitatea datelor fiecărui semnatar, pentru care își asumă răspunderea, conform declarației. O semnătură greșită invalidează toată pagina.
-      p Persoana care strânge semnăturile trebuie să completeze și să semneze declarația din josul paginii. Tabelele fără declarația din josul paginii semnată de cel care a colectat semnăturile nu sunt valabile.
-      p O persoană poate semna o singură dată și pentru un singur candidat. Și cel care colectează semnaturile poate semna, cu conditia să semneze o singura dată și pentru un singur candidat.
-      p Puteți trimite formularele, de preferabil prin curier, prin poștă sau le puteți aduce personal
-        strong  până la data de 20 Septembrie
-        |  la adresa:
       .row
-        .col-md-8.col-md-offset-2
+        .col-sm-8.small
+          p Dragi susținători,
+          p Vă mulțumesc pentru semnăturile pe care le strângeți ca să pot candida la alegerile prezidențiale.
+          p Persoana care strânge semnăturile trebuie să se asigure că semnatarul a completat corect și complet rubricile și să verifice valabilitatea datelor fiecărui semnatar, pentru care își asumă răspunderea, conform declarației. O semnătură greșită invalidează toată pagina.
+          p Persoana care strânge semnăturile trebuie să completeze și să semneze declarația din josul paginii. Tabelele fără declarația din josul paginii semnată de cel care a colectat semnăturile nu sunt valabile.
+          p O persoană poate semna o singură dată și pentru un singur candidat. Și cel care colectează semnaturile poate semna, cu conditia să semneze o singura dată și pentru un singur candidat.
+          p Puteți trimite formularele, de preferabil prin curier, prin poștă sau le puteți aduce personal
+            strong  până la data de 20 Septembrie la adresa din București (Rosetti 17) sau data de 17 la celelalte adrese din Germania și Statele Unite ale Americii.
+          p Vă mulțumesc!
+          p <em>Monica Macovei</em>
+        .col-sm-4
+          p.text-center
+            a.btn.btn-lg.btn-block.btn-success(href="/assets/misc/formular-final-fara-adresa.pdf", rel="download")
+             | Descarcă formularul
+             br
+             |  pentru semnături.
           .alert.alert-info.small
             p Monica Macovei Președinte
             p Str. C.A. Rosetti. 17, sector 2
             p Cod poștal 020011
             p București
-      p Venim în sprijinul dumneavoastră și vă punem la dispoziție și o adresă de corespondență în Germania, deschisă la <strong>Deutsche Post</strong>, și o alta la New York pentru cei care doresc să trimită listele cu semnături pentru candidatura mea la Președinția României, dar au dificultăți să le trimită direct în România. Adresa este:
-      .row
-        .col-md-6
           .alert.alert-info.small
             p.strong Monica Macovei
             p Cutia Poştala 112
             p Wertingen, Bayern
             p.strong Deutschland
-
-        .col-md-6
           .alert.alert-info.small
             p.strong Monica Macovei
             p PO Box 577
             p New York, 10030, New York State
             p.strong United States of America
+            //- p Venim în sprijinul dumneavoastră și vă punem la dispoziție și o adresă de corespondență în Germania, deschisă la <strong>Deutsche Post</strong>, și o alta la New York pentru cei care doresc să trimită listele cu semnături pentru candidatura mea la Președinția României, dar au dificultăți să le trimită direct în România. Adresa este:
+      h1 
+        a(id="lista-coordonatori") 
+        | Coordonatori strângere semnături
+      .table-responsive
+        table.table.table-bordered.small#volunteers
+          tr
+            th Oraș
+            th Coordonator(i)
+            th Telefon
+            th Email
+            th Adresă colectare
+          each mark in markers 
+            tr
+              td #{mark.title}
+              - var htmlobject = $(mark.infoWindow.content).html();
+              //- - console.log(htmlobject);
+              //- - var htmlobject = htmlobject[0].innerHTML.html(value).text();
+              td #{mark.infoWindow.coordinators}
+              td 
+                a(href="tel:!{mark.infoWindow.phone}") #{mark.infoWindow.phone}
+              td 
+                a(href="!{mark.infoWindow.email}") !{mark.infoWindow.email}
+              td #{mark.infoWindow.address}
+
+
+
 
       .alert.alert-info.small
         p Dacă vreți să strângeți semnături din locuri publice sau de la evenimente, vă puteți printa afișe pe format A3 sau A4 de mai jos.
         .text-center
           a.btn.btn-sm.btn-primary.poster-btn(href="/assets/misc/fwdafisepentruvoluntariA3.zip", rel="download") Descarcă afiș format A3
           a.btn.btn-sm.btn-primary.poster-btn(href="/assets/misc/fwdafisepentruvoluntariA4.zip", rel="download") Descarcă afiș format A4
-      p Vă mulțumesc!
-      p <em>Monica Macovei</em>
-
-      table.table.table-bordered#volunteers
-        tr
-          th Locație
-          th Contact
