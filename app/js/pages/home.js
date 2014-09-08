@@ -43,6 +43,14 @@ module.exports = View.extend({
       setTimeout(function () {
         x.layout();
       }, 100);
+    $(window).scroll(function() {
+      var scrollPos = $(this).scrollTop();
+      if(scrollPos > 350) {
+          $(".navbar").addClass('navbar-dimmed') // ->> css('background-color', '#232A50');
+      } else {
+          $(".navbar").removeClass('navbar-dimmed') // ->> css('background-color', '#232A50');
+      }
+    });
     return this;
   }
 });
