@@ -1,7 +1,7 @@
 .content
   .post
     .media
-      a.pull-left(href="#{locals.url}")
+      a.pull-left.hidden-xs(href="#{locals.url}")
         img.media-object(src="#{locals.thumb}", style="max-width: 12em;")
       .media-body
         a(href="#{locals.url}")
@@ -23,7 +23,7 @@
     //-       if locals.author
     //-         .small Autor: #{locals.author}
     //-       if locals.source
-    //-         .small 
+    //-         .small
     //-           a(href="#{locals.source}", target="_blank") Sursa
 
     //-       div.clearfix
