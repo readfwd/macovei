@@ -1,4 +1,8 @@
+.post
+  a(href="#{locals.url}")
+    img(src="#{locals.thumb}", style="width: 100%;")
 .content
+<<<<<<< HEAD
   .post
     .media
       a.pull-left.hidden-xs(href="#{locals.url}")
@@ -8,6 +12,11 @@
           h3.media-heading.post-title !{locals.title}
         blockquote: .small !{locals.preview}
         p.small Publicat: #{locals.date}
+=======
+  a(href="#{locals.url}")
+    h3.media-heading.post-title !{locals.title}
+  blockquote: .small !{locals.preview}
+>>>>>>> Create special page for Posts.
 
 
 

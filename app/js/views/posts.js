@@ -7,6 +7,9 @@ var PostPreView = require('./post-preview');
 
 module.exports = View.extend({
   template: templates.includes.postsCollection,
+  initialize: function () {
+    this.render();
+  },
   render: function () {
     this.$el.html(this.template());
     this.addAllPosts();

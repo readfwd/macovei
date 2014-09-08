@@ -49,6 +49,7 @@ module.exports = View.extend({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Change menubar.
     $(window).scroll(function() {
@@ -97,8 +98,24 @@ module.exports = View.extend({
 =======
           $(".navbar").removeClass('navbar-dimmed') // ->> css('background-color', '#232A50');
 >>>>>>> Refactoring.
+=======
+    var container = this.$('#posts')[0];
+      var x = new window.Masonry( container, {
+        itemSelector: '.item',
+        columnWidth: 20,
+      });
+
+      if ($(window).width() > 768) {
+        x.gutter = 10;
+>>>>>>> Create special page for Posts.
       }
-    });
+      else {
+        x.gutter = 90;
+        }
+      x.bindResize();
+      setTimeout(function () {
+        x.layout();
+      }, 100);
     return this;
   }
 });
