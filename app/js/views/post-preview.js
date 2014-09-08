@@ -7,8 +7,8 @@ var posts = require('../lib/posts-json.json');
 
 module.exports = window.postView = View.extend({
   template: templates.includes.postPreview,
-
   render: function () {
+    this.$el.addClass('item');
     this.$el.html(this.template({
       title: posts[this.model.attributes.slug].title,
       preview: posts[this.model.attributes.slug].preview,

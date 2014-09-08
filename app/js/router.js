@@ -17,6 +17,7 @@ var DonatiiThankYouPage = require('./pages/donatii-thankyou');
 var VoluntariatPage = require('./pages/voluntariat');
 var Eroare404 = require('./pages/eroare404');
 var PostPage = require('./pages/post');
+var PostsPage = require('./pages/posts-home');
 
 module.exports = Router.extend({
   routes: {
@@ -37,7 +38,8 @@ module.exports = Router.extend({
     'donatii-thankyou/': 'donatiiThankyou',
     'sustinere-financiara-multumiri/': 'donatiiThankyou',
     '404': 'eroare404',
-    'posts/:slug': 'post'
+    'posts/:slug': 'post',
+    'posts/': 'posts'
 
   },
 
@@ -104,5 +106,9 @@ module.exports = Router.extend({
       slug: slug
     }));
     // $('body').attr('data-page', 'semnaturi');
+  },
+
+  posts: function () {
+    this.trigger('newPage', new PostsPage({}));
   }
 });
