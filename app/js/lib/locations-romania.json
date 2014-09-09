@@ -175,11 +175,11 @@
     lng: 27.961235,
     title: 'Braila',
     infoWindow: {
-      content: '<p>Coordonator: Dragan Florin<br>0744.470.578 <br>draganbr75@gmail.com<br></p>',
+      content: '<p>Coordonator: Dragan Florin<br>0744.470.578 <br>draganbr75@gmail.com<br>Puncte strângere semnături: (1) Strada Mihai Eminescu, blocul Casa de Modă - intrarea prin spate, la etajul 6. <br/> (2) ProDomus pe Calea Călăraşilor.</p>',
       coordinators: 'Dragan Florin',
       phone: '0744.470.578',
       email: 'draganbr75@gmail.com',
-      address: ''
+      address: '(1) Strada Mihai Eminescu, blocul Casa de Modă - intrarea prin spate, la etajul 6. & (2) ProDomus pe Calea Călăraşilor.'
     }
   },
   {
