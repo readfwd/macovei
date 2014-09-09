@@ -11,21 +11,26 @@
   //-     div.serif(style="margin-top: 2em;") !{locals.content}
   //-     small Data: #{locals.date}
   //-       if locals.source
-  //-         span  / Sursa: 
+  //-         span  / Sursa:
   //-           a(href="#{locals.source}") #{locals.source}
 .row
   .col-md-8.col-sm-10.col-md-offset-2.col-sm-offset-1
     .article
       header
         h1: strong #{locals.title}
-        if locals.author
-          p.small de 
-            span.author #{locals.author}
+        .row
+          .col-xs-6
+            btn.btn-facebook
+              i.fa.fa-facebook.fa-inverse
+          .col-xs-6
+            if locals.author
+              p.small(style="text-align: right") de #{' '}
+                span.author  #{locals.author}
       .content !{locals.content}
 
       footer
         small Publicat: #{locals.date}
           //- time.updated(datetime="#{locals.date}", pubdate) #{locals.date}
           if locals.source
-            span  / Sursa: 
+            span  / Sursa:
               a(href="#{locals.source}") #{locals.source}
