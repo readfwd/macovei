@@ -18,14 +18,14 @@
     .article
       header
         h1: strong #{locals.title}
-        time.updated(datetime="#{locals.date}", pubdate) #{locals.date}
         if locals.author
           p.small de 
             span.author #{locals.author}
       .content !{locals.content}
 
       footer
-        small Data: #{locals.date}
+        small Publicat: #{locals.date}
+          //- time.updated(datetime="#{locals.date}", pubdate) #{locals.date}
           if locals.source
             span  / Sursa: 
               a(href="#{locals.source}") #{locals.source}

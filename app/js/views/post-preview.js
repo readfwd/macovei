@@ -4,6 +4,9 @@ var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
 var posts = require('../lib/posts-json.json');
+var moment = require('moment/min/moment-with-locales');
+moment.locale('ro');
+
 
 module.exports = window.postView = View.extend({
   template: templates.includes.postPreview,
@@ -16,7 +19,7 @@ module.exports = window.postView = View.extend({
       thumb: posts[this.model.attributes.slug].thumb,
       author: posts[this.model.attributes.slug].author,
       source: posts[this.model.attributes.slug].source,
-      date: posts[this.model.attributes.slug].date,
+      date: moment(posts[this.model.attributes.slug].date).fromNow(),
     }));
     return this;
   }
