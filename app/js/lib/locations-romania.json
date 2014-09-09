@@ -241,5 +241,17 @@
       email: 'minculescuiulia@yahoo.com',
       address: ''
     }
+  },
+  {
+    lat: 45.791208,
+    lng: 24.150867,
+    title: 'Sibiu',
+    infoWindow: {
+      content: '<p>Coordonator:  Adrian Sandu <br>0743.016.368<br>adsandu18@yahoo.com</p>',
+      coordinators: 'Adrian Sandu',
+      phone: '0743.016.368',
+      email: 'adsandu18@yahoo.com',
+      address: ''
+    }
   }
 ];
