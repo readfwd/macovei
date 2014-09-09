@@ -73,6 +73,7 @@
     "main-bower-files": "^2.0.0",
     "mean-seo": "git://github.com/readfwd/mean-seo.git#f641eeea9e",
     "mocha": "^1.21.3",
+    "moment": "^2.8.3",
     "newrelic": "^1.10.0",
     "ngrok": "^0.1.97",
     "penthouse": "^0.2.5",
