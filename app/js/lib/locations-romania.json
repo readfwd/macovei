@@ -52,11 +52,11 @@
     lng: 26.912,
     title: 'Bacau',
     infoWindow: {
-      content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br><br>Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>Punct depunere semnaturi: Calea Moldovei, nr. 35</p>',
+      content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br><br>Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>Puncte depunere semnaturi: (1) Calea Moldovei, nr. 35<br />(2)  Bd. Unirii nr 30, Clădirea 30 Avenue</p>',
       coordinators: 'Petrica Danila & Platon Mihai',
       phone: '0745.542.626 / 0740.042.611',
       email: 'petricadanila@gmail.com / plutonserv@yahoo.com',
-      address: 'Calea Moldovei, nr. 35'
+      address: '(1) Calea Moldovei, nr. 35 & (2) Bd. Unirii nr 30, Clădirea 30 Avenue'
 
     }
   },
