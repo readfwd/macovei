@@ -205,5 +205,41 @@
       email: 'bljandrei@gmail.com',
       address: ''
     }
+  },
+  {
+    lat: 45.651450,
+    lng: 25.612907,
+    title: 'Brasov',
+    infoWindow: {
+      content: '<p>Coordonator:  Alin Mocanu<br>0734.750.619<br>office.bgibrasov@yahoo.com <br> Punct strangere semnaturi: Str. Teiului, Bl 46B, magazin Just for you</p>',
+      coordinators: 'Alin Mocanu',
+      phone: '0734.750.619',
+      email: 'office.bgibrasov@yahoo.com',
+      address: 'Str. Teiului, Bl 46B, magazin "Just for you"'
+    }
+  },
+  {
+    lat: 44.857777,
+    lng: 24.871330,
+    title: 'Pitesti',
+    infoWindow: {
+      content: '<p>Coordonator: Vlad Craciunescu<br>0742.088.230<br>pitesticopycenter@yahoo.com</p>',
+      coordinators: 'Vlad Craciunescu',
+      phone: '0742.088.230',
+      email: 'pitesticopycenter@yahoo.com',
+      address: ''
+    }
+  },
+  {
+    lat: 44.934144,
+    lng: 26.026954,
+    title: 'Ploiesti',
+    infoWindow: {
+      content: '<p>Coordonator:  Liliana Iulia Minculescu <br>0722.537.087<br>minculescuiulia@yahoo.com</p>',
+      coordinators: 'Liliana Iulia Minculescu',
+      phone: '0722.537.087',
+      email: 'minculescuiulia@yahoo.com',
+      address: ''
+    }
   }
 ];
