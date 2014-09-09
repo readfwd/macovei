@@ -54,9 +54,6 @@
           each mark in markers 
             tr
               td #{mark.title}
-              - var htmlobject = $(mark.infoWindow.content).html();
-              //- - console.log(htmlobject);
-              //- - var htmlobject = htmlobject[0].innerHTML.html(value).text();
               td #{mark.infoWindow.coordinators}
               td 
                 a(href="tel:!{mark.infoWindow.phone}") #{mark.infoWindow.phone}
