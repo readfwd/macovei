@@ -20,6 +20,14 @@ module.exports = View.extend({
     this.pageSwitcher = new ViewSwitcher(this.$('[role="page-container"]')[0], {
       show: function (newView) {
         document.title = newView.pageTitle || 'Monica Macovei Presedinte';
+        var description = newView.pageDescription || 'Candidez independent, pentru că sunt convinsă că românii merită un Președinte al lor, nu al partidelor.'
+        var keywords = newView.pageKeywords || 'alegeri, prezidentiale, candidat, independent, romania, romani, anti-coruptie';
+        var url = newView.pageUrl || window.location.origin+"/"+window.location.hash;
+
+        $("meta[property='og:title'], meta[name='twitter:title']").attr('content', document.title);
+        $("meta[property='og:description'], meta[name='twitter:description']").attr('content', description);
+        $("meta[property='og:url'], meta[name='twitter:url']").attr('content', url);
+        $("link[rel='canonical']").attr('href', url);
         window.scrollTo(0, 0);
         app.currentPage = newView;
       }
