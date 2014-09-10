@@ -21,9 +21,6 @@ module.exports = View.extend({
     }
   },
 
-  events: {
-    'click .btn-facebook': 'share'
-  },
   render: function () {
     this.$el.html(this.template({
       content: this.locals.content,
@@ -34,14 +31,10 @@ module.exports = View.extend({
       title: this.locals.title,
       author: this.locals.author,
       source: this.locals.source,
+      url: "//macoveipresedinte.ro/posts/" + this.locals.slug
     }));
     return this;
   },
 
-  share: function() {
-    window.FB.ui({
-      method: 'share',
-      href: 'http://macoveipresedinte.ro/',
-    }, function(){});
-  }
+
 });
