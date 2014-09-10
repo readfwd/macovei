@@ -22,8 +22,19 @@ module.exports = View.extend({
         document.title = newView.pageTitle || 'Monica Macovei Presedinte';
         var description = newView.pageDescription || 'Candidez independent, pentru că sunt convinsă că românii merită un Președinte al lor, nu al partidelor.'
         var keywords = newView.pageKeywords || 'alegeri, prezidentiale, candidat, independent, romania, romani, anti-coruptie';
-        var url = newView.pageUrl || window.location.origin+"/"+window.location.hash;
+        var image = newView.pageImage || '/assets/img/macovei-presedinte-fb.jpg';
+        var type = newView.pageType || 'website';
+        if (document.location.hostname == "localhost") {
+          // check if localhost, output another url
+          var url = newView.pageUrl || window.location.origin+"/"+window.location.hash;window.location.origin+"/"+window.location.hash;
+        } else {
+          // if live, output real url
+          var url = newView.pageUrl || window.location.origin+window.location.pathname;
+        }
+        console.log(url);
 
+        $("meta[property='og:type']").attr('content', type);
+        $("meta[property='og:image'], meta[name='twitter:image']").attr('content', image);
         $("meta[property='og:title'], meta[name='twitter:title']").attr('content', document.title);
         $("meta[property='og:description'], meta[name='twitter:description'], meta[name='description']").attr('content', description);
         $("meta[property='og:url'], meta[name='twitter:url']").attr('content', url);

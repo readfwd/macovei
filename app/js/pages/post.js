@@ -16,6 +16,8 @@ module.exports = View.extend({
     });
     this.locals = posts[this.model.attributes.slug];
     this.pageDescription = this.locals.preview || 'Articole de susținere pentru Monica Macovei.';
+    this.pageImage = this.locals.thumb;
+    this.pageType = 'article';
     if (this.locals.title) {
       this.pageTitle = this.locals.title;
     }

@@ -6,8 +6,6 @@ var templates = require('../lib/templates');
 var posts = require('../lib/posts-json.json');
 var moment = require('moment/min/moment-with-locales');
 moment.locale('ro');
-console.log(moment());
-
 
 module.exports = window.postView = View.extend({
   template: templates.includes.postPreview,
