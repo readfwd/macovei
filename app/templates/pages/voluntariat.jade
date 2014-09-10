@@ -31,9 +31,12 @@
             p București
           .alert.alert-info.small
             p.strong Monica Macovei
-            p Cutia Poştala 112
-            p Wertingen, Bayern
-            p.strong Deutschland
+            p Postfach 112
+            p 86637 Wertingen
+            p Deutschland
+            //- p Cutia Poştala 112
+            //- p Wertingen, Bayern
+            //- p.strong Deutschland
           .alert.alert-info.small
             p.strong Monica Macovei
             p PO Box 577
@@ -54,9 +57,6 @@
           each mark in markers 
             tr
               td #{mark.title}
-              - var htmlobject = $(mark.infoWindow.content).html();
-              //- - console.log(htmlobject);
-              //- - var htmlobject = htmlobject[0].innerHTML.html(value).text();
               td #{mark.infoWindow.coordinators}
               td 
                 a(href="tel:!{mark.infoWindow.phone}") #{mark.infoWindow.phone}

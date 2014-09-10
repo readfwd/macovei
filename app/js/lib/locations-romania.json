@@ -4,9 +4,9 @@
     lng: 26.094637,
     title: 'Bucuresti',
     infoWindow: {
-      content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.36<br>team@macoveipresedinte.ro<br>Adresa: Str. C.A. Rosetti nr. 17 <br> la "Lokal", Str M. Eminescu, nr. 57A.</p>',
+      content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.101.7900<br>team@macoveipresedinte.ro<br>Adresa: Str. C.A. Rosetti nr. 17 <br> la "Lokal", Str M. Eminescu, nr. 57A.</p>',
       coordinators: 'Alina Daniela Bogdan & Mircea Șerdin',
-      phone: '031.860.11.30',
+      phone: '031.101.7900',
       email: 'team@macoveipresedinte.ro',
       address: '(1)Sediul de campanie: Str. C.A. Rosetti nr. 17 & (2) la "Lokal", Str M. Eminescu, nr. 57A.'
     },
@@ -40,11 +40,11 @@
     lng: 28.047494,
     title: 'Galati',
     infoWindow: {
-      content: '<p>Coordonator: George Schin<br>0744.613.117<br>schingeorge@yahoo.com<br>Punct strângere semnături : birou mediator Anca Simona Cinepa Str  N Bălcescu nr 56 ( in curte la demisol)</p>',
+      content: '<p>Coordonator: George Schin<br>0744.613.117<br>schingeorge@yahoo.com<br>Puncte strângere semnături : (1) birou mediator Anca Simona Cinepa Str  N Bălcescu nr 56 ( in curte la demisol) și <br/>(2) Str Basarabiei nr 142 bloc N 3 A parter (galeria de tapet royal)</p>',
       coordinators: 'George Schin',
       phone: '0744.613.117',
       email: 'schingeorge@yahoo.com',
-      address: 'Birou mediator "Anca Simona Cinepa" Str  N Bălcescu nr 56 ( in curte la demisol)'
+      address: '(1) Birou mediator "Anca Simona Cinepa" Str  N Bălcescu nr 56 ( in curte la demisol); (2) Str. Basarabiei nr 142 bloc N 3 A parter (Galeria de tapet Royal)'
     }
   },
   {
@@ -52,11 +52,11 @@
     lng: 26.912,
     title: 'Bacau',
     infoWindow: {
-      content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br><br>Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>Punct depunere semnaturi: Calea Moldovei, nr. 35</p>',
+      content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br><br>Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>Puncte depunere semnaturi: (1) Calea Moldovei, nr. 35<br />(2) Bd. Unirii nr 30, Clădirea 30 Avenue</p>',
       coordinators: 'Petrica Danila & Platon Mihai',
       phone: '0745.542.626 / 0740.042.611',
       email: 'petricadanila@gmail.com / plutonserv@yahoo.com',
-      address: 'Calea Moldovei, nr. 35'
+      address: '(1) Calea Moldovei, nr. 35 & (2) Bd. Unirii nr 30, Clădirea 30 Avenue'
 
     }
   },
@@ -175,11 +175,11 @@
     lng: 27.961235,
     title: 'Braila',
     infoWindow: {
-      content: '<p>Coordonator: Dragan Florin<br>0744.470.578 <br>draganbr75@gmail.com<br></p>',
+      content: '<p>Coordonator: Dragan Florin<br>0744.470.578 <br>draganbr75@gmail.com<br>Puncte strângere semnături: (1) Strada Mihai Eminescu, blocul Casa de Modă - intrarea prin spate, la etajul 6. <br/> (2) ProDomus pe Calea Călăraşilor.</p>',
       coordinators: 'Dragan Florin',
       phone: '0744.470.578',
       email: 'draganbr75@gmail.com',
-      address: ''
+      address: '(1) Strada Mihai Eminescu, blocul Casa de Modă - intrarea prin spate, la etajul 6. & (2) ProDomus pe Calea Călăraşilor.'
     }
   },
   {
@@ -203,6 +203,54 @@
       coordinators: 'Alexandru Blaj',
       phone: '0745.687.794',
       email: 'bljandrei@gmail.com',
+      address: ''
+    }
+  },
+  {
+    lat: 45.651450,
+    lng: 25.612907,
+    title: 'Brasov',
+    infoWindow: {
+      content: '<p>Coordonator:  Alin Mocanu<br>0727.528.582<br>office.bgibrasov@yahoo.com <br> Punct strangere semnaturi: Str. Teiului, Bl 46B, magazin Just for you</p>',
+      coordinators: 'Alin Mocanu',
+      phone: '0727.528.582',
+      email: 'office.bgibrasov@yahoo.com',
+      address: 'Str. Teiului, Bl 46B, magazin "Just for you"'
+    }
+  },
+  {
+    lat: 44.857777,
+    lng: 24.871330,
+    title: 'Pitesti',
+    infoWindow: {
+      content: '<p>Coordonator: Vlad Craciunescu<br>0742.088.230<br>pitesticopycenter@yahoo.com</p>',
+      coordinators: 'Vlad Craciunescu',
+      phone: '0742.088.230',
+      email: 'pitesticopycenter@yahoo.com',
+      address: ''
+    }
+  },
+  {
+    lat: 44.934144,
+    lng: 26.026954,
+    title: 'Ploiesti',
+    infoWindow: {
+      content: '<p>Coordonator:  Liliana Iulia Minculescu <br>0722.537.087<br>minculescuiulia@yahoo.com</p>',
+      coordinators: 'Liliana Iulia Minculescu',
+      phone: '0722.537.087',
+      email: 'minculescuiulia@yahoo.com',
+      address: ''
+    }
+  },
+  {
+    lat: 45.791208,
+    lng: 24.150867,
+    title: 'Sibiu',
+    infoWindow: {
+      content: '<p>Coordonator:  Adrian Sandu <br>0743.016.368<br>adsandu18@yahoo.com</p>',
+      coordinators: 'Adrian Sandu',
+      phone: '0743.016.368',
+      email: 'adsandu18@yahoo.com',
       address: ''
     }
   }

@@ -41,7 +41,7 @@ module.exports = View.extend({
   share: function() {
     window.FB.ui({
       method: 'share',
-      href: 'http://macoveipresedinte.ro/',
+      href: this.locals.slug,
     }, function(){});
   }
 });
