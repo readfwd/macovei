@@ -211,9 +211,9 @@
     lng: 25.612907,
     title: 'Brasov',
     infoWindow: {
-      content: '<p>Coordonator:  Alin Mocanu<br>0722 139 931<br>office.bgibrasov@yahoo.com <br> Punct strangere semnaturi: Str. Teiului, Bl 46B, magazin Just for you</p>',
+      content: '<p>Coordonator:  Alin Mocanu<br>0727.528.582<br>office.bgibrasov@yahoo.com <br> Punct strangere semnaturi: Str. Teiului, Bl 46B, magazin Just for you</p>',
       coordinators: 'Alin Mocanu',
-      phone: '0722 139 931',
+      phone: '0727.528.582',
       email: 'office.bgibrasov@yahoo.com',
       address: 'Str. Teiului, Bl 46B, magazin "Just for you"'
     }
