@@ -9,15 +9,15 @@ var moment = require('moment/min/moment-with-locales');
 moment.locale("ro");
 
 module.exports = View.extend({
-  pageTitle: 'Monica Macovei',
   template: templates.includes.postShow,
   initialize: function (options) {
     this.model = new Post({
       slug: options.slug
     });
     this.locals = posts[this.model.attributes.slug];
+    this.pageDescription = this.locals.preview || 'Articole de susținere pentru Monica Macovei.';
     if (this.locals.title) {
-      this.pageTitle = this.pageTitle + " | " + this.locals.title;
+      this.pageTitle = this.locals.title;
     }
   },
 
@@ -33,10 +33,6 @@ module.exports = View.extend({
       source: this.locals.source,
       url: "http%3A%2F%2Fmacoveipresedinte.ro%2Fposts%2F" + this.locals.slug
     }));
-    setTimeout(function () {
-      this.$('.pluginConnectButton').unwrap();
-      console.log('dadas');
-    }, 10);
     return this;
   }
 });

@@ -25,7 +25,7 @@ module.exports = View.extend({
         var url = newView.pageUrl || window.location.origin+"/"+window.location.hash;
 
         $("meta[property='og:title'], meta[name='twitter:title']").attr('content', document.title);
-        $("meta[property='og:description'], meta[name='twitter:description']").attr('content', description);
+        $("meta[property='og:description'], meta[name='twitter:description'], meta[name='description']").attr('content', description);
         $("meta[property='og:url'], meta[name='twitter:url']").attr('content', url);
         $("link[rel='canonical']").attr('href', url);
         window.scrollTo(0, 0);
