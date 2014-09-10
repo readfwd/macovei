@@ -31,8 +31,12 @@ module.exports = View.extend({
       title: this.locals.title,
       author: this.locals.author,
       source: this.locals.source,
-      url: "//macoveipresedinte.ro/posts/" + this.locals.slug
+      url: "http%3A%2F%2Fmacoveipresedinte.ro%2Fposts%2F" + this.locals.slug
     }));
+    setTimeout(function () {
+      this.$('.pluginConnectButton').unwrap();
+      console.log('dadas');
+    }, 10);
     return this;
   }
 });
