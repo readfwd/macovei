@@ -34,7 +34,5 @@ module.exports = View.extend({
       url: "//macoveipresedinte.ro/posts/" + this.locals.slug
     }));
     return this;
-  },
-
-
+  }
 });

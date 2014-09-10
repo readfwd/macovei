@@ -20,20 +20,12 @@
         h1: strong #{locals.title}
         .row
           .col-xs-6
-            //- iframe(src='//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width&layout=button&action=recommend&show_faces=false&share=false&height=35&appId=968436846506160', scrolling='no', frameborder='0', style='border: none; overflow: hidden; height: 35px;', allowtransparency='true')
             .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='button', data-action='recommend', data-show-faces='false', data-share='false')
-
-
 
           .col-xs-6
             if locals.author
               p.small(style="text-align: right") de #{' '}
                 span.author  #{locals.author}
-            //- .fb-share-button(data-layout='box_count', data-href='#{locals.url}')
-            //- div.
-            //-   <span class='st_facebook_vcount' displayText='Facebook'></span>
-
-
 
       .content !{locals.content}
 
