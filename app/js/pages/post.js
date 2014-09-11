@@ -26,7 +26,7 @@ module.exports = View.extend({
   render: function () {
     this.$el.html(this.template({
       content: this.locals.content,
-      date: moment(this.locals.date).fromNow(),
+      date: moment(this.locals.date, 'YYYY-MM-DD HH:mm').from(moment().format('YYYY-MM-DD HH:mm')),
       slug: this.locals.slug,
       preview: this.locals.preview,
       thumb: this.locals.thumb,
