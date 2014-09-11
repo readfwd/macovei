@@ -22,7 +22,7 @@ module.exports = View.extend({
         document.title = newView.pageTitle || 'Monica Macovei Presedinte';
         var description = newView.pageDescription || 'Candidez independent, pentru că sunt convinsă că românii merită un Președinte al lor, nu al partidelor.'
         var keywords = newView.pageKeywords || 'alegeri, prezidentiale, candidat, independent, romania, romani, anti-coruptie';
-        var image = newView.pageImage || '/assets/img/macovei-presedinte-fb.jpg';
+        var image = (window.location.origin + newView.pageImage) || (window.location.origin+'/assets/img/macovei-presedinte-fb.jpg');
         var type = newView.pageType || 'website';
         if (document.location.hostname == "localhost") {
           // check if localhost, output another url
@@ -31,8 +31,8 @@ module.exports = View.extend({
           // if live, output real url
           var url = newView.pageUrl || window.location.origin+window.location.pathname;
         }
-        url += '?_escaped_fragment_=';
-        console.log(url);
+        // point url to html rendered version
+        url += '?_escaped_fragment_=""';
 
         $("meta[property='og:type']").attr('content', type);
         $("meta[property='og:image'], meta[name='twitter:image']").attr('content', image);
