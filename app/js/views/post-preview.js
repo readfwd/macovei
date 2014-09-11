@@ -6,8 +6,6 @@ var templates = require('../lib/templates');
 var posts = require('../lib/posts-json.json');
 var moment = require('moment/min/moment-with-locales');
 moment.locale('ro');
-console.log(moment());
-
 
 module.exports = window.postView = View.extend({
   template: templates.includes.postPreview,
@@ -21,7 +19,7 @@ module.exports = window.postView = View.extend({
       thumb: posts[this.model.attributes.slug].thumb,
       author: posts[this.model.attributes.slug].author,
       source: posts[this.model.attributes.slug].source,
-      date: moment(posts[this.model.attributes.slug].date, 'YYYY-MM-DD').fromNow(),
+      date: moment(posts[this.model.attributes.slug].date, 'YYYY-MM-DD HH:mm').from(moment().format('YYYY-MM-DD HH:mm')),
     }));
     return this;
   }
