@@ -31,6 +31,7 @@ module.exports = View.extend({
           // if live, output real url
           var url = newView.pageUrl || window.location.origin+window.location.pathname;
         }
+        url += '?_escaped_fragment_=';
         console.log(url);
 
         $("meta[property='og:type']").attr('content', type);

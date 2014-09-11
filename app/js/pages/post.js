@@ -33,7 +33,7 @@ module.exports = View.extend({
       title: this.locals.title,
       author: this.locals.author,
       source: this.locals.source,
-      url: "http%3A%2F%2Fmacoveipresedinte.ro%2Fposts%2F" + this.locals.slug
+      url: "http%3A%2F%2Fmacoveipresedinte.ro%2Fposts%2F" + this.locals.slug + '?_escaped_fragment_=""'
     }));
     return this;
   }
