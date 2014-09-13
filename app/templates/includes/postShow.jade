@@ -16,7 +16,8 @@
       .content !{locals.content}
 
       footer
-        small Publicat: #{locals.date}
+        a.back.pull-left(href="../") Inapoi
+        small.pull-left Publicat: #{locals.date}
           //- time.updated(datetime="#{locals.date}", pubdate) #{locals.date}
           if locals.source
             span  / Sursa: 
