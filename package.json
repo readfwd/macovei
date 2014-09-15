@@ -72,6 +72,7 @@
     "lodash": "^2.4.1",
     "main-bower-files": "^2.0.0",
     "mean-seo": "git://github.com/readfwd/mean-seo.git#f641eeea9e",
+    "mkdirp": "^0.5.0",
     "mocha": "^1.21.3",
     "moment": "^2.8.3",
     "newrelic": "^1.10.0",

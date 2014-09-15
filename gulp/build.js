@@ -23,6 +23,7 @@ var path = require('path');
 var mainBowerFiles = require('main-bower-files');
 var fs = require('fs');
 var xml = require('xml-writer');
+var mkdirp = require('mkdirp');
 
 var opts = {
   autoprefixer: [
@@ -146,7 +147,7 @@ gulp.task('assets:dist', ['fonts'], function () {
 });
 
 // Common tasks between all the different builds.
-gulp.task('build:common', ['index.html', 'css', 'sitemap']);
+gulp.task('build:common', ['index.html', 'css']);
 
 // Minimal development build.
 gulp.task('build', ['build:common', 'js:dev', 'assets']);
@@ -219,7 +220,7 @@ gulp.task('critical', ['build:dist:base'], function (done) {
   });
 });
 
-gulp.task('build:dist', ['critical'], function () {
+gulp.task('build:dist', ['critical', 'sitemap'], function () {
   return gulp.src(paths.dist + '/index.html')
     .pipe($.replace(
       '<link rel=stylesheet href=' + cssPath + '>',
@@ -302,5 +303,7 @@ gulp.task('sitemap', function () {
   });
   sitemap.endElement();
   sitemap.endDocument();
-  fs.writeFileSync(paths.dist + '/sitemap.xml', sitemap.toString());
+  return nodefn.call(mkdirp, paths.dist).then(function () {
+    return nodefn.call(fs.writeFile, paths.dist + '/sitemap.xml', sitemap.toString());
+  });
 });
