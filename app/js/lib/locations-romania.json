@@ -23,18 +23,18 @@
       address: 'Calea Turzii nr.18-Cafeneaua "La Perne"'
     }
   },
-  {
-    lat: 44.181357,
-    lng: 28.629339,
-    title: 'Constanta',
-    infoWindow: {
-      content: '<p>Coordonator: Mihai Petre<br>0744.340.918<br>mihaipetre77@yahoo.com</p>',
-      coordinators: 'Mihai Petre',
-      phone: '0744.340.918',
-      email: 'mihaipetre77@yahoo.com',
-      address: ''
-    }
-  },
+  // {
+  //   lat: 44.181357,
+  //   lng: 28.629339,
+  //   title: 'Constanta',
+  //   infoWindow: {
+  //     content: '<p>Coordonator: Mihai Petre<br>0744.340.918<br>mihaipetre77@yahoo.com</p>',
+  //     coordinators: 'Mihai Petre',
+  //     phone: '0744.340.918',
+  //     email: 'mihaipetre77@yahoo.com',
+  //     address: ''
+  //   }
+  // },
   {
     lat: 45.437678,
     lng: 28.047494,
@@ -52,7 +52,7 @@
     lng: 26.912,
     title: 'Bacau',
     infoWindow: {
-      content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br><br>Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>Puncte depunere semnaturi: (1) Calea Moldovei, nr. 35<br />(2) Bd. Unirii nr 30, Clădirea 30 Avenue</p>',
+      content: '<p>Coordonator: Petrica Danila<br>0745.542.626<br>petricadanila@gmail.com<br>Bd. Unirii nr 30, Clădirea 30 Avenue <br>Coordonator: Platon Mihai<br> 0740.042.611<br> plutonserv@yahoo.com<br>Calea Moldovei, nr. 35<br /></p>',
       coordinators: 'Petrica Danila & Platon Mihai',
       phone: '0745.542.626 / 0740.042.611',
       email: 'petricadanila@gmail.com / plutonserv@yahoo.com',
