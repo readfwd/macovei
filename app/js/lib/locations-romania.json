@@ -253,5 +253,17 @@
       email: 'adsandu18@yahoo.com',
       address: ''
     }
+  },
+  {
+    lat: 46.165528,
+    lng: 21.317939,
+    title: 'Arad',
+    infoWindow: {
+      content: '<p>Coordonator:  Alexandru Barbicioiu <br>0753 478 734  <br>alexandru.barbicioiu@gmail.com<br />Calea Radnei nr 112-114, Bl 102, Scara A, ap 20</p>',
+      coordinators: 'Alexandru Barbicioiu',
+      phone: '0753 478 734',
+      email: 'alexandru.barbicioiu@gmail.com',
+      address: 'Calea Radnei nr 112-114, Bl 102, Scara A, ap 20'
+    }
   }
 ];
