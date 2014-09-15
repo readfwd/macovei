@@ -23,18 +23,18 @@
       address: 'Calea Turzii nr.18-Cafeneaua "La Perne"'
     }
   },
-  {
-    lat: 44.181357,
-    lng: 28.629339,
-    title: 'Constanta',
-    infoWindow: {
-      content: '<p>Coordonator: Mihai Petre<br>0744.340.918<br>mihaipetre77@yahoo.com</p>',
-      coordinators: 'Mihai Petre',
-      phone: '0744.340.918',
-      email: 'mihaipetre77@yahoo.com',
-      address: ''
-    }
-  },
+  // {
+  //   lat: 44.181357,
+  //   lng: 28.629339,
+  //   title: 'Constanta',
+  //   infoWindow: {
+  //     content: '<p>Coordonator: Mihai Petre<br>0744.340.918<br>mihaipetre77@yahoo.com</p>',
+  //     coordinators: 'Mihai Petre',
+  //     phone: '0744.340.918',
+  //     email: 'mihaipetre77@yahoo.com',
+  //     address: ''
+  //   }
+  // },
   {
     lat: 45.437678,
     lng: 28.047494,
