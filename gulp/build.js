@@ -271,20 +271,36 @@ gulp.task('sitemap', function () {
   var baseLink = "http://macoveipresedinte.ro/";
 
   sitemap.startDocument();
+  sitemap.startElement('urlset').writeAttribute('xmlns', "http://www.sitemaps.org/schemas/sitemap/0.9")
+    .writeAttribute('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
+    .writeAttribute('xsi:schemaLocation', "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd");
   _.each(routes, function (route, path) {
     if (route.skip) { return; }
-    sitemap.startElement('url');
+
     if (route.posts) {
+
       _.each(posts, function (post) {
+
+        sitemap.startElement('url');
         sitemap.startElement('loc').text(baseLink + 'post/' + post.slug).endElement();
+        sitemap.startElement('changefreq').text(route.changeFreq).endElement();
+        sitemap.startElement('priority').text(route.priority).endElement();
+        sitemap.endElement();
+
       });
+
     } else {
+
+      sitemap.startElement('url');
       sitemap.startElement('loc').text(baseLink + path).endElement();
+      sitemap.startElement('priority').text(route.priority).endElement();
+      sitemap.startElement('changefreq').text(route.changeFreq).endElement();
+      sitemap.endElement();
+
     }
-    sitemap.startElement('changefreq').text(route.changeFreq).endElement();
-    sitemap.startElement('priority').text(route.priority).endElement();
-    sitemap.endElement();
+
   });
+  sitemap.endElement();
   sitemap.endDocument();
   fs.writeFileSync(paths.dist + '/sitemap.xml', sitemap.toString());
 });
