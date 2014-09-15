@@ -265,5 +265,17 @@
       email: 'alexandru.barbicioiu@gmail.com',
       address: 'Calea Radnei nr 112-114, Bl 102, Scara A, ap 20'
     }
+  },
+  {
+    lat: 47.657906,
+    lng: 23.576875,
+    title: 'Baia Mare',
+    infoWindow: {
+      content: '<p>Coordonator: Oana Mihaescu <br>0734 833 887<br>oanamihaescu89@gmail.com<br /></p>',
+      coordinators: 'Oana Mihaescu',
+      phone: '0734 833 887',
+      email: 'oanamihaescu89@gmail.com',
+      address: ''
+    }
   }
 ];
