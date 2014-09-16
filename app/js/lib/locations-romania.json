@@ -114,11 +114,11 @@
     lng: 21.228160,
     title: 'Timisoara',
     infoWindow: {
-      content: '<p>Coordonator: <br>Piroska Bogdan<br>0727 214 432<br> piribogdan@gmail.com <br/>Avem doua corturi amplasate unde puteti semna intre orele 10:00-18:00: <br />(1) langa magazinul Bega in fata ceasului floral <br />(2) piata 700, vis-a-vis de statia de troleu.</p>',
+      content: '<p>Coordonator: <br>Piroska Bogdan<br>0727 214 432<br> piribogdan@gmail.com <br/>Corturi unde puteți semna între orele 10:00-18:00: <br/> (1) lângă magazinul Bega în fața ceasului floral <br/> (2) piața 700, vis-a-vis de stația de troleu. <br/> (3) Cort  Pietonal Maraseseti <br/> (4)Asociatia Timisoara -  Str Goethe nr 2  - Piata Operei, langa Segafredo</p>',
       coordinators: 'Piroska Bogdan',
       phone: '0727 214 432',
       email: 'piribogdan@gmail.com',
-      address: 'Avem două corturi amplasate unde puteți semna între orele 10:00-18:00: \n (1) lângă magazinul Bega în fața ceasului floral și \n (2) piața 700, vis-a-vis de stația de troleu.'
+      address: 'Corturi unde puteți semna între orele 10:00-18:00: \n (1) lângă magazinul Bega în fața ceasului floral \n (2) piața 700, vis-a-vis de stația de troleu. \n (3) Cort  Pietonal Maraseseti \n (4)Asociatia Timisoara -  Str Goethe nr 2  - Piata Operei, langa Segafredo'
 
     }
   },
