@@ -49,7 +49,7 @@ app.get('*', function(request, response) {
   for (var i = 0, n = validRoutes.length; i < n; i++) {
     if (validRoutes[i] === path) {
       found = true;
-      return;
+      break;
     }
   }
   response.status(found ? 200 : 404).sendFile(__dirname + '/dist/index.html');
