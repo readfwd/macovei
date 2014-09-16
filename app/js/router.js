@@ -25,10 +25,6 @@ module.exports = Router.extend({
   routes: _.mapValues(routes, function(route) {
     return route.prefix;
   }),
-
-  initialize: function () {
-    console.log(this.routes);
-  },
   
   // ------- ROUTE HANDLERS ---------
   home: function () {

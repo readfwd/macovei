@@ -220,7 +220,7 @@ gulp.task('critical', ['build:dist:base'], function (done) {
   });
 });
 
-gulp.task('build:dist', ['critical', 'sitemap'], function () {
+gulp.task('build:dist', ['sitemap', 'critical'], function () {
   return gulp.src(paths.dist + '/index.html')
     .pipe($.replace(
       '<link rel=stylesheet href=' + cssPath + '>',
@@ -282,27 +282,28 @@ gulp.task('sitemap', function () {
 
       _.each(posts, function (post) {
 
-        sitemap.startElement('url');
-        sitemap.startElement('loc').text(baseLink + 'post/' + post.slug).endElement();
-        sitemap.startElement('changefreq').text(route.changeFreq).endElement();
-        sitemap.startElement('priority').text(route.priority).endElement();
-        sitemap.endElement();
+        sitemap.startElement('url')
+          .startElement('loc').text(baseLink + 'post/' + post.slug).endElement()
+          .startElement('priority').text(route.priority).endElement()
+          .startElement('changefreq').text(route.changeFreq).endElement()
+          .endElement();
 
       });
 
     } else {
 
-      sitemap.startElement('url');
-      sitemap.startElement('loc').text(baseLink + path).endElement();
-      sitemap.startElement('priority').text(route.priority).endElement();
-      sitemap.startElement('changefreq').text(route.changeFreq).endElement();
-      sitemap.endElement();
+      sitemap.startElement('url')
+        .startElement('loc').text(baseLink + path).endElement()
+        .startElement('priority').text(route.priority).endElement()
+        .startElement('changefreq').text(route.changeFreq).endElement()
+        .endElement();
 
     }
 
   });
   sitemap.endElement();
   sitemap.endDocument();
+  // fs.writeFileSync(paths.dist + '/sitemap.xml', sitemap.toString());
   return nodefn.call(mkdirp, paths.dist).then(function () {
     return nodefn.call(fs.writeFile, paths.dist + '/sitemap.xml', sitemap.toString());
   });

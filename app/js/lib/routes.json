@@ -18,12 +18,12 @@
   "candidatura/": {
     "prefix": "candidatura",
     "changeFreq": "weekly",
-    "priority": "0.4"
+    "priority": "0.5"
   },
   "sustinatori/": {
     "prefix": "sustinatori",
     "changeFreq": "daily",
-    "priority": ""
+    "priority": "0.5"
   },
   "implicare/": {
     "prefix": "implicare",
@@ -38,56 +38,56 @@
   "contact/": {
     "prefix": "contact",
     "changeFreq": "weekly",
-    "priority": "0.4"
+    "priority": "0.5"
   },
   "fii-alaturi-de-mine/": {
     "prefix": "semnaturi",
     "changeFreq": "yearly",
-    "priority": "0.4"
+    "priority": "0.5"
   },
   "voluntariat/": {
     "prefix": "voluntariat",
     "changeFreq": "weekly",
-    "priority": "0.4"
+    "priority": "0.5"
   },
   "strange-semnaturi/": {
     "prefix": "voluntariat",
     "skip": true,
     "changeFreq": "weekly",
-    "priority": "0.4"
+    "priority": "0.5"
   },
   "donatii/": {
     "prefix": "donatii",
     "changeFreq": "monthly",
-    "priority": "0.4"
+    "priority": "0.5"
   },
   "sustinere-financiara/": {
     "prefix": "donatii",
     "skip": true,
     "changeFreq": "monthly",
-    "priority": "0.4"
+    "priority": "0.5"
   },
   "donatii_thankyou/": {
     "prefix": "donatiiThankyou",
     "changeFreq": "monthly",
     "skip": true,
-    "priority": "0.0"
+    "priority": "0.5"
   },
   "donatii-thankyou/": {
     "prefix": "donatiiThankyou",
     "changeFreq": "monthly",
-    "priority": "0.0"
+    "priority": "0.5"
   },
   "sustinere-financiara-multumiri/": {
     "prefix": "donatiiThankyou",
     "changeFreq": "monthly",
     "skip": true,
-    "priority": "0.0"
+    "priority": "0.5"
   },
   "404": {
     "prefix": "eroare404",
     "changeFreq": "yearly",
-    "priority": "0.4"
+    "priority": "0.5"
   },
   "posts/:slug": {
     "prefix": "post",
