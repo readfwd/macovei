@@ -23,18 +23,18 @@
       address: 'Calea Turzii nr.18-Cafeneaua "La Perne"'
     }
   },
-  // {
-  //   lat: 44.181357,
-  //   lng: 28.629339,
-  //   title: 'Constanta',
-  //   infoWindow: {
-  //     content: '<p>Coordonator: Mihai Petre<br>0744.340.918<br>mihaipetre77@yahoo.com</p>',
-  //     coordinators: 'Mihai Petre',
-  //     phone: '0744.340.918',
-  //     email: 'mihaipetre77@yahoo.com',
-  //     address: ''
-  //   }
-  // },
+  {
+    lat: 44.181357,
+    lng: 28.629339,
+    title: 'Constanta',
+    infoWindow: {
+      content: '<p>Coordonator: Popescu Florian<br>0724.197.580  <br>pflorian63@yahoo.com</p>',
+      coordinators: 'Popescu Florian',
+      phone: '0724.197.580 ',
+      email: 'pflorian63@yahoo.com',
+      address: ''
+    }
+  },
   {
     lat: 45.437678,
     lng: 28.047494,
@@ -251,6 +251,30 @@
       coordinators: 'Adrian Sandu',
       phone: '0743.016.368',
       email: 'adsandu18@yahoo.com',
+      address: ''
+    }
+  },
+  {
+    lat: 46.165528,
+    lng: 21.317939,
+    title: 'Arad',
+    infoWindow: {
+      content: '<p>Coordonator:  Alexandru Barbicioiu <br>0753 478 734  <br>alexandru.barbicioiu@gmail.com<br />Calea Radnei nr 112-114, Bl 102, Scara A, ap 20</p>',
+      coordinators: 'Alexandru Barbicioiu',
+      phone: '0753 478 734',
+      email: 'alexandru.barbicioiu@gmail.com',
+      address: 'Calea Radnei nr 112-114, Bl 102, Scara A, ap 20'
+    }
+  },
+  {
+    lat: 47.657906,
+    lng: 23.576875,
+    title: 'Baia Mare',
+    infoWindow: {
+      content: '<p>Coordonator: Oana Mihaescu <br>0734 833 887<br>oanamihaescu89@gmail.com<br /></p>',
+      coordinators: 'Oana Mihaescu',
+      phone: '0734 833 887',
+      email: 'oanamihaescu89@gmail.com',
       address: ''
     }
   }
