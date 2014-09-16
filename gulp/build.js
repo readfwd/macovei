@@ -264,7 +264,7 @@ gulp.task('posts', function () {
   fs.writeFileSync(paths.app + '/js/lib/posts-json.json', content);
 });
 
-gulp.task('sitemap', function () {
+gulp.task('sitemap', ['posts'], function () {
   var routes = require('../' + paths.app + '/js/lib/routes.json');
   var posts = require('../' + paths.app + '/js/lib/posts-json.json');
 
