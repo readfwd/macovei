@@ -29,7 +29,7 @@ module.exports = Router.extend({
   initialize: function () {
     console.log(this.routes);
   },
-  
+
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));
