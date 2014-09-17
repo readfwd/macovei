@@ -24,6 +24,7 @@ var mainBowerFiles = require('main-bower-files');
 var fs = require('fs');
 var xml = require('xml-writer');
 var mkdirp = require('mkdirp');
+var when = require('when');
 
 var opts = {
   autoprefixer: [
@@ -38,6 +39,43 @@ var opts = {
     'bb >= 9'
   ]
 };
+
+// URL replacement logic
+
+var urlReplacements = {};
+var moveToS3 = !!process.env.MOVE_TO_S3;
+var aws = {
+  "key": process.env.AWS_ACCESS_KEY,
+  "secret": process.env.AWS_SECRET_KEY,
+  "region": process.env.AWS_REGION,
+  "bucket": process.env.AWS_S3_BUCKET,
+};
+
+function replaceInTemplates(templates) {
+  _.each(urlReplacements, function(to, from) {
+    var escapedFrom = from.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+    var escapedTo = to.replace('$', '$$');
+    templates = templates.replace(new RegExp('([\'"])' + escapedFrom, 'g'), '$1' + escapedTo);
+  });
+  return templates;
+}
+
+function replaceUrl(url) {
+  var repl;
+  if ((repl = urlReplacements[url])) {
+    return repl;
+  }
+  return url;
+}
+
+if (moveToS3) {
+  gulp.task('assets:move:s3', ['assets:dist'], function () {});
+}
+
+gulp.task('replace-urls', moveToS3 ? ['assets:move:s3'] : [], function () {
+  var json = JSON.stringify(urlReplacements);
+  return nodefn.call(fs.writeFile, paths.app + '/js/lib/url-replacements.json', json);
+});
 
 // Wire Bower dependencies into the main jade file.
 gulp.task('wiredep', function () {
@@ -58,8 +96,10 @@ gulp.task('index.html', ['wiredep'], function () {
 
 // Generate JS functions from Jade templates.
 // Run this before any JS task, because Browserify needs to bundle them in.
-gulp.task('templates', function () {
-  templatizer(paths.app + '/templates', paths.app + '/js/lib/templates.js');
+gulp.task('templates', ['replace-urls'], function () {
+  var templates = templatizer(paths.app + '/templates', null, {});
+  templates = replaceInTemplates(templates);
+  return nodefn.call(fs.writeFile, paths.app + '/js/lib/templates.js', templates);
 });
 
 // Common outputs between all of the JS tasks.
@@ -136,14 +176,25 @@ gulp.task('fonts', function () {
 // Copies over assets for production.
 gulp.task('assets:dist', ['fonts'], function () {
   var imgFilter = $.filter('**/img/**/*.*');
-  return gulp.src(paths.app + '/assets/**/*')
+  var stream = gulp.src(paths.app + '/assets/**/*')
     .pipe(imgFilter)
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true
     })))
-    .pipe(imgFilter.restore())
-    .pipe(gulp.dest(paths.dist + '/assets/'));
+    .pipe(imgFilter.restore());
+
+  if (moveToS3) {
+    return stream
+      .pipe($.tap(function (file) {
+        if (!file.stat.isFile()) { return; }
+        var fileName = file.path.replace(file.base, '');
+        urlReplacements['/assets/' + fileName] = 'https://' + aws.bucket + '.s3-' + aws.region + '.amazonaws.com/' + fileName;
+      }))
+      .pipe($.s3(aws));
+  } else {
+    return stream.pipe(gulp.dest(paths.dist + '/assets/'));
+  }
 });
 
 // Common tasks between all the different builds.
@@ -229,11 +280,17 @@ gulp.task('build:dist', ['sitemap', 'critical'], function () {
     .pipe(gulp.dest(paths.dist));
 });
 
-gulp.task('posts', function () {
-  templatizer(paths.app + '/posts', paths.app + '/js/lib/posts-templates.js');
+gulp.task('posts', ['replace-urls'], function () {
+  var promises = [];
 
-  delete require.cache[require.resolve('../' + paths.app + '/js/lib/posts-templates')];
-  var t = require('../' + paths.app + '/js/lib/posts-templates');
+  var templates = templatizer(paths.app + '/posts', null, {});
+  templates = replaceInTemplates(templates);
+  promises.push(nodefn.call(fs.writeFile, paths.app + '/js/lib/posts-templates.js', templates));
+
+  var mod = {};
+  eval('(function (module) { ' + templates + ' })(mod)');
+  var t = mod.exports;
+
   var json = {};
   for (var key in t) {
     if (t.hasOwnProperty(key)) {
@@ -241,11 +298,11 @@ gulp.task('posts', function () {
       var c = t[key](locals);
       var d = locals.date;
       var s = locals.slug;
-      var p = locals.preview;
-      var thumb = locals.thumb;
+      var p = replaceInTemplates(locals.preview);
+      var thumb = replaceUrl(locals.thumb);
       var title = locals.title;
       var author = locals.author;
-      var source = locals.source;
+      var source = replaceUrl(locals.source);
       var tags = locals.tags;
       json[s] = {
         date: d,
@@ -261,7 +318,8 @@ gulp.task('posts', function () {
     }
   }
   var content = JSON.stringify(json);
-  fs.writeFileSync(paths.app + '/js/lib/posts-json.json', content);
+  promises.push(nodefn.call(fs.writeFile, paths.app + '/js/lib/posts-json.json', content));
+  return when.all(promises);
 });
 
 gulp.task('sitemap', ['posts'], function () {
@@ -303,7 +361,6 @@ gulp.task('sitemap', ['posts'], function () {
   });
   sitemap.endElement();
   sitemap.endDocument();
-  // fs.writeFileSync(paths.dist + '/sitemap.xml', sitemap.toString());
   return nodefn.call(mkdirp, paths.dist).then(function () {
     return nodefn.call(fs.writeFile, paths.dist + '/sitemap.xml', sitemap.toString());
   });
