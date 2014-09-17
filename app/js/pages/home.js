@@ -7,6 +7,7 @@ var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
 var $ = require('../shims/jquery');
 // var QuoteBoxView = require('../views/quote-box');
+// var urepl = require('../lib/url-replace');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Home',
@@ -18,7 +19,7 @@ module.exports = View.extend({
     //   model: new Backbone.Model({
     //     content: 'Monica Macovei, apărătoarea iconică a libertăților românilor.',
     //     author: 'Le Monde',
-        // authorLogo: 'assets/img/logo-le-monde.png'
+    //     authorLogo: urepl('/assets/img/logo-le-monde.png')
     //   }),
     //   el: this.$('[role="quote-box"]')
     // });
