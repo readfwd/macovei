@@ -28,11 +28,11 @@
     lng: 28.629339,
     title: 'Constanta',
     infoWindow: {
-      content: '<p>Coordonator: Popescu Florian<br>0724.197.580  <br>pflorian63@yahoo.com</p>',
+      content: '<p>Coordonator: Popescu Florian<br>0724.197.580  <br>pflorian63@yahoo.com<br/>Str Rapsodiei 40</p>',
       coordinators: 'Popescu Florian',
-      phone: '0724.197.580 ',
+      phone: '0724.197.580',
       email: 'pflorian63@yahoo.com',
-      address: ''
+      address: 'Str. Rapsodiei 40'
     }
   },
   {
