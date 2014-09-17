@@ -1,30 +1,23 @@
-.container.postShow
-  //- .row
-  //-   .col-md-2.hidden-sm.hidden-xs
-  //-     if locals.thumb
-  //-       img(src="#{locals.thumb}", style="margin-top: 1em; width: 100%;")
-  //-   .col-md-8.col-sm-10.col-sm-offset-1.content
-  //-     h2: strong #{locals.title}
-  //-     if locals.author
-  //-       p.small #{locals.author}
-
-  //-     div.serif(style="margin-top: 2em;") !{locals.content}
-  //-     small Data: #{locals.date}
-  //-       if locals.source
-  //-         span  / Sursa: 
-  //-           a(href="#{locals.source}") #{locals.source}
 .row
   .col-md-8.col-sm-10.col-md-offset-2.col-sm-offset-1
     .article
       header
         h1: strong #{locals.title}
-        if locals.author
-          p.small de 
-            span.author #{locals.author}
+        .row
+          .col-xs-6
+            iframe(src='//www.facebook.com/plugins/like.php?href=#{locals.url}&width&layout=button&action=like&show_faces=false&share=true&height=21&appId=688761444534662', scrolling='no', frameborder='0', style='border: none; overflow: hidden; height: 21px;', allowtransparency='true')
+          .col-xs-6
+            if locals.author
+              p.small(style="text-align: right") de #{' '}
+                span.author  #{locals.author}
+
+
+
       .content !{locals.content}
 
       footer
-        small Publicat: #{locals.date}
+        a.back.pull-left(href="../") Inapoi
+        small.pull-left Publicat: #{locals.date}
           //- time.updated(datetime="#{locals.date}", pubdate) #{locals.date}
           if locals.source
             span  / Sursa: 

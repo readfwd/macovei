@@ -19,7 +19,7 @@ module.exports = window.postView = View.extend({
       thumb: posts[this.model.attributes.slug].thumb,
       author: posts[this.model.attributes.slug].author,
       source: posts[this.model.attributes.slug].source,
-      date: moment(posts[this.model.attributes.slug].date).fromNow(),
+      date: moment(posts[this.model.attributes.slug].date, 'YYYY-MM-DD HH:mm').from(moment().format('YYYY-MM-DD HH:mm')),
     }));
     return this;
   }

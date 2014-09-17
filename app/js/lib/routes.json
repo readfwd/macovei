@@ -1,0 +1,103 @@
+{
+  "": {
+    "prefix": "home",
+    "changeFreq": "daily",
+    "skip": true,
+    "priority": "1.0"
+  },
+  "despre/": {
+    "prefix": "despre",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
+  "viziune/": {
+    "prefix": "viziune",
+    "changeFreq": "weekly",
+    "priority": "0.8"
+  },
+  "candidatura/": {
+    "prefix": "candidatura",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "sustinatori/": {
+    "prefix": "sustinatori",
+    "changeFreq": "daily",
+    "priority": "0.5"
+  },
+  "implicare/": {
+    "prefix": "implicare",
+    "changeFreq": "weekly",
+    "priority": "0.8"
+  },
+  "media/": {
+    "prefix": "media",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "contact/": {
+    "prefix": "contact",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "fii-alaturi-de-mine/": {
+    "prefix": "semnaturi",
+    "changeFreq": "yearly",
+    "priority": "0.5"
+  },
+  "voluntariat/": {
+    "prefix": "voluntariat",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "strange-semnaturi/": {
+    "prefix": "voluntariat",
+    "skip": true,
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "donatii/": {
+    "prefix": "donatii",
+    "changeFreq": "monthly",
+    "priority": "0.5"
+  },
+  "sustinere-financiara/": {
+    "prefix": "donatii",
+    "skip": true,
+    "changeFreq": "monthly",
+    "priority": "0.5"
+  },
+  "donatii_thankyou/": {
+    "prefix": "donatiiThankyou",
+    "changeFreq": "monthly",
+    "skip": true,
+    "priority": "0.5"
+  },
+  "donatii-thankyou/": {
+    "prefix": "donatiiThankyou",
+    "changeFreq": "monthly",
+    "priority": "0.5"
+  },
+  "sustinere-financiara-multumiri/": {
+    "prefix": "donatiiThankyou",
+    "changeFreq": "monthly",
+    "skip": true,
+    "priority": "0.5"
+  },
+  "404": {
+    "prefix": "eroare404",
+    "changeFreq": "yearly",
+    "priority": "0.5"
+  },
+  "posts/:slug": {
+    "prefix": "post",
+    "posts": true,
+    "changeFreq": "weekly",
+    "priority": "1.0"
+  },
+  "posts/": {
+    "prefix": "posts",
+    "changeFreq": "always",
+    "priority": "1.0"
+  }
+}

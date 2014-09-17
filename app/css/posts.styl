@@ -4,6 +4,35 @@
     margin: 0 auto
     max-height: 300px
     width: auto
+  .content
+    margin-top: 0 !important
+
+  .post
+    h3.post-title
+      font-weight: bold
+
+.btn-facebook
+  position: relative
+  border-radius: 3px
+  box-shadow: 0 1px 1px #999
+  display: inline-block
+  font-size: 16px
+  padding: 10px
+  text-align: center
+  width: 2.5em
+  height: 2.5em
+  background-color: #2b4170
+  background: linear-gradient(top, #3b5998, #2b4170)
+  border: 1px solid #2b4170
+  text-shadow: 0 -1px -1px #1f2f52
+  &:hover
+    background-color: #3b5998
+    background: linear-gradient(top, #2b4170, #3b5998)
+  i
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%, -50%, 0)
 
 .post
   h3.post-title
@@ -20,3 +49,48 @@
       width: 12%
   @media (max-width: 767px)
     width: 100%
+  .media-body
+    a
+      transition: 0.5s ease
+      &:hover
+        text-decoration: none
+        color: mm-dark-blue
+    .read-more
+      background: mm-blue
+      padding: 5px 10px
+      transition: 0.5s ease;
+      cursor: pointer
+      color: #fff
+      &:hover
+        background: mm-dark-blue
+        color: #fff
+    blockquote
+      border: none
+    div.small
+      &:before
+        content: '“'
+        font-size: 32px
+        color: #ccc
+        line-height: 16px
+      &:after
+        content: '”'
+        font-size: 32px
+        color: #ccc
+        line-height: 16px
+        position: relative
+        top: 5px
+a.back
+  padding: 5px 10px
+  margin: 10px 0 5px
+  transition: 0.5s ease
+  cursor: pointer
+  color: #fff
+  background: mm-blue
+  &:hover
+    text-decoration: none
+    background: mm-dark-blue
+
+.article
+  footer
+    small
+      clear: left

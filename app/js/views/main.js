@@ -20,6 +20,26 @@ module.exports = View.extend({
     this.pageSwitcher = new ViewSwitcher(this.$('[role="page-container"]')[0], {
       show: function (newView) {
         document.title = newView.pageTitle || 'Monica Macovei Presedinte';
+        var description = newView.pageDescription || 'Candidez independent, pentru că sunt convinsă că românii merită un Președinte al lor, nu al partidelor.'
+        var keywords = newView.pageKeywords || 'alegeri, prezidentiale, candidat, independent, romania, romani, anti-coruptie';
+        var image = (window.location.origin + newView.pageImage) || (window.location.origin+'/assets/img/macovei-presedinte-fb.jpg');
+        var type = newView.pageType || 'website';
+        if (document.location.hostname == "localhost") {
+          // check if localhost, output another url
+          var url = newView.pageUrl || window.location.origin+"/"+window.location.hash;window.location.origin+"/"+window.location.hash;
+        } else {
+          // if live, output real url
+          var url = newView.pageUrl || window.location.origin+window.location.pathname;
+        }
+        // point url to html rendered version
+        url += '?_escaped_fragment_=""';
+
+        $("meta[property='og:type']").attr('content', type);
+        $("meta[property='og:image'], meta[name='twitter:image']").attr('content', image);
+        $("meta[property='og:title'], meta[name='twitter:title']").attr('content', document.title);
+        $("meta[property='og:description'], meta[name='twitter:description'], meta[name='description']").attr('content', description);
+        $("meta[property='og:url'], meta[name='twitter:url']").attr('content', url);
+        $("link[rel='canonical']").attr('href', url);
         window.scrollTo(0, 0);
         app.currentPage = newView;
       }
