@@ -25,30 +25,16 @@ module.exports = View.extend({
 
     this.postsView = new PostsView({
       collection: app.posts,
-      el: this.$('[role="posts-collection"]')
+      el: this.$('[role="posts-collection"]'),
+      homePage: true
     });
-    var container = this.$('#posts')[0];
-      var x = new window.Masonry( container, {
-        itemSelector: '.item',
-        columnWidth: 20,
-      });
-
-      if ($(window).width() > 768) {
-        x.gutter = 10;
-      }
-      else {
-        x.gutter = 90;
-        }
-      x.bindResize();
-      setTimeout(function () {
-        x.layout();
-      }, 100);
+    
     $(window).scroll(function() {
       var scrollPos = $(this).scrollTop();
       if(scrollPos > 350) {
-          $(".navbar").addClass('navbar-dimmed') // ->> css('background-color', '#232A50');
+          $(".navbar").addClass('navbar-dimmed');
       } else {
-          $(".navbar").removeClass('navbar-dimmed') // ->> css('background-color', '#232A50');
+          $(".navbar").removeClass('navbar-dimmed');
       }
     });
     return this;
