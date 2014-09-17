@@ -15,15 +15,6 @@ module.exports = View.extend({
   render: function () {
     this.$el.html(this.template());
 
-    // this.quoteBoxView = new QuoteBoxView({
-    //   model: new Backbone.Model({
-    //     content: 'Monica Macovei, apărătoarea iconică a libertăților românilor.',
-    //     author: 'Le Monde',
-    //     authorLogo: 'assets/img/logo-le-monde.png'
-    //   }),
-    //   el: this.$('[role="quote-box"]')
-    // });
-
     this.postsView = new PostsView({
       collection: app.posts,
       el: this.$('[role="posts-collection"]')
@@ -35,7 +26,7 @@ module.exports = View.extend({
           $(".navbar .logo").html("Macovei 2014");
       } else {
           $(".navbar").removeClass('navbar-dimmed'); // ->> css('background-color', '#232A50');
-          $(".navbar .logo").html("<img src=\"assets/img/logo-macovei-albastru.jpg\">");
+          $(".navbar .logo").html("<img src=\"/assets/img/logo-macovei-albastru.jpg\">");
       }
     });
 
@@ -56,9 +47,7 @@ module.exports = View.extend({
       setTimeout(function () {
         x.layout();
       }, 10);
-
-
-
+      
     return this;
   }
 });

@@ -1,12 +1,16 @@
 
 .content
   .post
-    .head
-      a(href="#{locals.url}")
-        img(src="#{locals.thumb}", style="max-width: 12em;")
-    .body
-      a(href="#{locals.url}")
-        h3.media-heading.post-title !{locals.title}
-      blockquote: .small !{locals.preview}
-      p.small.pull-left Publicat: #{locals.date}
-      a.read-more.pull-right(href="#{locals.url}") Citește
+    .row
+      .col-xs-9
+        a(href="#{locals.url}")
+          h3.media-heading.post-title !{locals.title}
+        blockquote: .small !{locals.preview}
+      .col-xs-3
+        a(href="#{locals.url}")
+          img(src="#{locals.thumb}")
+    .row
+      .col-xs-6
+        p.small Publicat: #{locals.date}
+      .col-xs-6
+        a.read-more.pull-right(href="#{locals.url}") Citește
