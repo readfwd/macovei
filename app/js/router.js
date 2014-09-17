@@ -2,6 +2,7 @@
 
 var Router = require('ampersand-router');
 var $ = require('./shims/jquery');
+var _ = require('lodash');
 
 var HomePage = require('./pages/home');
 var DesprePage = require('./pages/despre');
@@ -19,30 +20,13 @@ var Eroare404 = require('./pages/eroare404');
 var PostPage = require('./pages/post');
 var PostsPage = require('./pages/posts-home');
 
+var routes = require('./lib/routes.json');
+
 module.exports = Router.extend({
-  routes: {
-    '': 'home',
-    'despre/': 'despre',
-    'viziune/': 'viziune',
-    'candidatura/': 'candidatura',
-    'sustinatori/': 'sustinatori',
-    'implicare/': 'implicare',
-    'media/': 'media',
-    'contact/': 'contact',
-    'fii-alaturi-de-mine/': 'semnaturi',
-    'voluntariat/': 'voluntariat',
-    'strange-semnaturi/': 'voluntariat',
-    'donatii/': 'donatii',
-    'sustinere-financiara/': 'donatii',
-    'donatii_thankyou/': 'donatiiThankyou',
-    'donatii-thankyou/': 'donatiiThankyou',
-    'sustinere-financiara-multumiri/': 'donatiiThankyou',
-    '404': 'eroare404',
-    'posts/:slug': 'post',
-    'posts/': 'posts'
-
-  },
-
+  routes: _.mapValues(routes, function(route) {
+    return route.prefix;
+  }),
+  
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));

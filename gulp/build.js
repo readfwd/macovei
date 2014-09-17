@@ -6,6 +6,7 @@ var gulp = require('gulp');
 var config = require('./_config.js');
 var paths = config.paths;
 var $ = config.plugins;
+var _ = require('lodash');
 
 var wiredep = require('wiredep').stream;
 var nodefn = require('when/node');
@@ -21,6 +22,8 @@ var express = require('express');
 var path = require('path');
 var mainBowerFiles = require('main-bower-files');
 var fs = require('fs');
+var xml = require('xml-writer');
+var mkdirp = require('mkdirp');
 
 var opts = {
   autoprefixer: [
@@ -217,7 +220,7 @@ gulp.task('critical', ['build:dist:base'], function (done) {
   });
 });
 
-gulp.task('build:dist', ['critical'], function () {
+gulp.task('build:dist', ['sitemap', 'critical'], function () {
   return gulp.src(paths.dist + '/index.html')
     .pipe($.replace(
       '<link rel=stylesheet href=' + cssPath + '>',
@@ -259,4 +262,49 @@ gulp.task('posts', function () {
   }
   var content = JSON.stringify(json);
   fs.writeFileSync(paths.app + '/js/lib/posts-json.json', content);
+});
+
+gulp.task('sitemap', ['posts'], function () {
+  var routes = require('../' + paths.app + '/js/lib/routes.json');
+  var posts = require('../' + paths.app + '/js/lib/posts-json.json');
+
+  var sitemap = new xml();
+  var baseLink = "http://macoveipresedinte.ro/";
+
+  sitemap.startDocument();
+  sitemap.startElement('urlset').writeAttribute('xmlns', "http://www.sitemaps.org/schemas/sitemap/0.9")
+    .writeAttribute('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
+    .writeAttribute('xsi:schemaLocation', "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd");
+  _.each(routes, function (route, path) {
+    if (route.skip) { return; }
+
+    if (route.posts) {
+
+      _.each(posts, function (post) {
+
+        sitemap.startElement('url')
+          .startElement('loc').text(baseLink + 'post/' + post.slug).endElement()
+          .startElement('priority').text(route.priority).endElement()
+          .startElement('changefreq').text(route.changeFreq).endElement()
+          .endElement();
+
+      });
+
+    } else {
+
+      sitemap.startElement('url')
+        .startElement('loc').text(baseLink + path).endElement()
+        .startElement('priority').text(route.priority).endElement()
+        .startElement('changefreq').text(route.changeFreq).endElement()
+        .endElement();
+
+    }
+
+  });
+  sitemap.endElement();
+  sitemap.endDocument();
+  // fs.writeFileSync(paths.dist + '/sitemap.xml', sitemap.toString());
+  return nodefn.call(mkdirp, paths.dist).then(function () {
+    return nodefn.call(fs.writeFile, paths.dist + '/sitemap.xml', sitemap.toString());
+  });
 });

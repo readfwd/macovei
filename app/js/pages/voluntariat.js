@@ -11,6 +11,9 @@ markers = _.sortBy(markers, 'title');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Voluntariat',
+  pageDescription: '',
+  pageKeywords: '',
+  pageUrl: '/strange-semnaturi/',
   template: templates.pages.voluntariat,
 
   render: function () {
