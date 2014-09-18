@@ -12,7 +12,6 @@ var SustinatoriPage = require('./pages/sustinatori');
 var ImplicarePage = require('./pages/implicare');
 var MediaPage = require('./pages/media');
 var ContactPage = require('./pages/contact');
-var SemnaturiPage = require('./pages/semnaturi');
 var DonatiiPage = require('./pages/donatii');
 var DonatiiThankYouPage = require('./pages/donatii-thankyou');
 var VoluntariatPage = require('./pages/voluntariat');
@@ -61,11 +60,6 @@ module.exports = Router.extend({
     this.trigger('newPage', new ContactPage({}));
   },
 
-  semnaturi: function () {
-    this.trigger('newPage', new SemnaturiPage({}));
-    $('body').attr('data-page', 'semnaturi');
-  },
-
   donatii: function () {
     this.trigger('newPage', new DonatiiPage({}));
     $('body').attr('data-page', 'donatii');
@@ -89,7 +83,6 @@ module.exports = Router.extend({
     this.trigger('newPage', new PostPage({
       slug: slug
     }));
-    // $('body').attr('data-page', 'semnaturi');
   },
 
   posts: function () {

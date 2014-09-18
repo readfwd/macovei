@@ -1,14 +1,10 @@
 .container
-  h1.text-center Strânge semnături
   .row
     .col-md-10.col-md-offset-1: .content
-      //- .text-center
-      //-   .btn-group
-      //-     .btn.btn-md.btn-primary#romaniaCenters România
-      //-     .btn.btn-md.btn-primary#worldWideCenters Diaspora
-      #map
+      h1.text-left Voluntariat
       .row
         .col-sm-8.small
+          #map
           p Dragi susținători,
           p Vă mulțumesc pentru semnăturile pe care le strângeți ca să pot candida la alegerile prezidențiale.
           p Persoana care strânge semnăturile trebuie să se asigure că semnatarul a completat corect și complet rubricile și să verifice valabilitatea datelor fiecărui semnatar, pentru care își asumă răspunderea, conform declarației. O semnătură greșită invalidează toată pagina.
@@ -19,6 +15,10 @@
           p Vă mulțumesc!
           p <em>Monica Macovei</em>
         .col-sm-4
+          .panel.panel-primary
+            .panel-heading Înscrie-te ca voluntar
+            .panel-body
+              include ../includes/mailchimpForm.jade
           p.text-center
             a.btn.btn-lg.btn-block.btn-success(href="/assets/misc/formular-final-fara-adresa.pdf", rel="download")
              | Descarcă formularul
