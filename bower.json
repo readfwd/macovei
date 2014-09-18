@@ -17,7 +17,7 @@
   "dependencies": {
     "bootstrap": "~3.2.0",
     "fontawesome": "~4.2.0",
-    "ShapeHoverEffectSVG": "codrops/ShapeHoverEffectSVG#d369803",
+    "ShapeHoverEffectSVG": "git://github.com/codrops/ShapeHoverEffectSVG.git#d3698031b26078d2a26a3b610c12b090d2b9b97e",
     "gmaps": "~0.4.14",
     "masonry": "~3.1.5"
   }
