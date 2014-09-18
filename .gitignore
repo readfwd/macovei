@@ -5,9 +5,11 @@ node_modules
 dist
 npm-debug.log
 .tmp
+.env
 coverage
 app/js/lib/templates.js
 app/js/lib/posts-templates.js
+app/js/lib/url-replacements.json
 app/js/lib/posts-json.json
 app/bower_components
 *.log
