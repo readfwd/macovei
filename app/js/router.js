@@ -5,7 +5,6 @@ var $ = require('./shims/jquery');
 var _ = require('lodash');
 
 var HomePage = require('./pages/home');
-var DesprePage = require('./pages/despre');
 var ViziunePage = require('./pages/viziune');
 var CandidaturaPage = require('./pages/candidatura');
 var SustinatoriPage = require('./pages/sustinatori');
@@ -19,28 +18,40 @@ var Eroare404 = require('./pages/eroare404');
 var PostPage = require('./pages/post');
 var PostsPage = require('./pages/posts-home');
 
+var CineSuntPage = require('./pages/cine-sunt');
+var CeAmFacutPage = require('./pages/ce-am-facut');
+var CeilaltiDespreMinePage = require('./pages/ceilalti-despre-mine');
+var MinciuniDespreMinePage = require('./pages/minciuni-despre-mine');
+var DeCeSaMaVotatiPage = require('./pages/de-ce-sa-ma-votati');
+var DepunereaCandidaturiiPage = require('./pages/depunerea-candidaturii');
+var PersonalitatiPage = require('./pages/personalitati');
+var TestimonialeOnlinePage = require('./pages/testimoniale-online');
+var AparitiiMediaPage = require('./pages/aparitii-media');
+var EvenimentePage = require('./pages/evenimente');
+var KitDePresaPage = require('./pages/kit-de-presa');
+
+
 var routes = require('./lib/routes.json');
 
 module.exports = Router.extend({
   routes: _.mapValues(routes, function(route) {
     return route.prefix;
   }),
-  
+
+  initialize: function() {
+    console.log(this.routes);
+  },
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));
     $('body').attr('data-page', 'home');
   },
 
-  despre: function () {
-    this.trigger('newPage', new DesprePage({}));
-  },
-
   viziune: function () {
     this.trigger('newPage', new ViziunePage({}));
   },
 
-  candidatura: function () {
+  deCeCandidez: function () {
     this.trigger('newPage', new CandidaturaPage({}));
   },
 
@@ -87,5 +98,49 @@ module.exports = Router.extend({
 
   posts: function () {
     this.trigger('newPage', new PostsPage({}));
+  },
+
+  cineSunt: function () {
+    this.trigger('newPage', new CineSuntPage({}));
+  },
+
+  ceAmFacut: function () {
+    this.trigger('newPage', new CeAmFacutPage({}));
+  },
+
+  ceilaltiDespreMine: function () {
+    this.trigger('newPage', new CeilaltiDespreMinePage({}));
+  },
+
+  minciuniDespreMine: function () {
+    this.trigger('newPage', new MinciuniDespreMinePage({}));
+  },
+
+  deCeSaMaVotati: function () {
+    this.trigger('newPage', new DeCeSaMaVotatiPage({}));
+  },
+
+  depunereaCandidaturii: function () {
+    this.trigger('newPage', new DepunereaCandidaturiiPage({}));
+  },
+
+  personalitati: function () {
+    this.trigger('newPage', new PersonalitatiPage({}));
+  },
+
+  testimonialeOnline: function () {
+    this.trigger('newPage', new TestimonialeOnlinePage({}));
+  },
+
+  aparitiiMedia: function () {
+    this.trigger('newPage', new AparitiiMediaPage({}));
+  },
+
+  evenimente: function () {
+    this.trigger('newPage', new EvenimentePage({}));
+  },
+
+  kitDePresa: function () {
+    this.trigger('newPage', new KitDePresaPage({}));
   }
 });
