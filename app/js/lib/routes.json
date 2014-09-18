@@ -5,8 +5,23 @@
     "skip": true,
     "priority": "1.0"
   },
-  "despre/": {
-    "prefix": "despre",
+  "despre/cine-sunt/": {
+    "prefix": "cineSunt",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
+  "despre/ce-am-facut/": {
+    "prefix": "ceAmFacut",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
+  "despre/ceilalti-despre-mine/": {
+    "prefix": "ceilaltiDespreMine",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
+  "despre/minciuni-despre-mine/": {
+    "prefix": "minciuniDespreMine",
     "changeFreq": "daily",
     "priority": "1.0"
   },
@@ -15,13 +30,33 @@
     "changeFreq": "weekly",
     "priority": "0.8"
   },
-  "candidatura/": {
-    "prefix": "candidatura",
+  "candidatura/de-ce-candidez/": {
+    "prefix": "deCeCandidez",
     "changeFreq": "weekly",
     "priority": "0.5"
   },
-  "sustinatori/": {
+  "candidatura/de-ce-sa-ma-votati/": {
+    "prefix": "deCeSaMaVotati",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "candidatura/depunerea-candidaturii/": {
+    "prefix": "depunereaCandidaturii",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "sustinatori/testimoniale-video/": {
     "prefix": "sustinatori",
+    "changeFreq": "daily",
+    "priority": "0.5"
+  },
+  "sustinatori/personalitati/": {
+    "prefix": "personalitati",
+    "changeFreq": "daily",
+    "priority": "0.5"
+  },
+  "sustinatori/testimoniale-online/": {
+    "prefix": "testimonialeOnline",
     "changeFreq": "daily",
     "priority": "0.5"
   },
@@ -30,8 +65,18 @@
     "changeFreq": "weekly",
     "priority": "0.8"
   },
-  "media/": {
+  "media/aparitii-media/": {
     "prefix": "media",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/evenimente/": {
+    "prefix": "evenimente",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/kit-de-presa/": {
+    "prefix": "kitDePresa",
     "changeFreq": "daily",
     "priority": "0.8"
   },
