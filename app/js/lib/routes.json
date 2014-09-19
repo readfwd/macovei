@@ -46,7 +46,7 @@
     "priority": "0.5"
   },
   "sustinatori/testimoniale-video/": {
-    "prefix": "sustinatori",
+    "prefix": "testimonialeVideo",
     "changeFreq": "daily",
     "priority": "0.5"
   },

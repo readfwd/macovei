@@ -1,0 +1,48 @@
+[
+  /*Add new videos here*/
+  {
+    "url": "//www.youtube.com/embed/neBB7tNs_Q8?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "T.O. Bobe",
+    "quote": "O sustin si o votez pe Monica Macovei."
+  },
+  {
+    "url": "//www.youtube.com/embed/HkwVC67THqA?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Cristi Ghinea",
+    "quote": "Votez Monica Macovei pentru PE."
+  },
+  {
+    "url": "//www.youtube.com/embed/wtByTqRLySI?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Marian Preda",
+    "quote": "Eu o votez pe Monica Macovei. Este altfel decât ei."
+  },
+  {
+    "url": "//www.youtube.com/embed/e3N51aSEgrI?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Pavel Șușară",
+    "quote": "... am o compatibilitate profundă cu felul ei de a fi."
+  },
+  {
+    "url": "//www.youtube.com/embed/bkDj9iKTd14?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Silvia Gherghescu, mama Monicăi Macovei",
+    "quote": "O susțin pe Monica cu toată dragostea."
+  },
+  {
+    "url": "//www.youtube.com/embed/mcWa_EloIuc?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Dan Amariei",
+    "quote": "Acum avem cu cine vota: Monica Macovei."
+  },
+  {
+    "url": "//www.youtube.com/embed/dKjSYJx4mwM?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Andreea Bibiri",
+    "quote": "Știu că a făcut lucruri excepționale pentru țară!"
+  },
+  {
+    "url": "//www.youtube.com/embed/11tXrvWJttQ?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Vladimir Tismăneanu",
+    "quote": "Monica Macovei este vocea celor fără de voce."
+  },
+  {
+    "url": "//www.youtube.com/embed/ANxDJW3QSG0?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Andrei Gheorghe",
+    "quote": "6! Vine Monica."
+  }
+]

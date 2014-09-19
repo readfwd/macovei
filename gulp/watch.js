@@ -11,6 +11,8 @@ var browserSync = require('browser-sync');
 gulp.task('watch:common', ['build'], function () {
   gulp.watch(paths.app + '/index.jade', ['index.html']);
   gulp.watch(paths.app + '/templates/**/*.jade', ['js:dev']);
+  gulp.watch(paths.app + '/js/lib/**/*.js', ['js:dev']);
+  gulp.watch(paths.app + '/js/lib/**/*.json', ['js:dev']);
   gulp.watch(paths.app + '/posts/**/*.jade', ['js:dev']);
   gulp.watch([paths.app + '/**/*.js',
               '!' + paths.app + '/js/lib/templates.js',

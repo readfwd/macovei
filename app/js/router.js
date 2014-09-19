@@ -7,7 +7,7 @@ var _ = require('lodash');
 var HomePage = require('./pages/home');
 var ViziunePage = require('./pages/viziune');
 var CandidaturaPage = require('./pages/candidatura');
-var SustinatoriPage = require('./pages/sustinatori');
+var TestimonialeVideoPage = require('./pages/testimoniale-video');
 var ImplicarePage = require('./pages/implicare');
 var MediaPage = require('./pages/media');
 var ContactPage = require('./pages/contact');
@@ -55,8 +55,8 @@ module.exports = Router.extend({
     this.trigger('newPage', new CandidaturaPage({}));
   },
 
-  sustinatori: function () {
-    this.trigger('newPage', new SustinatoriPage({}));
+  testimonialeVideo: function () {
+    this.trigger('newPage', new TestimonialeVideoPage({}));
   },
 
   implicare: function () {
