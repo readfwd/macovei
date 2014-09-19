@@ -1,0 +1,20 @@
+.videoStripe
+  .container
+    h1
+      .row
+        .col-sm-10
+          span Testimoniale Video
+        .col-sm-2
+          a.pull-right(href="/sustinatori/testimoniale-online/") Toate
+    .row
+      - var maxVideos = 3;
+      - for (var i = 0; i < maxVideos; i++) {
+        .col-sm-4
+          .testimonial
+            .sustinator.small.sustinator-nume
+              span #{videos[i].person}
+            .sustinator.sustinator-text
+              span #{videos[i].quote}
+            .embed-responsive.embed-responsive-16by9
+              iframe.embed-responsive-item(src="#{videos[i].url}", modestbranding="1", frameborder="0", allowfullscreen)
+      - }
