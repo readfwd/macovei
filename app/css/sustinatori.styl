@@ -9,16 +9,20 @@
     color: #fff
   .sustinator
     opacity: 15px
-    position: absolute
-    z-index: 5
+    position: relative
+    z-index: 1
     color: #fff
     transition: 0.5s ease
     &.sustinator-nume
+      position: absolute
+      bottom: 35px
       span
         padding: 0.1em 0.2em
         background: rgba(0, 103, 158, 0.7)
         font-weight: 300
     &.sustinator-text
+      position: absolute
+      bottom: 0
       background: rgba(0, 103, 158, 0.7)
       font-weight: 300
       padding: 0.1em 0.2em
@@ -31,4 +35,3 @@
     box-shadow: 1px 0 20px rgba(0,0,0,0.7)
     .sustinator
       opacity: 0
-

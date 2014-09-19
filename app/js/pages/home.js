@@ -6,6 +6,8 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
 var $ = require('../shims/jquery');
+var videos = require('../lib/testimoniale-video.json');
+var dubi = require('../lib/dubi.json');
 // var QuoteBoxView = require('../views/quote-box');
 // var urepl = require('../lib/url-replace');
 
@@ -13,7 +15,10 @@ module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Home',
   template: templates.pages.home,
   render: function () {
-    this.$el.html(this.template());
+    this.$el.html(this.template({
+      videos: videos,
+      dubi: dubi
+    }));
 
     // this.quoteBoxView = new QuoteBoxView({
     //   model: new Backbone.Model({
@@ -29,7 +34,7 @@ module.exports = View.extend({
       el: this.$('[role="posts-collection"]'),
       homePage: true
     });
-    
+
     $(window).scroll(function() {
       var scrollPos = $(this).scrollTop();
       if(scrollPos > 350) {

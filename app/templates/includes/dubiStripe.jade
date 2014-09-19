@@ -1,0 +1,15 @@
+.dubiStripe
+  .container
+    h1
+      .row
+        .col-sm-10
+          span Dubi și Monica
+        .col-sm-2
+          a.pull-right(href="/dubi/") Toate
+    .row
+      - var comics = 4;
+      - for (var i = 0; i < comics; i++) {
+        .col-sm-3
+          div
+            img.dubi(src="#{dubi[i]}")
+      - }

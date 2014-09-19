@@ -7,7 +7,7 @@ var _ = require('lodash');
 var HomePage = require('./pages/home');
 var ViziunePage = require('./pages/viziune');
 var CandidaturaPage = require('./pages/candidatura');
-var SustinatoriPage = require('./pages/sustinatori');
+var TestimonialeVideoPage = require('./pages/testimoniale-video');
 var ImplicarePage = require('./pages/implicare');
 var MediaPage = require('./pages/media');
 var ContactPage = require('./pages/contact');
@@ -29,6 +29,7 @@ var TestimonialeOnlinePage = require('./pages/testimoniale-online');
 var AparitiiMediaPage = require('./pages/aparitii-media');
 var EvenimentePage = require('./pages/evenimente');
 var KitDePresaPage = require('./pages/kit-de-presa');
+var DubiPage = require('./pages/dubi');
 
 
 var routes = require('./lib/routes.json');
@@ -55,8 +56,8 @@ module.exports = Router.extend({
     this.trigger('newPage', new CandidaturaPage({}));
   },
 
-  sustinatori: function () {
-    this.trigger('newPage', new SustinatoriPage({}));
+  testimonialeVideo: function () {
+    this.trigger('newPage', new TestimonialeVideoPage({}));
   },
 
   implicare: function () {
@@ -142,5 +143,8 @@ module.exports = Router.extend({
 
   kitDePresa: function () {
     this.trigger('newPage', new KitDePresaPage({}));
+  },
+  dubi: function () {
+    this.trigger('newPage', new DubiPage({}));
   }
 });
