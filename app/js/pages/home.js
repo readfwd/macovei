@@ -7,6 +7,7 @@ var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
 var $ = require('../shims/jquery');
 var videos = require('../lib/testimoniale-video.json');
+var dubi = require('../lib/dubi.json');
 // var QuoteBoxView = require('../views/quote-box');
 // var urepl = require('../lib/url-replace');
 
@@ -15,7 +16,8 @@ module.exports = View.extend({
   template: templates.pages.home,
   render: function () {
     this.$el.html(this.template({
-      videos: videos
+      videos: videos,
+      dubi: dubi
     }));
 
     // this.quoteBoxView = new QuoteBoxView({

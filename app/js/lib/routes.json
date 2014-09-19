@@ -144,5 +144,10 @@
     "prefix": "posts",
     "changeFreq": "always",
     "priority": "1.0"
+  },
+  "dubi/": {
+    "prefix": "dubi",
+    "changeFreq": "weekly",
+    "priority": "0.5"
   }
 }

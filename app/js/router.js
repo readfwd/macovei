@@ -29,6 +29,7 @@ var TestimonialeOnlinePage = require('./pages/testimoniale-online');
 var AparitiiMediaPage = require('./pages/aparitii-media');
 var EvenimentePage = require('./pages/evenimente');
 var KitDePresaPage = require('./pages/kit-de-presa');
+var DubiPage = require('./pages/dubi');
 
 
 var routes = require('./lib/routes.json');
@@ -142,5 +143,8 @@ module.exports = Router.extend({
 
   kitDePresa: function () {
     this.trigger('newPage', new KitDePresaPage({}));
+  },
+  dubi: function () {
+    this.trigger('newPage', new DubiPage({}));
   }
 });
