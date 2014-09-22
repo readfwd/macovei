@@ -37,7 +37,6 @@ module.exports = View.extend({
   },
 
   addLink: function (post) {
-    console.log(this.$el.html());
     var view = new LinkPreView({
       model: post
     });
