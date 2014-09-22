@@ -14,20 +14,15 @@ var dubi = require('../lib/dubi.json');
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Home',
   template: templates.pages.home,
+  events: {
+    "click .chevron": "scroll"
+  },
+
   render: function () {
     this.$el.html(this.template({
       videos: videos,
       dubi: dubi
     }));
-
-    // this.quoteBoxView = new QuoteBoxView({
-    //   model: new Backbone.Model({
-    //     content: 'Monica Macovei, apărătoarea iconică a libertăților românilor.',
-    //     author: 'Le Monde',
-    //     authorLogo: urepl('/assets/img/logo-le-monde.png')
-    //   }),
-    //   el: this.$('[role="quote-box"]')
-    // });
 
     this.postsView = new PostsView({
       collection: app.posts,
@@ -44,5 +39,12 @@ module.exports = View.extend({
       }
     });
     return this;
+  },
+
+  scroll: function () {
+    // $("body").animate({ scrollTop: $('.newsStripe').offset().top }, 1000);
+    $("body").animate({
+      scrollTop: this.$('.newsStripe').offset().top
+    }, 200);
   }
 });
