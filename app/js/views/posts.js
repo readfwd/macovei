@@ -5,7 +5,6 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 var PostPreView = require('./post-preview');
 var LinkPreView = require('./link-preview');
-var $ = require('../shims/jquery');
 
 module.exports = View.extend({
   template: templates.includes.postsCollection,
@@ -13,15 +12,13 @@ module.exports = View.extend({
     this.render(options);
   },
   render: function (options) {
-    this.$el.html(this.template());
+    this.$el.html(this.template(options));
     if (options.homePage) {
       this.addPost(this.collection.last());
       this.addLink(this.collection.at(this.collection.length - 2));
       this.addLink(this.collection.at(this.collection.length - 3));
-      // this.collection.each(this.addLink, this);
-      // for (var i = this.collection.length - 2, n = this.collection.length - 6; i > n; i--) {
-      //   this.addLink(i, this);
-      // }
+      this.addLink(this.collection.at(this.collection.length - 4));
+
     }
     else {
       this.addAllPosts();
@@ -36,15 +33,14 @@ module.exports = View.extend({
     var view = new PostPreView({
       model: post
     });
-    this.$('[role="posts"]').prepend(view.render().el);
+    this.$el.find('[role="posts"]').prepend(view.render().el);
   },
 
   addLink: function (post) {
-    this.$( document ).ready(function() {
-      var view = new LinkPreView({
-        model: post
-      });
-      $('[role="links"]').prepend(view.render().el);
+    console.log(this.$el.html());
+    var view = new LinkPreView({
+      model: post
     });
+    this.$el.find('[role="links"]').prepend(view.render().el);
   }
 });
