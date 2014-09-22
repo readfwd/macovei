@@ -39,9 +39,6 @@ module.exports = Router.extend({
     return route.prefix;
   }),
 
-  initialize: function() {
-    console.log(this.routes);
-  },
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));
@@ -50,26 +47,32 @@ module.exports = Router.extend({
 
   viziune: function () {
     this.trigger('newPage', new ViziunePage({}));
+    $('body').attr('data-page', 'viziune');
   },
 
   deCeCandidez: function () {
     this.trigger('newPage', new CandidaturaPage({}));
+    $('body').attr('data-page', 'deCeCandidez');
   },
 
   testimonialeVideo: function () {
     this.trigger('newPage', new TestimonialeVideoPage({}));
+    $('body').attr('data-page', 'testimonialeVideo');
   },
 
   implicare: function () {
-    this.trigger('newPage', new ImplicarePage({}));
+    this.trigger('newPage', new ImplicarePage({}))
+    $('body').attr('data-page', 'implicare');;
   },
 
   media: function () {
     this.trigger('newPage', new MediaPage({}));
+    $('body').attr('data-page', 'media');
   },
 
   contact: function () {
     this.trigger('newPage', new ContactPage({}));
+    $('body').attr('data-page', 'contact');
   },
 
   donatii: function () {
@@ -79,6 +82,7 @@ module.exports = Router.extend({
 
   donatiiThankyou: function () {
     this.trigger('newPage', new DonatiiThankYouPage({}));
+    $('body').attr('data-page', 'donatiiThankYou');
   },
 
   voluntariat: function () {
@@ -95,56 +99,70 @@ module.exports = Router.extend({
     this.trigger('newPage', new PostPage({
       slug: slug
     }));
+    $('body').attr('data-page', 'post');
   },
 
   posts: function () {
     this.trigger('newPage', new PostsPage({}));
+    $('body').attr('data-page', 'posts');
   },
 
   cineSunt: function () {
     this.trigger('newPage', new CineSuntPage({}));
+    $('body').attr('data-page', 'cineSunt');
   },
 
   ceAmFacut: function () {
     this.trigger('newPage', new CeAmFacutPage({}));
+    $('body').attr('data-page', 'ceAmFacut');
   },
 
   ceilaltiDespreMine: function () {
     this.trigger('newPage', new CeilaltiDespreMinePage({}));
+    $('body').attr('data-page', 'ceilaltiDespreMine');
   },
 
   minciuniDespreMine: function () {
     this.trigger('newPage', new MinciuniDespreMinePage({}));
+    $('body').attr('data-page', 'minciuniDespreMine');
   },
 
   deCeSaMaVotati: function () {
     this.trigger('newPage', new DeCeSaMaVotatiPage({}));
+    $('body').attr('data-page', 'deCeSaMaVotati');
   },
 
   depunereaCandidaturii: function () {
     this.trigger('newPage', new DepunereaCandidaturiiPage({}));
+    $('body').attr('data-page', 'depunereaCandidaturii');
   },
 
   personalitati: function () {
     this.trigger('newPage', new PersonalitatiPage({}));
+    $('body').attr('data-page', 'personalitati');
   },
 
   testimonialeOnline: function () {
     this.trigger('newPage', new TestimonialeOnlinePage({}));
+    $('body').attr('data-page', 'testimonialeOnline');
   },
 
   aparitiiMedia: function () {
     this.trigger('newPage', new AparitiiMediaPage({}));
+    $('body').attr('data-page', 'aparitiiMedia');
   },
 
   evenimente: function () {
     this.trigger('newPage', new EvenimentePage({}));
+    $('body').attr('data-page', 'evenimente');
   },
 
   kitDePresa: function () {
     this.trigger('newPage', new KitDePresaPage({}));
+    $('body').attr('data-page', 'kitDePresa');
   },
   dubi: function () {
     this.trigger('newPage', new DubiPage({}));
+    $('body').attr('data-page', 'dubi');
   }
 });

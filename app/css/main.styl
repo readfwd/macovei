@@ -18,7 +18,7 @@ body
     background: mm-dark-blue
     position: fixed
     top: 0
-    z-index: 1
+    z-index: 100
     width: 100%
 
   @media (max-width: 767px)
@@ -31,7 +31,17 @@ body
   padding: 15px
   background: white
 
+.logo
+  .white
+    display: none
+  .black
+    display: block
 [data-page='home']
+  .logo
+    .white
+      display: block
+    .black
+      display: none
   .navbar
     background: rgba(0,0,0,0.50);
   .navbar-dimmed
@@ -40,7 +50,7 @@ body
     padding-top: 0
 
 [role="page-container"]
-  padding-top: 50px
+  padding-top: 150px
   @media (max-width: 767px)
     background: #eee
     border-top: 0.5em solid rgba(mm-red, 1.0)
@@ -108,3 +118,16 @@ h1
 .dubi
   width: 100%
   height: auto
+.logo
+  position: absolute
+  top: 60%
+  img
+    height: 5em
+.macovei-logo
+  img
+    position: absolute
+    height: 2em !important
+    top: 50%
+    transform: translateY(-50%)
+a.navbar-brand:hover
+  background-color: transparent !important

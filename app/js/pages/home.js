@@ -14,20 +14,20 @@ var dubi = require('../lib/dubi.json');
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Home',
   template: templates.pages.home,
+  events: {
+    "click .chevron": "scroll",
+    "scroll": "handleScrolling"
+  },
+
+  initialize: function () {
+    $(window).scroll(this.handleScrolling);
+  },
+
   render: function () {
     this.$el.html(this.template({
       videos: videos,
       dubi: dubi
     }));
-
-    // this.quoteBoxView = new QuoteBoxView({
-    //   model: new Backbone.Model({
-    //     content: 'Monica Macovei, apărătoarea iconică a libertăților românilor.',
-    //     author: 'Le Monde',
-    //     authorLogo: urepl('/assets/img/logo-le-monde.png')
-    //   }),
-    //   el: this.$('[role="quote-box"]')
-    // });
 
     this.postsView = new PostsView({
       collection: app.posts,
@@ -35,14 +35,31 @@ module.exports = View.extend({
       homePage: true
     });
 
+
+    this.$('body').attr('data-page', 'home').css("padding-top", 0);
+    return this;
+  },
+
+  scroll: function () {
+    // $("body").animate({ scrollTop: $('.newsStripe').offset().top }, 1000);
+    $("body").animate({
+      scrollTop: this.$('.newsStripe').offset().top - 50
+    }, 200);
+  },
+
+  handleScrolling: function () {
     $(window).scroll(function() {
-      var scrollPos = $(this).scrollTop();
-      if(scrollPos > 350) {
-          $(".navbar").addClass('navbar-dimmed');
+      var scrollPos = this.$(this).scrollTop();
+      if(scrollPos > 300) {
+          this.$(".navbar").addClass('navbar-dimmed');
+          this.$(".logo").html(
+            "<img src=\"/assets/img/logo-nou-macovei-white-lung.png\"></img>")
+            .addClass('macovei-logo').removeClass('logo');
       } else {
-          $(".navbar").removeClass('navbar-dimmed');
+          this.$(".navbar").removeClass('navbar-dimmed');
+          this.$(".macovei-logo").html("<img src=\"/assets/img/logo-nou-macovei-white.png\"></img>")
+            .removeClass('macovei-logo').addClass('logo');
       }
     });
-    return this;
   }
 });

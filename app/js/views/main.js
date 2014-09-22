@@ -10,8 +10,14 @@ var templates = require('../lib/templates');
 module.exports = View.extend({
   template: templates.body,
   events: {
-    'click a[href]:not([rel="download"])': 'handleLinkClick'
+    'click a[href]:not([rel="download"])': 'handleLinkClick',
+    'scroll': "handleScrolling"
   },
+
+  intialize: function () {
+    $(window).scroll(this.handleScrolling);
+  },
+
   render: function () {
     var self = this;
     this.$el.html(this.template());
@@ -51,6 +57,7 @@ module.exports = View.extend({
       }
     });
 
+
     return this;
   },
   setPage: function (view) {
@@ -72,5 +79,21 @@ module.exports = View.extend({
         e.preventDefault();
         app.navigate(path);
       }
+  },
+
+  handleScrolling: function () {
+    $(window).scroll(function() {
+      var scrollPos = this.$(this).scrollTop();
+      if(scrollPos > 100) {
+          this.$(".navbar").addClass('navbar-dimmed');
+          this.$(".logo").html(
+            "<img src=\"/assets/img/logo-nou-macovei-white-lung.png\"></img>")
+            .addClass('macovei-logo').removeClass('logo');
+      } else {
+          this.$(".navbar").removeClass('navbar-dimmed');
+          this.$(".macovei-logo").html("<img src=\"/assets/img/logo-nou-macovei-black.png\"></img>")
+            .removeClass('macovei-logo').addClass('logo');
+      }
+    });
   }
 });

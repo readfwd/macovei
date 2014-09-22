@@ -1,1 +1,9 @@
-div(role="posts", id="posts", class="js-masonry", style="position: relative")
+- if (homePage) {
+  .row
+    .col-sm-6
+      div(role="posts", id="posts", class="js-masonry", style="position: relative")
+    .col-sm-6
+      div(role="links", id="links", class="js-masonry", style="position: relative")
+- } else {
+  div(role="posts", id="posts", class="js-masonry", style="position: relative")
+- }
