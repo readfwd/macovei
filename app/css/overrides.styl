@@ -17,7 +17,7 @@ a
       background: white
 
     &:hover
-      background: transparent
+      background: lighten(mm-red, 50%)
 
   .navbar-collapse
     border-color: transparent
@@ -26,6 +26,12 @@ a
     color: white
     font-weight: 300
     transition: color 0.1s
-
     &:hover
       background: lighten(mm-red, 50%)
+
+  & .open > a, .nav .open > a:hover
+    background: lighten(mm-red, 50%)
+    cursor: pointer
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus
+  background: lighten(mm-red, 92%)
