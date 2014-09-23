@@ -38,6 +38,8 @@ body
   .black
     display: block
 [data-page='home']
+  .social
+    position: absolute
   .logo
     .white
       display: block
@@ -51,7 +53,7 @@ body
     padding-top: 0
 
 [role="page-container"]
-  padding-top: 140px
+  padding-top: 150px
   @media (max-width: 767px)
     background: #eee
     border-top: 0.5em solid rgba(mm-red, 1.0)
@@ -132,3 +134,11 @@ h1
     transform: translateY(-50%)
 a.navbar-brand:hover
   background-color: transparent !important
+
+.social
+  position: absolute
+  bottom: 100px
+  left: 50%
+  transform: translateX(-50%)
+  iframe
+    width: 100%
