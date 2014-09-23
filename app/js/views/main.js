@@ -6,21 +6,20 @@ var View = Backbone.View;
 var $ = require('../shims/jquery');
 var ViewSwitcher = require('ampersand-view-switcher');
 var templates = require('../lib/templates');
+var urlrepl = require('../lib/url-replace');
 
 module.exports = View.extend({
   template: templates.body,
   events: {
     'click a[href]:not([rel="download"])': 'handleLinkClick',
-    'scroll': "handleScrolling"
-  },
-
-  intialize: function () {
-    $(window).scroll(this.handleScrolling);
+    'scroll': 'handleScrolling'
   },
 
   render: function () {
     var self = this;
     this.$el.html(this.template());
+
+    $(window).scroll(this.handleScrolling.bind(this));
 
     // Init and configure the page switcher.
     this.pageSwitcher = new ViewSwitcher(this.$('[role="page-container"]')[0], {
@@ -56,13 +55,15 @@ module.exports = View.extend({
         return self.$('.navbar-toggle').click();
       }
     });
-
-
     return this;
   },
+
   setPage: function (view) {
+    this.currentView = view;
     this.pageSwitcher.set(view);
+    this.renderLogo();
   },
+
   handleLinkClick: function (e) {
 
       var t = $(e.target);
@@ -82,18 +83,41 @@ module.exports = View.extend({
   },
 
   handleScrolling: function () {
-    $(window).scroll(function() {
-      var scrollPos = this.$(this).scrollTop();
-      if(scrollPos > 100) {
-          this.$(".navbar").addClass('navbar-dimmed');
-          this.$(".logo").html(
-            "<img src=\"/assets/img/logo-nou-macovei-white-lung.png\"></img>")
-            .addClass('macovei-logo').removeClass('logo');
-      } else {
-          this.$(".navbar").removeClass('navbar-dimmed');
-          this.$(".macovei-logo").html("<img src=\"/assets/img/logo-nou-macovei-black.png\"></img>")
-            .removeClass('macovei-logo').addClass('logo');
+    var view = this.currentView;
+    var scrollPos = $(window).scrollTop();
+    console.log('scroll', scrollPos, view.$el);
+    if(scrollPos > 100) {
+        this.$(".navbar").addClass('navbar-dimmed');
+        this.$(".logo")
+          .addClass('macovei-logo')
+          .html(
+            "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-white-lung.png") + "\"></img>")
+          .removeClass('logo');
+    } else {
+      this.renderLogo();
+      this.$(".navbar").removeClass('navbar-dimmed');
+      var html = "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-black.png") + "\"></img>";
+      if (view.homePage === true) {
+        html = "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-white.png") + "\"></img>";
       }
-    });
+      this.$(".macovei-logo")
+        .addClass('logo')
+        .html(html)
+        .removeClass('macovei-logo');
+    }
+  },
+
+  renderLogo: function () {
+    if ($(window).scrollTop() === 0) {
+      if (this.currentView.homePage) {
+        this.$('.logo')
+          .html( "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-white.png") + "\"></img>");
+      }
+      else {
+        this.$('.logo')
+          .html(
+            "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-black.png") + "\"></img>");
+      }
+    }
   }
 });
