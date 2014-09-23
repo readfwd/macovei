@@ -26,10 +26,15 @@ var DeCeSaMaVotatiPage = require('./pages/de-ce-sa-ma-votati');
 var DepunereaCandidaturiiPage = require('./pages/depunerea-candidaturii');
 var PersonalitatiPage = require('./pages/personalitati');
 var TestimonialeOnlinePage = require('./pages/testimoniale-online');
-var AparitiiMediaPage = require('./pages/aparitii-media');
 var EvenimentePage = require('./pages/evenimente');
 var KitDePresaPage = require('./pages/kit-de-presa');
 var DubiPage = require('./pages/dubi');
+var DiscursuriPage = require('./pages/discursuri');
+var BriefinguriPage = require('./pages/briefinguri');
+var DeclaratiiComunicatePage = require('./pages/declaratii-comunicate');
+var GaleriePage = require('./pages/galerie');
+
+
 
 
 var routes = require('./lib/routes.json');
@@ -61,8 +66,8 @@ module.exports = Router.extend({
   },
 
   implicare: function () {
-    this.trigger('newPage', new ImplicarePage({}))
-    $('body').attr('data-page', 'implicare');;
+    this.trigger('newPage', new ImplicarePage({}));
+    $('body').attr('data-page', 'implicare');
   },
 
   media: function () {
@@ -147,9 +152,24 @@ module.exports = Router.extend({
     $('body').attr('data-page', 'testimonialeOnline');
   },
 
-  aparitiiMedia: function () {
-    this.trigger('newPage', new AparitiiMediaPage({}));
-    $('body').attr('data-page', 'aparitiiMedia');
+  discursuri: function () {
+    this.trigger('newPage', new DiscursuriPage({}));
+    $('body').attr('data-page', 'discursuri');
+  },
+
+  declaratiiComunicate: function () {
+    this.trigger('newPage', new DeclaratiiComunicatePage({}));
+    $('body').attr('data-page', 'declaratiiComunicate');
+  },
+
+  briefinguri: function () {
+    this.trigger('newPage', new BriefinguriPage({}));
+    $('body').attr('data-page', 'briefinguri');
+  },
+
+  galerie: function () {
+    this.trigger('newPage', new GaleriePage({}));
+    $('body').attr('data-page', 'galerie');
   },
 
   evenimente: function () {

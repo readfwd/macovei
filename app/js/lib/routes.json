@@ -80,6 +80,26 @@
     "changeFreq": "daily",
     "priority": "0.8"
   },
+  "media/discursuri/": {
+    "prefix": "discursuri",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/briefinguri/": {
+    "prefix": "briefinguri",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/declaratii-comunicate/": {
+    "prefix": "declaratiiComunicate",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/galerie-foto-video/": {
+    "prefix": "galerie",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
   "contact/": {
     "prefix": "contact",
     "changeFreq": "weekly",
