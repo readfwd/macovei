@@ -14,13 +14,9 @@ var dubi = require('../lib/dubi.json');
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Home',
   template: templates.pages.home,
+  homePage: true,
   events: {
-    "click .chevron": "scroll",
-    "scroll": "handleScrolling"
-  },
-
-  initialize: function () {
-    $(window).scroll(this.handleScrolling);
+    "click .chevron": "scroll"
   },
 
   render: function () {
@@ -32,7 +28,7 @@ module.exports = View.extend({
     this.postsView = new PostsView({
       collection: app.posts,
       el: this.$('[role="posts-collection"]'),
-      homePage: true
+      homePage: this.homePage
     });
 
 
@@ -45,21 +41,6 @@ module.exports = View.extend({
     $("body").animate({
       scrollTop: this.$('.newsStripe').offset().top - 50
     }, 200);
-  },
-
-  handleScrolling: function () {
-    $(window).scroll(function() {
-      var scrollPos = this.$(this).scrollTop();
-      if(scrollPos > 300) {
-          this.$(".navbar").addClass('navbar-dimmed');
-          this.$(".logo").html(
-            "<img src=\"/assets/img/logo-nou-macovei-white-lung.png\"></img>")
-            .addClass('macovei-logo').removeClass('logo');
-      } else {
-          this.$(".navbar").removeClass('navbar-dimmed');
-          this.$(".macovei-logo").html("<img src=\"/assets/img/logo-nou-macovei-white.png\"></img>")
-            .removeClass('macovei-logo').addClass('logo');
-      }
-    });
   }
+
 });

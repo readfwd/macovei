@@ -90,6 +90,24 @@
       left: 50%
       transform: translateX(-50%)
       bottom: 55px
+      .hi-icon-wrap
+        padding: 0
+        .hi-icon
+          margin: 0
+          font-size: 15px
+          width: 45px
+          height: 45px
+          z-index: 0
+          &:hover
+            box-shadow: 0 0 0 5px rgba(255,255,255,1)
+          i
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate3d(-50%, -50%, 0);
+      @media(max-width: 767px)
+        .chevron
+          bottom: 0
   video
     min-width: 100%
     min-height: 100%

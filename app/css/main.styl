@@ -33,11 +33,14 @@ body
   background: white
 
 .logo
+  margin-top: 10px
   .white
     display: none
   .black
     display: block
 [data-page='home']
+  .social
+    position: absolute
   .logo
     .white
       display: block
@@ -132,3 +135,11 @@ div.pluginConnectButton
     transform: translateY(-50%)
 a.navbar-brand:hover
   background-color: transparent !important
+
+.social
+  position: absolute
+  bottom: 100px
+  left: 50%
+  transform: translateX(-50%)
+  iframe
+    width: 100%
