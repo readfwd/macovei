@@ -12,8 +12,9 @@ body
   line-height: 1.5em
   font-family: font-family-sans
   background: #eee
-  // padding-top: 50px
-
+  // text-rendering : optimizeLegibility !important // apparently not working on Android 4.2 & 4.3
+  -webkit-font-smoothing: antialiased !important
+  -moz-osx-font-smoothing: grayscale !important
   .navbar
     background: mm-dark-blue
     position: fixed
@@ -101,10 +102,10 @@ body
 div.pluginConnectButton
   display:none !important
 
-h1
-  color: #fff
-  background: mm-blue
-  padding: 5px 15px
+#home-page
+  h1
+    color: #fff
+    padding: 5px 15px
 
 .home
   .item
