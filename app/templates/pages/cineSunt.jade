@@ -1,17 +1,18 @@
+- var url = document.documentURI;
 .container(data-spy="scroll", data-target="#affix-nav", data-offset-top="60", data-offset-bottom="200")
   .row
     .col-md-4.nav.sidebar(id="affix-nav")
       ul.nav.sidenav.affix-top(data-spy="affix", data-offset-top="10")
         li.active: a(href="#cinesunt") Cine sunt
-        li: a(href="#premii") Premii
-        li: a(href="#apartenenta") Apartenență
-        li: a(href="#educatie") Educație
-        li: a(href="#pregatire") Pregătire
-        li: a(href="#experienta") Experiență
-        li: a(href="#publicatii") Publicații
-        li: a(href="#discursuri") Discursuri
-        li: a(href="#audieri") Audieri
-        li: a(href="#limbistraine") Limbi străine
+        li: a(href="#{url}#premii") Premii
+        li: a(href="#{url}#apartenenta") Apartenență
+        li: a(href="#{url}#educatie") Educație
+        li: a(href="#{url}#pregatire") Pregătire
+        li: a(href="#{url}#experienta") Experiență
+        li: a(href="#{url}#publicatii") Publicații
+        li: a(href="#{url}#discursuri") Discursuri
+        li: a(href="#{url}#audieri") Audieri
+        li: a(href="#{url}#limbistraine") Limbi străine
 
     .col-md-8
       section(id="cinesunt")
