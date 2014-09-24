@@ -55,6 +55,7 @@ function replaceInTemplates(templates) {
   _.each(urlReplacements, function(to, from) {
     var escapedFrom = from.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
     var escapedTo = to.replace('$', '$$');
+    console.log(escapedFrom, escapedTo);
     templates = templates.replace(new RegExp('([\'"])' + escapedFrom, 'g'), '$1' + escapedTo);
   });
   return templates;
@@ -89,6 +90,9 @@ gulp.task('index.html', ['wiredep'], function () {
   return gulp.src(paths.app + '/index.jade')
     .pipe($.jade({
       pretty: true
+    }))
+    .pipe($.tap(function(file) {
+      file.content = replaceInTemplates(file.content);
     }))
     .pipe(gulp.dest(paths.tmp))
     .pipe(browserSync.reload({stream: true}));
