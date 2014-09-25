@@ -32,11 +32,11 @@
         color: black
         text-decoration: none
 
-  @media(min-width: 500px) (max-width: 767px)
+  @media (max-width: 767px)
     .imgBack
       top: -50%;
-      left: -110%;
-  @media(max-width: 500px)
+
+  @media (max-width: 500px)
     .imgBack
       left: -140%;
   .overlay
@@ -53,43 +53,12 @@
       margin-top: 1em
       text-align: center
       font-size: 1em
-    .quote-bar
-      height: 50px
-      bottom: 0
-      position: absolute
-      bottom: 0
 
-      width: 100%
-      // text-align: center
-      background: rgba(0,0,0,0.50);
-      div
-        position: relative
-        height: 100%
-        .quote
-          span
-            position: absolute
-            top: 50%
-            left: 20%
-            transform: translate3d(-20%, -50%, 0)
-          img
-            position: absolute
-            top: 50%
-            right: 20%
-            transform: translate3d(20%, -50%, 0)
-            width: auto
-            height: 80%
-          @media(max-width: 1200px)
-            img
-              right: 0
-              transform: translateY(-50%)
-    @media(max-width: 767px)
-      .quote-bar
-        display: none
     .chevron
       position: absolute
       left: 50%
       transform: translateX(-50%)
-      bottom: 55px
+      bottom: 10px
       .hi-icon-wrap
         padding: 0
         .hi-icon

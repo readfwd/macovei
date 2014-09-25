@@ -169,5 +169,10 @@
     "prefix": "dubi",
     "changeFreq": "weekly",
     "priority": "0.5"
+  },
+  "principii/": {
+    "prefix": "principii",
+    "changeFreq": "weekly",
+    "priority": "0.5"
   }
 }
