@@ -33,6 +33,7 @@ var DiscursuriPage = require('./pages/discursuri');
 var BriefinguriPage = require('./pages/briefinguri');
 var DeclaratiiComunicatePage = require('./pages/declaratii-comunicate');
 var GaleriePage = require('./pages/galerie');
+var PrincipiiPage = require('./pages/principii');
 
 
 
@@ -44,6 +45,9 @@ module.exports = Router.extend({
     return route.prefix;
   }),
 
+  initialize: function () {
+    console.log(this.routes);
+  },
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));
@@ -184,5 +188,11 @@ module.exports = Router.extend({
   dubi: function () {
     this.trigger('newPage', new DubiPage({}));
     $('body').attr('data-page', 'dubi');
+  },
+
+  principii: function () {
+    this.trigger('newPage', new PrincipiiPage({}));
+    console.log('dasda');
+    $('body').attr('data-page', 'principii');
   }
 });
