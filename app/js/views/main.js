@@ -7,6 +7,7 @@ var $ = require('../shims/jquery');
 var ViewSwitcher = require('ampersand-view-switcher');
 var templates = require('../lib/templates');
 var urlrepl = require('../lib/url-replace');
+var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
   template: templates.body,
@@ -62,6 +63,7 @@ module.exports = View.extend({
     this.currentView = view;
     this.pageSwitcher.set(view);
     this.renderLogo();
+    this.renderQuote();
   },
 
   handleLinkClick: function (e) {
@@ -85,7 +87,6 @@ module.exports = View.extend({
   handleScrolling: function () {
     var view = this.currentView;
     var scrollPos = $(window).scrollTop();
-    console.log('scroll', scrollPos, view.$el);
     if(scrollPos > 100) {
         this.$(".navbar").addClass('navbar-dimmed');
         this.$(".logo")
@@ -119,5 +120,11 @@ module.exports = View.extend({
             "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-black.png") + "\"></img>");
       }
     }
+  },
+
+  renderQuote: function () {
+    this.quoteBoxView = new QuoteBoxView({
+      el: this.$('.quote')
+    });
   }
 });
