@@ -45,9 +45,9 @@ module.exports = Router.extend({
     return route.prefix;
   }),
 
-  initialize: function () {
-    console.log(this.routes);
-  },
+  // initialize: function () {
+  //   console.log(this.routes);
+  // },
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));

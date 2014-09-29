@@ -12,9 +12,9 @@ module.exports = View.extend({
     this.render();
   },
   render: function () {
-    console.log(this.$el);
+    // console.log(this.$el);
     var number = Math.floor(Math.random() * (quotes.length - 1) + 1);
-    console.log(quotes[number].quote);
+    // console.log(quotes[number].quote);
     var author = quotes[number].author;
     var quote =  quotes[number].quote;
     this.$el.html(this.template({
