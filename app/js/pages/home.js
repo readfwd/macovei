@@ -6,10 +6,11 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 var PostsView = require('../views/posts');
 var $ = require('../shims/jquery');
+var _ = require('lodash');
 var videos = require('../lib/testimoniale-video.json');
 var dubi = require('../lib/dubi.json');
 // var QuoteBoxView = require('../views/quote-box');
-// var urepl = require('../lib/url-replace');
+var urlrepl = require('../lib/url-replace');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Home',
@@ -20,6 +21,9 @@ module.exports = View.extend({
   },
 
   render: function () {
+    _.each(dubi, function (comic) {
+      comic = urlrepl(comic);
+    });
     this.$el.html(this.template({
       videos: videos,
       dubi: dubi
