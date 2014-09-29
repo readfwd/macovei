@@ -28,7 +28,10 @@ module.exports = View.extend({
         document.title = newView.pageTitle || 'Monica Macovei Presedinte';
         var description = newView.pageDescription || 'Candidez independent, pentru că sunt convinsă că românii merită un Președinte al lor, nu al partidelor.'
         var keywords = newView.pageKeywords || 'alegeri, prezidentiale, candidat, independent, romania, romani, anti-coruptie';
-        var image = (window.location.origin + newView.pageImage) || (window.location.origin+'/assets/img/macovei-presedinte-fb.jpg');
+        var image = urlrepl(newView.pageImage || '/assets/img/macovei-presedinte-fb.jpg');
+        if (!/^http/.test(image)) {
+          image = window.location.origin + image;
+        }
         var type = newView.pageType || 'website';
         if (document.location.hostname == "localhost") {
           // check if localhost, output another url
