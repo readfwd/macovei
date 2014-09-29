@@ -2,6 +2,8 @@
 @import overrides
 @import media
 @import photoStripe
+@import dubiStripe
+@import videoStripe
 @import msie
 @import donatii
 @import posts
@@ -160,3 +162,37 @@ a.navbar-brand:hover
   width: 40%
   transform: translate3d(0%, -20%, 0);
   text-align: right
+
+//homepage stripe all-button
+.has-icon
+  color: #fff
+  text-transform: uppercase
+  text-decoration: none
+  font-size: 18px
+  span
+    left: 0px;
+    transition: all 0.2s ease-out
+    position: relative
+    padding: 15px 20px
+    display: block
+    letter-spacing: 1px
+    i
+      font-size: 18px
+      line-height: 18px
+      width: 18px
+      position: absolute
+      top: 50%
+      right: 30px
+      margin-top: -9px
+      opacity: 0
+      transition: all 0.2s ease-out
+  &:hover
+    text-decoration: none
+    color: #fff
+    transition: 0.5s ease
+    span
+      left: -25px
+      margin-left: 20px
+      i
+        opacity: 1
+        right: -14px
