@@ -1,18 +1,8 @@
 .container
   h1 Principii
-  ul
-    li Principiul 1
-      span #{' '}
-        .btn-group
-          btn.btn.btn-default De acord
-          btn.btn.btn-default Împotriva
-    li Principiul 2
-      span #{' '}
-        .btn-group
-          btn.btn.btn-default De acord
-          btn.btn.btn-default Împotriva
-    li Principiul 3
-      span #{' '}
-        .btn-group
-          btn.btn.btn-default De acord
-          btn.btn.btn-default Împotriva
+  for principiu in principii
+    h2= principiu.title
+    for item in principiu.children
+      h3= item.title
+      span= item.content
+      a(href='https://www.facebook.com/dialog/feed?app_id=688761444534662&redirect_uri=http://macoveipresedinte.ro/principii&link=http://macoveipresedinte.ro/principii&caption=' + encodeURIComponent(item.title) + '&description=' + encodeURIComponent(item.content), target="_blank") Distribuie
