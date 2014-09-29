@@ -3,7 +3,7 @@
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
-var principii = require('http://readfwd.com/principii.json');
+var principii = require('../lib/principii.json');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Principii',
