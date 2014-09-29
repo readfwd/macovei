@@ -6,10 +6,10 @@
   overflow: hidden
   .imgBack
     position: absolute;
-    top: -50%;
-    left: -50%;
-    height: 200%
-    width: 200%
+    top: 0;
+    left: 0;
+    height: 100%
+    width: 100%
     img
       position: absolute;
       top: 0;
@@ -17,8 +17,8 @@
       right: 0;
       bottom: 0;
       margin: auto;
-      min-width: 50%;
-      min-height: 50%;
+      min-width: 100%;
+      min-height: 100%;
   .hotlinks
     a
       padding: 0.2em 0.6em
@@ -35,11 +35,12 @@
 
   @media (max-width: 767px)
     .imgBack
-      top: -50%;
+      top: 0;
 
   @media (max-width: 500px)
     .imgBack
-      left: -140%;
+      left: 0;
+
   .overlay
     position: absolute
     top: 0

@@ -1,11 +1,13 @@
+- var bgImages = ['/assets/img/hero/20140902-MMConferintaDemisiePDL-0032.jpg','/assets/img/hero/20140903-MMIntalnireSustinatoriSediu-0023.jpg','/assets/img/hero/20140905-MMConferintaUWE-0101.jpg','/assets/img/hero/20140911-MMStudio-0029-1.jpg', '/assets/img/hero/20140911-MMStudio-0042.jpg']
+- var bgNow = bgImages[Math.floor(Math.random() * bgImages.length)];
 .photoStripe
   //- video(autoplay='true', loop='true')
   //-   source(src='/assets/placeholder.mp4', type='video/mp4')
   .imgBack
-    img(src="/assets/img/hero/08-ocs.jpg")
+    img(src="#{bgNow}")
   .overlay.text-center
     .callout
-      span Macovei, e mai bună decât ei! Hei hei hei hei!
+      span Macovei, e mai bună decât ei!
     .hotlinks
       a(href="/sustinatori/testimoniale-video/") susținători
       a(href="/candidatura/de-ce-sa-ma-votati/") de ce să mă votați?
