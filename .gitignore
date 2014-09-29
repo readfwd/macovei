@@ -13,4 +13,3 @@ app/js/lib/url-replacements.json
 app/js/lib/posts-json.json
 app/bower_components
 *.log
-app/js/lib/principii.json
