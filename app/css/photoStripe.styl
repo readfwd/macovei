@@ -10,19 +10,12 @@
     left: 0;
     height: 100%
     width: 100%
-    img
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      min-width: 100%;
-      min-height: 100%;
+    background-size: cover
+    background-position: center center
+
   .hotlinks
     a
       padding: 0.2em 0.6em
-      // display: block
       border: 3px solid white
       color: white
       text-decoration: none
@@ -33,14 +26,6 @@
         color: black
         text-decoration: none
 
-  @media (max-width: 767px)
-    .imgBack
-      top: 0;
-
-  @media (max-width: 500px)
-    .imgBack
-      left: 0;
-
   .overlay
     position: absolute
     top: 0
@@ -48,10 +33,12 @@
     height: 100%
     width: 100%
     .callout
-      margin-top: 40vh
+      margin-top: 60vh
       text-align: center
       font-size: 2.3em
       line-height: 110%
+      margin-left: 1em
+      margin-right: 1em
     .hotlinks
       margin-top: 1em
       text-align: center
@@ -83,3 +70,19 @@
   video
     min-width: 100%
     min-height: 100%
+
+  @media (max-width: 767px)
+    .imgBack
+      top: 0;
+
+  @media (max-width: 500px)
+    .imgBack
+      left: 0;
+    .hotlinks
+      a
+        display: block
+        margin: 1em;
+        padding: 0.5em;
+    .overlay
+      .callout
+        margin-top: 50vh
