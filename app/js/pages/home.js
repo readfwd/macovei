@@ -21,8 +21,8 @@ module.exports = View.extend({
   },
 
   render: function () {
-    _.each(dubi, function (comic) {
-      comic = urlrepl(comic);
+    _.forEach(dubi, function (comic, key) {
+      dubi[key] = urlrepl(comic);
     });
     this.$el.html(this.template({
       videos: videos,
