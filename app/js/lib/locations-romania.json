@@ -28,11 +28,11 @@
     lng: 28.629339,
     title: 'Constanta',
     infoWindow: {
-      content: '<p>Coordonator: Popescu Florian<br>0724.197.580  <br>pflorian63@yahoo.com</p>',
+      content: '<p>Coordonator: Popescu Florian<br>0724.197.580  <br>pflorian63@yahoo.com<br/>Str Rapsodiei 40</p>',
       coordinators: 'Popescu Florian',
-      phone: '0724.197.580 ',
+      phone: '0724.197.580',
       email: 'pflorian63@yahoo.com',
-      address: ''
+      address: 'Str. Rapsodiei 40'
     }
   },
   {
@@ -114,11 +114,11 @@
     lng: 21.228160,
     title: 'Timisoara',
     infoWindow: {
-      content: '<p>Coordonator: <br>Piroska Bogdan<br>0727 214 432<br> piribogdan@gmail.com <br/>Avem doua corturi amplasate unde puteti semna intre orele 10:00-18:00: <br />(1) langa magazinul Bega in fata ceasului floral <br />(2) piata 700, vis-a-vis de statia de troleu.</p>',
+      content: '<p>Coordonator: <br>Piroska Bogdan<br>0727 214 432<br> piribogdan@gmail.com <br/>Corturi unde puteți semna între orele 10:00-18:00: <br/> (1) lângă magazinul Bega în fața ceasului floral <br/> (2) piața 700, vis-a-vis de stația de troleu. <br/> (3) Cort  Pietonal Maraseseti <br/> (4)Asociatia Timisoara -  Str Goethe nr 2  - Piata Operei, langa Segafredo</p>',
       coordinators: 'Piroska Bogdan',
       phone: '0727 214 432',
       email: 'piribogdan@gmail.com',
-      address: 'Avem două corturi amplasate unde puteți semna între orele 10:00-18:00: \n (1) lângă magazinul Bega în fața ceasului floral și \n (2) piața 700, vis-a-vis de stația de troleu.'
+      address: 'Corturi unde puteți semna între orele 10:00-18:00: \n (1) lângă magazinul Bega în fața ceasului floral \n (2) piața 700, vis-a-vis de stația de troleu. \n (3) Cort  Pietonal Maraseseti \n (4)Asociatia Timisoara -  Str Goethe nr 2  - Piata Operei, langa Segafredo'
 
     }
   },
@@ -275,6 +275,54 @@
       coordinators: 'Oana Mihaescu',
       phone: '0734 833 887',
       email: 'oanamihaescu89@gmail.com',
+      address: ''
+    }
+  },
+  {
+    lat: 47.184076,
+    lng: 23.048286,
+    title: 'Salaj',
+    infoWindow: {
+      content: '<p>Coordonator:  Elena Erdei <br>0745.907.490<br>elena.erdei@yahoo.com</p>',
+      coordinators: 'Elena Erdei',
+      phone: '0745.907.490',
+      email: 'elena.erdei@yahoo.com',
+      address: ''
+    }
+  },
+  {
+    lat: 46.934286,
+    lng: 26.378517,
+    title: 'Neamt',
+    infoWindow: {
+      content: '<p>Coordonatori:  Ioana-Noemy Toma 0747.092.114 ioana_noemy_toma@ymail.com <br>Lucian Victor Trasnea 0751.857.707 trasnea@gmail.com<br> Luminita Marcoci 0740.764.227 luminita.marcoci@gmail.com </p>',
+      coordinators: 'Ioana-Noemy Toma, Lucian Victor Trasnea & Luminita Marcoci ',
+      phone: '0747.092.114 / 0751.857.707 / 0740.764.227',
+      email: 'ioana_noemy_toma@ymail.com / trasnea@gmail.com / luminita.marcoci@gmail.com',
+      address: ''
+    }
+  },
+  {
+    lat: 45.162636,
+    lng: 26.817970,
+    title: 'Buzau',
+    infoWindow: {
+      content: '<p>Coordonator: Diana Elena Scholtes 0746.233.500  dianamihalache@yahoo.com  </p>',
+      coordinators: 'Diana Elena Scholtes',
+      phone: '0746.233.500',
+      email: 'dianamihalache@yahoo.com',
+      address: ''
+    }
+  },
+  {
+    lat: 47.132249,
+    lng: 24.495048,
+    title: 'Bistrita-Nasaud',
+    infoWindow: {
+      content: '<p>Coordonatori:  Renata Runcan 0747.226.246 renataruncan@gmail.com <br> Saitauari Ovidiu Calin 0740.218.007 ovidiucalin007@yahoo.com </p>',
+      coordinators: 'Renata Runcan & Saitauari Ovidiu Calin',
+      phone: '0740.218.007',
+      email: 'ovidiucalin007@yahoo.com',
       address: ''
     }
   }
