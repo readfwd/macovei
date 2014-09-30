@@ -34,11 +34,10 @@ var BriefinguriPage = require('./pages/briefinguri');
 var DeclaratiiComunicatePage = require('./pages/declaratii-comunicate');
 var GaleriePage = require('./pages/galerie');
 var PrincipiiPage = require('./pages/principii');
+var ScrisoareDeschisaPage = require('./pages/scrisoare-deschisa');
 var TagsPage = require('./pages/tagged-posts');
 var TagPostsPage = require('./pages/tagged-post');
-
-
-
+var MacoveiCvPage = require('./pages/macovei-cv');
 
 var routes = require('./lib/routes.json');
 
@@ -191,7 +190,14 @@ module.exports = Router.extend({
     this.trigger('newPage', new DubiPage({}));
     $('body').attr('data-page', 'dubi');
   },
-
+  macoveiCV: function () {
+    this.trigger('newPage', new MacoveiCvPage({}));
+    $('body').attr('data-page', 'macoveiCV');
+  },
+  scrisoareDeschisa: function () {
+    this.trigger('newPage', new ScrisoareDeschisaPage({}));
+    $('body').attr('data-page', 'scrisoareDeschisa');
+  },
   principii: function () {
     this.trigger('newPage', new PrincipiiPage({}));
     console.log('dasda');

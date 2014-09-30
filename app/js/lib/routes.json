@@ -10,6 +10,11 @@
     "changeFreq": "daily",
     "priority": "1.0"
   },
+  "despre/macovei-cv/": {
+    "prefix": "macoveiCV",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
   "despre/ce-am-facut/": {
     "prefix": "ceAmFacut",
     "changeFreq": "daily",
@@ -170,15 +175,20 @@
     "changeFreq": "weekly",
     "priority": "0.5"
   },
-  "program-politic/": {
+  "candidatura/program-politic/": {
     "prefix": "principii",
     "changeFreq": "weekly",
     "priority": "0.5"
   },
-  "decalogul/": {
+  "candidatura/decalogul/": {
     "prefix": "principii",
     "changeFreq": "weekly",
     "skip": true,
+    "priority": "0.5"
+  },
+  "candidatura/scrisoare-deschisa/": {
+    "prefix": "scrisoareDeschisa",
+    "changeFreq": "weekly",
     "priority": "0.5"
   },
   "tags/": {
