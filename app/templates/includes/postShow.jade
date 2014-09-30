@@ -11,8 +11,6 @@
               p.small(style="text-align: right") de #{' '}
                 span.author  #{locals.author}
 
-
-
       .content !{locals.content}
 
       footer
@@ -20,5 +18,5 @@
         small.pull-left Publicat: #{locals.date}
           //- time.updated(datetime="#{locals.date}", pubdate) #{locals.date}
           if locals.source
-            span  / Sursa: 
+            span  / Sursa:
               a(href="#{locals.source}") #{locals.source}

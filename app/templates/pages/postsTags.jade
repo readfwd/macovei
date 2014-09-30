@@ -1,0 +1,7 @@
+.container
+  h1 Categorii postări
+
+  ol.breadcrumb
+    for tag in tags
+      li
+        a(href=document.location.origin + '/tags/' + tag)= tag

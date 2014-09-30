@@ -34,6 +34,8 @@ var BriefinguriPage = require('./pages/briefinguri');
 var DeclaratiiComunicatePage = require('./pages/declaratii-comunicate');
 var GaleriePage = require('./pages/galerie');
 var PrincipiiPage = require('./pages/principii');
+var TagsPage = require('./pages/tagged-posts');
+var TagPostsPage = require('./pages/tagged-post');
 
 
 
@@ -194,5 +196,16 @@ module.exports = Router.extend({
     this.trigger('newPage', new PrincipiiPage({}));
     console.log('dasda');
     $('body').attr('data-page', 'principii');
+  },
+  tags: function () {
+    this.trigger('newPage', new TagsPage({
+    }));
+    $('body').attr('data-page', 'taggedPosts');
+  },
+  tag: function (tag) {
+    this.trigger('newPage', new TagPostsPage({
+      tag: tag
+    }));
+    $('body').attr('data-page', 'taggedPost');
   }
 });

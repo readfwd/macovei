@@ -4,5 +4,5 @@
     h2= principiu.title
     for item in principiu.children
       h3= item.title
-      span= item.content
+      p= item.content
       a(href='https://www.facebook.com/dialog/feed?app_id=688761444534662&redirect_uri=http://macoveipresedinte.ro/principii&link=http://macoveipresedinte.ro/principii&caption=' + encodeURIComponent(item.title) + '&description=' + encodeURIComponent(item.content), target="_blank") Distribuie
