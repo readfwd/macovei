@@ -162,12 +162,27 @@ a.navbar-brand:hover
     width: 100%
 
 .quote
-  position: absolute
-  top: 10%
-  right: 10%
-  width: 40%
-  transform: translate3d(0%, -20%, 0);
-  text-align: right
+  &.quote-head
+    position: absolute
+    top: 10%
+    right: 10%
+    width: 40%
+    transform: translate3d(0%, -20%, 0);
+    text-align: right
+
+  &.quote-in-page
+    text-align: left
+  .quote-photo
+    width: 100%
+    height: 20em
+    background-size: cover
+    background-position: center center
+  .quote-text
+    color: white
+    background: mm-dark-blue
+    padding: 1em
+    .quote-author
+      text-align: right
 
 //homepage stripe all-button
 .has-icon
@@ -204,3 +219,13 @@ a.navbar-brand:hover
         right: -14px
 .tag.selected
   background-color: mm-red
+
+.ceamfacut, .cinesunt
+  font-family: font-family-serif
+  .well
+    margin-bottom: 1em
+    
+  .letrina
+    font-size: 4em
+    padding: 0.3em 0.3em 0.3em 0
+    color: mm-red

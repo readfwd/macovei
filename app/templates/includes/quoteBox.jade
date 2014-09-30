@@ -1,3 +1,5 @@
 .quotes
-  p #{locals.quote}
-  p.small #{locals.author}
+  .quote-photo(style="background-image: url('/assets/img/macovei-presedinte-fb.jpg')")
+  .quote-text
+    p #{locals.quote}
+    p.quote-author.small #{locals.author}
