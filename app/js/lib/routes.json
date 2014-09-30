@@ -170,9 +170,15 @@
     "changeFreq": "weekly",
     "priority": "0.5"
   },
-  "principii/": {
+  "program-politic/": {
     "prefix": "principii",
     "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "decalogul/": {
+    "prefix": "principii",
+    "changeFreq": "weekly",
+    "skip": true,
     "priority": "0.5"
   },
   "tags/": {

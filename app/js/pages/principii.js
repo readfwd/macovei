@@ -3,14 +3,14 @@
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
-var principii = require('../lib/principii.json');
+var decalogul = require('../lib/decalogul.json');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Principii',
-  template: templates.pages.principii,
+  template: templates.pages.decalogul,
   render: function () {
     this.$el.html(this.template({
-      principii: principii
+      principii: decalogul
     }));
     return this;
   }
