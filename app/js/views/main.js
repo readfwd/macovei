@@ -100,13 +100,14 @@ module.exports = View.extend({
   handleScrolling: function () {
     var view = this.currentView;
     var scrollPos = $(window).scrollTop();
-    if(scrollPos > 100) {
+    if(scrollPos > 20) {
         this.$(".navbar").addClass('navbar-dimmed');
         this.$(".logo")
           .addClass('macovei-logo')
           .html(
             "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-white-lung.png") + "\"></img>")
           .removeClass('logo');
+        this.$(".head-quote").addClass('hidden');
     } else {
       this.renderLogo();
       this.$(".navbar").removeClass('navbar-dimmed');
@@ -118,6 +119,7 @@ module.exports = View.extend({
         .addClass('logo')
         .html(html)
         .removeClass('macovei-logo');
+      this.$(".head-quote").removeClass('hidden');
     }
   },
 
