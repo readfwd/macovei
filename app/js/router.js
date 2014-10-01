@@ -34,11 +34,10 @@ var BriefinguriPage = require('./pages/briefinguri');
 var DeclaratiiComunicatePage = require('./pages/declaratii-comunicate');
 var GaleriePage = require('./pages/galerie');
 var PrincipiiPage = require('./pages/principii');
+var ScrisoareDeschisaPage = require('./pages/scrisoare-deschisa');
 var TagsPage = require('./pages/tagged-posts');
 var TagPostsPage = require('./pages/tagged-post');
-
-
-
+var MacoveiCvPage = require('./pages/macovei-cv');
 
 var routes = require('./lib/routes.json');
 
@@ -191,15 +190,82 @@ module.exports = Router.extend({
     this.trigger('newPage', new DubiPage({}));
     $('body').attr('data-page', 'dubi');
   },
-
+  macoveiCV: function () {
+    this.trigger('newPage', new MacoveiCvPage({}));
+    $('body').attr('data-page', 'macoveiCV');
+  },
+  scrisoareDeschisa: function () {
+    this.trigger('newPage', new ScrisoareDeschisaPage({}));
+    $('body').attr('data-page', 'scrisoareDeschisa');
+  },
   principii: function () {
-    this.trigger('newPage', new PrincipiiPage({}));
-    console.log('dasda');
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 1
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog1: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 1
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog2: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 2
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog3: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 3
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog4: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 4
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog5: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 5
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog6: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 6
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog7: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 7
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog8: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 8
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog9: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 9
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog10: function () {
+    this.trigger('newPage', new PrincipiiPage({ 
+      principle: 10
+    }));
     $('body').attr('data-page', 'principii');
   },
   tags: function () {
-    this.trigger('newPage', new TagsPage({
-    }));
+    this.trigger('newPage', new TagsPage({}));
     $('body').attr('data-page', 'taggedPosts');
   },
   tag: function (tag) {
