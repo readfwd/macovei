@@ -1,13 +1,28 @@
 - var principiu = principii[care];
 .container
-  h1 Decalogul Monicăi Macovei
   .row
     .col-sm-8
-      .letrina=(care+1)
-      h2= principiu.title
+      .row
+        .col-xs-1
+          .letrina=(care+1)
+        .col-xs-10
+          h2= principiu.title
       for item in principiu.children
         h3= item.title
         p.serif= item.content
         a(href='https://www.facebook.com/dialog/feed?app_id=688761444534662&redirect_uri=http://macoveipresedinte.ro/candidatura/program-politic/&link=http://macoveipresedinte.ro/candidatura/program-politic/&caption=' + encodeURIComponent(item.title) + '&description=' + encodeURIComponent(item.content), target="_blank") Distribuie
     .col-sm-4
+      .blue-stripe 
+        span Decalogul Monicăi Macovei
+      ol.decalog.small
+        li: a(href="/program-politic/1-sa-nu-ai-alti-stapani/") Să nu ai alți stăpâni decât cetățeanul
+        li: a(href="/program-politic/2-sa-nu-tradezi-interesul-national/") Să nu trădezi interesul național
+        li: a(href="/program-politic/3-sa-nu-ataci-institutiile-statului/") Să nu ataci instituțiile statului
+        li: a(href="/program-politic/4-sa-nu-furi-banul-public/") Să nu furi și să nu risipești banul public
+        li: a(href="/program-politic/5-sa-nu-minti/") Să nu minți, să nu plagiezi, să nu calomniezi, să nu mituiești
+        li: a(href="/program-politic/6-sa-ti-inmultesti-banii-si-creatia/") Să-ți înmulțești banii şi creaţia
+        li: a(href="/program-politic/7-sa-ti-educi-copiii/") Să-ți educi copiii
+        li: a(href="/program-politic/8-sa-ti-respecti-parintii-si-semenii/") Să-ți respecți părinții și să-ți ajuți semenii
+        li: a(href="/program-politic/9-sa-cultivi-solul-si-sa-protejezi-natura/") Să cultivi solul și să protejezi natura
+        li: a(href="/program-politic/10-sa-ti-respecti-identitatea/") Să-ți respecți identitatea, valorile și trecutul ca să ai un viitor 
       .quote.quote-in-page
