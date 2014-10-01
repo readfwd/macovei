@@ -13,7 +13,7 @@ module.exports = View.extend({
   template: templates.pages.decalogul,
   initialize: function (options) {
     principle = options.principle - 1 || principle;
-    this.imageLink = urlrepl(window.location.origin + $("meta[property='og:image']").attr('content'));
+    this.imageLink = urlrepl( $("meta[property='og:image']").attr('content'));
   },
   render: function () {
     this.$el.html(this.template({
