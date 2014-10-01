@@ -43,7 +43,7 @@ module.exports = View.extend({
   scroll: function () {
     // $("body").animate({ scrollTop: $('.newsStripe').offset().top }, 1000);
     $("body").animate({
-      scrollTop: this.$('.liveStripe').offset().top - 50
+      scrollTop: this.$('.newsStripe').offset().top - 50
     }, 200);
   }
 
