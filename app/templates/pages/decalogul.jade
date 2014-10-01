@@ -8,6 +8,7 @@
       for item in principiu.children
         h3= item.title
         p.serif= item.content
-        a(href='https://www.facebook.com/dialog/feed?app_id=688761444534662&redirect_uri=http://macoveipresedinte.ro/candidatura/program-politic/&link=http://macoveipresedinte.ro/candidatura/program-politic/&caption=' + encodeURIComponent(item.title) + '&description=' + encodeURIComponent(item.content), target="_blank") Distribuie
+        - if (/^http:\/\/localhost/.test(image)) { image = 'http://placekitten.com/g/500/500'; }
+        a(href='https://www.facebook.com/dialog/feed?app_id=688761444534662&redirect_uri=' + encodeURIComponent( 'http://macoveipresedinte.ro/candidatura/program-politic/') + '&link=' + encodeURIComponent('http://macoveipresedinte.ro/candidatura/program-politic/') + '&picture=' + encodeURIComponent(image) + '&caption=' + encodeURIComponent(item.title) + '&description=' + encodeURIComponent(item.content), target="_blank") Distribuie
     .col-sm-4
       .quote.quote-in-page
