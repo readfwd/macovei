@@ -13,7 +13,7 @@ module.exports = View.extend({
   render: function () {
     _.forEach(reasons, function (reason) {
       // console.log(reason);
-      reason.image = window.location.origin + urlrepl(reason.image);
+      reason.image = urlrepl(reason.image);
       console.log(reason.image);
     });
     this.$el.html(this.template({
