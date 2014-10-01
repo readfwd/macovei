@@ -60,7 +60,7 @@ module.exports = View.extend({
         self.$('.navbar-brand')
           .removeClass('logo')
           .addClass('macovei-logo')
-          .html('<img src="/assets/img/logo-nou-macovei-white-lung.png">');
+          .html("<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-white.png") + "\"></img>");
         self.$('.navbar-collapse').removeClass('navbar-right');
 
       }
