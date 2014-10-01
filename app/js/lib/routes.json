@@ -235,7 +235,7 @@
   },
 
   "program-politic/8-sa-ti-respecti-parintii-si-semenii/": {
-    "prefix": "decalog7",
+    "prefix": "decalog8",
     "changeFreq": "weekly",
     "skip": true,
     "priority": "0.5"
@@ -257,6 +257,12 @@
 
   "candidatura/scrisoare-deschisa/": {
     "prefix": "scrisoareDeschisa",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+
+  "despre/20-de-motive-sa-votezi-macovei/": {
+    "prefix": "motiveSaVoteziMacovei",
     "changeFreq": "weekly",
     "priority": "0.5"
   },
