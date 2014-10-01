@@ -186,6 +186,75 @@
     "skip": true,
     "priority": "0.5"
   },
+  "program-politic/1-sa-nu-ai-alti-stapani/": {
+    "prefix": "decalog1",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+  "program-politic/2-sa-nu-tradezi-interesul-national/": {
+    "prefix": "decalog2",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/3-sa-nu-ataci-institutiile-statului/": {
+    "prefix": "decalog3",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/4-sa-nu-furi-banul-public/": {
+    "prefix": "decalog4",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/5-sa-nu-minti/": {
+    "prefix": "decalog5",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/6-sa-ti-inmultesti-banii-si-creatia/": {
+    "prefix": "decalog6",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/7-sa-ti-educi-copiii/": {
+    "prefix": "decalog7",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/8-sa-ti-respecti-parintii-si-semenii/": {
+    "prefix": "decalog7",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/9-sa-cultivi-solul-si-sa-protejezi-natura/": {
+    "prefix": "decalog9",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/10-sa-ti-respecti-identitatea/": {
+    "prefix": "decalog10",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
   "candidatura/scrisoare-deschisa/": {
     "prefix": "scrisoareDeschisa",
     "changeFreq": "weekly",
