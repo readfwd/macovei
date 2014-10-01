@@ -26,8 +26,6 @@ body
 
   @media (max-width: 767px)
     font-size: 14px
-    &[data-page='home']
-      // padding-top: 35%
 nav
   li
     cursor: pointer
@@ -54,6 +52,9 @@ nav
   .navbar, .dropdown-menu
     background: rgba(0,0,0,0.50);
 
+  @media(max-width: 992px)
+    .navbar, .dropdown-menu
+      background: mm-dark-blue
   .dropdown-menu > li > a
     color: white
 
@@ -150,6 +151,11 @@ img.stripe
     height: 2em !important
     top: 50%
     transform: translateY(-50%)
+@media (max-width: 991px)
+  .macovei-logo
+    img
+    top: 10%
+    transform: translateY(-5%)
 a.navbar-brand:hover
   background-color: transparent !important
 

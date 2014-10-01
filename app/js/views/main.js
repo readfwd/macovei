@@ -54,9 +54,15 @@ module.exports = View.extend({
       }
     });
 
-    this.$('.nav a').on('click', function () {
-      if ($(window).width() < 768){
-        return self.$('.navbar-toggle').click();
+    this.$('.navbar-toggle').on('click', function () {
+      if ($(window).width() < 992){
+        console.log('fara');
+        self.$('.navbar-brand')
+          .removeClass('logo')
+          .addClass('macovei-logo')
+          .html('<img src="/assets/img/logo-nou-macovei-white-lung.png">');
+        self.$('.navbar-collapse').removeClass('navbar-right');
+
       }
     });
     return this;
@@ -67,6 +73,10 @@ module.exports = View.extend({
     this.pageSwitcher.set(view);
     this.renderLogo();
     this.renderQuote();
+    if ($(window).width() < 992) {
+      return this.$('.navbar-collapse').removeClass('in')
+
+    }
   },
 
   handleLinkClick: function (e) {
