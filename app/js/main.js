@@ -36,8 +36,8 @@ module.exports = {
 
       // Asynchronously load our main CSS file.
       loadcss('/css/main.css');
-      loadcss('http://fonts.googleapis.com/css?family=Source+Sans+Pro:' +
-              '300,400,600,300italic|Source+Serif+Pro:400,600&subset=latin,latin-ext');
+      loadcss('http://fonts.googleapis.com/css?family=Open+Sans:' +
+              '300italic,400italic,700italic,400,700,300|Source+Serif+Pro:400,600&subset=latin,latin-ext');
 
       // Initialize our main view.
       var mainView = self.view = new MainView({
