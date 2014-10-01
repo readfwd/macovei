@@ -85,10 +85,14 @@ gulp.task('wiredep', function () {
 });
 
 // Turn index.jade into an HTML file.
-gulp.task('index.html', ['wiredep'], function () {
+gulp.task('index.html', ['wiredep', 'replace-urls'], function () {
   return gulp.src(paths.app + '/index.jade')
     .pipe($.jade({
       pretty: true
+    }))
+    .pipe($.tap(function (file) {
+      if (!file.stat.isFile()) { return; }
+      file.contents = new Buffer(replaceInTemplates(file.contents.toString()));
     }))
     .pipe(gulp.dest(paths.tmp))
     .pipe(browserSync.reload({stream: true}));
