@@ -38,6 +38,7 @@ var ScrisoareDeschisaPage = require('./pages/scrisoare-deschisa');
 var TagsPage = require('./pages/tagged-posts');
 var TagPostsPage = require('./pages/tagged-post');
 var MacoveiCvPage = require('./pages/macovei-cv');
+var MotiveSaVoteziMacoveiPage = require('./pages/motive-sa-votezi-macovei');
 
 var routes = require('./lib/routes.json');
 
@@ -197,6 +198,10 @@ module.exports = Router.extend({
   scrisoareDeschisa: function () {
     this.trigger('newPage', new ScrisoareDeschisaPage({}));
     $('body').attr('data-page', 'scrisoareDeschisa');
+  },
+  motiveSaVoteziMacovei: function () {
+    this.trigger('newPage', new MotiveSaVoteziMacoveiPage({}));
+    $('body').attr('data-page', 'motiveSaVoteziMacovei');
   },
   principii: function () {
     this.trigger('newPage', new PrincipiiPage({ 

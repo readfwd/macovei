@@ -260,6 +260,12 @@
     "changeFreq": "weekly",
     "priority": "0.5"
   },
+
+  "despre/20-de-motive-sa-votezi-macovei/": {
+    "prefix": "motiveSaVoteziMacovei",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
   "tags/": {
     "prefix": "tags",
     "changeFreq": "always",
