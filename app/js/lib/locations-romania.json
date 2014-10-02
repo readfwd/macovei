@@ -271,10 +271,10 @@
     lng: 23.576875,
     title: 'Baia Mare',
     infoWindow: {
-      content: '<p>Coordonator: Oana Mihaescu <br>0734 833 887<br>oanamihaescu89@gmail.com<br /></p>',
-      coordinators: 'Oana Mihaescu',
-      phone: '0734 833 887',
-      email: 'oanamihaescu89@gmail.com',
+      content: '<p>Coordonator: Calin Herteg <br>0746173713<br>calinherteg@yahoo.com<br /></p>',
+      coordinators: 'Calin Herteg',
+      phone: '0746173713',
+      email: 'calinherteg@yahoo.com',
       address: ''
     }
   },
@@ -323,6 +323,18 @@
       coordinators: 'Renata Runcan & Saitauari Ovidiu Calin',
       phone: '0740.218.007',
       email: 'ovidiucalin007@yahoo.com',
+      address: ''
+    }
+  },
+  {
+    lat: 44.564017,
+    lng: 27.370719,
+    title: 'Ialomița',
+    infoWindow: {
+      content: '<p>Coordonatori:  Adrian Mihaila 0741.012.387</p>',
+      coordinators: 'Adrian Mihaila',
+      phone: '0741.012.387',
+      email: '',
       address: ''
     }
   }
