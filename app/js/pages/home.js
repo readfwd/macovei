@@ -29,6 +29,7 @@ module.exports = View.extend({
       dubi: dubi
     }));
 
+
     this.postsView = new PostsView({
       collection: app.posts,
       el: this.$('[role="posts-collection"]'),
