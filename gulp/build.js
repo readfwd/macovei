@@ -15,6 +15,7 @@ var exec = require('child_process').exec;
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var istanbul = require('browserify-istanbul');
+var browserifyIncremental = require('browserify-incremental');
 var browserSync = require('browser-sync');
 var templatizer = require('templatizer');
 var penthouse = require('penthouse');
@@ -131,10 +132,15 @@ gulp.task('js:istanbul', ['templates', 'posts'], function () {
 
 // Bundles Browserify with sourcemaps.
 gulp.task('js:dev', ['templates', 'posts'], function () {
-  var bundleStream = browserify({
+  // Incremental development bundle.
+  // Stored as a global variable so it can be reused
+  // between compiles by `browserify-incremental`
+  global.incDevBundle = global.incDevBundle || browserifyIncremental({
       entries: paths.app + '/js/main.js',
       debug: true
-    })
+    });
+
+  var bundleStream = global.incDevBundle
     .bundle()
     .on('error', config.handleError);
 

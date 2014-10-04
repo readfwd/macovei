@@ -23,6 +23,7 @@ module.exports = View.extend({
     //   el: this.$('[role="quote-box"]')
     // });
 
+
     this.postsView = new PostsView({
       collection: app.posts,
       el: this.$('[role="posts-collection"]')
