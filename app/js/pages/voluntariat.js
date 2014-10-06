@@ -49,6 +49,7 @@ module.exports = View.extend({
       zoom: 6
     });
     this.addMarkersRomania();
+    this.addMarkersWW();
 
     var self = this;
     setTimeout(function () {
@@ -73,13 +74,21 @@ module.exports = View.extend({
     map.setCenter(this.wwCoords.latitude, this.wwCoords.longitude);
     map.setZoom(2);
     var markersWW = [{
-      lat: 44.437917,
-      lng: 26.094637,
-      title: 'Bucuresti',
+      lat: 43.6895985,
+      lng: -79.3531731,
+      title: 'Toronto',
       infoWindow: {
-        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.36<br>team@macoveipresedinte.ro</p>'
+        content: '<p>Coordonator: Barbu Gheorghe 1-647-632-1805 george_barbu2000@yahoo.com george_barbu2000@hotmail.com </p>',
+        phone: '1-647-632-1805',
+        email: 'george_barbu2000@yahoo.com /  george_barbu2000@hotmail.com',
+        address: '20 Gamble Ave. #317, Toronto, Ontario, M4K-2G9'
       }
     }];
+    for (var i in markersWW) {
+      if (markersWW.hasOwnProperty(i)) {
+        map.addMarker(markersWW[i]);
+      }
+    }
   }
 
 });
