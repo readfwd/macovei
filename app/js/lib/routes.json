@@ -275,5 +275,11 @@
     "prefix": "tag",
     "changeFreq": "always",
     "priority": "1.0"
+  },
+
+  "dar-nu-are-sanse/": {
+    "prefix": "nuAreSanse",
+    "changeFreq": "weekly",
+    "priority": "0.5"
   }
 }

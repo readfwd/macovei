@@ -39,6 +39,7 @@ var TagsPage = require('./pages/tagged-posts');
 var TagPostsPage = require('./pages/tagged-post');
 var MacoveiCvPage = require('./pages/macovei-cv');
 var MotiveSaVoteziMacoveiPage = require('./pages/motive-sa-votezi-macovei');
+var DarNuAreSansePage = require('./pages/dar-nu-are-sanse');
 
 var routes = require('./lib/routes.json');
 
@@ -204,67 +205,67 @@ module.exports = Router.extend({
     $('body').attr('data-page', 'motiveSaVoteziMacovei');
   },
   principii: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 1
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog1: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 1
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog2: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 2
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog3: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 3
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog4: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 4
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog5: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 5
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog6: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 6
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog7: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 7
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog8: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 8
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog9: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 9
     }));
     $('body').attr('data-page', 'principii');
   },
   decalog10: function () {
-    this.trigger('newPage', new PrincipiiPage({ 
+    this.trigger('newPage', new PrincipiiPage({
       principle: 10
     }));
     $('body').attr('data-page', 'principii');
@@ -278,5 +279,9 @@ module.exports = Router.extend({
       tag: tag
     }));
     $('body').attr('data-page', 'taggedPost');
+  },
+  nuAreSanse: function () {
+    this.trigger('newPage', new DarNuAreSansePage());
+    $('body').attr('data-page', 'nuAreSanse');
   }
 });
