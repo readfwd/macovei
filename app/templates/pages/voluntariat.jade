@@ -14,8 +14,8 @@
         //-   strong  până la data de 20 Septembrie la adresa din București (Rosetti 17) sau data de 17 la celelalte adrese din Germania și Statele Unite ale Americii.
         //- p Vă mulțumesc!
         //- p <em>Monica Macovei</em>
-        h2 
-          a(id="lista-coordonatori") 
+        h2
+          a(id="lista-coordonatori")
           | Coordonatori voluntari
         .table-responsive
           table.table.table-bordered.small#volunteers
@@ -25,14 +25,14 @@
               th Telefon
               th Email
               //- th Adresă colectare
-            each mark in markers 
+            each mark in markers
               tr
                 td #{mark.title}
                 td #{mark.infoWindow.coordinators}
-                td 
-                  a(href="tel:!{mark.infoWindow.phone}") #{mark.infoWindow.phone}
-                td 
-                  a(href="!{mark.infoWindow.email}") !{mark.infoWindow.email}
+                td
+                  a(href="tel:" + mark.infoWindow.phone) #{mark.infoWindow.phone}
+                td
+                  a(href="mailto:" + mark.infoWindow.email) !{mark.infoWindow.email}
                 //- td #{mark.infoWindow.address}
       .col-sm-4
         .panel.panel-primary
