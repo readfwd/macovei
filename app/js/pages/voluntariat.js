@@ -49,7 +49,7 @@ module.exports = View.extend({
       zoom: 6
     });
     this.addMarkersRomania();
-    this.addMarkersWW();
+    // this.addMarkersWW();
 
     var self = this;
     setTimeout(function () {
