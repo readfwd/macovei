@@ -27,15 +27,16 @@
   },
   "homepage": "https://github.com/readfwd/macovei",
   "devDependencies": {
+    "browserify-incremental": "^0.1.2",
     "coveralls": "^2.11.1",
-    "ngrok": "^0.1.97",
     "karma": "^0.12.19",
     "karma-coverage": "git://github.com/readfwd/karma-coverage.git#61216c0",
     "karma-mocha": "^0.1.6",
     "karma-mocha-reporter": "^0.2.8",
     "karma-osx-reporter": "^0.1.0",
     "karma-phantomjs-launcher": "^0.1.4",
-    "mocha": "^1.21.3"
+    "mocha": "^1.21.3",
+    "ngrok": "^0.1.97"
   },
   "dependencies": {
     "ampersand-router": "^1.0.2",
