@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/readfwd/macovei",
   "devDependencies": {
-    "browserify-incremental": "^0.1.2",
     "coveralls": "^2.11.1",
     "karma": "^0.12.19",
     "karma-coverage": "git://github.com/readfwd/karma-coverage.git#61216c0",
@@ -46,6 +45,7 @@
     "bowser": "^0.7.1",
     "browser-sync": "^1.3.0",
     "browserify": "^5.9.1",
+    "browserify-incremental": "^0.1.2",
     "browserify-istanbul": "^0.1.1",
     "compression": "^1.0.9",
     "express": "^4.7.2",
