@@ -276,9 +276,13 @@
     "changeFreq": "always",
     "priority": "1.0"
   },
-
   "dar-nu-are-sanse/": {
     "prefix": "nuAreSanse",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "monica-in-dialog/": {
+    "prefix": "inDialog",
     "changeFreq": "weekly",
     "priority": "0.5"
   }
