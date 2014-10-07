@@ -285,5 +285,10 @@
     "prefix": "inDialog",
     "changeFreq": "weekly",
     "priority": "0.5"
+  },
+  "agenda/": {
+    "prefix": "agenda",
+    "changeFreq": "daily",
+    "priority": "0.8"
   }
 }
