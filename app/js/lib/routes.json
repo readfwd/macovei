@@ -290,5 +290,10 @@
     "prefix": "agenda",
     "changeFreq": "daily",
     "priority": "0.8"
+  },
+  "program-politic/": {
+    "prefix": "decalog",
+    "changeFreq": "weekly",
+    "priority": "0.5"
   }
 }

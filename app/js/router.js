@@ -42,6 +42,7 @@ var MotiveSaVoteziMacoveiPage = require('./pages/motive-sa-votezi-macovei');
 var DarNuAreSansePage = require('./pages/dar-nu-are-sanse');
 var MonicaInDialogPage = require('./pages/monica-in-dialog');
 var AgendaPage = require('./pages/agenda');
+var DecalogPage = require('./pages/decalog');
 
 var routes = require('./lib/routes.json');
 
@@ -208,7 +209,7 @@ module.exports = Router.extend({
   },
   principii: function () {
     this.trigger('newPage', new PrincipiiPage({
-      principle: 1
+      principle: 0
     }));
     $('body').attr('data-page', 'principii');
   },
@@ -293,5 +294,9 @@ module.exports = Router.extend({
   agenda: function () {
     this.trigger('newPage', new AgendaPage());
     $('body').attr('data-page', 'agenda');
+  },
+  decalog: function () {
+    this.trigger('newPage', new DecalogPage());
+    $('body').attr('data-page', 'decalog');
   }
 });
