@@ -40,6 +40,8 @@ var TagPostsPage = require('./pages/tagged-post');
 var MacoveiCvPage = require('./pages/macovei-cv');
 var MotiveSaVoteziMacoveiPage = require('./pages/motive-sa-votezi-macovei');
 var DarNuAreSansePage = require('./pages/dar-nu-are-sanse');
+var MonicaInDialogPage = require('./pages/monica-in-dialog');
+var AgendaPage = require('./pages/agenda');
 
 var routes = require('./lib/routes.json');
 
@@ -283,5 +285,13 @@ module.exports = Router.extend({
   nuAreSanse: function () {
     this.trigger('newPage', new DarNuAreSansePage());
     $('body').attr('data-page', 'nuAreSanse');
+  },
+  inDialog: function () {
+    this.trigger('newPage', new MonicaInDialogPage());
+    $('body').attr('data-page', 'monicaInDialog');
+  },
+  agenda: function () {
+    this.trigger('newPage', new AgendaPage());
+    $('body').attr('data-page', 'agenda');
   }
 });
