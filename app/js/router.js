@@ -40,6 +40,9 @@ var TagPostsPage = require('./pages/tagged-post');
 var MacoveiCvPage = require('./pages/macovei-cv');
 var MotiveSaVoteziMacoveiPage = require('./pages/motive-sa-votezi-macovei');
 var DarNuAreSansePage = require('./pages/dar-nu-are-sanse');
+var MonicaInDialogPage = require('./pages/monica-in-dialog');
+var AgendaPage = require('./pages/agenda');
+var DecalogPage = require('./pages/decalog');
 
 var routes = require('./lib/routes.json');
 
@@ -206,7 +209,7 @@ module.exports = Router.extend({
   },
   principii: function () {
     this.trigger('newPage', new PrincipiiPage({
-      principle: 1
+      principle: 0
     }));
     $('body').attr('data-page', 'principii');
   },
@@ -283,5 +286,17 @@ module.exports = Router.extend({
   nuAreSanse: function () {
     this.trigger('newPage', new DarNuAreSansePage());
     $('body').attr('data-page', 'nuAreSanse');
+  },
+  inDialog: function () {
+    this.trigger('newPage', new MonicaInDialogPage());
+    $('body').attr('data-page', 'monicaInDialog');
+  },
+  agenda: function () {
+    this.trigger('newPage', new AgendaPage());
+    $('body').attr('data-page', 'agenda');
+  },
+  decalog: function () {
+    this.trigger('newPage', new DecalogPage());
+    $('body').attr('data-page', 'decalog');
   }
 });

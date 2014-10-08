@@ -276,9 +276,23 @@
     "changeFreq": "always",
     "priority": "1.0"
   },
-
   "dar-nu-are-sanse/": {
     "prefix": "nuAreSanse",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "monica-in-dialog/": {
+    "prefix": "inDialog",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "agenda/": {
+    "prefix": "agenda",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "program-politic/": {
+    "prefix": "decalog",
     "changeFreq": "weekly",
     "priority": "0.5"
   }
