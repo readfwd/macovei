@@ -4,6 +4,7 @@ var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
 var $ = require('../shims/jquery');
+var donations = require('../lib/donations.json');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Susținere financiară',
@@ -13,12 +14,26 @@ module.exports = View.extend({
   },
 
   render: function () {
-    this.$el.html(this.template());
-    this.$('.progress .progress-bar').progressbar({
+    var self = this;
+    self.$el.html(self.template({
+      donations: donations
+    }));
+    self.$('.progress .progress-bar').attr('data-transitiongoal', self.$('.progress .progress-bar').attr('data-transitiongoal-backup'));
+    self.$('.progress .progress-bar').progressbar({
       display_text: 'center',
-      use_percentage: false
+      use_percentage: false,
+      amount_format: function (p) {
+        self.amount = p + 5;
+        return self.amount;
+      },
+      update: function(raised) {
+        raised = self.amount;
+      }
     });
-    this.$('.progressbar-back-text').detach();
+
+
+    self.$('.progressbar-back-text').detach();
+    self.$('#raised').html(self.$('.progressbar-front-text'));
     return this;
   },
 

@@ -1,25 +1,29 @@
 .container
   h1.text-center Susținere financiară
-  .milestones
-    .progress
-      .progress-bar.progress-bar-striped(role="progressbar", data-transitiongoal="50")
+  .text-center
+    #raised
+    span  #{donations.currency}
+  .row.milestones
+    .col-md-10.col-md-offset-1
+      .progress.progress-bar-striped
+        .progress-bar.progress-bar-striped.six-sec-ease-in-out(role="progressbar", data-transitiongoal="#{donations.raised}" - 5, aria-valuemin="5", aria-valuemax="#{donations.moneyCap}")
 
     .row
-      .col-md-2.col-sm-offset-1.col-xs-6.col-sm-3
+      .col-sm-2.col-sm-offset-1.col-xs-4
         .milestone
-          img.mile1(src="/assets/img/1.png")
-      .col-md-2.col-xs-6.col-sm-3
+          img.mile1(src="#{donations.milestone1.image}")
+      .col-sm-2.col-xs-4
         .milestone
-          img.mile2(src="/assets/img/1.png")
-      .col-md-2.col-xs-6.col-sm-3
+          img.mile2(src="#{donations.milestone2.image}")
+      .col-sm-2.col-xs-4
         .milestone
-          img.mile3(src="/assets/img/1.png")
-      .col-md-2.col-xs-6.col-sm-3
+          img.mile3(src="#{donations.milestone3.image}")
+      .col-sm-2.col-xs-4
         .milestone
-          img.mile4(src="/assets/img/1.png")
-      .col-md-2.col-xs-6.col-sm-3
+          img.mile4(src="#{donations.milestone4.image}")
+      .col-sm-2.col-xs-4
         .milestone
-          img.mile5(src="http://placekitten.com/g/200/300")
+          img.mile5(src="#{donations.milestone5.image}")
 
 
 
