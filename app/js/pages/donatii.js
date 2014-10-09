@@ -14,6 +14,11 @@ module.exports = View.extend({
 
   render: function () {
     this.$el.html(this.template());
+    this.$('.progress .progress-bar').progressbar({
+      display_text: 'center',
+      use_percentage: false
+    });
+    this.$('.progressbar-back-text').detach();
     return this;
   },
 
