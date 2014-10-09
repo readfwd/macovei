@@ -8,6 +8,9 @@ var _ = require('lodash');
 var markers = require('../lib/locations-romania.json');
 markers = _.sortBy(markers, 'title');
 
+var wwMarkers = require('../lib/locations-worldwide.json');
+wwMarkers = _.sortBy(wwMarkers, 'title');
+
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Voluntariat',
@@ -18,7 +21,8 @@ module.exports = View.extend({
 
   render: function () {
     this.$el.html(this.template({
-      markers: markers
+      markers: markers,
+      wwMarkers: wwMarkers
     }));
     this.romaniaCoords = {
       latitude: 45.94,
@@ -49,7 +53,7 @@ module.exports = View.extend({
       zoom: 6
     });
     this.addMarkersRomania();
-    // this.addMarkersWW();
+    this.addMarkersWW();
 
     var self = this;
     setTimeout(function () {
@@ -71,22 +75,11 @@ module.exports = View.extend({
 
   addMarkersWW: function () {
     var map = this.map;
-    map.setCenter(this.wwCoords.latitude, this.wwCoords.longitude);
-    map.setZoom(2);
-    var markersWW = [{
-      lat: 43.6895985,
-      lng: -79.3531731,
-      title: 'Toronto',
-      infoWindow: {
-        content: '<p>Coordonator: Barbu Gheorghe 1-647-632-1805 george_barbu2000@yahoo.com george_barbu2000@hotmail.com </p>',
-        phone: '1-647-632-1805',
-        email: 'george_barbu2000@yahoo.com /  george_barbu2000@hotmail.com',
-        address: '20 Gamble Ave. #317, Toronto, Ontario, M4K-2G9'
-      }
-    }];
-    for (var i in markersWW) {
-      if (markersWW.hasOwnProperty(i)) {
-        map.addMarker(markersWW[i]);
+    map.setCenter(this.romaniaCoords.latitude, this.romaniaCoords.longitude);
+    map.setZoom(6);
+    for (var i in wwMarkers) {
+      if (wwMarkers.hasOwnProperty(i)) {
+        map.addMarker(wwMarkers[i]);
       }
     }
   }

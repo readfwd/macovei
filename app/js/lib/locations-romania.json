@@ -24,18 +24,6 @@
     }
   },
   {
-    lat: 44.181357,
-    lng: 28.629339,
-    title: 'Constanta',
-    infoWindow: {
-      content: '<p>Coordonator: Popescu Florian<br>0724.197.580  <br>pflorian63@yahoo.com<br/>Str Rapsodiei 40</p>',
-      coordinators: 'Popescu Florian',
-      phone: '0724.197.580',
-      email: 'pflorian63@yahoo.com',
-      address: 'Str. Rapsodiei 40'
-    }
-  },
-  {
     lat: 45.437678,
     lng: 28.047494,
     title: 'Galati',
@@ -336,18 +324,6 @@
       phone: '0741.012.387',
       email: '',
       address: ''
-    }
-  },
-  {
-    lat: 43.6895985,
-    lng: -79.3531731,
-    title: 'Toronto, Canada',
-    infoWindow: {
-      content: '<p>Coordonator: Barbu Gheorghe 1-647-632-1805 george_barbu2000@yahoo.com george_barbu2000@hotmail.com </p>',
-      coordinators: 'Barbu Gheorghe ',
-      phone: '1-647-632-1805',
-      email: 'george_barbu2000@yahoo.com /  george_barbu2000@hotmail.com',
-      address: '20 Gamble Ave. #317, Toronto, Ontario, M4K-2G9'
     }
   },
   {

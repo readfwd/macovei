@@ -1,5 +1,11 @@
 [
-  /*Add new videos here*/  {
+  /*Add new videos here*/
+  {
+    "url": "//www.youtube.com/embed/yOca04qgsb0?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Devis Grebu",
+    "quote": ""
+  },
+  {
     "url": "//www.youtube.com/embed/o7fygH9MblU?rel=0&iv_load_policy=3&showinfo=0&controls=0",
     "person": "Devis Grebu, Alex Ștefănescu, Florin Tudose",
     "quote": ""
