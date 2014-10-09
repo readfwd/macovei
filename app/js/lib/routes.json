@@ -80,8 +80,8 @@
     "changeFreq": "daily",
     "priority": "0.8"
   },
-  "media/kit-de-presa/": {
-    "prefix": "kitDePresa",
+  "materiale/": {
+    "prefix": "materiale",
     "changeFreq": "daily",
     "priority": "0.8"
   },
