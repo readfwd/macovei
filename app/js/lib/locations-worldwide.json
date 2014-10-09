@@ -1,0 +1,26 @@
+[
+  {
+    lat: 43.6895985,
+    lng: -79.3531731,
+    title: "Toronto, Canada",
+    infoWindow: {
+      content: "<p>Coordonator: Barbu Gheorghe 1-647-632-1805 george_barbu2000@yahoo.com george_barbu2000@hotmail.com </p>",
+      coordinators: "Barbu Gheorghe ",
+      phone: "1-647-632-1805",
+      email: "george_barbu2000@yahoo.com /  george_barbu2000@hotmail.com",
+      address: "20 Gamble Ave. #317, Toronto, Ontario, M4K-2G9"
+    }
+  },
+  {
+    lat: 51.5195098,
+    lng: -0.0866641,
+    title: "London, UK",
+    infoWindow: {
+      content: "<p>Coordonatori: Dorel Palenciuc, +44-7-789-646-239, Marius Muntean, +44-7-964-265-699 </p>",
+      coordinators: "Dorel Palenciuc / Marius Muntean",
+      phone: "+44-7-789-646-239 / +44-7-964-265-699",
+      email: "",
+      address: ""
+    }
+  }
+];

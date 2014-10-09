@@ -17,6 +17,7 @@
         h2
           a(id="lista-coordonatori")
           | Coordonatori voluntari
+        h3 România
         .table-responsive
           table.table.table-bordered.small#volunteers
             tr
@@ -34,6 +35,23 @@
                 td
                   a(href="mailto:" + mark.infoWindow.email) !{mark.infoWindow.email}
                 //- td #{mark.infoWindow.address}
+        h3 Străinătate
+        .table-responsive
+          table.table.table-bordered.small#volunteers
+            tr
+              th Oraș
+              th Coordonator(i)
+              th Telefon
+              th Email
+              //- th Adresă colectare
+            each mark in wwMarkers
+              tr
+                td #{mark.title}
+                td #{mark.infoWindow.coordinators}
+                td
+                  a(href="tel:" + mark.infoWindow.phone) #{mark.infoWindow.phone}
+                td
+                  a(href="mailto:" + mark.infoWindow.email) !{mark.infoWindow.email}
       .col-sm-4
         .panel.panel-primary
           .panel-heading Înscrie-te ca voluntar
