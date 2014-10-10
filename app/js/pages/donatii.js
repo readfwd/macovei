@@ -28,6 +28,35 @@ module.exports = View.extend({
       },
       update: function(raised) {
         raised = self.amount;
+        if (raised >= 20000) {
+          self.$('.mile-1').addClass('passed');
+          self.$('.value').removeClass('passed');
+          self.$('.value-1').addClass('passed');
+        }
+
+        if (raised >= 50000) {
+          self.$('.mile-2').addClass('passed');
+          self.$('.value').removeClass('passed');
+          self.$('.value-2').addClass('passed');
+        }
+
+        if(raised >= 100000) {
+          self.$('.mile-3').addClass('passed');
+          self.$('.value').removeClass('passed');
+          self.$('.value-3').addClass('passed');
+        }
+
+        if (raised >= 200000) {
+          self.$('.mile-4').addClass('passed');
+          self.$('.value').removeClass('passed');
+          self.$('.value-4').addClass('passed');
+        }
+
+        if (raised === 300000) {
+          self.$('.mile-5').addClass('passed');
+          self.$('.value').removeClass('passed');
+          self.$('.value-5').addClass('passed');
+        }
       }
     });
 
