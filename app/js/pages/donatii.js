@@ -10,7 +10,8 @@ module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Susținere financiară',
   template: templates.pages.donatii,
   events: {
-    'click .paypal .btn': 'loadBtn'
+    'click .paypal .btn': 'loadBtn',
+    'click #doneaza': 'doneaza'
   },
 
   render: function () {
@@ -24,35 +25,41 @@ module.exports = View.extend({
       use_percentage: false,
       amount_format: function (p) {
         self.amount = p + 5;
-        return self.amount;
+        var value = self.amount + ' / 300000 ' + donations.currency;
+        return value;
       },
       update: function(raised) {
         raised = self.amount;
         if (raised >= 20000) {
+          self.$('.mile').removeClass('passed');
           self.$('.mile-1').addClass('passed');
           self.$('.value').removeClass('passed');
           self.$('.value-1').addClass('passed');
         }
 
         if (raised >= 50000) {
+          self.$('.mile').removeClass('passed');
           self.$('.mile-2').addClass('passed');
           self.$('.value').removeClass('passed');
           self.$('.value-2').addClass('passed');
         }
 
         if(raised >= 100000) {
+          self.$('.mile').removeClass('passed');
           self.$('.mile-3').addClass('passed');
           self.$('.value').removeClass('passed');
           self.$('.value-3').addClass('passed');
         }
 
         if (raised >= 200000) {
+          self.$('.mile').removeClass('passed');
           self.$('.mile-4').addClass('passed');
           self.$('.value').removeClass('passed');
           self.$('.value-4').addClass('passed');
         }
 
         if (raised === 300000) {
+          self.$('.mile').removeClass('passed');
           self.$('.mile-5').addClass('passed');
           self.$('.value').removeClass('passed');
           self.$('.value-5').addClass('passed');
@@ -70,5 +77,11 @@ module.exports = View.extend({
     var t = $(e.target);
     t.addClass('active');
     t.html('<i class="fa fa-fw fa-spin fa-spinner"></i>');
+  },
+
+  doneaza: function () {
+    $("body").animate({
+      scrollTop: this.$('#content').offset().top - 50
+    }, 200);
   }
 });
