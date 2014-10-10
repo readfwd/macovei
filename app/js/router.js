@@ -27,7 +27,7 @@ var DepunereaCandidaturiiPage = require('./pages/depunerea-candidaturii');
 var PersonalitatiPage = require('./pages/personalitati');
 var TestimonialeOnlinePage = require('./pages/testimoniale-online');
 var EvenimentePage = require('./pages/evenimente');
-var KitDePresaPage = require('./pages/kit-de-presa');
+var MaterialePage = require('./pages/materiale');
 var DubiPage = require('./pages/dubi');
 var DiscursuriPage = require('./pages/discursuri');
 var BriefinguriPage = require('./pages/briefinguri');
@@ -187,9 +187,9 @@ module.exports = Router.extend({
     $('body').attr('data-page', 'evenimente');
   },
 
-  kitDePresa: function () {
-    this.trigger('newPage', new KitDePresaPage({}));
-    $('body').attr('data-page', 'kitDePresa');
+  materiale: function () {
+    this.trigger('newPage', new MaterialePage({}));
+    $('body').attr('data-page', 'materiale');
   },
   dubi: function () {
     this.trigger('newPage', new DubiPage({}));
