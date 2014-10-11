@@ -1,6 +1,11 @@
 [
   /*Add new videos here*/
   {
+    "url": "//www.youtube.com/embed/xCTWHXfhpRM?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Ingeborg Grässle",
+    "quote": ""
+  },
+  {
     "url": "//www.youtube.com/embed/yOca04qgsb0?rel=0&iv_load_policy=3&showinfo=0&controls=0",
     "person": "Devis Grebu",
     "quote": ""
