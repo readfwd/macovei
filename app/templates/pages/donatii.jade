@@ -1,9 +1,46 @@
 .container
   h1.text-center Susținere financiară
-  .row
+  .donation-stripe
+    .text-center
+      #raised
+    .donations-progress
+      .row
+        .col-md-10.col-md-offset-1
+          .progress.progress-bar-striped
+            .progress-bar.progress-bar-striped.six-sec-ease-in-out(role="progressbar", data-transitiongoal="#{donations.raised}" - 5, aria-valuemin="5", aria-valuemax="#{donations.moneyCap}")
+          .milestones
+            .mile.mile-1
+            .value.value-1.hidden-xs 20.000 Lei
+            .mile.mile-2
+            .value.value-2.hidden-xs 50.000 Lei
+            .mile.mile-3
+            .value.value-3.hidden-xs 100.000 Lei
+            .mile.mile-4
+            .value.value-4.hidden-xs 200.000 Lei
+            .mile.mile-5
+            .value.value-5.hidden-xs 300.000 Lei
+      .row
+        .col-sm-2.col-sm-offset-1.col-xs-5
+          .milestone.mile-1
+            img(src="#{donations.milestone1.image}")
+        .col-sm-2.col-xs-5
+          .milestone.mile-2
+            img(src="#{donations.milestone2.image}")
+        .col-sm-2.col-xs-5
+          .milestone.mile-3
+            img(src="#{donations.milestone3.image}")
+        .col-sm-2.col-xs-5
+          .milestone.mile-4
+            img(src="#{donations.milestone4.image}")
+        .col-sm-2.col-xs-5
+          .milestone.mile-5
+            img(src="#{donations.milestone5.image}")
+    #doneaza
+      img(src="/assets/img/donations/donateButton.png")
+
+  .row#content
     .col-md-10.col-md-offset-1: .content
       p Dragi prieteni,
-      br
       p Știți că nu am firme, nu fac afaceri cu statul și nu am oligarhi și nici partide care să mă sprijine financiar în campanie. Am intrat în această cursă electorală pentru că doresc o Românie vie, sănătoasă, curajoasă și mândră. Contez pe sprijinul vostru, al celor care vreți o astfel de Românie.
       p Dacă doriți să susțineți campania electorală, o puteți face în contul “Macovei Președinte”, deschis la Unicredit Tiriac Bank București, prin următoarele metode:
       .row
