@@ -1,6 +1,21 @@
 [
   /*Add new videos here*/
   {
+    "url": "//www.youtube.com/embed/PgjQ9MSgjV4?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "",
+    "quote": "Ei o voteaza pe Monica Macovei! Tu?"
+  },
+  {
+    "url": "//www.youtube.com/embed/yDgB5vCnEw8?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "",
+    "quote": "Florin Tudose: Monica Macovei ma face sa ma simt mandru ca sunt roman"
+  },
+  {
+    "url": "//www.youtube.com/embed/tlYCSKxnYbk?rel=0&iv_load_policy=3&showinfo=0&controls=0",
+    "person": "Anna Bildt",
+    "quote": ""
+  },
+  {
     "url": "//www.youtube.com/embed/xCTWHXfhpRM?rel=0&iv_load_policy=3&showinfo=0&controls=0",
     "person": "Ingeborg Grässle",
     "quote": ""
