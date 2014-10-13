@@ -5,6 +5,8 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 var $ = require('../shims/jquery');
 var donations = require('../lib/donations.json');
+var urlrepl = require('../lib/url-replace');
+var _ = require('lodash');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Susținere financiară',
@@ -16,6 +18,11 @@ module.exports = View.extend({
 
   render: function () {
     var self = this;
+    _.forEach(donations, function (entry) {
+      if (entry.image) {
+        entry.image = urlrepl(entry.image);
+      }
+    });
     self.$el.html(self.template({
       donations: donations
     }));
