@@ -29,29 +29,6 @@ module.exports = View.extend({
     }));
     var postsView = new PostsView({
       collection: window.app.posts,
-      filterTag: 'comunicat',
-      el: this.$('#comunicat')
-    });
-    var container = this.$('#comunicat')[0];
-
-    var x = new window.Masonry( container, {
-      itemSelector: '.item',
-      columnWidth: 20,
-    });
-
-    if (this.$(window).width() > 768) {
-      x.gutter = 20;
-    }
-    else {
-      x.gutter = 10;
-      }
-    x.bindResize();
-    setTimeout(function () {
-      x.layout();
-    }, 10);
-
-    var postsView2 = new PostsView({
-      collection: window.app.posts,
       filterTag: 'declaratie',
       el: this.$('#declaratie')
     });
