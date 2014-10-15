@@ -52,12 +52,6 @@
         li: a(data-toggle='modal', data-target='#paypal')
           | Paypal
           i.fa.fa-fw.fa-paypal
-        li: a(data-toggle='modal', data-target='#credit-card')
-          | Credit-card (în curând)
-          i.fa.fa-fw.fa-credit-card
-        li: a(data-toggle='modal', data-target='#sms')
-          | SMS (în curând)
-          i.fa.fa-fw.fa-mobile-phone
 
     .col-md-6.col-sm-7
       p.strong Transfer bancar / plata la ghișeu
@@ -145,30 +139,7 @@
               //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
         .modal-footer
           button.btn.btn-default(type='button', data-dismiss='modal') Închide
-  #credit-card.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-    .modal-dialog
-      .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal')
-            span(aria-hidden='true') ×
-            span.sr-only Închide
-          h4#myModalLabel.modal-title Card de credit
-        .modal-body
-          p În curând
-        .modal-footer
-          button.btn.btn-default(type='button', data-dismiss='modal') Închide
-  #sms.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-    .modal-dialog
-      .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal')
-            span(aria-hidden='true') ×
-            span.sr-only Închide
-          h4#myModalLabel.modal-title SMS
-        .modal-body
-          p În curând
-        .modal-footer
-          button.btn.btn-default(type='button', data-dismiss='modal') Închide
+
   p Vă mulțumim!
   p <em>Echipa de campanie a candidatului independent Monica Macovei.</em>
   hr
