@@ -88,7 +88,7 @@ module.exports = View.extend({
 
   doneaza: function () {
     $("body").animate({
-      scrollTop: this.$('#content').offset().top - 50
+      scrollTop: this.$('.payment-methods').offset().top - 60
     }, 200);
   }
 });
