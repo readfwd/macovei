@@ -20,6 +20,7 @@
     "ShapeHoverEffectSVG": "git://github.com/codrops/ShapeHoverEffectSVG.git#d3698031b26078d2a26a3b610c12b090d2b9b97e",
     "IconHoverEffects": "git://github.com/codrops/IconHoverEffects.git#bfaf5e29c33860a7a46f1a40ba7431eb9b5140ce",
     "gmaps": "~0.4.14",
-    "masonry": "~3.1.5"
+    "masonry": "~3.1.5",
+    "bootstrap-progressbar": "~0.8.3"
   }
 }

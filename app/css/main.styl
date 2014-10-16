@@ -307,3 +307,81 @@ a.navbar-brand:hover
     margin: 0 auto
 ul.decalogul
   list-style-type: none
+.milestone
+  padding: 0.2em
+  img
+    width: 120%
+.six-sec-ease-in-out
+  transition: width 2s ease;
+.donations-progress
+  .progress-bar
+    background-color: #FF0000
+    display:block
+  .progress-bar-striped
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent)
+    background-size: 20px 20px
+#raised
+  display: inline-block
+.milestones
+  position: relative
+  height: 3em
+  .mile
+    height: 2em
+    border: 2px solid #ccc
+    position: absolute
+    top: -90%;
+    transform: translate3d(0%, 3%, 0)
+    &.mile-1
+      left: 7%;
+    &.mile-2
+      left: 17%
+    &.mile-3
+      left: 33%
+    &.mile-4
+      left: 67%
+    &.mile-5
+      right: 0%
+    &.passed
+      border-color: #333
+    @media (max-width: 768px)
+      transform: translate3d(0%, -21%, 0)
+  .value
+    position: absolute
+    transform: translateY(-30%)
+    &.value-1
+      left: 0%
+      transform: translateX(2%)
+    &.value-2
+      left: 10%
+      transform: translateX(5%)
+    &.value-3
+      left: 25%
+      transform: translateX(17%)
+    &.value-4
+      left: 55%
+      transform: translateX(35%)
+    &.value-5
+      right: 0%
+      transform: translateX(5%)
+    &.passed
+      font-weight: 600
+      color: #333
+.doneazaBtn
+  background-color: mm-red
+  font-weight: 600 !important
+#raised
+  font-size: 1.3em
+  padding: 0.3em
+  background-color: #ccc
+  margin: 0.3em
+#doneaza
+  text-align: center
+  cursor: pointer
+  margin: 2.5em 0
+  img
+    height: auto
+    width: 40%
+#content
+  margin-top: 2em
+.mile-2 img
+  filter: grayscale(100%);
