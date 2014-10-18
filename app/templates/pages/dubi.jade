@@ -1,7 +1,8 @@
+- dubi.reverse();
+- console.log(dubi);
 .container
-  h1
-    .row
-      .col-sm-12
-        span Dubi și Monica
-  each comic in dubi
-    img.dubi(src="#{comic}")
+  h1 Dubi și Monica
+  .dubi-flex-container
+    each comic in dubi
+      .dubi-flex-item
+        img.img-responsive(src="#{comic}")
