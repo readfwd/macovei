@@ -26,6 +26,10 @@ body
 
   @media (max-width: 767px)
     font-size: 14px
+  &[data-page='dubi']
+    background: #333
+    color: white
+    
 nav
   li
     cursor: pointer
@@ -146,13 +150,13 @@ img.stripe
   display: flex
   flex-flow: row wrap
   justify-content: space-between
-  align-items: flex-start
+  align-items: stretch
   align-content: flex-start
   .dubi-flex-item
     max-width: 250px
-    
-
-
+    background: white
+    padding: 0.2em
+    margin-bottom: 1em
 
 .dubi
   width: 30%
