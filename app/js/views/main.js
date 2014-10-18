@@ -18,7 +18,7 @@ module.exports = View.extend({
 
   render: function () {
     var self = this;
-    this.$el.html(this.template());
+    this.$el.append(this.template());
 
     $(window).scroll(this.handleScrolling.bind(this));
 

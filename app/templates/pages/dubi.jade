@@ -4,4 +4,5 @@
       .col-sm-12
         span Dubi și Monica
   each comic in dubi
-    img.dubi(src="#{comic}")
+    a(href='#{comic}', data-lightbox='dubi', data-title='Dubi si Monica')
+      img.dubi(src='#{comic}')
