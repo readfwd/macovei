@@ -26,6 +26,10 @@ body
 
   @media (max-width: 767px)
     font-size: 14px
+  &[data-page='dubi']
+    background: #333
+    color: white
+    
 nav
   li
     cursor: pointer
@@ -141,12 +145,26 @@ div.pluginConnectButton
 img.stripe
   width: 25%
   padding: 0.5em
+
+.dubi-flex-container
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-items: stretch
+  align-content: flex-start
+  .dubi-flex-item
+    max-width: 250px
+    background: white
+    padding: 0.2em
+    margin-bottom: 1em
+
 .dubi
   width: 30%
   padding: 0.5em
   height: auto
   display: inline-block
   margin: 0.5em
+
 .logo
   position: absolute
   top: 60%

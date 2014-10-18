@@ -7,9 +7,12 @@ var dubi = require('../lib/dubi.json');
 var _ = require('lodash');
 var urlrepl = require('../lib/url-replace');
 
+dubi.reverse();
+
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Dubi și Monica',
   template: templates.pages.dubi,
+  dubiPage: true,
   render: function () {
     _.forEach(dubi, function (comic, key) {
       dubi[key] = urlrepl(comic);

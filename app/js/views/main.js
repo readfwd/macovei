@@ -112,7 +112,7 @@ module.exports = View.extend({
       this.renderLogo();
       this.$(".navbar").removeClass('navbar-dimmed');
       var html = "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-black.png") + "\"></img>";
-      if (view.homePage === true) {
+      if (view.homePage === true || view.dubiPage === true) {
         html = "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-white.png") + "\"></img>";
       }
       this.$(".macovei-logo")
@@ -125,7 +125,7 @@ module.exports = View.extend({
 
   renderLogo: function () {
     if ($(window).scrollTop() === 0) {
-      if (this.currentView.homePage) {
+      if (this.currentView.homePage || this.currentView.dubiPage) {
         this.$('.logo')
           .html( "<img src=\"" + urlrepl("/assets/img/logo-nou-macovei-white.png") + "\"></img>");
       }
