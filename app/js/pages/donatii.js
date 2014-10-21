@@ -28,8 +28,8 @@ module.exports = View.extend({
       }
     });
 
-    _.forEach(donationsGallery, function (image) {
-      image = urlrepl(image);
+    _.forEach(donationsGallery, function (image, key) {
+      donationsGallery[key] = urlrepl(image);
     });
 
     self.$el.html(self.template({
