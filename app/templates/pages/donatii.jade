@@ -42,6 +42,16 @@
           .col-sm-2.col-xs-5
             .milestone.mile-5
               img(src="#{donations.milestone5.image}")
+      #gallery
+        .text-center
+          img(src="/assets/img/donations/seeMore.png")
+        .images.hidden
+          .well: .row
+            each image in gallery
+              .col-sm-2
+                a(href='#{image}', data-lightbox='donations-gallery', data-title='Materile')
+                  img.img-responsive(src="#{image}")
+
   .payment-methods
     p Dacă doriți să susțineți campania electorală, o puteți face în contul “Macovei Președinte”, deschis la Unicredit Tiriac Bank București, prin următoarele metode:
   .row

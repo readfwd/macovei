@@ -4,7 +4,10 @@ var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var templates = require('../lib/templates');
 var $ = require('../shims/jquery');
+
 var donations = require('../lib/donations.json');
+var donationsGallery = require('../lib/donationsGallery.json');
+
 var urlrepl = require('../lib/url-replace');
 var _ = require('lodash');
 
@@ -13,7 +16,8 @@ module.exports = View.extend({
   template: templates.pages.donatii,
   events: {
     'click .paypal .btn': 'loadBtn',
-    'click #doneaza': 'doneaza'
+    'click #doneaza': 'doneaza',
+    'click #gallery .text-center': 'showGallery'
   },
 
   render: function () {
@@ -23,8 +27,14 @@ module.exports = View.extend({
         entry.image = urlrepl(entry.image);
       }
     });
+
+    _.forEach(donationsGallery, function (image) {
+      image = urlrepl(image);
+    });
+
     self.$el.html(self.template({
-      donations: donations
+      donations: donations,
+      gallery: donationsGallery
     }));
     self.$('.progress .progress-bar').attr('data-transitiongoal', self.$('.progress .progress-bar').attr('data-transitiongoal-backup'));
     self.$('.progress .progress-bar').progressbar({
@@ -90,5 +100,9 @@ module.exports = View.extend({
     $("body").animate({
       scrollTop: this.$('.payment-methods').offset().top - 60
     }, 200);
+  },
+
+  showGallery: function () {
+    $('.images').toggleClass('hidden');
   }
 });
