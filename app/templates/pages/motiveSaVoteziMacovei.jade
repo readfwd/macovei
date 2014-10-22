@@ -8,7 +8,7 @@
               .col-xs-3
                 img.img-responsive(src= reason.image)
               .col-xs-9
-                p= reason.content
+                p !{reason.content}
                 - if (/^http:\/\/localhost/.test(reason.image)) { reason.image = 'https://macovei-stage.s3-eu-west-1.amazonaws.com/img/logo-macovei.png'; }
                 a(href='https://www.facebook.com/dialog/feed?app_id=688761444534662&redirect_uri=' + encodeURIComponent( 'http://macoveipresedinte.ro/despre/20-de-motive-sa-votezi-macovei/') + '&link=' + encodeURIComponent('http://macoveipresedinte.ro/despre/20-de-motive-sa-votezi-macovei/') + '&picture=' + encodeURIComponent(reason.image) + '&description=' + encodeURIComponent(reason.content), target="_blank") Distribuie
     .col-sm-4
