@@ -42,7 +42,7 @@ module.exports = View.extend({
       use_percentage: false,
       amount_format: function (p) {
         self.amount = p + 5;
-        var value = self.amount + ' / 300000 ' + donations.currency;
+        var value = self.amount + ' / ' + donations.moneyCap + ' ' + donations.currency;
         return value;
       },
       update: function(raised) {
@@ -68,18 +68,11 @@ module.exports = View.extend({
           self.$('.value-3').addClass('passed');
         }
 
-        if (raised >= 200000) {
+        if (raised === 145000) {
           self.$('.mile').removeClass('passed');
           self.$('.mile-4').addClass('passed');
           self.$('.value').removeClass('passed');
           self.$('.value-4').addClass('passed');
-        }
-
-        if (raised === 300000) {
-          self.$('.mile').removeClass('passed');
-          self.$('.mile-5').addClass('passed');
-          self.$('.value').removeClass('passed');
-          self.$('.value-5').addClass('passed');
         }
       }
     });
