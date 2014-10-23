@@ -15,6 +15,7 @@ var exec = require('child_process').exec;
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var istanbul = require('browserify-istanbul');
+var browserifyIncremental = require('browserify-incremental');
 var browserSync = require('browser-sync');
 var templatizer = require('templatizer');
 var penthouse = require('penthouse');
@@ -55,7 +56,6 @@ function replaceInTemplates(templates) {
   _.each(urlReplacements, function(to, from) {
     var escapedFrom = from.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
     var escapedTo = to.replace('$', '$$');
-    console.log(escapedFrom, escapedTo);
     templates = templates.replace(new RegExp('([\'"])' + escapedFrom, 'g'), '$1' + escapedTo);
   });
   return templates;
@@ -86,13 +86,14 @@ gulp.task('wiredep', function () {
 });
 
 // Turn index.jade into an HTML file.
-gulp.task('index.html', ['wiredep'], function () {
+gulp.task('index.html', ['wiredep', 'replace-urls'], function () {
   return gulp.src(paths.app + '/index.jade')
     .pipe($.jade({
       pretty: true
     }))
-    .pipe($.tap(function(file) {
-      file.content = replaceInTemplates(file.content);
+    .pipe($.tap(function (file) {
+      if (!file.stat.isFile()) { return; }
+      file.contents = new Buffer(replaceInTemplates(file.contents.toString()));
     }))
     .pipe(gulp.dest(paths.tmp))
     .pipe(browserSync.reload({stream: true}));
@@ -135,10 +136,15 @@ gulp.task('js:istanbul', ['templates', 'posts'], function () {
 
 // Bundles Browserify with sourcemaps.
 gulp.task('js:dev', ['templates', 'posts'], function () {
-  var bundleStream = browserify({
+  // Incremental development bundle.
+  // Stored as a global variable so it can be reused
+  // between compiles by `browserify-incremental`
+  global.incDevBundle = global.incDevBundle || browserifyIncremental({
       entries: paths.app + '/js/main.js',
       debug: true
-    })
+    });
+
+  var bundleStream = global.incDevBundle
     .bundle()
     .on('error', config.handleError);
 

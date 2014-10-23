@@ -44,15 +44,15 @@ app.get('/sitemap.xml', function(request, response) {
 });
 
 app.get('*', function(request, response) {
-  var path = request.url.replace(/\?.*$/, '').replace(/\/$/, '').replace(/^\//, '');
-  var found = false;
-  for (var i = 0, n = validRoutes.length; i < n; i++) {
-    if (validRoutes[i] === path) {
-      found = true;
-      break;
-    }
-  }
-  response.status(found ? 200 : 404).sendFile(__dirname + '/dist/index.html');
+  // var path = request.url.replace(/\?.*$/, '').replace(/\/$/, '').replace(/^\//, '');
+  // var found = false;
+  // for (var i = 0, n = validRoutes.length; i < n; i++) {
+  //   if (validRoutes[i] === path) {
+  //     found = true;
+  //     break;
+  //   }
+  // }
+  response.sendFile(__dirname + '/dist/index.html');
 });
 
 var port = process.env.PORT || 8080;

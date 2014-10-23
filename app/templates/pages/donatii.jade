@@ -1,140 +1,164 @@
 .container
   h1.text-center Susținere financiară
+  #content
+    .row
+      .col-xs-12
+        p Dragi prieteni,
+        p Eu nu am puterea financiară a candidaților și partidelor finanțate indirect prin bani furați de la români. Candidații trebuie finantați direct de cetățenii care îi susțin. Donați 50 de lei acum, nici mai mult, nici mai puțin. Trebuie să fim mulți, nu să dăm mult. Așa trebuie finanțată politica. Ca președinte voi susține reforma finanțării partidelor și candidaților astfel încât campaniile electorale să fie finanțate numai din donații transparente. Preferabil multe și mici.
+        #doneaza
+          img(src="/assets/img/donations/donateButton.png")
+    .donation-stripe
+      .text-center
+        #raised
+      .donations-progress
+        .row
+          .col-md-10.col-md-offset-1
+            .progress.progress-bar-striped
+              .progress-bar.progress-bar-striped.six-sec-ease-in-out(role="progressbar", data-transitiongoal="#{donations.raised}" - 5, aria-valuemin="5", aria-valuemax="#{donations.moneyCap}")
+            .milestones
+              .mile.mile-1
+              .value.value-1.hidden-xs 20.000 Lei
+              .mile.mile-2
+              .value.value-2.hidden-xs 50.000 Lei
+              .mile.mile-3
+              .value.value-3.hidden-xs 100.000 Lei
+              .mile.mile-4
+              .value.value-4.hidden-xs 145.000 Lei
+        .row
+          .col-sm-2.col-sm-offset-2.col-xs-5
+            .milestone.mile-1
+              img(src="#{donations.milestone1.image}")
+          .col-sm-2.col-xs-5
+            .milestone.mile-2
+              img(src="#{donations.milestone2.image}")
+          .col-sm-2.col-xs-5
+            .milestone.mile-3
+              img(src="#{donations.milestone3.image}")
+          .col-sm-2.col-xs-5
+            .milestone.mile-4
+              img(src="#{donations.milestone4.image}")
+      #gallery
+        .text-center
+          img(src="/assets/img/donations/seeMore.png")
+        .images.hidden
+          .well: .row
+            each image in gallery
+              .col-sm-2
+                a(href='#{image}', data-lightbox='donations-gallery', data-title='Materiale')
+                  img.img-responsive(src="#{image}")
+
+  .payment-methods
+    p Dacă doriți să susțineți campania electorală, o puteți face în contul “Macovei Președinte”, deschis la Unicredit Tiriac Bank București, prin următoarele metode:
   .row
-    .col-md-10.col-md-offset-1: .content
-      p Dragi prieteni,
-      br
-      p Știți că nu am firme, nu fac afaceri cu statul și nu am oligarhi și nici partide care să mă sprijine financiar în campanie. Am intrat în această cursă electorală pentru că doresc o Românie vie, sănătoasă, curajoasă și mândră. Contez pe sprijinul vostru, al celor care vreți o astfel de Românie.
-      p Dacă doriți să susțineți campania electorală, o puteți face în contul “Macovei Președinte”, deschis la Unicredit Tiriac Bank București, prin următoarele metode:
-      .row
-        .col-md-6.col-sm-5
-          p.strong Online prin:
-          //- .col-md-5.col-sm-6.col-xs-12.pull-right
-          ul.nav.nav-pills.nav-stacked.donation-pills
-            li: a(data-toggle='modal', data-target='#paypal')
-              | Paypal
-              i.fa.fa-fw.fa-paypal
-            li: a(data-toggle='modal', data-target='#credit-card')
-              | Credit-card (în curând)
-              i.fa.fa-fw.fa-credit-card
-            li: a(data-toggle='modal', data-target='#sms')
-              | SMS (în curând)
-              i.fa.fa-fw.fa-mobile-phone
+    .col-md-6.col-sm-5
+      p.strong Online prin:
+      //- .col-md-5.col-sm-6.col-xs-12.pull-right
+      ul.nav.nav-pills.nav-stacked.donation-pills
+        li: a(data-toggle='modal', data-target='#paypal')
+          | Paypal
+          i.fa.fa-fw.fa-paypal
 
-        .col-md-6.col-sm-7
-          p.strong Transfer bancar / plata la ghișeu
-          p Titular: <strong>Monica Macovei Presedinte</strong>
-          p Conturi:
-          .table-responsive
-            table.table
-              tr
-                td: .text-right: span.label.label-default LEI
-                td <strong>RO50 BACX 0000 0000 1750 5007</strong>
-              tr
-                td: .text-right: span.label.label-default EUR
-                td <strong>RO23 BACX 0000 0000 1750 5008</strong>
-              tr
-                td: .text-right: span.label.label-default USD
-                td <strong>RO93 BACX 0000 0000 1750 5009</strong>
-              tr
-                td: .text-right: span.label.label-default GBP
-                td <strong>RO66 BACX 0000 0000 1750 5010</strong>
-      p Cod SWIFT sau BIC: <strong>BACXROBU</strong>
-      p Banca: <strong>UniCredit Tiriac Bank</strong>, "Millennium" Branch, Bucharest
-      p Adresă bancă: 88 Victoriei, Bucharest 1, RO-10085, Romania.
-      p Susținerea campaniei electorale se poate face prin depunere directă la ghișeu, mergând la orice filială Unicredit Tiriac Bank din țară și alegând unul din cele trei conturi bancare deschise la Unicredit Tiriac Bank București, sau prin transfer bancar.
-      p Pentru a putea înregistra legal tranzacția, vă rugăm să menționați în formularul bancar, în câmpul de explicații, adresa (oraș, strada, nr.) și CNP/CIF dumneavoastră, cu mențiunea “suport financiar” și să ne trimiteți un email cu aceste informații la adresa: <a href="mailto:trezorier@macoveipresedinte.ro">trezorier@macoveipresedinte.ro</a>. Puteți folosi această adresă de email dacă doriți să obțineți informații suplimentare.
+    .col-md-6.col-sm-7
+      p.strong Transfer bancar / plata la ghișeu
+      p Titular: <strong>Monica Macovei Presedinte</strong>
+      p Conturi:
+      .table-responsive
+        table.table
+          tr
+            td: .text-right: span.label.label-default LEI
+            td <strong>RO50 BACX 0000 0000 1750 5007</strong>
+          tr
+            td: .text-right: span.label.label-default EUR
+            td <strong>RO23 BACX 0000 0000 1750 5008</strong>
+          tr
+            td: .text-right: span.label.label-default USD
+            td <strong>RO93 BACX 0000 0000 1750 5009</strong>
+          tr
+            td: .text-right: span.label.label-default GBP
+            td <strong>RO66 BACX 0000 0000 1750 5010</strong>
+  p Cod SWIFT sau BIC: <strong>BACXROBU</strong>
+  p Banca: <strong>UniCredit Tiriac Bank</strong>, "Millennium" Branch, Bucharest
+  p Adresă bancă: 88 Victoriei, Bucharest 1, RO-10085, Romania.
+  p Susținerea campaniei electorale se poate face prin depunere directă la ghișeu, mergând la orice filială Unicredit Tiriac Bank din țară și alegând unul din cele trei conturi bancare deschise la Unicredit Tiriac Bank București, sau prin transfer bancar.
+  p Pentru a putea înregistra legal tranzacția, vă rugăm să menționați în formularul bancar, în câmpul de explicații, adresa (oraș, strada, nr.) și CNP/CIF dumneavoastră, cu mențiunea “suport financiar” și să ne trimiteți un email cu aceste informații la adresa: <a href="mailto:trezorier@macoveipresedinte.ro">trezorier@macoveipresedinte.ro</a>. Puteți folosi această adresă de email dacă doriți să obțineți informații suplimentare.
 
-      #paypal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-        .modal-dialog
-          .modal-content
-            .modal-header
-              button.close(type='button', data-dismiss='modal')
-                span(aria-hidden='true') ×
-                span.sr-only Închide
-              h4#myModalLabel.modal-title Susținere financiară prin Paypal
+  #paypal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal')
+            span(aria-hidden='true') ×
+            span.sr-only Închide
+          h4#myModalLabel.modal-title Susținere financiară prin Paypal
 
-            .modal-body.paypal.text-center.paypal
-              img.img-responsive.center-block(src="/assets/img/paypal.png")
-              hr
-              .inline-block
-                form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
-                  input(type="hidden", name="cmd", value="_s-xclick")
-                  input(type="hidden", name="hosted_button_id", value="Y24YA5FNEG8NW")
-                  button.btn.btn-primary(type="submit") 15€
-                  //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
+        .modal-body.paypal.text-center.paypal
+          img.img-responsive.center-block(src="/assets/img/paypal.png")
+          hr
+          .inline-block
+            form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
+              input(type="hidden", name="cmd", value="_s-xclick")
+              input(type="hidden", name="hosted_button_id", value="Y24YA5FNEG8NW")
+              button.btn.btn-primary(type="submit") 15€
+              //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
 
-              .inline-block
-                form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
-                  input(type="hidden", name="cmd", value="_s-xclick")
-                  input(type="hidden", name="hosted_button_id", value="TJUUAC3EC2Y9J")
-                  button.btn.btn-primary(type="submit") 35€
-                  //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
+          .inline-block
+            form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
+              input(type="hidden", name="cmd", value="_s-xclick")
+              input(type="hidden", name="hosted_button_id", value="TJUUAC3EC2Y9J")
+              button.btn.btn-primary(type="submit") 35€
+              //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
 
-              .inline-block
-                form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
-                  input(type="hidden", name="cmd", value="_s-xclick")
-                  input(type="hidden", name="hosted_button_id", value="W7MZL2TEJSC3U")
-                  button.btn.btn-primary(type="submit") 50€
-                  //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
+          .inline-block
+            form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
+              input(type="hidden", name="cmd", value="_s-xclick")
+              input(type="hidden", name="hosted_button_id", value="W7MZL2TEJSC3U")
+              button.btn.btn-primary(type="submit") 50€
+              //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
 
-              .inline-block
-                form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
-                  input(type="hidden", name="cmd", value="_s-xclick")
-                  input(type="hidden", name="hosted_button_id", value="DUXNUF4SDEZTN")
-                  button.btn.btn-primary(type="submit") 100€
-                  //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
+          .inline-block
+            form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
+              input(type="hidden", name="cmd", value="_s-xclick")
+              input(type="hidden", name="hosted_button_id", value="DUXNUF4SDEZTN")
+              button.btn.btn-primary(type="submit") 100€
+              //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
 
-              .inline-block
-                form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
-                  input(type="hidden", name="cmd", value="_s-xclick")
-                  input(type="hidden", name="hosted_button_id", value="NJU6DHZG3TTLQ")
-                  button.btn.btn-primary(type="submit") 250€
-                  //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
+          .inline-block
+            form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
+              input(type="hidden", name="cmd", value="_s-xclick")
+              input(type="hidden", name="hosted_button_id", value="NJU6DHZG3TTLQ")
+              button.btn.btn-primary(type="submit") 250€
+              //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
 
-              .inline-block
-                form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
-                  input(type="hidden", name="cmd", value="_s-xclick")
-                  input(type="hidden", name="hosted_button_id", value="78R97WWTGK24A")
-                  button.btn.btn-primary(type="submit") 500€
-                  //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
+          .inline-block
+            form.form-inline(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top", role="form")
+              input(type="hidden", name="cmd", value="_s-xclick")
+              input(type="hidden", name="hosted_button_id", value="78R97WWTGK24A")
+              button.btn.btn-primary(type="submit") 500€
+              //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
 
-              .inline-block
-                form(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top")
-                  input(type="hidden", name="cmd", value="_s-xclick")
-                  input(type="hidden", name="hosted_button_id", value="K5P5333MC35Y2")
-                  button.btn.btn-primary(type="submit") Altă sumă
-                  //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
-            .modal-footer
-              button.btn.btn-default(type='button', data-dismiss='modal') Închide
-      #credit-card.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-        .modal-dialog
-          .modal-content
-            .modal-header
-              button.close(type='button', data-dismiss='modal')
-                span(aria-hidden='true') ×
-                span.sr-only Închide
-              h4#myModalLabel.modal-title Card de credit
-            .modal-body
-              p În curând
-            .modal-footer
-              button.btn.btn-default(type='button', data-dismiss='modal') Închide
-      #sms.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-        .modal-dialog
-          .modal-content
-            .modal-header
-              button.close(type='button', data-dismiss='modal')
-                span(aria-hidden='true') ×
-                span.sr-only Închide
-              h4#myModalLabel.modal-title SMS
-            .modal-body
-              p În curând
-            .modal-footer
-              button.btn.btn-default(type='button', data-dismiss='modal') Închide
-      p Vă mulțumim!
-      p <em>Echipa de campanie a candidatului independent Monica Macovei.</em>
-      hr
-      .alert.alert-info.small
-        p Mandatar financiar pentru campania electorală a candidatului independent Monica Macovei este domnul <strong>Viorel Bîtu</strong> (email:
-          a(href="mailto:trezorier@macoveipresedinte.ro") trezorier@macoveipresedinte.ro
-          |), înregistrat la Autoritatea Electorală Permanentă, potrivit art.26 alin.12 din Legea nr.334/2006 privind finanțarea activității partidelor politice și a campaniilor electorale, actualizată și republicată.
+          .inline-block
+            form(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top")
+              input(type="hidden", name="cmd", value="_s-xclick")
+              input(type="hidden", name="hosted_button_id", value="K5P5333MC35Y2")
+              button.btn.btn-primary(type="submit") Altă sumă
+              //- img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
+          hr
+          p.small Pentru a putea înregistra legal tranzacția, vă rugăm să menționați într-un email pe adresa
+            a(href="mailto:donatii@macoveipresedinte.ro")  donatii@macoveipresedinte.ro
+            | ,
+            strong  adresa dumneavoastra
+            |  (oraș, strada, nr.) și
+            strong  CNP/CIF dumneavoastră,
+            |  cu mențiunea
+            strong  “suport financiar”
+            | .
+        .modal-footer
+          button.btn.btn-default(type='button', data-dismiss='modal') Închide
+
+  p Vă mulțumim!
+  p <em>Echipa de campanie a candidatului independent Monica Macovei.</em>
+  hr
+  .alert.alert-info.small
+    p Mandatar financiar pentru campania electorală a candidatului independent Monica Macovei este domnul <strong>Viorel Bîtu</strong> (email:
+      a(href="mailto:trezorier@macoveipresedinte.ro") trezorier@macoveipresedinte.ro
+      |), înregistrat la Autoritatea Electorală Permanentă, potrivit art.26 alin.12 din Legea nr.334/2006 privind finanțarea activității partidelor politice și a campaniilor electorale, actualizată și republicată.

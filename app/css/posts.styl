@@ -35,36 +35,51 @@
     transform: translate3d(-50%, -50%, 0)
 
 .post
-  .media-body
-    a
-      transition: 0.5s ease
-      &:hover
-        text-decoration: none
-        color: mm-dark-blue
-    .read-more
-      background: mm-blue
-      padding: 5px 10px
-      transition: 0.5s ease;
-      cursor: pointer
-      color: #fff 
-      &:hover
-        background: mm-dark-blue
-        color: #fff
-    blockquote
-      border: none
-    div.small
-      &:before
-        content: '“'
-        font-size: 32px
-        color: #ccc
-        line-height: 16px
-      &:after
-        content: '”'
-        font-size: 32px
-        color: #ccc
-        line-height: 16px
-        position: relative
-        top: 5px
+  h3.post-title
+    font-weight: bold
+  position: relative
+
+.item
+  background: white
+  width: 45%
+  // text-align: center
+  margin-bottom: 1em !important
+  @media (max-width: 800px)
+    .item
+      width: 12%
+  @media (max-width: 767px)
+    width: 100%
+  img
+    width: 100%
+  a
+    transition: 0.5s ease
+    &:hover
+      text-decoration: none
+      color: mm-dark-blue
+  .read-more
+    background: mm-blue
+    padding: 5px 10px
+    transition: 0.5s ease;
+    cursor: pointer
+    color: #fff
+    &:hover
+      background: mm-dark-blue
+      color: #fff
+  blockquote
+    border: none
+  div.small
+    &:before
+      content: '“'
+      font-size: 32px
+      color: #ccc
+      line-height: 16px
+    &:after
+      content: '”'
+      font-size: 32px
+      color: #ccc
+      line-height: 16px
+      position: relative
+      top: 5px
 a.back
   padding: 5px 10px
   margin: 10px 0 5px
@@ -80,3 +95,4 @@ a.back
   footer
     small
       clear: left
+

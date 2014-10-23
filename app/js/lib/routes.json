@@ -5,8 +5,28 @@
     "skip": true,
     "priority": "1.0"
   },
-  "despre/": {
-    "prefix": "despre",
+  "despre/cine-sunt/": {
+    "prefix": "cineSunt",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
+  "despre/macovei-cv/": {
+    "prefix": "macoveiCV",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
+  "despre/ce-am-facut/": {
+    "prefix": "ceAmFacut",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
+  "despre/ceilalti-despre-mine/": {
+    "prefix": "ceilaltiDespreMine",
+    "changeFreq": "daily",
+    "priority": "1.0"
+  },
+  "despre/minciuni-despre-mine/": {
+    "prefix": "minciuniDespreMine",
     "changeFreq": "daily",
     "priority": "1.0"
   },
@@ -15,13 +35,33 @@
     "changeFreq": "weekly",
     "priority": "0.8"
   },
-  "candidatura/": {
-    "prefix": "candidatura",
+  "candidatura/de-ce-candidez/": {
+    "prefix": "deCeCandidez",
     "changeFreq": "weekly",
     "priority": "0.5"
   },
-  "sustinatori/": {
-    "prefix": "sustinatori",
+  "candidatura/de-ce-sa-ma-votati/": {
+    "prefix": "deCeSaMaVotati",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "candidatura/depunerea-candidaturii/": {
+    "prefix": "depunereaCandidaturii",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "sustinatori/testimoniale-video/": {
+    "prefix": "testimonialeVideo",
+    "changeFreq": "daily",
+    "priority": "0.5"
+  },
+  "sustinatori/personalitati/": {
+    "prefix": "personalitati",
+    "changeFreq": "daily",
+    "priority": "0.5"
+  },
+  "sustinatori/testimoniale-online/": {
+    "prefix": "testimonialeOnline",
     "changeFreq": "daily",
     "priority": "0.5"
   },
@@ -30,8 +70,38 @@
     "changeFreq": "weekly",
     "priority": "0.8"
   },
-  "media/": {
+  "media/aparitii-media/": {
     "prefix": "media",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/evenimente/": {
+    "prefix": "evenimente",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "materiale/": {
+    "prefix": "materiale",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/discursuri/": {
+    "prefix": "discursuri",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/briefinguri/": {
+    "prefix": "briefinguri",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/declaratii-comunicate/": {
+    "prefix": "declaratiiComunicate",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "media/galerie-foto-video/": {
+    "prefix": "galerie",
     "changeFreq": "daily",
     "priority": "0.8"
   },
@@ -41,7 +111,7 @@
     "priority": "0.5"
   },
   "fii-alaturi-de-mine/": {
-    "prefix": "semnaturi",
+    "prefix": "voluntariat",
     "changeFreq": "yearly",
     "priority": "0.5"
   },
@@ -94,5 +164,136 @@
     "posts": true,
     "changeFreq": "weekly",
     "priority": "1.0"
+  },
+  "posts/": {
+    "prefix": "posts",
+    "changeFreq": "always",
+    "priority": "1.0"
+  },
+  "dubi/": {
+    "prefix": "dubi",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "candidatura/program-politic/": {
+    "prefix": "principii",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "candidatura/decalogul/": {
+    "prefix": "principii",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+  "program-politic/1-sa-nu-ai-alti-stapani/": {
+    "prefix": "decalog1",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+  "program-politic/2-sa-nu-tradezi-interesul-national/": {
+    "prefix": "decalog2",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/3-sa-nu-ataci-institutiile-statului/": {
+    "prefix": "decalog3",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/4-sa-nu-furi-banul-public/": {
+    "prefix": "decalog4",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/5-sa-nu-minti/": {
+    "prefix": "decalog5",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/6-sa-ti-inmultesti-banii-si-creatia/": {
+    "prefix": "decalog6",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/7-sa-ti-educi-copiii/": {
+    "prefix": "decalog7",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/8-sa-ti-respecti-parintii-si-semenii/": {
+    "prefix": "decalog8",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/9-sa-cultivi-solul-si-sa-protejezi-natura/": {
+    "prefix": "decalog9",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "program-politic/10-sa-ti-respecti-identitatea/": {
+    "prefix": "decalog10",
+    "changeFreq": "weekly",
+    "skip": true,
+    "priority": "0.5"
+  },
+
+  "candidatura/scrisoare-deschisa/": {
+    "prefix": "scrisoareDeschisa",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+
+  "despre/20-de-motive-sa-votezi-macovei/": {
+    "prefix": "motiveSaVoteziMacovei",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "tags/": {
+    "prefix": "tags",
+    "changeFreq": "always",
+    "priority": "1.0"
+  },
+  "tags/:tag": {
+    "prefix": "tag",
+    "changeFreq": "always",
+    "priority": "1.0"
+  },
+  "dar-nu-are-sanse/": {
+    "prefix": "nuAreSanse",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "monica-in-dialog/": {
+    "prefix": "inDialog",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "agenda/": {
+    "prefix": "agenda",
+    "changeFreq": "daily",
+    "priority": "0.8"
+  },
+  "program-politic/": {
+    "prefix": "decalog",
+    "changeFreq": "weekly",
+    "priority": "0.5"
   }
 }

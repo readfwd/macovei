@@ -1,4 +1,9 @@
-blockquote
-  span= locals.content
-.author
-  img(src="#{locals.authorLogo}", alt="Logo #{locals.author}")
+- var quotePhotos = ['/assets/img/quote/01-mm-square.jpg','/assets/img/quote/02-mm-square.jpg','/assets/img/quote/03-mm-square.jpg','/assets/img/quote/04-mm-square.jpg','/assets/img/macovei-presedinte-fb.jpg']
+- var thisPhoto = quotePhotos[Math.floor(Math.random() * quotePhotos.length)];
+.quotes
+  .quote-photo(style="background-image: url('#{thisPhoto}')")
+  .quote-text
+    p #{locals.quote}
+    p.quote-author.small #{locals.author}
+      span.quote-sign ”
+    img.img-responsive(src="/assets/img/mm-logo-extins-white.png")

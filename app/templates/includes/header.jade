@@ -1,4 +1,4 @@
-nav.navbar.navbar-default.navbar-fixed-top(role="nagivation")
+nav.navbar.navbar-fixed-top(role="nagivation")
   .container
     .navbar-header
       button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-collapse")
@@ -6,22 +6,24 @@ nav.navbar.navbar-default.navbar-fixed-top(role="nagivation")
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a(class="navbar-brand", href="/") Macovei 2014
+      a.logo(class="navbar-brand", href="/")
+        img.black(src="/assets/img/logo-nou-macovei-black.png")
+        img.white(src="/assets/img/logo-nou-macovei-white.png")
 
-    .collapse.navbar-collapse(id="navbar-collapse")
+    .collapse.navbar-collapse.navbar-right(id="navbar-collapse")
       ul.nav.navbar-nav
-        li: a(href="/fii-alaturi-de-mine/") Veniți cu mine!
-        li: a(href="/strange-semnaturi/") Strânge semnături
-        li: a(href="/sustinere-financiara/") Susține financiar
-        li: a(href="/sustinatori/") Testimoniale
-        //- li: a(href="/media/") Media
-        //- li.dropdown
-        //-   a.dropdown-toggle(href="/despre", data-toggle="dropdown") Despre mine <span class="caret"></span>
-        //-   ul.dropdown-menu(role="menu")
-        //-     li: a(href="/despre/cine-sunt") Cine sunt
-        //-     li: a(href="/despre/ce-am-facut") Ce am făcut
-        //-     li: a(href="/despre/lumea-despre-mine") Lumea despre mine
-        //-
+
+        li.dropdown
+          a.dropdown-toggle(data-toggle="dropdown") Despre mine <span class="caret"></span>
+          ul.dropdown-menu(role="menu")
+            li: a(href="/despre/cine-sunt/") Cine sunt
+            li: a(href="/despre/ce-am-facut/") Ce am făcut
+            li: a(href="/sustinatori/testimoniale-video/") Cine mă susține
+            li: a(href="/despre/20-de-motive-sa-votezi-macovei/") De ce să mă votezi
+            li: a(href="/despre/minciuni-despre-mine/") Minciuni despre mine
+            li: a(href="/monica-in-dialog/") Monica în dialog
+            li: a(href="/agenda/") Agenda
+
         //- li.dropdown
         //-   a.dropdown-toggle(href="/viziune", data-toggle="dropdown") Viziune <span class="caret"></span>
         //-   ul.dropdown-menu(role="menu")
@@ -42,34 +44,55 @@ nav.navbar.navbar-default.navbar-fixed-top(role="nagivation")
         //-     li: a(href="/viziune/tineret") Tineret
         //-     li: a(href="/viziune/sport") Sport
         //-
+        li.dropdown
+          a.dropdown-toggle(data-toggle="dropdown") Program politic <span class="caret"></span>
+          ul.dropdown-menu(role="menu")
+            //- li: a(href="/candidatura/scrisoare-deschisa/") Scrisoare deschisă către tine
+            //- li: a(href="/program-politic/") Decalogul Monicăi Macovei
+            li: a(href="/program-politic/") Program politic
+            li: a(href="/program-politic/1-sa-nu-ai-alti-stapani/") 1. Să nu ai alți stăpâni decât cetățeanul
+            li: a(href="/program-politic/2-sa-nu-tradezi-interesul-national/") 2. Să nu trădezi interesul național
+            li: a(href="/program-politic/3-sa-nu-ataci-institutiile-statului/") 3. Să nu ataci instituțiile statului
+            li: a(href="/program-politic/4-sa-nu-furi-banul-public/") 4. Să nu furi și să nu risipești banul public
+            li: a(href="/program-politic/5-sa-nu-minti/") 5. Să nu minți, să nu plagiezi, să nu calomniezi, să nu mituiești
+            li: a(href="/program-politic/6-sa-ti-inmultesti-banii-si-creatia/") 6. Să-ți înmulțești banii şi creaţia
+            li: a(href="/program-politic/7-sa-ti-educi-copiii/") 7. Să-ți educi copiii
+            li: a(href="/program-politic/8-sa-ti-respecti-parintii-si-semenii/") 8. Să-ți respecți părinții și să-ți ajuți semenii
+            li: a(href="/program-politic/9-sa-cultivi-solul-si-sa-protejezi-natura/") 9. Să cultivi solul și să protejezi natura
+            li: a(href="/program-politic/10-sa-ti-respecti-identitatea/") 10. Să-ți respecți identitatea, valorile și trecutul ca să ai un viitor
+            //- li: a(href="/candidatura/depunerea-candidaturii/") Depunerea candidaturii
+
+
         //- li.dropdown
-        //-   a.dropdown-toggle(href="/candidatura", data-toggle="dropdown") Candidatura <span class="caret"></span>
+        //-   a.dropdown-toggle(data-toggle="dropdown") Susținători <span class="caret"></span>
         //-   ul.dropdown-menu(role="menu")
-        //-     li: a(href="/candidatura/de-ce-candidez") De ce candidez
-        //-     li: a(href="/candidatura/de-ce-sa-ma-votati") De ce să mă votați
-        //-     li: a(href="/candidatura/depunerea-candidaturii") Depunerea candidaturii
-        //-
-        //- li.dropdown
-        //-   a.dropdown-toggle(href="/sustinatori", data-toggle="dropdown") Susținători <span class="caret"></span>
-        //-   ul.dropdown-menu(role="menu")
-        //-     li: a(href="/sustinatori/personalitati") Personalități
-        //-     li: a(href="/sustinatori/testimoniale-video") Testimoniale video
-        //-     li: a(href="/sustinatori/testimoniale-online") Testimoniale online
-        //-
-        //- li.dropdown
-        //-   a.dropdown-toggle(href="/implicare", data-toggle="dropdown") Implicare <span class="caret"></span>
-        //-   ul.dropdown-menu(role="menu")
-        //-     li: a(href="/implicare/voluntariat") Voluntariat
-        //-     li: a(href="/implicare/donatii") Donații
-        //-     li: a(href="/implicare/sustine-candidatura") Susține candidatura
-        //-     li: a(href="/implicare/raspandirea-mesajului") Răspândirea mesajului
-        //-
-        //- li.dropdown
-        //-   a.dropdown-toggle(href="/media", data-toggle="dropdown") Media <span class="caret"></span>
-        //-   ul.dropdown-menu(role="menu")
-        //-     li: a(href="/media/aparitii-media") Apariții media
-        //-     li: a(href="/media/evenimente") Evenimente
-        //-     li: a(href="/media/noutati") Noutăți
-        //-     li: a(href="/media/kit-de-presa") Kit de presă
-        //-
-        li: a(href="/contact/") Contact
+        //-     li: a(href="/sustinatori/personalitati/") Personalități
+        //-     li: a(href="/sustinatori/testimoniale-video/") Testimoniale video
+        //-     li: a(href="/sustinatori/testimoniale-online/") Testimoniale online
+
+        li.dropdown
+          a.dropdown-toggle(data-toggle="dropdown") Presă <span class="caret"></span>
+          ul.dropdown-menu(role="menu")
+            //- li: a(href="/posts/") Noutăți
+            //- li: a(href="/media/discursuri/") Discursuri
+            li: a(href="/posts/") Monica în presă
+            //- li: a(href="/media/briefinguri/") Briefinguri de presa
+            li: a(href="/media/declaratii-comunicate/") Declaratii si comunicate
+            //- li: a(href="/media/evenimente/") Evenimente si program de campanie
+            //- li: a(href="/media/galerie-foto-video/") Galerie foto/ video
+
+
+
+        li.dropdown
+          a.dropdown-toggle(data-toggle="dropdown") Implică-te <span class="caret"></span>
+          ul.dropdown-menu(role="menu")
+            //- li: a(href="/strange-semnaturi/") Vreau să fiu observator
+            li: a(href="/voluntariat/") Vreau să fiu voluntar
+            //- li: a(href="/voluntariat/") Materiale promoționale
+            li: a(href="/sustinere-financiara/") Susține financiar
+            li: a(href="/materiale/") Materiale
+            li: a(href="/contact/") Contact
+            li: a(href="/dubi/") Dubi și Monica :)
+
+        li: a.doneazaBtn(href="/sustinere-financiara/") DONEAZĂ
+//- .quote.head-quote.hidden-xs

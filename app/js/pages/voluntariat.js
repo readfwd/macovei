@@ -8,6 +8,9 @@ var _ = require('lodash');
 var markers = require('../lib/locations-romania.json');
 markers = _.sortBy(markers, 'title');
 
+var wwMarkers = require('../lib/locations-worldwide.json');
+wwMarkers = _.sortBy(wwMarkers, 'title');
+
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Voluntariat',
@@ -18,7 +21,8 @@ module.exports = View.extend({
 
   render: function () {
     this.$el.html(this.template({
-      markers: markers
+      markers: markers,
+      wwMarkers: wwMarkers
     }));
     this.romaniaCoords = {
       latitude: 45.94,
@@ -49,6 +53,7 @@ module.exports = View.extend({
       zoom: 6
     });
     this.addMarkersRomania();
+    this.addMarkersWW();
 
     var self = this;
     setTimeout(function () {
@@ -70,16 +75,13 @@ module.exports = View.extend({
 
   addMarkersWW: function () {
     var map = this.map;
-    map.setCenter(this.wwCoords.latitude, this.wwCoords.longitude);
-    map.setZoom(2);
-    var markersWW = [{
-      lat: 44.437917,
-      lng: 26.094637,
-      title: 'Bucuresti',
-      infoWindow: {
-        content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.860.11.36<br>team@macoveipresedinte.ro</p>'
+    map.setCenter(this.romaniaCoords.latitude, this.romaniaCoords.longitude);
+    map.setZoom(6);
+    for (var i in wwMarkers) {
+      if (wwMarkers.hasOwnProperty(i)) {
+        map.addMarker(wwMarkers[i]);
       }
-    }];
+    }
   }
 
 });

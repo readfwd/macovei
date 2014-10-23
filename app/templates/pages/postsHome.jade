@@ -1,0 +1,10 @@
+.container
+  h1 Presă
+
+  ol.breadcrumb
+    for tag in tags
+      li
+        - var encodedTag = encodeURIComponent(tag);
+        a.tag(href=document.location.origin + '/tags/' + encodedTag)= tag
+
+  div(role="posts-collection")

@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-md-12
+      h1 Monica în dialog
+      .row
+        each video in videos
+          .col-sm-6
+            .testimonial
+              .sustinator.sustinator-text
+                span #{video.title}
+              .embed-responsive.embed-responsive-16by9
+                iframe.embed-responsive-item(src="#{video.url}", modestbranding="1", frameborder="0", allowfullscreen)

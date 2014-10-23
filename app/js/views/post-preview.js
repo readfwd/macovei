@@ -7,11 +7,11 @@ var posts = require('../lib/posts-json.json');
 var moment = require('moment/min/moment-with-locales');
 moment.locale('ro');
 
+
 module.exports = window.postView = View.extend({
   template: templates.includes.postPreview,
-
   render: function () {
-    // console.log(posts[this.model.attributes.slug].date),
+    this.$el.addClass('item');
     this.$el.html(this.template({
       title: posts[this.model.attributes.slug].title,
       preview: posts[this.model.attributes.slug].preview,

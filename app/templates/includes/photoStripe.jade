@@ -1,0 +1,43 @@
+- var bgImages = [
+-  '/assets/img/hero/20140902-MMConferintaDemisiePDL-0032.jpg',
+//- -  '/assets/img/hero/20140903-MMIntalnireSustinatoriSediu-0023.jpg',
+//- -  '/assets/img/hero/20140905-MMConferintaUWE-0101.jpg',
+-  '/assets/img/hero/20140911-MMStudio-0029-1.jpg', 
+-  '/assets/img/hero/20140911-MMStudio-0042.jpg',
+-  '/assets/img/hero/hero-dan-amariei.jpg',
+-  '/assets/img/hero/hero-gradina-bw.jpg',
+-  '/assets/img/hero/hero-mov.jpg',
+-  '/assets/img/hero/hero-smile-bw.jpg',
+-  '/assets/img/hero/hero-big-head.jpg',
+-  '/assets/img/hero/hero-blue-smile.jpg',
+-  '/assets/img/hero/hero-green.jpg',
+-  '/assets/img/hero/hero-motorcycle.jpg',
+-  '/assets/img/hero/hero-motorcycle2.jpg',
+-  '/assets/img/hero/hero-ue.jpg',
+- ]
+- var bgNow = bgImages[Math.floor(Math.random() * bgImages.length)];
+
+.photoStripe
+  //- video(autoplay='true', loop='true')
+  //-   source(src='/assets/placeholder.mp4', type='video/mp4')
+  .imgBack(style="background-image: url('#{bgNow}')")
+    //- img(src="#{bgNow}")
+  .overlay.text-center
+    .callout
+      span Macovei, mai bună decât ei!
+    .hotlinks
+      a(href="/sustinatori/testimoniale-video/") cine mă susține
+      a(href="/despre/20-de-motive-sa-votezi-macovei/") 20 de motive
+      a(href="/program-politic/") programul politic
+      a(href="http://joconline.macoveipresedinte.ro/") joc online
+    .facebook-iframe.hidden-xs
+      iframe.embed-responsive( src='//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMonicaMacoveiUE&layout=button_count&action=like&show_faces=true&share=true&height=20&locale=en_US', scrolling='no', frameborder='0', style='border: none; overflow: hidden; width: 150px; height: 20px', allowtransparency='true')
+    //- .hotlinks
+    //-   a(href="#") Facebook oficial
+    .chevron-div.hidden-xs
+      .container
+        div
+          .chevron
+              .hi-icon-wrap.hi-icon-effect-9.hi-icon-effect-9a
+                .hi-icon
+                  i.fa.fa-chevron-down.fa-2x

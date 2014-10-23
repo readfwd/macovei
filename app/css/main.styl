@@ -1,7 +1,9 @@
 @import variables
 @import overrides
 @import media
-@import hero
+@import photoStripe
+@import dubiStripe
+@import videoStripe
 @import msie
 @import donatii
 @import posts
@@ -9,29 +11,74 @@
 @import semnaturi
 
 body
-  font-size: 20px
-  line-height: 1.5em
+  font-size: 18px
+  line-height: 140%
   font-family: font-family-sans
-  background: #eee
-  padding-top: 50px
+  background: #fff
+  // text-rendering : optimizeLegibility !important // apparently not working on Android 4.2 & 4.3
+  -webkit-font-smoothing: antialiased !important
+  -moz-osx-font-smoothing: grayscale !important
+  .navbar
+    background: mm-dark-blue
+    position: fixed
+    top: 0
+    z-index: 100
+    width: 100%
 
   @media (max-width: 767px)
     font-size: 14px
-    &[data-page='home']
-      // padding-top: 35%
+  &[data-page='dubi']
+    background: #333
+    color: white
+
+nav
+  li
+    cursor: pointer
 
 .serif
   font-family: font-family-serif
-
 .sans
   font-family: font-family-sans
+
 
 .content
   margin-top: 15px
   padding: 15px
   background: white
 
+.logo
+  margin-top: 10px
+  .white
+    display: none
+  .black
+    display: block
+[data-page='home']
+  .social
+    position: absolute
+  .logo
+    .white
+      display: block
+    .black
+      display: none
+
+  .navbar, .dropdown-menu
+    background: rgba(0,0,0,0.50);
+
+  @media(max-width: 992px)
+    .navbar, .dropdown-menu
+      background: mm-dark-blue
+  .dropdown-menu > li > a
+    color: white
+
+
+  .navbar-dimmed
+    background: mm-dark-blue;
+
+  [role="page-container"]
+    padding-top: 0
+
 [role="page-container"]
+  padding-top: 150px
   @media (max-width: 767px)
     background: #eee
     border-top: 0.5em solid rgba(mm-red, 1.0)
@@ -64,6 +111,7 @@ body
 //   display: block
 //   max-width: 100%
 
+
 .volunteer-btn
   margin: 0.5em 0
 .strong
@@ -78,7 +126,274 @@ body
 div.pluginConnectButton
   display:none !important
 
-h1 
+#home-page
+  h1
+    color: #fff
+    padding: 5px 15px
+
+.home
+  .item
+    width: 100%
+
+.newsStripe
+  background-color: #7f8c8d
+
+.videoStripe
+  background-color: #2c3e50
+
+.dubiStripe
+  background-color: #d35400
+img.stripe
+  width: 25%
+  padding: 0.5em
+
+.dubi-flex-container
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-items: stretch
+  align-content: flex-start
+  .dubi-flex-item
+    max-width: 250px
+    background: white
+    padding: 0.2em
+    margin-bottom: 1em
+
+.dubi
+  width: 30%
+  padding: 0.5em
+  height: auto
+  display: inline-block
+  margin: 0.5em
+
+.logo
+  position: absolute
+  top: 60%
+  img
+    height: 5em
+.macovei-logo
+  img
+    position: absolute
+    height: 2em !important
+    top: 50%
+    transform: translateY(-50%)
+@media (max-width: 991px)
+  .macovei-logo
+    img
+    top: 10%
+    transform: translateY(-5%)
+a.navbar-brand:hover
+  background-color: transparent !important
+
+.social
+  position: absolute
+  bottom: 10px
+  left: 20%
+  transform: translateX(-50%)
+  iframe
+    width: 100%
+
+.quote
+  &.quote-head
+    position: absolute
+    top: 10%
+    right: 10%
+    width: 40%
+    transform: translate3d(0%, -20%, 0);
+    text-align: right
+
+  &.quote-in-page
+    text-align: left
+  .quote-photo
+    width: 100%
+    height: 20em
+    background-size: cover
+    background-position: center center
+  .quote-text
+    color: white
+    background: mm-dark-blue
+    padding: 1em
+    .quote-author
+      text-align: left
+    .quote-sign
+      font-family: font-family-serif
+      font-size: 3em
+      color: yellow
+      float: left
+      margin-top: 0.3em
+      margin-right: 0.2em
+
+//homepage stripe all-button
+.has-icon
   color: #fff
-  background: mm-blue
-  padding: 5px 15px
+  text-transform: uppercase
+  text-decoration: none
+  font-size: 18px
+  span
+    left: 0px;
+    transition: all 0.2s ease-out
+    position: relative
+    padding: 15px 20px
+    display: block
+    letter-spacing: 1px
+    i
+      font-size: 18px
+      line-height: 18px
+      width: 18px
+      position: absolute
+      top: 50%
+      right: 30px
+      margin-top: -9px
+      opacity: 0
+      transition: all 0.2s ease-out
+  &:hover
+    text-decoration: none
+    color: #fff
+    transition: 0.5s ease
+    span
+      left: -25px
+      margin-left: 20px
+      i
+        opacity: 1
+        right: -14px
+.tag.selected
+  background-color: mm-red
+
+.ceamfacut, .cinesunt
+  font-family: font-family-serif
+  .well
+    margin-bottom: 1em
+
+  .letrina
+    font-size: 4em
+    padding: 0.3em 0.3em 0.3em 0
+    color: mm-red
+
+.scrisoareDeschisa
+  p
+    font-family: font-family-serif
+    text-indent: 1.5em
+  .p-group
+    margin-bottom: 1em
+    p
+      padding: 0
+      margin: 0
+
+.letrina
+  font-size: 4em
+  padding: 0.3em 0.3em 0.3em 0
+  color: mm-red
+  &.letrina-principiu
+    padding-top: 0.5em
+
+.panel-default
+  .panel-heading
+    h3
+      font-size: 1.2em
+
+.motive-sa-votezi-macovei
+  .icon-mm
+    // float: left
+    padding: 0.2em
+    max-width: 8em
+    display: block
+    margin-bottom: 2em
+    img
+      width: auto
+  p
+    padding-top: 1.3em;
+    font-size: 0.8em;
+
+.blue-stripe
+  margin-bottom: 1.5em;
+  span
+    background: mm-dark-blue
+    color: white
+    padding: 0.2em 0.5em
+// ol.decalog
+//   li > a
+//     background: mm-dark-blue
+//     color: white
+//     padding: 0.2em
+
+.liveStripe
+  padding-top: 1em
+  padding-bottom: 1em
+  background-color: mm-red
+.sansa
+  img
+    width: 80%
+    margin: 0 auto
+ul.decalogul
+  list-style-type: none
+.milestone
+  padding: 0.2em
+  img
+    width: 120%
+.six-sec-ease-in-out
+  transition: width 2s ease;
+.donations-progress
+  .progress-bar
+    background-color: #FF0000
+    display:block
+  .progress-bar-striped
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent)
+    background-size: 20px 20px
+#raised
+  display: inline-block
+.milestones
+  position: relative
+  height: 3em
+  .mile
+    height: 2em
+    border: 2px solid #ccc
+    position: absolute
+    top: -90%;
+    transform: translate3d(0%, 3%, 0)
+    &.mile-1
+      left: 14%;
+    &.mile-2
+      left: 34%
+    &.mile-3
+      left: 69%
+    &.mile-4
+      right: 0%
+    &.passed
+      border-color: #333
+    @media (max-width: 768px)
+      transform: translate3d(0%, -21%, 0)
+  .value
+    position: absolute
+    transform: translateY(-30%)
+    &.value-1
+      left: 10%
+      transform: translateX(2%)
+    &.value-2
+      left: 29%
+      transform: translateX(5%)
+    &.value-3
+      left: 62%
+      transform: translateX(17%)
+    &.value-4
+      right: 0%
+      transform: translateX(5%)
+    &.passed
+      font-weight: 600
+      color: #333
+.doneazaBtn
+  background-color: mm-red
+  font-weight: 600 !important
+#raised
+  font-size: 1.3em
+  padding: 0.3em
+  background-color: #ccc
+  margin: 0.3em
+#doneaza
+  text-align: center
+  cursor: pointer
+  margin: 2.5em 0
+  img
+    height: auto
+    width: 40%
+#content
+  margin-top: 2em

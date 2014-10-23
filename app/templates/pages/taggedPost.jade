@@ -1,0 +1,11 @@
+.container
+  h1= tag.charAt(0).toUpperCase() + tag.slice(1)
+
+  ol.breadcrumb
+    for tag in tags
+      li
+        - var encodedTag = encodeURIComponent(tag);
+        a.tag(href=document.location.origin + '/tags/' + encodedTag)= tag
+
+  div(role="posts-collection")
+    div(role="posts", id="posts", class="js-masonry", style="position: relative")

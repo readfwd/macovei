@@ -1,0 +1,7 @@
+.container
+  h1 Dubi și Monica
+  .dubi-flex-container
+    each comic in dubi
+      .dubi-flex-item
+        a(href='#{comic}', data-lightbox='dubi', data-title='Dubi si Monica')
+          img.img-responsive(src="#{comic}")

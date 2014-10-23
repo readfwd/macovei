@@ -6,7 +6,7 @@ var templates = require('../lib/templates');
 
 module.exports = View.extend({
   pageTitle: 'Monica Macovei Presedinte | Candidatură',
-  template: templates.pages.candidatura,
+  template: templates.pages.deCeCandidez,
   render: function () {
     this.$el.html(this.template());
     return this;

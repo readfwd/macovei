@@ -12,7 +12,7 @@ module.exports = View.extend({
   template: templates.includes.postShow,
   initialize: function (options) {
     this.model = new Post({
-      slug: options.slug
+      slug: options.slug,
     });
     this.locals = posts[this.model.attributes.slug];
     this.pageDescription = this.locals.preview || 'Articole de susținere pentru Monica Macovei.';
@@ -33,7 +33,8 @@ module.exports = View.extend({
       title: this.locals.title,
       author: this.locals.author,
       source: this.locals.source,
-      url: "http%3A%2F%2Fmacoveipresedinte.ro%2Fposts%2F" + this.locals.slug + '?_escaped_fragment_=""'
+      url: "http%3A%2F%2Fmacoveipresedinte.ro%2Fposts%2F" + this.locals.slug + '?_escaped_fragment_=""',
+      tags: this.locals.tags
     }));
     return this;
   }

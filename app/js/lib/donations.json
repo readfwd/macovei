@@ -1,0 +1,21 @@
+{
+  "currency": "Lei",
+  "raised": "115000",
+  "moneyCap": "145000",
+  "milestone1": {
+    "mile": "20000",
+    "image": "/assets/img/donations/mile1.png"
+  },
+  "milestone2": {
+    "mile":"50000",
+    "image": "/assets/img/donations/mile2-passed.png"
+  },
+  "milestone3": {
+    "mile": "100000",
+    "image": "/assets/img/donations/mile3-passed.png"
+  },
+  "milestone4": {
+    "mile": "145000",
+    "image": "/assets/img/donations/secretMile4.png"
+  }
+}

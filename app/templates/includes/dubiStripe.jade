@@ -1,0 +1,15 @@
+.dubiStripe
+  .container
+    h1
+      .row
+        .col-sm-10
+          span Dubi și Monica
+        .col-sm-2
+          a.pull-right.has-icon(href="/dubi/")
+            span Toate
+              i.fa.fa-long-arrow-right
+    .dubi-flex-container
+      - var comics = 4;
+      - for (var i = 0; i < comics; i++) {
+          .dubi-flex-item: a(href='#{dubi[i]}', data-lightbox='dubi', data-title='Dubi si Monica'): img.img-responsive(src="#{dubi[i]}")
+      - }

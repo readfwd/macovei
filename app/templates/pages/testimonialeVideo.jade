@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-md-12
+      h1 Cine o susține pe Monica Macovei
+      .row
+        each video in videos
+          .col-sm-6
+            .testimonial
+              .sustinator.small.sustinator-nume
+                span #{video.person}
+              .sustinator.sustinator-text
+                span #{video.quote}
+              .embed-responsive.embed-responsive-16by9
+                iframe.embed-responsive-item(src="#{video.url}", modestbranding="1", frameborder="0", allowfullscreen)

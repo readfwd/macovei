@@ -12,7 +12,7 @@ html(lang="ro")
     meta(name="keywords", content="alegeri, prezidentiale, candidat, independent, romania, romani, anti-coruptie")
     //- Open Graph
     meta(property="og:title", content="Monica Macovei Presedinte")
-    meta(property="og:image", content="/assets/img/macovei-presedinte-fb.jpg")
+    meta(property="og:image", content="/assets/img/logo-macovei.png")
     meta(property="og:site_name", content="Monica Macovei Presedinte")
     meta(property="og:type", content="website")
     meta(property="og:url", content="http://macoveipresedinte.ro")
@@ -26,10 +26,27 @@ html(lang="ro")
     meta(name="twitter:url", content="http://macoveipresedinte.ro")
     meta(name="twitter:title", content="Monica Macovei Președinte")
     meta(name="twitter:description", content="Candidez independent, pentru că sunt convinsă că românii merită un Președinte al lor, nu al partidelor.")
-    meta(name="twitter:image", content="/assets/img/macovei-presedinte-fb.jpg")
+    meta(name="twitter:image", content="/assets/img/logo-macovei.png")
     //- canonical url
     link(rel="canonical", href="http://macoveipresedinte.ro")
-
+    //- favicon
+    link(rel="shortcut icon", href="/assets/img/icons/favicon.ico")
+    link(rel="apple-touch-icon", sizes="57x57", href="/assets/img/icons/apple-touch-icon-57x57.png")
+    link(rel="apple-touch-icon", sizes="114x114", href="/assets/img/icons/apple-touch-icon-114x114.png")
+    link(rel="apple-touch-icon", sizes="72x72", href="/assets/img/icons/apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="144x144", href="/assets/img/icons/apple-touch-icon-144x144.png")
+    link(rel="apple-touch-icon", sizes="60x60", href="/assets/img/icons/apple-touch-icon-60x60.png")
+    link(rel="apple-touch-icon", sizes="120x120", href="/assets/img/icons/apple-touch-icon-120x120.png")
+    link(rel="apple-touch-icon", sizes="76x76", href="/assets/img/icons/apple-touch-icon-76x76.png")
+    link(rel="apple-touch-icon", sizes="152x152", href="/assets/img/icons/apple-touch-icon-152x152.png")
+    link(rel="apple-touch-icon", sizes="180x180", href="/assets/img/icons/apple-touch-icon-180x180.png")
+    link(rel="icon", type="image/png", href="/assets/img/icons/favicon-192x192.png", sizes="192x192")
+    link(rel="icon", type="image/png", href="/assets/img/icons/favicon-160x160.png", sizes="160x160")
+    link(rel="icon", type="image/png", href="/assets/img/icons/favicon-96x96.png", sizes="96x96")
+    link(rel="icon", type="image/png", href="/assets/img/icons/favicon-16x16.png", sizes="16x16")
+    link(rel="icon", type="image/png", href="/assets/img/icons/favicon-32x32.png", sizes="32x32")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="msapplication-TileImage", content="/assets/img/icons/mstile-144x144.png")
 
 
     //- NB: The following semantic comments are used by 'useref' and 'wiredep'
@@ -41,20 +58,37 @@ html(lang="ro")
     link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel='stylesheet', href='bower_components/fontawesome/css/font-awesome.css')
     // endbower
+    link(rel='stylesheet', href='bower_components/lightbox2/css/lightbox.css')
     link(rel='stylesheet', href='bower_components/ShapeHoverEffectSVG/css/component.css')
+    link(rel='stylesheet', href='bower_components/IconHoverEffects/css/component.css')
     link(rel="stylesheet", href="css/main.css")
     // endbuild
   body
+    include ./templates/includes/marketizator.jade
     include ./templates/includes/facebookSDK.jade
     include ./templates/includes/googleAnalytics.jade
-    script(src='http://maps.google.com/maps/api/js?sensor=true')
+    script(src='//maps.google.com/maps/api/js?sensor=true')
     // build:js({app,.tmp,dist}) /js/main.js
     // bower:js
     script(src='bower_components/jquery/dist/jquery.js')
     script(src='bower_components/bootstrap/dist/js/bootstrap.js')
     script(src='bower_components/gmaps/gmaps.js')
+    script(src='bower_components/get-style-property/get-style-property.js')
+    script(src='bower_components/get-size/get-size.js')
+    script(src='bower_components/eventie/eventie.js')
+    script(src='bower_components/doc-ready/doc-ready.js')
+    script(src='bower_components/eventEmitter/EventEmitter.js')
+    script(src='bower_components/jquery-bridget/jquery.bridget.js')
+    script(src='bower_components/matches-selector/matches-selector.js')
+    script(src='bower_components/outlayer/item.js')
+    script(src='bower_components/outlayer/outlayer.js')
+    script(src='bower_components/masonry/masonry.js')
+    script(src='bower_components/bootstrap-progressbar/bootstrap-progressbar.js')
+    script(src='bower_components/lightbox2/js/lightbox.js')
     // endbower
     script(src='bower_components/ShapeHoverEffectSVG/js/snap.svg-min.js')
+    script(src='bower_components/IconHoverEffects/js/component.js')
+    script(src='bower_components/IconHoverEffects/js/modernizr.custom.js')
     script(src="js/main.js")
     // endbuild
     include ./templates/includes/adwordsRemarketing.jade

@@ -5,19 +5,44 @@ var $ = require('./shims/jquery');
 var _ = require('lodash');
 
 var HomePage = require('./pages/home');
-var DesprePage = require('./pages/despre');
 var ViziunePage = require('./pages/viziune');
 var CandidaturaPage = require('./pages/candidatura');
-var SustinatoriPage = require('./pages/sustinatori');
+var TestimonialeVideoPage = require('./pages/testimoniale-video');
 var ImplicarePage = require('./pages/implicare');
 var MediaPage = require('./pages/media');
 var ContactPage = require('./pages/contact');
-var SemnaturiPage = require('./pages/semnaturi');
 var DonatiiPage = require('./pages/donatii');
 var DonatiiThankYouPage = require('./pages/donatii-thankyou');
 var VoluntariatPage = require('./pages/voluntariat');
 var Eroare404 = require('./pages/eroare404');
 var PostPage = require('./pages/post');
+var PostsPage = require('./pages/posts-home');
+
+var CineSuntPage = require('./pages/cine-sunt');
+var CeAmFacutPage = require('./pages/ce-am-facut');
+var CeilaltiDespreMinePage = require('./pages/ceilalti-despre-mine');
+var MinciuniDespreMinePage = require('./pages/minciuni-despre-mine');
+var DeCeSaMaVotatiPage = require('./pages/de-ce-sa-ma-votati');
+var DepunereaCandidaturiiPage = require('./pages/depunerea-candidaturii');
+var PersonalitatiPage = require('./pages/personalitati');
+var TestimonialeOnlinePage = require('./pages/testimoniale-online');
+var EvenimentePage = require('./pages/evenimente');
+var MaterialePage = require('./pages/materiale');
+var DubiPage = require('./pages/dubi');
+var DiscursuriPage = require('./pages/discursuri');
+var BriefinguriPage = require('./pages/briefinguri');
+var DeclaratiiComunicatePage = require('./pages/declaratii-comunicate');
+var GaleriePage = require('./pages/galerie');
+var PrincipiiPage = require('./pages/principii');
+var ScrisoareDeschisaPage = require('./pages/scrisoare-deschisa');
+var TagsPage = require('./pages/tagged-posts');
+var TagPostsPage = require('./pages/tagged-post');
+var MacoveiCvPage = require('./pages/macovei-cv');
+var MotiveSaVoteziMacoveiPage = require('./pages/motive-sa-votezi-macovei');
+var DarNuAreSansePage = require('./pages/dar-nu-are-sanse');
+var MonicaInDialogPage = require('./pages/monica-in-dialog');
+var AgendaPage = require('./pages/agenda');
+var DecalogPage = require('./pages/decalog');
 
 var routes = require('./lib/routes.json');
 
@@ -25,44 +50,44 @@ module.exports = Router.extend({
   routes: _.mapValues(routes, function(route) {
     return route.prefix;
   }),
-  
+
+  // initialize: function () {
+  //   console.log(this.routes);
+  // },
   // ------- ROUTE HANDLERS ---------
   home: function () {
     this.trigger('newPage', new HomePage({}));
     $('body').attr('data-page', 'home');
   },
 
-  despre: function () {
-    this.trigger('newPage', new DesprePage({}));
-  },
-
   viziune: function () {
     this.trigger('newPage', new ViziunePage({}));
+    $('body').attr('data-page', 'viziune');
   },
 
-  candidatura: function () {
+  deCeCandidez: function () {
     this.trigger('newPage', new CandidaturaPage({}));
+    $('body').attr('data-page', 'deCeCandidez');
   },
 
-  sustinatori: function () {
-    this.trigger('newPage', new SustinatoriPage({}));
+  testimonialeVideo: function () {
+    this.trigger('newPage', new TestimonialeVideoPage({}));
+    $('body').attr('data-page', 'testimonialeVideo');
   },
 
   implicare: function () {
     this.trigger('newPage', new ImplicarePage({}));
+    $('body').attr('data-page', 'implicare');
   },
 
   media: function () {
     this.trigger('newPage', new MediaPage({}));
+    $('body').attr('data-page', 'media');
   },
 
   contact: function () {
     this.trigger('newPage', new ContactPage({}));
-  },
-
-  semnaturi: function () {
-    this.trigger('newPage', new SemnaturiPage({}));
-    $('body').attr('data-page', 'semnaturi');
+    $('body').attr('data-page', 'contact');
   },
 
   donatii: function () {
@@ -72,6 +97,7 @@ module.exports = Router.extend({
 
   donatiiThankyou: function () {
     this.trigger('newPage', new DonatiiThankYouPage({}));
+    $('body').attr('data-page', 'donatiiThankYou');
   },
 
   voluntariat: function () {
@@ -88,5 +114,189 @@ module.exports = Router.extend({
     this.trigger('newPage', new PostPage({
       slug: slug
     }));
+    $('body').attr('data-page', 'post');
+  },
+
+  posts: function () {
+    this.trigger('newPage', new PostsPage({}));
+    $('body').attr('data-page', 'posts');
+  },
+
+  cineSunt: function () {
+    this.trigger('newPage', new CineSuntPage({}));
+    $('body').attr('data-page', 'cineSunt');
+  },
+
+  ceAmFacut: function () {
+    this.trigger('newPage', new CeAmFacutPage({}));
+    $('body').attr('data-page', 'ceAmFacut');
+  },
+
+  ceilaltiDespreMine: function () {
+    this.trigger('newPage', new CeilaltiDespreMinePage({}));
+    $('body').attr('data-page', 'ceilaltiDespreMine');
+  },
+
+  minciuniDespreMine: function () {
+    this.trigger('newPage', new MinciuniDespreMinePage({}));
+    $('body').attr('data-page', 'minciuniDespreMine');
+  },
+
+  deCeSaMaVotati: function () {
+    this.trigger('newPage', new DeCeSaMaVotatiPage({}));
+    $('body').attr('data-page', 'deCeSaMaVotati');
+  },
+
+  depunereaCandidaturii: function () {
+    this.trigger('newPage', new DepunereaCandidaturiiPage({}));
+    $('body').attr('data-page', 'depunereaCandidaturii');
+  },
+
+  personalitati: function () {
+    this.trigger('newPage', new PersonalitatiPage({}));
+    $('body').attr('data-page', 'personalitati');
+  },
+
+  testimonialeOnline: function () {
+    this.trigger('newPage', new TestimonialeOnlinePage({}));
+    $('body').attr('data-page', 'testimonialeOnline');
+  },
+
+  discursuri: function () {
+    this.trigger('newPage', new DiscursuriPage({}));
+    $('body').attr('data-page', 'discursuri');
+  },
+
+  declaratiiComunicate: function () {
+    this.trigger('newPage', new DeclaratiiComunicatePage({}));
+    $('body').attr('data-page', 'declaratiiComunicate');
+  },
+
+  briefinguri: function () {
+    this.trigger('newPage', new BriefinguriPage({}));
+    $('body').attr('data-page', 'briefinguri');
+  },
+
+  galerie: function () {
+    this.trigger('newPage', new GaleriePage({}));
+    $('body').attr('data-page', 'galerie');
+  },
+
+  evenimente: function () {
+    this.trigger('newPage', new EvenimentePage({}));
+    $('body').attr('data-page', 'evenimente');
+  },
+
+  materiale: function () {
+    this.trigger('newPage', new MaterialePage({}));
+    $('body').attr('data-page', 'materiale');
+  },
+  dubi: function () {
+    this.trigger('newPage', new DubiPage({}));
+    $('body').attr('data-page', 'dubi');
+  },
+  macoveiCV: function () {
+    this.trigger('newPage', new MacoveiCvPage({}));
+    $('body').attr('data-page', 'macoveiCV');
+  },
+  scrisoareDeschisa: function () {
+    this.trigger('newPage', new ScrisoareDeschisaPage({}));
+    $('body').attr('data-page', 'scrisoareDeschisa');
+  },
+  motiveSaVoteziMacovei: function () {
+    this.trigger('newPage', new MotiveSaVoteziMacoveiPage({}));
+    $('body').attr('data-page', 'motiveSaVoteziMacovei');
+  },
+  principii: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 0
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog1: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 1
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog2: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 2
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog3: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 3
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog4: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 4
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog5: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 5
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog6: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 6
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog7: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 7
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog8: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 8
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog9: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 9
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  decalog10: function () {
+    this.trigger('newPage', new PrincipiiPage({
+      principle: 10
+    }));
+    $('body').attr('data-page', 'principii');
+  },
+  tags: function () {
+    this.trigger('newPage', new TagsPage({}));
+    $('body').attr('data-page', 'taggedPosts');
+  },
+  tag: function (tag) {
+    this.trigger('newPage', new TagPostsPage({
+      tag: tag
+    }));
+    $('body').attr('data-page', 'taggedPost');
+  },
+  nuAreSanse: function () {
+    this.trigger('newPage', new DarNuAreSansePage());
+    $('body').attr('data-page', 'nuAreSanse');
+  },
+  inDialog: function () {
+    this.trigger('newPage', new MonicaInDialogPage());
+    $('body').attr('data-page', 'monicaInDialog');
+  },
+  agenda: function () {
+    this.trigger('newPage', new AgendaPage());
+    $('body').attr('data-page', 'agenda');
+  },
+  decalog: function () {
+    this.trigger('newPage', new DecalogPage());
+    $('body').attr('data-page', 'decalog');
   }
 });

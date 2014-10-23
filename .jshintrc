@@ -92,6 +92,7 @@
     "predef"        : [
         "require",
         "module",
-        "process"
+        "process",
+        "global"
     ]       // additional predefined global variables
 }
