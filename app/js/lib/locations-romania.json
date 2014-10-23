@@ -2,6 +2,78 @@
   {
     lat: 44.437917,
     lng: 26.094637,
+    title: 'Bucuresti - Sector 1',
+    infoWindow: {
+      content: '<p>Coordonatori: Spataru Constantin si Spataru Anca<br>0744.266.742 / 0744.265.231',
+      coordinators: 'Spataru Constantin si Spataru Anca',
+      phone: '0744.266.742 / 0744.265.231',
+      email: 'team@macoveipresedinte.ro',
+      address: ''
+    },
+  },
+  {
+    lat: 44.437917,
+    lng: 26.094637,
+    title: 'Bucuresti - Sector 2',
+    infoWindow: {
+      content: '<p>Coordonatori: Razvan Popescu<br>0729.297.929',
+      coordinators: 'Razvan Popescu',
+      phone: '0729.297.929',
+      email: 'team@macoveipresedinte.ro',
+      address: ''
+    },
+  },
+  {
+    lat: 44.437917,
+    lng: 26.094637,
+    title: 'Bucuresti - Sector 3',
+    infoWindow: {
+      content: '<p>Coordonatori: Corina Petroff<br>021.348.6699',
+      coordinators: 'Corina Petroff',
+      phone: '021.348.6699',
+      email: 'team@macoveipresedinte.ro',
+      address: ''
+    },
+  },
+  {
+    lat: 44.437917,
+    lng: 26.094637,
+    title: 'Bucuresti - Sector 4',
+    infoWindow: {
+      content: '<p>Coordonatori: Razvan Popescu<br>0729.297.929',
+      coordinators: 'Razvan Popescu',
+      phone: '0729.297.929',
+      email: 'team@macoveipresedinte.ro',
+      address: ''
+    },
+  },
+  {
+    lat: 44.437917,
+    lng: 26.094637,
+    title: 'Bucuresti - Sector 5',
+    infoWindow: {
+      content: '<p>Coordonatori: Ion Nastasescu<br>0745.176.373',
+      coordinators: 'Ion Nastasescu',
+      phone: '0745.176.373',
+      email: 'team@macoveipresedinte.ro',
+      address: ''
+    },
+  },
+  {
+    lat: 44.437917,
+    lng: 26.094637,
+    title: 'Bucuresti - Sector 6',
+    infoWindow: {
+      content: '<p>Coordonatori: Alexandra Iancu<br>0745.148.254',
+      coordinators: 'Alexandra Iancu',
+      phone: '0745.148.254',
+      email: 'team@macoveipresedinte.ro',
+      address: ''
+    },
+  },
+  {
+    lat: 44.437917,
+    lng: 26.094637,
     title: 'Bucuresti',
     infoWindow: {
       content: '<p>Coordonatori: Alina Daniela Bogdan &amp; Mircea Serdin<br>031.101.7900<br>team@macoveipresedinte.ro<br>Adresa: Str. C.A. Rosetti nr. 17 <br> la "Lokal", Str M. Eminescu, nr. 57A.</p>',
