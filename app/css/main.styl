@@ -396,3 +396,90 @@ ul.decalogul
     width: 40%
 #content
   margin-top: 2em
+
+.letters
+  .letter
+    background: url('/assets/img/letters/background.png')
+    background-size: contain
+    background-repeat: no-repeat
+    position: relative
+    height: 40em
+
+    @media(max-width: 992px)
+      background: url('/assets/img/letters/background-small.jpg')
+      background-size: contain
+      background-repeat: no-repeat
+      height: 65em
+      width: 80%
+      @media(max-width: 767px)
+        background-size: contain
+        height: 55em
+        width: auto
+    .letter-text
+      text-align: left
+      width: 50%
+      position: absolute
+      top: 11%
+      left: 7%
+      padding: 1em
+      @media(max-width: 992px)
+        left: 12%
+        @media(max-width: 767px)
+          top: 8%
+          left: 10%
+          padding: 0 1em
+    .letter-content
+      text-align: left
+      position: absolute
+      top: 20%
+      left: 7%
+      width: 30%
+      padding-left: 1em
+      @media(max-width: 1199px)
+        top: 20%
+        width: 40%
+        @media(max-width: 992px)
+          width: 70%
+          left: 12%
+        @media(max-width: 767px)
+          font-size: 0.8em
+          width: 65%
+          left: 15%
+          top: 15%
+    .letter-destination
+      position: absolute
+      bottom: 55%
+      right: 27%
+      width: 25%
+      @media(max-width: 1199px)
+        right: 14%
+        width: 30%
+        @media(max-width: 992px)
+          bottom: 36%
+          width: 40%
+          right: 20%
+        @media(max-width: 767px)
+          bottom: 25%
+          left: 15%
+    .letter-send
+      position: absolute
+      bottom: 0
+      left: 33%
+      @media(max-width: 1199px)
+        left: 35%
+        @media(max-width: 992px)
+          img
+            width: 70%
+        @media(max-width: 767px)
+          left: 20%
+  .result
+    margin: 1em
+    position: relative
+    left: 30%
+    font-size: 1.5em
+    #negative
+      position: relative
+      left: -10%
+      color: red
+    #positive
+      color: green
