@@ -19,7 +19,7 @@ module.exports = View.extend({
   render: function () {
     var self = this;
     this.$el.html(this.template());
-    
+
     return this;
   },
 
@@ -51,7 +51,7 @@ module.exports = View.extend({
 
     $.ajax({
       type: 'POST',
-      url: process.env.MAIL_SERVER,
+      url: 'https://macovei-mail-server.herokuapp.com/send',
       data: JSON.stringify(letterData),
       contentType: 'Application/json',
       crossDomain: true,
