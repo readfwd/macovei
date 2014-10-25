@@ -13,8 +13,7 @@ module.exports = View.extend({
   events: {
     'click .letter-send': 'sendLetter',
     'click #title-list li a': 'getTitle',
-    'click #destination-list li a': 'getDestination',
-    'click #sendTo-btn': 'getSendTo'
+    'click #destination-list li a': 'getDestination'
   },
 
   render: function () {
