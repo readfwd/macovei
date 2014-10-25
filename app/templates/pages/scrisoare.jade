@@ -1,0 +1,43 @@
+- var titles = [ 'Dragă mamă', 'Dragă tată', 'Dragă buni', 'Dragă bunicule', 'Dragă mătușă', 'Dragă unchiule', 'Draga mea', 'Dragul meu'];
+- var destinations = [ 'italia', 'spania', 'franța', 'germania', 'anglia'];
+
+.letters
+  .container
+    h1 Scrisoare
+
+    .letter
+      //- img(src='/assets/img/letters/background.png')
+      .letter-text
+        .title
+          .btn-group
+            button#title-btn.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+              | Dragă ...
+              span.caret
+            ul.dropdown-menu#title-list(role='menu')
+              each title,index in titles
+                li
+                  a.choice(id="title-" + index, data-value=index) #{title}
+      .letter-content
+        span Mereu ai crezut în mine. Dar oamenii îmi tot spun că viitorul pe care mi-l doresc eu nu are nicio șansă. Așa că m-am hotărât să plec în #{' '}
+        .btn-group(style="display: inline-block")
+          button#destination-btn.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+            | Țară
+            span.caret
+          span .
+          ul.dropdown-menu#destination-list(role='menu')
+            each destination,index in destinations
+              li
+                a.choice(id="destination-" + index, data-value=index) #{destination.toLowerCase().replace(/^.|\s\S/g, function(a) { return a.toUpperCase(); })}
+        p Știi că nu mă las ușor, dar e ca atunci când dansezi: dacă partenerul nu se mișcă bine, degeaba. Dacă ne-am da toți seama că ne furăm singuri căciula când sprijinim corupția, poate am schimba ceva în țara asta. Că nimeni nu pleacă de drag.<br>Ar mai fi însă o opțiune care îmi dă speranță. E un om care mi-a demonstrat că vrea ce vreau și eu. De aceea vă rog ca pe 2 noiembrie să credeți iar în mine și să votați cu Monica Macovei.<br>Vă iubesc și ne vedem cât de curând!
+      .letter-destination
+        .input-group
+          span.input-group-addon Pentru
+          input.form-control(type="email", placeholder="Destinatar")
+        #warning.hidden: span Email invalid!
+      .letter-send
+        img(src='/assets/img/letters/sendIt.png')
+    .result
+      #positive.hidden
+        span Mesajul a fost trimis!
+      #negative.hidden
+        span A aparut o eroare! Te rugăm să reîncerci!

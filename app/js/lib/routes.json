@@ -295,5 +295,10 @@
     "prefix": "decalog",
     "changeFreq": "weekly",
     "priority": "0.5"
+  },
+  "scrisoare/": {
+    "prefix": "scrisoare",
+    "changeFreq": "weekly",
+    "priority": "0.5"
   }
 }
