@@ -396,3 +396,125 @@ ul.decalogul
     width: 40%
 #content
   margin-top: 2em
+
+.letters
+  .letter
+    background-size: contain
+    background-repeat: no-repeat
+    position: relative
+    height: 40em
+    #back
+      width: 100%
+      max-height: 100%
+    #backSmall
+      height: 100%
+      max-width: 100%
+
+    .letter-text
+      text-align: left
+      width: 50%
+      position: absolute
+      top: 12%
+      left: 7%
+      padding: 1em
+    @media(max-width: 1199px)
+      .letter-text
+        top: 12%
+    @media(max-width: 992px)
+      .letter-text
+        top: 15%
+        left: 12%
+    @media(max-width: 767px)
+      .letter-text
+        top: 15%
+        left: 15%
+        padding: 0 1em
+    .letter-content
+      text-align: left
+      position: absolute
+      top: 22%
+      left: 7%
+      width: 30%
+      padding-left: 1em
+    @media(max-width: 1199px)
+      .letter-content
+        top: 21%
+        width: 40%
+    @media(max-width: 992px)
+      .letter-content
+        top: 25%
+        width: 70%
+        left: 12%
+    @media(max-width: 767px)
+      .letter-content
+        font-size: 0.8em
+        width: 65%
+        left: 15%
+        top: 20%
+    .letter-destination
+      position: absolute
+      top: 40%
+      right: 14%
+      width: 30%
+    @media(max-width: 1199px)
+      .letter-destination
+        top: 40%
+        right: 14%
+        width: 30%
+    @media(max-width: 992px)
+      .letter-destination
+        position: absolute
+        top: 65%
+        height: 5%
+        width: 40%
+        right: 20%
+    @media(max-width: 767px)
+      .letter-destination
+        top: 65%
+        left: 45%
+    .letter-send
+      position: absolute
+      bottom: 0%
+      left: 40%
+      img
+        width: 80%
+    .letter-send:hover
+      cursor: pointer
+      transform: scale(1.2)
+    @media(max-width: 1199px)
+      .letter-send
+        bottom: 3%
+    @media(max-width: 992px)
+      .letter-send
+        bottom: 3%
+        left:35%
+        img
+          width:70%
+    @media(max-width: 767px)
+      .letter-send
+        bottom: 0
+  @media(max-width: 992px)
+    .letter
+      background-size: contain
+      background-repeat: no-repeat
+      height: 65em
+      width: 80%
+  @media(max-width: 767px)
+    .letter
+      background-size: contain
+      height: 55em
+      width: auto
+#warning
+  font-size: 1.3em
+  color: red
+.result
+  margin: 1em
+  position: relative
+  left: 30%
+  font-size: 1.5em
+  #negative
+    position: relative
+    left: -10%
+    color: red
+  #positive
+    color: green
