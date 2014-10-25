@@ -28,6 +28,9 @@ module.exports = View.extend({
         .css('height', '1000px');
 
     }
+    $('.letter-send img').hover(function() {
+      console.log('f')
+    })
     return this;
   },
 
@@ -45,7 +48,10 @@ module.exports = View.extend({
     var emailRegxp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (emailRegxp.test($('.letter-destination input').val())) {
+      $('#warning').removeClass('visible').addClass('hidden');
       this.sendTo = $('.letter-destination input').val();
+    } else {
+      $('#warning').removeClass('hidden').addClass('visible');
     }
 
     var letterData = {
@@ -56,14 +62,19 @@ module.exports = View.extend({
 
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:3000/send',
+      url: process.env.MAIL_SERVER,
       data: JSON.stringify(letterData),
       contentType: 'Application/json',
+      crossDomain: true,
       success: function() {
-        $('#positive').removeClass('hidden').addClass('visible')
+        $('#negative').removeClass('visible').addClass('hidden');
+        $('#positive').removeClass('visible').addClass('hidden');
+        $('#positive').removeClass('hidden').addClass('visible');
       },
       error: function () {
-        $('#negative').removeClass('hidden').addClass('visible')
+        $('#positive').removeClass('visible').addClass('hidden');
+        $('#negative').removeClass('visible').addClass('hidden');
+        $('#negative').removeClass('hidden').addClass('visible');
       }
     })
   }
