@@ -19,14 +19,15 @@ module.exports = View.extend({
   render: function () {
     var self = this;
     this.$el.html(this.template());
-    if ($(window).width > 991) {
-      $('.letter').css('background', urlrepl('/assets/img/letters/background.png'))
-    } else {
-      $('.letter')
-        .css('background', urlrepl('/assets/img/letters/background-small.jpg'))
-        .css('height', '1000px');
-
-    }
+    $(document).ready(function () {
+      if ($(window).width > 991) {
+        $('.letter').css('background', urlrepl('/assets/img/letters/background.png'))
+      } else {
+        $('.letter')
+          .css('background', urlrepl('/assets/img/letters/background-small.jpg'))
+          .css('height', '1000px');
+      }
+    });
     return this;
   },
 
