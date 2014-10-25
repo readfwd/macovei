@@ -28,9 +28,6 @@ module.exports = View.extend({
         .css('height', '1000px');
 
     }
-    $('.letter-send img').hover(function() {
-      console.log('f')
-    })
     return this;
   },
 
