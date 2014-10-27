@@ -19,7 +19,7 @@
                 li
                   a.choice(id="title-" + index, data-value=index) #{title}
       .letter-content
-        span Mereu ai crezut în mine. Dar oamenii îmi tot spun că viitorul pe care mi-l doresc eu nu are nicio șansă. Așa că m-am hotărât să plec în #{' '}
+        span Mereu ai crezut în mine. Dar mă uit in jurul meu si văd că viitorul pe care mi-l doresc eu nu are nicio șansă in România. Așa că m-am hotărât să plec în #{' '}
         .btn-group(style="display: inline-block")
           button#destination-btn.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
             | Țară
@@ -29,7 +29,7 @@
             each destination,index in destinations
               li
                 a.choice(id="destination-" + index, data-value=index) #{destination.toLowerCase().replace(/^.|\s\S/g, function(a) { return a.toUpperCase(); })}
-        p Știi că nu mă las ușor, dar e ca atunci când dansezi: dacă partenerul nu se mișcă bine, degeaba. Dacă ne-am da toți seama că ne furăm singuri căciula când sprijinim corupția, poate am schimba ceva în țara asta. Că nimeni nu pleacă de drag.<br>Ar mai fi însă o opțiune care îmi dă speranță. E un om care mi-a demonstrat că vrea ce vreau și eu. De aceea vă rog ca pe 2 noiembrie să credeți iar în mine și să votați cu Monica Macovei.<br>Vă iubesc și ne vedem cât de curând!
+        p O să-mi fie dor de tine, și ție de mine. Dar țara asta pare să fie prea coruptă ca eu să mai pot reuși să fac ceva pe meritul meu, fără pile și fără șpagă. Că nimeni nu pleacă de drag. <br>Să știi, totuși, că mai există un singur om care îmi dă speranță. Este o personă care mi-a demonstrat că vrea ceea ce vreau și eu. De aceea te rog din suflet ca pe 2 noiembrie să crezi iar în mine și să votezi cu Monica Macovei. <br>Vă iubesc și ne vedem cât de curând!
       .letter-destination
         .input-group
           span.input-group-addon Pentru
