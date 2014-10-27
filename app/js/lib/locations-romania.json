@@ -4,7 +4,7 @@
     lng: 26.248054,
     title: 'Suceava',
     infoWindow: {
-      conent: '<p>Coordonatori: Nati Gramescu<br>0743.320.833',
+      content: '<p>Coordonatori: Nati Gramescu<br>0743.320.833',
       coordinators: 'Nati Gramescu',
       phone: '0743.320.833',
       email: 'n.gramesc@gmail.com',
