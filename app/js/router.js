@@ -44,6 +44,7 @@ var MonicaInDialogPage = require('./pages/monica-in-dialog');
 var AgendaPage = require('./pages/agenda');
 var DecalogPage = require('./pages/decalog');
 var ScrisoarePage = require('./pages/scrisoare')
+var ProiectePage = require('./pages/proiecte')
 
 var routes = require('./lib/routes.json');
 
@@ -304,5 +305,10 @@ module.exports = Router.extend({
   scrisoare: function () {
     this.trigger('newPage', new ScrisoarePage());
     $('body').attr('data-page', 'scrisoare');
+  },
+
+  proiecte: function () {
+    this.trigger('newPage', new ProiectePage());
+    $('body').attr('data-page', 'proiecte');
   }
 });

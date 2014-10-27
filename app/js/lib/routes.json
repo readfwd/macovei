@@ -300,5 +300,10 @@
     "prefix": "scrisoare",
     "changeFreq": "weekly",
     "priority": "0.5"
+  },
+  "proiecte/": {
+    "prefix": "proiecte",
+    "changeFreq": "weekly",
+    "priority": "0.5"
   }
 }
