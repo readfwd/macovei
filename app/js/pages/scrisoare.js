@@ -59,6 +59,7 @@ module.exports = View.extend({
         $('#negative').removeClass('visible').addClass('hidden');
         $('#positive').removeClass('visible').addClass('hidden');
         $('#positive').removeClass('hidden').addClass('visible');
+        $('.letter-send').addClass('unclickable');
       },
       error: function () {
         $('#positive').removeClass('visible').addClass('hidden');
