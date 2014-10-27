@@ -1,5 +1,17 @@
 [
   {
+    lat: 47.650551,
+    lng: 26.248054,
+    title: 'Suceava',
+    infoWindow: {
+      conent: '<p>Coordonatori: Nati Gramescu<br>0743.320.833',
+      coordinators: 'Nati Gramescu',
+      phone: '0743.320.833',
+      email: 'n.gramesc@gmail.com',
+      address: ''
+    }
+  },
+  {
     lat: 44.437917,
     lng: 26.094637,
     title: 'Bucuresti - Sector 1',
