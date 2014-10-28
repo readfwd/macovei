@@ -54,10 +54,10 @@ module.exports = View.extend({
     }
 
     if (!emailRegxp.test(this.source)) {
-      $('.letter-source input').addClass('not-valid')
+      $('.letter-source input').addClass('not-valid');
       validDataSource = false;
     } else {
-      $('.letter-source input').removeClass('not-valid')
+      $('.letter-source input').removeClass('not-valid');
       validDataSource = true;
     }
 
@@ -80,13 +80,12 @@ module.exports = View.extend({
     };
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:3000/send',
+      url: 'https://macovei-mail-server.herokuapp.com/send',
       data: JSON.stringify(letterData),
       contentType: 'Application/json',
       crossDomain: true,
       success: function() {
         $('.letter-overlay').removeClass('hidden');
-        $('.letter-send').addClass('unclickable');
       },
       error: function () {
         $('#positive').removeClass('visible').addClass('hidden');
