@@ -19,7 +19,12 @@ module.exports = View.extend({
   render: function () {
     var self = this;
     this.$el.html(this.template());
-
+    $(document).ready(function () {
+      $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+      $('.letter-overlay').click (function () {
+        self.render();
+      });
+    })
     return this;
   },
 
@@ -34,31 +39,40 @@ module.exports = View.extend({
   },
 
   sendLetter: function () {
+    var self = this;
     var emailRegxp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    this.sendTo = $('.letter-destination input').val();
+    this.source = $('.letter-source input').val();
 
-    if (emailRegxp.test($('.letter-destination input').val())) {
-      $('#warning').removeClass('visible').addClass('hidden');
-      this.sendTo = $('.letter-destination input').val();
-    } else {
-      $('#warning').removeClass('hidden').addClass('visible');
+    if (!emailRegxp.test(this.sendTo)) {
+      return;
     }
 
+    if (!emailRegxp.test(this.source)) {
+      return;
+    }
+
+    if (!this.titleId) {
+      this.titleId = 0;
+    }
+
+    if (!this.destinationId) {
+      this.destinationId = 4;
+    }
     var letterData = {
       title: this.titleId,
       destination: this.destinationId,
-      sendTo: this.sendTo
+      sendTo: this.sendTo,
+      source: this.source
     };
-
     $.ajax({
       type: 'POST',
-      url: 'https://macovei-mail-server.herokuapp.com/send',
+      url: 'http://localhost:3000/send',
       data: JSON.stringify(letterData),
       contentType: 'Application/json',
       crossDomain: true,
       success: function() {
-        $('#negative').removeClass('visible').addClass('hidden');
-        $('#positive').removeClass('visible').addClass('hidden');
-        $('#positive').removeClass('hidden').addClass('visible');
+        $('.letter-overlay').removeClass('hidden');
         $('.letter-send').addClass('unclickable');
       },
       error: function () {
