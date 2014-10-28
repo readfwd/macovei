@@ -19,7 +19,12 @@ module.exports = View.extend({
   render: function () {
     var self = this;
     this.$el.html(this.template());
-
+    $(document).ready(function () {
+      $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+      $('.letter-overlay').click (function () {
+        self.render();
+      });
+    })
     return this;
   },
 
@@ -34,21 +39,45 @@ module.exports = View.extend({
   },
 
   sendLetter: function () {
+    var self = this;
     var emailRegxp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    if (emailRegxp.test($('.letter-destination input').val())) {
-      $('#warning').removeClass('visible').addClass('hidden');
-      this.sendTo = $('.letter-destination input').val();
+    this.sendTo = $('.letter-destination input').val();
+    this.source = $('.letter-source input').val();
+    var validDataDest = true;
+    var validDataSource = true;
+    if (!emailRegxp.test(this.sendTo)) {
+      $('.letter-destination input').addClass('not-valid');
+      validDataDest = false;
     } else {
-      $('#warning').removeClass('hidden').addClass('visible');
+      $('.letter-destination input').removeClass('not-valid');
+      validDataDest  = true;
     }
 
+    if (!emailRegxp.test(this.source)) {
+      $('.letter-source input').addClass('not-valid');
+      validDataSource = false;
+    } else {
+      $('.letter-source input').removeClass('not-valid');
+      validDataSource = true;
+    }
+
+    if (!validDataDest || !validDataSource) {
+      return
+    }
+
+    if (!this.titleId) {
+      this.titleId = 0;
+    }
+
+    if (!this.destinationId) {
+      this.destinationId = 4;
+    }
     var letterData = {
       title: this.titleId,
       destination: this.destinationId,
-      sendTo: this.sendTo
+      sendTo: this.sendTo,
+      source: this.source
     };
-
     $.ajax({
       type: 'POST',
       url: 'https://macovei-mail-server.herokuapp.com/send',
@@ -56,10 +85,7 @@ module.exports = View.extend({
       contentType: 'Application/json',
       crossDomain: true,
       success: function() {
-        $('#negative').removeClass('visible').addClass('hidden');
-        $('#positive').removeClass('visible').addClass('hidden');
-        $('#positive').removeClass('hidden').addClass('visible');
-        $('.letter-send').addClass('unclickable');
+        $('.letter-overlay').removeClass('hidden');
       },
       error: function () {
         $('#positive').removeClass('visible').addClass('hidden');
