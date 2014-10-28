@@ -401,15 +401,34 @@ ul.decalogul
   .letter
     background-size: contain
     background-repeat: no-repeat
-    position: relative
     height: 40em
+    position: relative
     #back
-      width: 100%
-      max-height: 100%
+      width: auto
+      height: 100%
     #backSmall
       height: 100%
       max-width: 100%
-
+    .letter-overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.6)
+      z-index: 10
+      h1
+        color: white
+      h1, a
+        position: absolute
+        top: 40%
+        left: 40%
+        transform: translate3d(-40%, -40%, 0)
+      a
+        top: 50%
+        transform: translate3d(-50%, -40%, 0)
+    .not-valid
+      border: 2px solid mm-red
     .letter-text
       text-align: left
       width: 50%
@@ -451,31 +470,52 @@ ul.decalogul
         width: 65%
         left: 15%
         top: 20%
-    .letter-destination
+    .letter-destination, .letter-source
       position: absolute
-      top: 40%
-      right: 14%
+      top: 37%
+      right: 25%
       width: 30%
+    .letter-source
+      top: 45%
+
+    .help-block
+      display: none
+
+    .letter-dest-group
+      &:not(.success)
+        .letter-dest-valid
+          display: none
+      &:not(.warning)
+        .letter-dest-warn
+          display: none
+      .letter-dest-valid
+        color: green
+      .letter-dest-warn
+        color: red
+
     @media(max-width: 1199px)
-      .letter-destination
-        top: 40%
-        right: 14%
-        width: 30%
+      .letter-destination, .letter-source
+        right: 10%
+        width: 35%
     @media(max-width: 992px)
-      .letter-destination
+      .letter-destination, .letter-source
         position: absolute
-        top: 65%
-        height: 5%
-        width: 40%
-        right: 20%
+        top: 63%
+        width: 50%
+        right: 15%
+      .letter-source
+        top: 67%
     @media(max-width: 767px)
-      .letter-destination
-        top: 65%
-        left: 45%
+      .letter-destination, .letter-source
+        top: 63%
+        left: 13%
+        width: 65%
+      .letter-source
+        top: 69%
     .letter-send
       position: absolute
       bottom: 0%
-      left: 40%
+      left: 35%
       img
         width: 80%
     .letter-send:hover
