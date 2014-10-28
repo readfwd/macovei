@@ -43,13 +43,26 @@ module.exports = View.extend({
     var emailRegxp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     this.sendTo = $('.letter-destination input').val();
     this.source = $('.letter-source input').val();
-
+    var validDataDest = true;
+    var validDataSource = true;
     if (!emailRegxp.test(this.sendTo)) {
-      return;
+      $('.letter-destination input').addClass('not-valid');
+      validDataDest = false;
+    } else {
+      $('.letter-destination input').removeClass('not-valid');
+      validDataDest  = true;
     }
 
     if (!emailRegxp.test(this.source)) {
-      return;
+      $('.letter-source input').addClass('not-valid')
+      validDataSource = false;
+    } else {
+      $('.letter-source input').removeClass('not-valid')
+      validDataSource = true;
+    }
+
+    if (!validDataDest || !validDataSource) {
+      return
     }
 
     if (!this.titleId) {
