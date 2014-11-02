@@ -3,6 +3,8 @@
 var Router = require('ampersand-router');
 var $ = require('./shims/jquery');
 var _ = require('lodash');
+var routes = require('./lib/routes.json');
+
 
 var HomePage = require('./pages/home');
 var ViziunePage = require('./pages/viziune');
@@ -47,7 +49,6 @@ var ScrisoarePage = require('./pages/scrisoare');
 var ProiectePage = require('./pages/proiecte');
 var VoteazaMacoveiPage = require('./pages/voteaza-macovei');
 
-var routes = require('./lib/routes.json');
 
 module.exports = Router.extend({
   routes: _.mapValues(routes, function(route) {
