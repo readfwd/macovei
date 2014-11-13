@@ -17,7 +17,8 @@ module.exports = View.extend({
   template: templates.pages.home,
   homePage: true,
   events: {
-    "click .chevron": "scroll"
+    "click .chevron": "scroll",
+    "click .live": "scrollLive"
   },
 
   render: function () {
@@ -45,6 +46,13 @@ module.exports = View.extend({
     // $("body").animate({ scrollTop: $('.newsStripe').offset().top }, 1000);
     $("body").animate({
       scrollTop: this.$('.newsStripe').offset().top - 50
+    }, 200);
+  },
+
+  scrollLive: function () {
+    // $("body").animate({ scrollTop: $('.newsStripe').offset().top }, 1000);
+    $("body").animate({
+      scrollTop: this.$('.liveStripe').offset().top - 50
     }, 200);
   }
 

@@ -295,5 +295,25 @@
     "prefix": "decalog",
     "changeFreq": "weekly",
     "priority": "0.5"
+  },
+  "scrisoare/": {
+    "prefix": "scrisoare",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "proiecte/": {
+    "prefix": "proiecte",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "voteaza-macovei/": {
+    "prefix": "voteazaMacovei",
+    "changeFreq": "weekly",
+    "priority": "0.5"
+  },
+  "voteaza-pozitia-11/": {
+    "prefix": "voteazaMacovei",
+    "changeFreq": "weekly",
+    "priority": "0.5"
   }
 }
