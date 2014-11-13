@@ -1,0 +1,34 @@
+#voteaza.container
+  .div(style="background: red")
+  //- h1 Votează Macovei
+  .row
+    .col-sm-8
+      img.img-responsive(src="/assets/img/MM_web_Ro.png")
+      .content
+        .call.text-center
+          h3 Bravo!
+          p Ai făcut o jumătate de pas către o Românie a copiilor sănătoși și educați, a părinților cu slujbe bune.
+          hr
+          h3 Vrei să faci următorul pas?
+          p Votează Macovei!
+          img.img-responsive(src="/assets/img/MM_web_M.png")
+          h3 Votează poziția 11 
+          h4 pentru că Macovei e mai bună decât ei!
+          img.img-responsive(src="/assets/img/MM_web_buletin_1200x800.png")
+    .col-sm-4
+      .quote.quote-in-page
+  .row
+    .col-sm-12
+      h3 De ce să votezi Monica Macovei?
+      for reason in reasons
+        .well
+          .row
+            .col-xs-3
+              img.img-responsive(src= reason.image)
+            .col-xs-9
+              p !{reason.content}
+              - if (/^http:\/\/localhost/.test(reason.image)) { reason.image = 'https://macovei-stage.s3-eu-west-1.amazonaws.com/img/logo-macovei.png'; }
+              a(href='https://www.facebook.com/dialog/feed?app_id=688761444534662&redirect_uri=' + encodeURIComponent( 'http://macoveipresedinte.ro/despre/20-de-motive-sa-votezi-macovei/') + '&link=' + encodeURIComponent('http://macoveipresedinte.ro/despre/20-de-motive-sa-votezi-macovei/') + '&picture=' + encodeURIComponent(reason.image) + '&description=' + encodeURIComponent(reason.content), target="_blank") Distribuie
+
+
+

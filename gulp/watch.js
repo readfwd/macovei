@@ -31,7 +31,7 @@ function browserSyncRun(done, path) {
     server: {
       baseDir: path
     },
-    port: 4000
+    port: process.env.PORT || 4000
   }, function () {
     done();
   });

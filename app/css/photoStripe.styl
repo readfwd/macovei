@@ -13,18 +13,6 @@
     background-size: cover
     background-position: center center
 
-  .hotlinks
-    a
-      padding: 0.2em 0.6em
-      border: 3px solid white
-      color: white
-      text-decoration: none
-      margin-left: 1em
-      margin-right: 1em
-      &:hover
-        background: white
-        color: black
-        text-decoration: none
 
   .overlay
     position: absolute
@@ -91,3 +79,20 @@
     .overlay
       .callout
         margin-top: 50vh
+.hotlinks
+  a
+    padding: 0.2em 0.6em
+    border: 3px solid white
+    color: white
+    text-decoration: none
+    margin-left: 1em
+    margin-right: 1em
+    &:hover
+      background: white
+      color: black
+      text-decoration: none
+    &.live
+      background: mm-red
+      border: 3px solid mm-red
+      &:hover
+        background: white

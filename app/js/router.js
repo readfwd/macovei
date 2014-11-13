@@ -3,6 +3,8 @@
 var Router = require('ampersand-router');
 var $ = require('./shims/jquery');
 var _ = require('lodash');
+var routes = require('./lib/routes.json');
+
 
 var HomePage = require('./pages/home');
 var ViziunePage = require('./pages/viziune');
@@ -43,8 +45,10 @@ var DarNuAreSansePage = require('./pages/dar-nu-are-sanse');
 var MonicaInDialogPage = require('./pages/monica-in-dialog');
 var AgendaPage = require('./pages/agenda');
 var DecalogPage = require('./pages/decalog');
+var ScrisoarePage = require('./pages/scrisoare');
+var ProiectePage = require('./pages/proiecte');
+var VoteazaMacoveiPage = require('./pages/voteaza-macovei');
 
-var routes = require('./lib/routes.json');
 
 module.exports = Router.extend({
   routes: _.mapValues(routes, function(route) {
@@ -298,5 +302,20 @@ module.exports = Router.extend({
   decalog: function () {
     this.trigger('newPage', new DecalogPage());
     $('body').attr('data-page', 'decalog');
+  },
+
+  scrisoare: function () {
+    this.trigger('newPage', new ScrisoarePage());
+    $('body').attr('data-page', 'scrisoare');
+  },
+
+  proiecte: function () {
+    this.trigger('newPage', new ProiectePage());
+    $('body').attr('data-page', 'proiecte');
+  },
+
+  voteazaMacovei: function () {
+    this.trigger('newPage', new VoteazaMacoveiPage());
+    $('body').attr('data-page', 'voteazaMacovei');
   }
 });
