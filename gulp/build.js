@@ -178,9 +178,6 @@ gulp.task('assets', ['assets:clean', 'mktmp'], function () {
 
 gulp.task('fonts', function () {
   return gulp.src(mainBowerFiles())
-    .pipe($.tap(function (file) {
-      console.log(file.path);
-    }))
     .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
     .pipe($.flatten())
     .pipe(gulp.dest(paths.dist + '/fonts'));
