@@ -14,44 +14,48 @@
         //-   strong  până la data de 20 Septembrie la adresa din București (Rosetti 17) sau data de 17 la celelalte adrese din Germania și Statele Unite ale Americii.
         //- p Vă mulțumesc!
         //- p <em>Monica Macovei</em>
-        h2
-          a(id="lista-coordonatori")
-          | Coordonatori voluntari
-        h3 România
-        .table-responsive
-          table.table.table-bordered.small#volunteers
-            tr
-              th Oraș
-              th Coordonator(i)
-              th Telefon
-              th Email
-              //- th Adresă colectare
-            each mark in markers
-              tr
-                td #{mark.title}
-                td #{mark.infoWindow.coordinators}
-                td
-                  a(href="tel:" + mark.infoWindow.phone) #{mark.infoWindow.phone}
-                td
-                  a(href="mailto:" + mark.infoWindow.email) !{mark.infoWindow.email}
-                //- td #{mark.infoWindow.address}
-        h3 Străinătate
-        .table-responsive
-          table.table.table-bordered.small#volunteers
-            tr
-              th Oraș
-              th Coordonator(i)
-              th Telefon
-              th Email
-              //- th Adresă colectare
-            each mark in wwMarkers
-              tr
-                td #{mark.title}
-                td #{mark.infoWindow.coordinators}
-                td
-                  a(href="tel:" + mark.infoWindow.phone) #{mark.infoWindow.phone}
-                td
-                  a(href="mailto:" + mark.infoWindow.email) !{mark.infoWindow.email}
+
+        //- Removed on request from Serban Marinescu on 22.01.2015
+        //- h2
+        //-   a(id="lista-coordonatori")
+        //-   | Coordonatori voluntari
+        //- h3 România
+        //- .table-responsive
+        //-   table.table.table-bordered.small#volunteers
+        //-     tr
+        //-       th Oraș
+        //-       th Coordonator(i)
+        //-       th Telefon
+        //-       th Email
+        //-       //- th Adresă colectare
+        //-     each mark in markers
+        //-       tr
+        //-         td #{mark.title}
+        //-         td #{mark.infoWindow.coordinators}
+        //-         td
+        //-           a(href="tel:" + mark.infoWindow.phone) #{mark.infoWindow.phone}
+        //-         td
+        //-           a(href="mailto:" + mark.infoWindow.email) !{mark.infoWindow.email}
+        //-         //- td #{mark.infoWindow.address}
+        //- h3 Străinătate
+        //- .table-responsive
+        //-   table.table.table-bordered.small#volunteers
+        //-     tr
+        //-       th Oraș
+        //-       th Coordonator(i)
+        //-       th Telefon
+        //-       th Email
+        //-       //- th Adresă colectare
+        //-     each mark in wwMarkers
+        //-       tr
+        //-         td #{mark.title}
+        //-         td #{mark.infoWindow.coordinators}
+        //-         td
+        //-           a(href="tel:" + mark.infoWindow.phone) #{mark.infoWindow.phone}
+        //-         td
+        //-           a(href="mailto:" + mark.infoWindow.email) !{mark.infoWindow.email}
+        //- end remove area
+
       .col-sm-4
         .panel.panel-primary
           .panel-heading Înscrie-te ca voluntar
